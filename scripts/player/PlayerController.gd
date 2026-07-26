@@ -7,12 +7,23 @@ extends CharacterBody3D
 var gravity: float = ProjectSettings.get_setting("physics/3d/default_gravity")
 
 @onready var camera: Camera3D = $Camera3D
-
+@onready var block_ray: RayCast3D = $Camera3D/BlockRay
+@onready var world: Node3D = get_tree().get_first_node_in_group("world")
 
 func _ready() -> void:
+	if not is_multiplayer_authority():
+		camera.current = false
+		set_process_unhandled_input(false)
+		set_physics_process(false)
+		return
+
+	camera.current = true
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-
-
+@rpc("authority", "unreliable")
+func sync_transform(new_transform: Transform3D) -> void:
+	if is_multiplayer_authority():
+		return
+	global_transform = new_transform
 func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventMouseMotion and Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
 		rotate_y(-event.relative.x * mouse_sensitivity)
@@ -24,6 +35,13 @@ func _unhandled_input(event: InputEvent) -> void:
 
 	if event.is_action_pressed("ui_cancel"):
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+	if event is InputEventMouseButton and event.pressed:
+
+		if event.button_index == MOUSE_BUTTON_LEFT:
+			try_break_block()
+
+		elif event.button_index == MOUSE_BUTTON_RIGHT:
+			try_place_block()
 func _physics_process(delta: float) -> void:
 	if not is_on_floor():
 		velocity.y -= gravity * delta
@@ -42,3 +60,32 @@ func _physics_process(delta: float) -> void:
 		velocity.z = move_toward(velocity.z, 0, speed)
 
 	move_and_slide()
+	if is_multiplayer_authority():
+		sync_transform.rpc(global_transform)
+func try_break_block():
+
+	if !block_ray.is_colliding():
+		return
+
+	var collider = block_ray.get_collider()
+
+	if collider == null:
+		return
+
+	var pos := Vector3i(collider.global_position.round())
+
+	world.break_block(pos)
+	
+	
+func try_place_block():
+
+	if !block_ray.is_colliding():
+		return
+
+	var hit := block_ray.get_collision_point()
+
+	var normal := block_ray.get_collision_normal()
+
+	var pos := Vector3i((hit + normal * 0.5).floor())
+
+	world.place_block(pos)

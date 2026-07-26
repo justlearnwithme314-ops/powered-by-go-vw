@@ -22,7 +22,7 @@ debug_color = Color(0.96862745, 0, 0.09019608, 0.41960785)
 [node name="Camera3D" type="Camera3D" parent="." unique_id=512128831]
 transform = Transform3D(1, 0, 0, 0, 1.0000001, 0, 0, 0, 1.0000001, 0, 1.6, 0)
 
-[node name="RayCast3D" type="RayCast3D" parent="Camera3D" unique_id=187626672]
+[node name="BlockRay" type="RayCast3D" parent="Camera3D" unique_id=187626672]
 target_position = Vector3(0, 0, -5)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=120731622]
