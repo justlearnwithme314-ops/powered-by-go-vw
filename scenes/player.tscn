@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://d2lca5unihe28"]
+
+[ext_resource type="Script" uid="uid://b7gks3tys68l2" path="res://scripts/player/PlayerController.gd" id="1_v0iea"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_1vivr"]
+radius = 0.4
+height = 1.8
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_1vivr"]
+radius = 0.4
+height = 1.8
+
+[node name="Player" type="CharacterBody3D" unique_id=76178794]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0060378313, 0)
+script = ExtResource("1_v0iea")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1586274711]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
+shape = SubResource("CapsuleShape3D_1vivr")
+debug_color = Color(0.96862745, 0, 0.09019608, 0.41960785)
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=512128831]
+transform = Transform3D(1, 0, 0, 0, 1.0000001, 0, 0, 0, 1.0000001, 0, 1.6, 0)
+
+[node name="RayCast3D" type="RayCast3D" parent="Camera3D" unique_id=187626672]
+target_position = Vector3(0, 0, -5)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=120731622]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.027, 0.9, -0.001)
+mesh = SubResource("CapsuleMesh_1vivr")
