@@ -1,16 +1,23 @@
 [gd_resource type="VoxelBlockyLibrary" format=3 uid="uid://dxeqg5ek48mc0"]
 
+[ext_resource type="VoxelBlockyModelCube" uid="uid://cxv2l4kxbfs3a" path="res://stuff/new_voxel_blocky_model_cube.tres" id="1_wr2qa"]
+
 [sub_resource type="VoxelBlockyModelEmpty" id="VoxelBlockyModelEmpty_mnw0l"]
 resource_name = "air"
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mng84"]
-resource_name = "grass"
-vertex_color_use_as_albedo = true
-albedo_color = Color(0.29431105, 0.45919055, 0.15224609, 1)
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xltk2"]
+albedo_color = Color(0.32138583, 0.19572762, 0.0020502496, 1)
 
-[sub_resource type="VoxelBlockyModelCube" id="VoxelBlockyModelCube_wr2qa"]
-material_override_0 = SubResource("StandardMaterial3D_mng84")
-resource_name = "grass_block"
+[sub_resource type="VoxelBlockyModelCube" id="VoxelBlockyModelCube_y87by"]
+material_override_0 = SubResource("StandardMaterial3D_xltk2")
+resource_name = "dirt_block"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_erur3"]
+albedo_color = Color(0.40069774, 0.40069774, 0.40069768, 1)
+
+[sub_resource type="VoxelBlockyModelCube" id="VoxelBlockyModelCube_ojdwt"]
+material_override_0 = SubResource("StandardMaterial3D_erur3")
+resource_name = "stone_block"
 
 [resource]
-models = Array[VoxelBlockyModel]([SubResource("VoxelBlockyModelEmpty_mnw0l"), SubResource("VoxelBlockyModelCube_wr2qa"), null])
+models = Array[VoxelBlockyModel]([SubResource("VoxelBlockyModelEmpty_mnw0l"), ExtResource("1_wr2qa"), SubResource("VoxelBlockyModelCube_y87by"), SubResource("VoxelBlockyModelCube_ojdwt")])

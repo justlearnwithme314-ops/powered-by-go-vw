@@ -1,0 +1,10 @@
+[gd_resource type="VoxelBlockyModelCube" format=3 uid="uid://cxv2l4kxbfs3a"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mng84"]
+resource_name = "grass"
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.29431105, 0.45919055, 0.15224609, 1)
+
+[resource]
+material_override_0 = SubResource("StandardMaterial3D_mng84")
+resource_name = "grass_block"

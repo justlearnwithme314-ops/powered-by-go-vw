@@ -5,6 +5,9 @@
 [ext_resource type="PackedScene" uid="uid://d3vnnnd2fe8u" path="res://scenes/world/World.tscn" id="2_rj7qi"]
 [ext_resource type="PackedScene" uid="uid://d1w5ccem33kle" path="res://scenes/player/Player.tscn" id="3_0y155"]
 
+[sub_resource type="VoxelStreamSQLite" id="VoxelStreamSQLite_6eebf"]
+database_path = "res://worlds/world.sqlite"
+
 [node name="Game" type="Node3D" unique_id=1733765405]
 
 [node name="NetworkManager" type="Node" parent="." unique_id=672257491]
@@ -14,13 +17,20 @@ script = ExtResource("2_0y155")
 
 [node name="Hud" parent="UI" unique_id=1184928410 instance=ExtResource("2_j4klc")]
 
-[node name="World" parent="." unique_id=960716359 instance=ExtResource("2_rj7qi")]
-
 [node name="Players" type="Node" parent="." unique_id=528922470]
 
 [node name="SpawnPoint" type="Marker3D" parent="Players" unique_id=1852564008]
 
-[node name="Player" parent="Players" unique_id=444961606 instance=ExtResource("3_0y155")]
+[node name="Player" parent="." unique_id=444961606 instance=ExtResource("3_0y155")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 52.771324, 0)
 
+[node name="VoxelViewer" parent="Player" index="3" unique_id=452240542]
+enabled_in_editor = true
+
+[node name="World" parent="." unique_id=960716359 instance=ExtResource("2_rj7qi")]
+
+[node name="VoxelTerrain" parent="World" index="2" unique_id=996375764]
+stream = SubResource("VoxelStreamSQLite_6eebf")
+
+[editable path="Player"]
 [editable path="World"]
-[editable path="Players/Player"]

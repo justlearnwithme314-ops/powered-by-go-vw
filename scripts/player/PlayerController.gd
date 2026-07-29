@@ -131,3 +131,13 @@ func _log(message: String) -> void:
 func _log_warning(message: String) -> void:
 	if enable_debug_logs:
 		push_warning("[PlayerController] ", message)
+func _input(event: InputEvent) -> void:
+	if event.is_action_pressed("ui_cancel"):
+		# Find your VoxelTerrain node in the scene tree and force it to save
+		# (Make sure the node path matches where your VoxelTerrain is located)
+		var voxel_terrain = get_node_or_null("/root/Game/World/VoxelTerrain")
+		if voxel_terrain:
+			voxel_terrain.save_modified_blocks()
+			
+		# Quit the game
+		get_tree().quit()
