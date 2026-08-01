@@ -31,3 +31,4 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6, 0)
 target_position = Vector3(0, 0, -10)
 
 [node name="VoxelViewer" type="VoxelViewer" parent="." unique_id=452240542]
+enabled_in_editor = true

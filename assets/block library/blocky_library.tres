@@ -19,5 +19,89 @@ albedo_color = Color(0.40069774, 0.40069774, 0.40069768, 1)
 material_override_0 = SubResource("StandardMaterial3D_erur3")
 resource_name = "stone_block"
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_j4klc"]
+albedo_color = Color(0.22538185, 0.17811325, 0.035307445, 1)
+
+[sub_resource type="VoxelBlockyModelCube" id="VoxelBlockyModelCube_5v67m"]
+color = Color(0.18236572, 0.09995248, 0.10171101, 1)
+material_override_0 = SubResource("StandardMaterial3D_j4klc")
+resource_name = "wood_block"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_15kd6"]
+albedo_color = Color(0.24449307, 0.5640485, 0.23062804, 1)
+
+[sub_resource type="VoxelBlockyModelCube" id="VoxelBlockyModelCube_c6knv"]
+color = Color(0, 0.5804287, 0.1352224, 1)
+material_override_0 = SubResource("StandardMaterial3D_15kd6")
+resource_name = "leaves"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wdbbf"]
+albedo_color = Color(0.5383912, 0.38363457, 0.24256447, 1)
+
+[sub_resource type="VoxelBlockyModelCube" id="VoxelBlockyModelCube_1ipw1"]
+color = Color(0.73274684, 0.46396095, 0.35654774, 1)
+material_override_0 = SubResource("StandardMaterial3D_wdbbf")
+resource_name = "iron_ore"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wr2qa"]
+albedo_color = Color(0.1148968, 0.11489681, 0.1148968, 1)
+
+[sub_resource type="VoxelBlockyModelCube" id="VoxelBlockyModelCube_j4klc"]
+material_override_0 = SubResource("StandardMaterial3D_wr2qa")
+resource_name = "coal_ore"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_s3ho0"]
+albedo_color = Color(0.8713344, 0.738114, 0.3114979, 1)
+
+[sub_resource type="VoxelBlockyModelCube" id="VoxelBlockyModelCube_wdbbf"]
+material_override_0 = SubResource("StandardMaterial3D_s3ho0")
+resource_name = "gold_ore"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v5p7v"]
+albedo_color = Color(0.5294118, 1, 1, 1)
+
+[sub_resource type="VoxelBlockyModelCube" id="VoxelBlockyModelCube_migvx"]
+material_override_0 = SubResource("StandardMaterial3D_v5p7v")
+resource_name = "diamond_ore"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xye8g"]
+resource_name = "sand_block"
+albedo_color = Color(0.9999996, 0.93786323, 0.74126416, 1)
+
+[sub_resource type="VoxelBlockyModelCube" id="VoxelBlockyModelCube_8bvh6"]
+material_override_0 = SubResource("StandardMaterial3D_xye8g")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vs3mj"]
+albedo_color = Color(0.84919, 0.7297606, 0.5652619, 1)
+
+[sub_resource type="VoxelBlockyModelCube" id="VoxelBlockyModelCube_anm5x"]
+color = Color(0.9981647, 0.7975624, 0.583332, 1)
+material_override_0 = SubResource("StandardMaterial3D_vs3mj")
+resource_name = "sandstone_block"
+
+[sub_resource type="VoxelBlockyModelCube" id="VoxelBlockyModelCube_msvhk"]
+color = Color(0.31763697, 0.68601847, 0.9398292, 1)
+resource_name = "water_block"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nvk7l"]
+
+[sub_resource type="VoxelBlockyModelCube" id="VoxelBlockyModelCube_vhn27"]
+material_override_0 = SubResource("StandardMaterial3D_nvk7l")
+resource_name = "snow_block"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rb3p6"]
+albedo_color = Color(0.737193, 0.7371929, 0.7371929, 1)
+
+[sub_resource type="VoxelBlockyModelCube" id="VoxelBlockyModelCube_2okls"]
+material_override_0 = SubResource("StandardMaterial3D_rb3p6")
+resource_name = "gravel_block"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_knyav"]
+resource_name = "bedrock_block"
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="VoxelBlockyModelCube" id="VoxelBlockyModelCube_xp818"]
+material_override_0 = SubResource("StandardMaterial3D_knyav")
+
 [resource]
-models = Array[VoxelBlockyModel]([SubResource("VoxelBlockyModelEmpty_mnw0l"), ExtResource("1_wr2qa"), SubResource("VoxelBlockyModelCube_y87by"), SubResource("VoxelBlockyModelCube_ojdwt")])
+models = Array[VoxelBlockyModel]([SubResource("VoxelBlockyModelEmpty_mnw0l"), ExtResource("1_wr2qa"), SubResource("VoxelBlockyModelCube_y87by"), SubResource("VoxelBlockyModelCube_ojdwt"), SubResource("VoxelBlockyModelCube_5v67m"), SubResource("VoxelBlockyModelCube_c6knv"), SubResource("VoxelBlockyModelCube_1ipw1"), SubResource("VoxelBlockyModelCube_j4klc"), SubResource("VoxelBlockyModelCube_wdbbf"), SubResource("VoxelBlockyModelCube_migvx"), SubResource("VoxelBlockyModelCube_8bvh6"), SubResource("VoxelBlockyModelCube_anm5x"), SubResource("VoxelBlockyModelCube_msvhk"), SubResource("VoxelBlockyModelCube_vhn27"), SubResource("VoxelBlockyModelCube_2okls"), SubResource("VoxelBlockyModelCube_xp818")])

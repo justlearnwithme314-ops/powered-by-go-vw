@@ -136,8 +136,8 @@ func _input(event: InputEvent) -> void:
 		# Find your VoxelTerrain node in the scene tree and force it to save
 		# (Make sure the node path matches where your VoxelTerrain is located)
 		var voxel_terrain = get_node_or_null("/root/Game/World/VoxelTerrain")
-		if voxel_terrain:
-			voxel_terrain.save_modified_blocks()
+		#if voxel_terrain:
+			# Saving will be implemented later
 			
 		# Quit the game
 		get_tree().quit()

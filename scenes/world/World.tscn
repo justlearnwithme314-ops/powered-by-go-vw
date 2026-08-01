@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bqf3a376n1lmv" path="res://scripts/world/World.gd" id="1_1oml7"]
 [ext_resource type="VoxelBlockyLibrary" uid="uid://dxeqg5ek48mc0" path="res://assets/block library/blocky_library.tres" id="1_5qbjp"]
-[ext_resource type="Script" uid="uid://bf3ke5bepwfgc" path="res://scripts/generator/VoxelGen.gd" id="2_6eebf"]
+[ext_resource type="Script" uid="uid://bahxqsrsxn060" path="res://terrain/world_generator.gd" id="3_gbddb"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_qjesc"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -15,10 +15,10 @@ sky_material = SubResource("ProceduralSkyMaterial_qjesc")
 background_mode = 2
 sky = SubResource("Sky_5qbjp")
 
-[sub_resource type="VoxelGeneratorScript" id="VoxelGeneratorScript_6eebf"]
-script = ExtResource("2_6eebf")
+[sub_resource type="VoxelGeneratorScript" id="VoxelGeneratorScript_d2pp6"]
+script = ExtResource("3_gbddb")
 
-[sub_resource type="VoxelMesherBlocky" id="VoxelMesherBlocky_tpg5x"]
+[sub_resource type="VoxelMesherBlocky" id="VoxelMesherBlocky_qbdty"]
 library = ExtResource("1_5qbjp")
 
 [node name="World" type="Node3D" unique_id=960716359]
@@ -31,9 +31,10 @@ environment = SubResource("Environment_1oml7")
 transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
 shadow_enabled = true
 
-[node name="VoxelTerrain" type="VoxelTerrain" parent="." unique_id=996375764]
-generator = SubResource("VoxelGeneratorScript_6eebf")
-mesher = SubResource("VoxelMesherBlocky_tpg5x")
+[node name="VoxelTerrain" type="VoxelTerrain" parent="." unique_id=1558092614]
+run_stream_in_editor = false
+generator = SubResource("VoxelGeneratorScript_d2pp6")
+mesher = SubResource("VoxelMesherBlocky_qbdty")
 
-[node name="VoxelViewer" type="VoxelViewer" parent="." unique_id=645987980]
+[node name="VoxelViewer" type="VoxelViewer" parent="." unique_id=2121118255]
 enabled_in_editor = true
