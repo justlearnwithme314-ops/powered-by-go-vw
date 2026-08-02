@@ -89,10 +89,10 @@ static func get_block_for_depth(
 		match BiomeGenerator.get_biome(wx, wz, noise):
 
 			Biome.Type.DESERT:
-				return Block.DIRT # Replace with Block.SAND later
+				return Block.SAND # Replace with Block.SAND later
 
 			Biome.Type.SNOW:
-				return Block.GRASS # Replace with Block.SNOW later
+				return Block.SNOW # Replace with Block.SNOW later
 
 			Biome.Type.MOUNTAINS:
 				return Block.GRASS
