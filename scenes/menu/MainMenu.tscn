@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://c6nb785083ld0"]
 
+[ext_resource type="Script" uid="uid://ncgn43fpxlem" path="res://scripts/menu/MainMenu.gd" id="1_m2yvp"]
+
 [node name="MainMenu" type="Control" unique_id=60944228]
 layout_mode = 3
 anchors_preset = 15
@@ -7,29 +9,48 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_m2yvp")
 
 [node name="CenterContainer" type="CenterContainer" parent="." unique_id=1478203098]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -34.5
+offset_top = -53.0
+offset_right = 34.5
+offset_bottom = 53.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer" unique_id=411279771]
 layout_mode = 2
 
 [node name="Title" type="Label" parent="CenterContainer/VBoxContainer" unique_id=1704938744]
 layout_mode = 2
+text = "Powered by GO.VW"
+
+[node name="Button" type="Button" parent="CenterContainer/VBoxContainer" unique_id=1711025432]
+layout_mode = 2
+text = "Worlds"
 
 [node name="HostButton" type="Button" parent="CenterContainer/VBoxContainer" unique_id=1797091118]
 layout_mode = 2
+text = "Host"
 
 [node name="IpInput" type="LineEdit" parent="CenterContainer/VBoxContainer" unique_id=1423557139]
 layout_mode = 2
 
 [node name="JoinButton" type="Button" parent="CenterContainer/VBoxContainer" unique_id=1432415659]
 layout_mode = 2
+text = "Join"
 
 [node name="ModsButton" type="Button" parent="CenterContainer/VBoxContainer" unique_id=279154628]
 layout_mode = 2
+text = "Mods"
 
 [node name="QuitButton" type="Button" parent="CenterContainer/VBoxContainer" unique_id=894917162]
 layout_mode = 2
+text = "Quit"

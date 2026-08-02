@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://d1w5ccem33kle"]
 
 [ext_resource type="Script" uid="uid://db3kqi5dc571k" path="res://scripts/player/PlayerController.gd" id="1_wr5hl"]
+[ext_resource type="Script" uid="uid://cygl2kh2fgjvr" path="res://scripts/inventory/Inventory.gd" id="2_gfjak"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_mnw0l"]
 radius = 0.4
@@ -31,4 +32,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6, 0)
 target_position = Vector3(0, 0, -10)
 
 [node name="VoxelViewer" type="VoxelViewer" parent="." unique_id=452240542]
+view_distance = 32
 enabled_in_editor = true
+
+[node name="Inventory" type="Node" parent="." unique_id=1751967946 groups=["player"]]
+script = ExtResource("2_gfjak")

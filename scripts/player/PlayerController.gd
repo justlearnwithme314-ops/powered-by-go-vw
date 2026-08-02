@@ -9,8 +9,6 @@ extends CharacterBody3D
 ## Voxel interaction parameters
 @export_group("Voxel Settings")
 @export var reach_distance: float = 8.0
-@export var place_block_id: int = 1
-@export var break_block_id: int = 0
 
 ## Debug settings
 @export_group("Debug")
@@ -20,10 +18,11 @@ var gravity: float = float(ProjectSettings.get_setting("physics/3d/default_gravi
 var voxel_tool: VoxelTool = null
 
 @onready var camera: Camera3D = $Camera3D
+@onready var inventory: Inventory = $Inventory
+
 
 func _ready() -> void:
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-	# Deferred call now matches the actual function below
 	call_deferred("_initialize_voxel_tool")
 
 
@@ -36,17 +35,30 @@ func _initialize_voxel_tool() -> void:
 
 
 func _unhandled_input(event: InputEvent) -> void:
+
 	if event is InputEventMouseButton:
+
+		# Scroll hotbar
+		if event.button_index == MOUSE_BUTTON_WHEEL_UP and event.pressed:
+			inventory.selected_slot = wrapi(inventory.selected_slot - 1, 0, 4)
+			return
+
+		elif event.button_index == MOUSE_BUTTON_WHEEL_DOWN and event.pressed:
+			inventory.selected_slot = wrapi(inventory.selected_slot + 1, 0, 4)
+			return
+
+		# Break block
 		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
 			if Input.get_mouse_mode() != Input.MOUSE_MODE_CAPTURED:
 				Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 				return
 			else:
-				interact_with_voxels(true) # Left Click: Break Block
+				interact_with_voxels(true)
 
+		# Place block
 		elif event.button_index == MOUSE_BUTTON_RIGHT and event.pressed:
 			if Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
-				interact_with_voxels(false) # Right Click: Place Block
+				interact_with_voxels(false)
 
 	if event is InputEventMouseMotion:
 		if Input.get_mouse_mode() != Input.MOUSE_MODE_CAPTURED:
@@ -64,7 +76,6 @@ func _physics_process(delta: float) -> void:
 	if not is_on_floor():
 		velocity.y -= gravity * delta
 
-	# Pause player movement while cursor is visible
 	if Input.get_mouse_mode() != Input.MOUSE_MODE_CAPTURED:
 		velocity.x = move_toward(velocity.x, 0.0, speed)
 		velocity.z = move_toward(velocity.z, 0.0, speed)
@@ -88,56 +99,64 @@ func _physics_process(delta: float) -> void:
 
 
 func interact_with_voxels(is_destroying: bool) -> void:
-	# 1. Fetch VoxelTool if missing
+
 	if voxel_tool == null:
 		if Global.active_terrain != null:
 			voxel_tool = Global.active_terrain.get_voxel_tool()
-			_log("Dynamically cached VoxelTool from Global.active_terrain.")
 		else:
-			_log_warning("Interaction failed: Global.active_terrain is NULL! Did you assign it in World.gd?")
+			_log_warning("Interaction failed: Global.active_terrain is NULL!")
 			return
 
 	if camera == null:
-		_log_warning("Interaction failed: Camera3D node not found under Player.")
+		_log_warning("Interaction failed: Camera3D node not found.")
 		return
 
-	# 2. Raycast setup
 	var origin: Vector3 = camera.global_position
 	var forward: Vector3 = -camera.global_transform.basis.z.normalized()
 
-	_log("Click! Casting ray from " + str(origin) + " | Reach: " + str(reach_distance) + "m")
-
-	# 3. Perform raycast
 	var hit: VoxelRaycastResult = voxel_tool.raycast(origin, forward, reach_distance)
 
-	if hit:
-		voxel_tool.channel = VoxelBuffer.CHANNEL_TYPE
+	if !hit:
+		return
 
-		if is_destroying:
-			_log("HIT! Destroying block at: " + str(hit.position))
-			voxel_tool.set_voxel(hit.position, break_block_id)
-		else:
-			_log("HIT! Placing block (ID " + str(place_block_id) + ") at: " + str(hit.previous_position))
-			voxel_tool.set_voxel(hit.previous_position, place_block_id)
+	voxel_tool.channel = VoxelBuffer.CHANNEL_TYPE
+
+	if is_destroying:
+
+		var block_id := voxel_tool.get_voxel(hit.position)
+
+		if block_id != 0:
+
+			if inventory.add_block(block_id):
+
+				voxel_tool.set_voxel(hit.position, 0)
+
+				_log("Collected block ID: " + str(block_id))
+			else:
+				_log("Inventory is full.")
+
 	else:
-		_log("MISSED! No voxel collision within reach distance.")
+
+		var block_id := inventory.get_selected_block()
+
+		if block_id != 0:
+
+			voxel_tool.set_voxel(hit.previous_position, block_id)
+			inventory.remove_selected_block()
+
+			_log("Placed block ID: " + str(block_id))
 
 
-## Debug helper functions
 func _log(message: String) -> void:
 	if enable_debug_logs:
 		print("[PlayerController] ", message)
 
+
 func _log_warning(message: String) -> void:
 	if enable_debug_logs:
 		push_warning("[PlayerController] ", message)
+
+
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("ui_cancel"):
-		# Find your VoxelTerrain node in the scene tree and force it to save
-		# (Make sure the node path matches where your VoxelTerrain is located)
-		var voxel_terrain = get_node_or_null("/root/Game/World/VoxelTerrain")
-		#if voxel_terrain:
-			# Saving will be implemented later
-			
-		# Quit the game
 		get_tree().quit()

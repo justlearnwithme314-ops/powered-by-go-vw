@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://c5efv4wwvwrjv"]
+
+[ext_resource type="Script" uid="uid://c1lrxlkl7h28m" path="res://scripts/InventoryUI/InventoryUI.gd" id="1_mwf85"]
+
+[node name="InventoryUI" type="CanvasLayer" unique_id=1826023962]
+script = ExtResource("1_mwf85")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1489577289]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer" unique_id=685478064]
+layout_mode = 2
+
+[node name="Slot1" type="Label" parent="MarginContainer/HBoxContainer" unique_id=56680906]
+custom_minimum_size = Vector2(150, 60)
+layout_mode = 2
+
+[node name="Slot2" type="Label" parent="MarginContainer/HBoxContainer" unique_id=341434860]
+custom_minimum_size = Vector2(150, 60)
+layout_mode = 2
+
+[node name="Slot3" type="Label" parent="MarginContainer/HBoxContainer" unique_id=111270239]
+custom_minimum_size = Vector2(150, 60)
+layout_mode = 2
+
+[node name="Slot4" type="Label" parent="MarginContainer/HBoxContainer" unique_id=2074804023]
+custom_minimum_size = Vector2(150, 60)
+layout_mode = 2
