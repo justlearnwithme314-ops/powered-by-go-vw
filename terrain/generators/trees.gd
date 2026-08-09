@@ -13,6 +13,11 @@ static func generate(
 
 	for z in range(size.z):
 		for x in range(size.x):
+			if x < 3 or x > size.x - 4:
+				continue
+
+			if z < 3 or z > size.z - 4:
+				continue
 
 			var wx := origin.x + x
 			var wz := origin.z + z

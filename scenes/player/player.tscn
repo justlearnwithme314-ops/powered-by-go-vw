@@ -14,6 +14,50 @@ material = SubResource("StandardMaterial3D_mng84")
 radius = 0.4
 height = 1.8
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8vrlf"]
+albedo_color = Color(0.8157849, 0.8953493, 0.8124337, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_1vivr"]
+material = SubResource("StandardMaterial3D_8vrlf")
+size = Vector3(0.2, 0.5, 0.2)
+
+[sub_resource type="Animation" id="Animation_gfjak"]
+resource_name = "HandSwing"
+length = 0.19999999999999998
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.099887215, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(-0.30543262, 0.6091199, 0.2268928), Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_4kuee"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_524rm"]
+_data = {
+&"HandSwing": SubResource("Animation_gfjak"),
+&"RESET": SubResource("Animation_4kuee")
+}
+
 [node name="Player" type="CharacterBody3D" unique_id=444961606]
 script = ExtResource("1_wr5hl")
 
@@ -31,8 +75,16 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6, 0)
 [node name="RayCast3D" type="RayCast3D" parent="Camera3D" unique_id=114076117]
 target_position = Vector3(0, 0, -10)
 
+[node name="Hand" type="Node3D" parent="Camera3D" unique_id=365123097]
+
+[node name="HandMesh" type="MeshInstance3D" parent="Camera3D/Hand" unique_id=176572023]
+transform = Transform3D(0.90510356, -0.27837652, 0.3213938, 0.16317591, 0.9254165, 0.34202012, -0.3926335, -0.25711992, 0.8830222, 0.4, -0.4, -0.8)
+mesh = SubResource("BoxMesh_1vivr")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Camera3D/Hand" unique_id=366269918]
+libraries/ = SubResource("AnimationLibrary_524rm")
+
 [node name="VoxelViewer" type="VoxelViewer" parent="." unique_id=452240542]
-view_distance = 32
 enabled_in_editor = true
 
 [node name="Inventory" type="Node" parent="." unique_id=1751967946 groups=["player"]]

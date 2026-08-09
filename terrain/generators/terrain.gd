@@ -95,7 +95,7 @@ static func get_block_for_depth(
 				return Block.SNOW # Replace with Block.SNOW later
 
 			Biome.Type.MOUNTAINS:
-				return Block.GRASS
+				return Block.STONE
 
 			Biome.Type.FOREST:
 				return Block.GRASS

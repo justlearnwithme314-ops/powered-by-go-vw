@@ -37,5 +37,4 @@ generator = SubResource("VoxelGeneratorScript_d2pp6")
 mesher = SubResource("VoxelMesherBlocky_qbdty")
 
 [node name="VoxelViewer" type="VoxelViewer" parent="." unique_id=2121118255]
-view_distance = 32
 enabled_in_editor = true

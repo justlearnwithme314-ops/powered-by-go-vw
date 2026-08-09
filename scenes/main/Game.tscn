@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://dupkwwpd76hjc"]
 
+[ext_resource type="Script" uid="uid://b6m5t01lhrlam" path="res://scripts/network/GameManager.gd" id="1_wdbbf"]
 [ext_resource type="Script" uid="uid://c70sk7wps4qgt" path="res://scripts/network/NetworkManager.gd" id="2_0y155"]
 [ext_resource type="PackedScene" uid="uid://wcm8fssonn3x" path="res://scenes/ui/HUD.tscn" id="2_j4klc"]
 [ext_resource type="PackedScene" uid="uid://d3vnnnd2fe8u" path="res://scenes/world/World.tscn" id="2_rj7qi"]
@@ -7,6 +8,8 @@
 [ext_resource type="PackedScene" uid="uid://d1w5ccem33kle" path="res://scenes/player/Player.tscn" id="4_j4klc"]
 
 [node name="Game" type="Node3D" unique_id=1733765405]
+script = ExtResource("1_wdbbf")
+player_scene = ExtResource("4_j4klc")
 
 [node name="NetworkManager" type="Node" parent="." unique_id=672257491]
 script = ExtResource("2_0y155")
@@ -20,8 +23,5 @@ script = ExtResource("2_0y155")
 [node name="Players" type="Node" parent="." unique_id=528922470]
 
 [node name="SpawnPoint" type="Marker3D" parent="Players" unique_id=1852564008]
-
-[node name="Player" parent="Players" unique_id=444961606 instance=ExtResource("4_j4klc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 665.095, 0)
 
 [node name="World" parent="." unique_id=960716359 instance=ExtResource("2_rj7qi")]

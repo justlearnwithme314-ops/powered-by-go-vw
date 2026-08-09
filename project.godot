@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 Global="*uid://10b3vr7l2yho"
 ModLoader="*uid://cpu2yx20120px"
+NetworkManager="*uid://c70sk7wps4qgt"
 
 [display]
 

@@ -1,8 +1,8 @@
 extends CanvasLayer
 
-@onready var inventory: Inventory = get_node("/root/Game/Players/Player/Inventory")
+@onready var inventory: Inventory = get_node_or_null("/root/Game/Players/Player/Inventory")
 
-@onready var labels = [
+@onready var labels: Array = [
 	$MarginContainer/HBoxContainer/Slot1,
 	$MarginContainer/HBoxContainer/Slot2,
 	$MarginContainer/HBoxContainer/Slot3,
@@ -10,32 +10,63 @@ extends CanvasLayer
 ]
 
 var block_names := {
-	0: "Empty",
-	1: "Grass",
-	2: "Dirt",
-	3: "Stone",
-	4: "Wood",
-	5: "Leaves",
-	6: "Iron Ore",
-	7: "Coal Ore",
-	8: "Gold Ore",
-	9: "Diamond Ore",
-	10: "Sand",
-	11: "Sandstone",
-	12: "Water",
-	13: "Snow",
-	14: "Gravel",
-	15: "Bedrock"
+	Block.AIR: "Empty",
+	Block.GRASS: "Grass",
+	Block.DIRT: "Dirt",
+	Block.STONE: "Stone",
+	Block.LOG: "Wood",
+	Block.LEAVES: "Leaves",
+	Block.IRON: "Iron Ore",
+	Block.COAL: "Coal Ore",
+	Block.GOLD: "Gold Ore",
+	Block.DIAMOND: "Diamond Ore",
+	Block.SAND: "Sand",
+	Block.SANDSTONE: "Sandstone",
+	Block.WATER: "Water",
+	Block.SNOW: "Snow",
+	Block.GRAVEL: "Gravel",
+	Block.BEDROCK: "Bedrock",
+	Block.FLOWER_RED: "Red Flower",
+	Block.FLOWER_YELLOW: "Yellow Flower",
+	Block.TALL_GRASS: "Tall Grass",
+	Block.CACTUS: "Cactus",
+	Block.ICE: "Ice"
 }
 
-func _process(_delta: float) -> void:
+
+func _ready() -> void:
+	await get_tree().create_timer(0.5).timeout
+
+	var my_id := multiplayer.get_unique_id()
+	inventory = get_node_or_null("/root/Game/Players/" + str(my_id) + "/Inventory")
+
+	if inventory == null:
+		push_warning("[InventoryUI] Could not find local player inventory.")
+		return
+
+	inventory.ensure_initialized()
+
+	if inventory.changed.is_connected(update_ui) == false:
+		inventory.changed.connect(update_ui)
+
+	update_ui()
+
+func update_ui() -> void:
 	if inventory == null:
 		return
 
-	for i in range(4):
+	inventory.ensure_initialized()
+
+	for i in range(labels.size()):
+
+		if i >= inventory.slots.size():
+			labels[i].text = "Empty"
+			labels[i].modulate = Color.WHITE
+			continue
+
 		var slot = inventory.slots[i]
 
-		if slot.id == 0:
+		if slot.id == Block.AIR:
 			labels[i].text = "Empty"
 		else:
 			labels[i].text = "%s\nx%d" % [
