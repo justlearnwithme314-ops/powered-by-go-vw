@@ -2,90 +2,521 @@
 
 [ext_resource type="Script" uid="uid://db3kqi5dc571k" path="res://scripts/player/PlayerController.gd" id="1_wr5hl"]
 [ext_resource type="Script" uid="uid://cygl2kh2fgjvr" path="res://scripts/inventory/Inventory.gd" id="2_gfjak"]
+[ext_resource type="ArrayMesh" uid="uid://dmyole1pbklad" path="res://assets/models/player/Template Guy/Components/Leg.obj" id="3_v42im"]
+[ext_resource type="ArrayMesh" uid="uid://be6s5802gsbo3" path="res://assets/models/player/Template Guy/Components/Body.obj" id="4_pn6s4"]
+[ext_resource type="ArrayMesh" uid="uid://bjsm0xuv2vlrb" path="res://assets/models/player/Template Guy/Components/Arm.obj" id="5_7oing"]
+[ext_resource type="ArrayMesh" uid="uid://bjyrkuc5g2i1w" path="res://assets/models/player/Template Guy/Components/Head.obj" id="6_5stf6"]
+[ext_resource type="ArrayMesh" uid="uid://tqv5y62yhmvu" path="res://assets/models/player/Template Guy/Components/Palm.obj" id="7_180ig"]
+[ext_resource type="ArrayMesh" uid="uid://b4injjru67bp6" path="res://assets/models/player/Template Guy/Components/Waist.obj" id="8_20koh"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_mnw0l"]
 radius = 0.4
-height = 1.8
+height = 1.4
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mng84"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1vivr"]
+albedo_color = Color(0.05733987, 0.021617513, 0, 1)
 
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_wr2qa"]
-material = SubResource("StandardMaterial3D_mng84")
-radius = 0.4
-height = 1.8
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v5gy4"]
+albedo_color = Color(0.05882353, 0.023529412, 0, 1)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8vrlf"]
-albedo_color = Color(0.8157849, 0.8953493, 0.8124337, 1)
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_auskg"]
+albedo_color = Color(0.8, 0.79607844, 0.9137255, 1)
 
-[sub_resource type="BoxMesh" id="BoxMesh_1vivr"]
-material = SubResource("StandardMaterial3D_8vrlf")
-size = Vector3(0.2, 0.5, 0.2)
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u7cuq"]
+albedo_color = Color(0.8, 0.79607844, 0.9137255, 1)
 
-[sub_resource type="Animation" id="Animation_gfjak"]
-resource_name = "HandSwing"
-length = 0.19999999999999998
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:rotation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.099887215, 0.2),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector3(0, 0, 0), Vector3(-0.30543262, 0.6091199, 0.2268928), Vector3(0, 0, 0)]
-}
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_d2pp6"]
+albedo_color = Color(0.8, 0.79607844, 0.9137255, 1)
 
-[sub_resource type="Animation" id="Animation_4kuee"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u8wmi"]
+albedo_color = Color(0.85177183, 0.6330548, 0.9625457, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o5tgd"]
+albedo_color = Color(0.92254144, 0.75580174, 0.6214965, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0sxyj"]
+albedo_color = Color(0.92156863, 0.75686276, 0.61960787, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qbdty"]
+albedo_color = Color(0.05882353, 0.023529412, 0, 1)
+
+[sub_resource type="Animation" id="Animation_v42im"]
 length = 0.001
-tracks/0/type = "value"
+tracks/0/type = "bezier"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath(".:rotation")
+tracks/0/path = NodePath("right leg:position:x")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(0, 0, 0)]
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0.18768957, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("right leg:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(-0.9661695, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("right leg:position:z")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(-0.34696665, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("left leg:position:x")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(-0.04546825, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/4/type = "bezier"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("left leg:position:y")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(-0.96489966, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/5/type = "bezier"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("left leg:position:z")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(-0.33282393, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/6/type = "bezier"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("left arm:rotation:x")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(-0.15796855, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/7/type = "bezier"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("left arm:rotation:y")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1.6084465, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/8/type = "bezier"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("left arm:rotation:z")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0.21557333, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/9/type = "bezier"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("left arm:position:x")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(-0.34110227, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/10/type = "bezier"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("left arm:position:y")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(-0.9196204, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/11/type = "bezier"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("left arm:position:z")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(-0.4232682, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/12/type = "bezier"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("palm2:position:x")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(-0.0029781237, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/13/type = "bezier"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("palm2:position:y")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0.28917417, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/14/type = "bezier"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("palm2:position:z")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(-0.32060456, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/15/type = "bezier"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("palm2:rotation:x")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/16/type = "bezier"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("palm2:rotation:y")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1.5707964, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/17/type = "bezier"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("palm2:rotation:z")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
 }
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_524rm"]
+[sub_resource type="Animation" id="Animation_pn6s4"]
+resource_name = "break"
+length = 0.26
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("left arm:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 2, 2),
+"points": PackedFloat32Array(-0.34110227, -0.25, 0, 0.25, 0, -0.08123514, -0.033230707, -0.04331119, 0, 0, -0.31610963, -0.008063811, 0.03914575, 0, 0),
+"times": PackedFloat32Array(0.00078036886, 0.20016462, 0.24854748)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("left arm:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 2, 2),
+"points": PackedFloat32Array(-0.9196204, -0.25, 0, 0.25, 0, -0.7896516, -0.033230707, -0.02166147, 0, 0, -0.9349109, -0.008063811, 0.024209887, 0, 0),
+"times": PackedFloat32Array(0.00078036886, 0.20016462, 0.24854748)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("left arm:position:z")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 2, 2),
+"points": PackedFloat32Array(-0.4232682, -0.25, 0, 0.25, 0, -0.83911306, -0.033230707, 0.06930747, 0, 0, -0.4533903, -0.008063811, -0.064287126, 0, 0),
+"times": PackedFloat32Array(0.00078036886, 0.20016462, 0.24854748)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("left arm:rotation:x")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0, 2, 2),
+"points": PackedFloat32Array(-0.00278208, -0.25, 0, 0.25, 0, -0.18483292, -0.033230707, 0.030341806, 0, 0, -0.0135166105, -0.008063811, -0.028552718, 0, 0),
+"times": PackedFloat32Array(0.00078036886, 0.20016462, 0.24854748)
+}
+tracks/4/type = "bezier"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("left arm:rotation:y")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"handle_modes": PackedInt32Array(0, 2, 2),
+"points": PackedFloat32Array(1.5717784, -0.25, 0, 0.25, 0, 1.6113992, -0.033230707, -0.0066034594, 0, 0, 1.5754527, -0.008063811, 0.0059910817, 0, 0),
+"times": PackedFloat32Array(0.00078036886, 0.20016462, 0.24854748)
+}
+tracks/5/type = "bezier"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("left arm:rotation:z")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"handle_modes": PackedInt32Array(0, 2, 2),
+"points": PackedFloat32Array(0.0039535454, -0.25, 0, 0.25, 0, 0.25129604, -0.033230707, -0.04122375, 0, 0, 0.019132983, -0.008063811, 0.03869384, 0, 0),
+"times": PackedFloat32Array(0.00078036886, 0.20016462, 0.24854748)
+}
+tracks/6/type = "bezier"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("palm2:position:x")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"handle_modes": PackedInt32Array(0, 2, 2),
+"points": PackedFloat32Array(-0.0076690093, -0.25, 0, 0.25, 0, 0.06678053, -0.033230707, -0.0124082565, 0, 0, 0.000868164, -0.008063811, 0.010985394, 0, 0),
+"times": PackedFloat32Array(0.00078036886, 0.20016462, 0.24854748)
+}
+tracks/7/type = "bezier"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("palm2:position:y")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"handle_modes": PackedInt32Array(0, 2, 2),
+"points": PackedFloat32Array(0.28259817, -0.25, 0, 0.25, 0, 0.2990381, -0.033230707, -0.0027399908, 0, 0, 0.26615813, -0.008063811, 0.0054799966, 0, 0),
+"times": PackedFloat32Array(0.00078036886, 0.20016462, 0.24854748)
+}
+tracks/8/type = "bezier"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("palm2:position:z")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"handle_modes": PackedInt32Array(0, 2, 2),
+"points": PackedFloat32Array(-0.31159562, -0.25, 0, 0.25, 0, -0.4233443, -0.033230707, 0.018624783, 0, 0, -0.3179003, -0.008063811, -0.017574003, 0, 0),
+"times": PackedFloat32Array(0.00078036886, 0.20016462, 0.24854748)
+}
+tracks/9/type = "bezier"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("palm2:rotation:x")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"handle_modes": PackedInt32Array(0, 2, 2),
+"points": PackedFloat32Array(0.004137892, -0.25, 0, 0.25, 0, 0.004137892, -0.033230707, 0, 0, 0, 0.004137892, -0.008063811, 0, 0, 0),
+"times": PackedFloat32Array(0.00078036886, 0.20016462, 0.24854748)
+}
+tracks/10/type = "bezier"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("palm2:rotation:y")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"handle_modes": PackedInt32Array(0, 2, 2),
+"points": PackedFloat32Array(1.5693127, -0.25, 0, 0.25, 0, 1.5693127, -0.033230707, 0, 0, 0, 1.5693127, -0.008063811, 0, 0, 0),
+"times": PackedFloat32Array(0.00078036886, 0.20016462, 0.24854748)
+}
+tracks/11/type = "bezier"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("palm2:rotation:z")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"handle_modes": PackedInt32Array(0, 2, 2),
+"points": PackedFloat32Array(-0.005895694, -0.25, 0, 0.25, 0, -0.005895694, -0.033230707, 0, 0, 0, -0.005895694, -0.008063811, 0, 0, 0),
+"times": PackedFloat32Array(0.00078036886, 0.20016462, 0.24854748)
+}
+
+[sub_resource type="Animation" id="Animation_7oing"]
+resource_name = "walk"
+loop_mode = 1
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("right leg:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 2, 2, 2, 2),
+"points": PackedFloat32Array(0.18768957, -0.25, 0, 0.25, 0, 0.23272958, -0.033333335, -0.007506669, 0, 0, 0.20741406, -0.033333335, 0.004219254, 0, 0, 0.17848745, -0.033451393, 0.0048211017, 0, 0, 0.19085017, -0.033107333, -0.0020604532, 0, 0),
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.60070837, 0.79935235)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("right leg:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 2, 2, 2, 2),
+"points": PackedFloat32Array(-0.9661695, -0.25, 0, 0.25, 0, -0.99009204, -0.033333335, 0.003987094, 0, 0, -0.9821179, -0.033333335, -0.0013290247, 0, 0, -0.9462341, -0.033451393, -0.005980631, 0, 0, -0.9462341, -0.033107333, 0, 0, 0),
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.60070837, 0.79935235)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("right leg:position:z")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 2, 2, 2, 2),
+"points": PackedFloat32Array(-0.34696665, -0.25, 0, 0.25, 0, -0.4068446, -0.033333335, 0.009979656, 0, 0, -0.37662092, -0.033333335, -0.0050372784, 0, 0, -0.32529595, -0.033451393, -0.008554161, 0, 0, -0.3376132, -0.033107333, 0.0020528736, 0, 0),
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.60070837, 0.79935235)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("left leg:position:x")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0, 2, 2, 2, 2),
+"points": PackedFloat32Array(-0.04546825, -0.25, 0, 0.25, 0, -0.079525985, -0.033333335, 0.0056762896, 0, 0, -0.028407313, -0.033333335, -0.008519779, 0, 0, 0.0067363605, -0.033451393, -0.005857279, 0, 0, -0.039174177, -0.033107333, 0.0076517565, 0, 0),
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.60070837, 0.79935235)
+}
+tracks/4/type = "bezier"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("left leg:position:y")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"handle_modes": PackedInt32Array(0, 2, 2, 2, 2),
+"points": PackedFloat32Array(-0.96489966, -0.25, 0, 0.25, 0, -0.9465587, -0.033333335, -0.0030568244, 0, 0, -0.96489966, -0.033333335, 0.0030568244, 0, 0, -0.9979135, -0.033451393, 0.0055023036, 0, 0, -0.95389473, -0.033107333, -0.007336458, 0, 0),
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.60070837, 0.79935235)
+}
+tracks/5/type = "bezier"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("left leg:position:z")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"handle_modes": PackedInt32Array(0, 2, 2, 2, 2),
+"points": PackedFloat32Array(-0.33282393, -0.25, 0, 0.25, 0, -0.28738874, -0.033333335, -0.007572532, 0, 0, -0.34982234, -0.033333335, 0.010405601, 0, 0, -0.40554166, -0.033451393, 0.009286553, 0, 0, -0.33219373, -0.033107333, -0.012224656, 0, 0),
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.60070837, 0.79935235)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5stf6"]
 _data = {
-&"HandSwing": SubResource("Animation_gfjak"),
-&"RESET": SubResource("Animation_4kuee")
+&"RESET": SubResource("Animation_v42im"),
+&"break": SubResource("Animation_pn6s4"),
+&"walk": SubResource("Animation_7oing")
 }
 
 [node name="Player" type="CharacterBody3D" unique_id=444961606]
 script = ExtResource("1_wr5hl")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1529290443]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00015226007, 0.69999987, 0.0020838976)
 shape = SubResource("CapsuleShape3D_mnw0l")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=46766896]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
-mesh = SubResource("CapsuleMesh_wr2qa")
-
 [node name="Camera3D" type="Camera3D" parent="." unique_id=1023283323]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0207168, -0.3700519)
 
 [node name="RayCast3D" type="RayCast3D" parent="Camera3D" unique_id=114076117]
 target_position = Vector3(0, 0, -10)
-
-[node name="Hand" type="Node3D" parent="Camera3D" unique_id=365123097]
-
-[node name="HandMesh" type="MeshInstance3D" parent="Camera3D/Hand" unique_id=176572023]
-transform = Transform3D(0.90510356, -0.27837652, 0.3213938, 0.16317591, 0.9254165, 0.34202012, -0.3926335, -0.25711992, 0.8830222, 0.4, -0.4, -0.8)
-mesh = SubResource("BoxMesh_1vivr")
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Camera3D/Hand" unique_id=366269918]
-libraries/ = SubResource("AnimationLibrary_524rm")
 
 [node name="VoxelViewer" type="VoxelViewer" parent="." unique_id=452240542]
 enabled_in_editor = true
 
 [node name="Inventory" type="Node" parent="." unique_id=1751967946 groups=["player"]]
 script = ExtResource("2_gfjak")
+
+[node name="right leg" type="MeshInstance3D" parent="." unique_id=41105314]
+transform = Transform3D(-4.371139e-09, 0, 0.1, 0, 0.1, 0, -0.1, 0, -4.371139e-09, 0.18768957, -0.9661695, -0.34696665)
+mesh = ExtResource("3_v42im")
+surface_material_override/0 = SubResource("StandardMaterial3D_1vivr")
+
+[node name="left leg" type="MeshInstance3D" parent="." unique_id=1746185050]
+transform = Transform3D(-4.371139e-09, 0, 0.1, 0, 0.1, 0, -0.1, 0, -4.371139e-09, -0.04546825, -0.96489966, -0.33282393)
+mesh = ExtResource("3_v42im")
+surface_material_override/0 = SubResource("StandardMaterial3D_v5gy4")
+
+[node name="torso" type="MeshInstance3D" parent="." unique_id=791141455]
+transform = Transform3D(-4.371139e-09, 0, 0.1, 0, 0.1, 0, -0.1, 0, -4.371139e-09, 0.26720843, -0.92393035, -0.3217395)
+mesh = ExtResource("4_pn6s4")
+surface_material_override/0 = SubResource("StandardMaterial3D_auskg")
+
+[node name="right arm" type="MeshInstance3D" parent="." unique_id=430359619]
+transform = Transform3D(-4.371139e-09, 0, 0.1, 0, 0.1, 0, -0.1, 0, -4.371139e-09, 0.26720843, -0.92393035, -0.3217395)
+mesh = ExtResource("5_7oing")
+surface_material_override/0 = SubResource("StandardMaterial3D_u7cuq")
+
+[node name="left arm" type="MeshInstance3D" parent="." unique_id=1758040231]
+transform = Transform3D(-0.007039649, -0.014551067, 0.09868488, 0.021124423, 0.09646917, 0.015731234, -0.09748953, 0.021954048, -0.0037172574, -0.34110227, -0.9196204, -0.4232682)
+mesh = ExtResource("5_7oing")
+surface_material_override/0 = SubResource("StandardMaterial3D_d2pp6")
+
+[node name="head" type="MeshInstance3D" parent="." unique_id=1557458554]
+transform = Transform3D(-4.371139e-09, 0, 0.1, 0, 0.1, 0, -0.1, 0, -4.371139e-09, 0.26720843, -0.92393035, -0.3217395)
+mesh = ExtResource("6_5stf6")
+surface_material_override/0 = SubResource("StandardMaterial3D_u8wmi")
+
+[node name="palm2" type="MeshInstance3D" parent="." unique_id=2037992206]
+transform = Transform3D(-4.371139e-09, 0, 0.1, 0, 0.09999999, 0, -0.1, 0, -4.371139e-09, -0.0029781237, 0.28917417, -0.32060456)
+mesh = ExtResource("7_180ig")
+surface_material_override/0 = SubResource("StandardMaterial3D_o5tgd")
+
+[node name="palm" type="MeshInstance3D" parent="." unique_id=1645344512]
+transform = Transform3D(-4.371139e-09, 0, 0.1, 0, 0.1, 0, -0.1, 0, -4.371139e-09, 0.62639505, 0.28542337, -0.22017612)
+mesh = ExtResource("7_180ig")
+surface_material_override/0 = SubResource("StandardMaterial3D_0sxyj")
+
+[node name="waist" type="MeshInstance3D" parent="." unique_id=157592995]
+transform = Transform3D(-4.371139e-09, 0, 0.1, 0, 0.1, 0, -0.1, 0, -4.371139e-09, 0.26774797, -0.9239303, -0.31906325)
+mesh = ExtResource("8_20koh")
+surface_material_override/0 = SubResource("StandardMaterial3D_qbdty")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=2039504656]
+libraries/ = SubResource("AnimationLibrary_5stf6")
