@@ -5,7 +5,6 @@
 [ext_resource type="ArrayMesh" uid="uid://dmyole1pbklad" path="res://assets/models/player/Template Guy/Components/Leg.obj" id="3_v42im"]
 [ext_resource type="ArrayMesh" uid="uid://be6s5802gsbo3" path="res://assets/models/player/Template Guy/Components/Body.obj" id="4_pn6s4"]
 [ext_resource type="ArrayMesh" uid="uid://bjsm0xuv2vlrb" path="res://assets/models/player/Template Guy/Components/Arm.obj" id="5_7oing"]
-[ext_resource type="ArrayMesh" uid="uid://bjyrkuc5g2i1w" path="res://assets/models/player/Template Guy/Components/Head.obj" id="6_5stf6"]
 [ext_resource type="ArrayMesh" uid="uid://tqv5y62yhmvu" path="res://assets/models/player/Template Guy/Components/Palm.obj" id="7_180ig"]
 [ext_resource type="ArrayMesh" uid="uid://b4injjru67bp6" path="res://assets/models/player/Template Guy/Components/Waist.obj" id="8_20koh"]
 
@@ -27,9 +26,6 @@ albedo_color = Color(0.8, 0.79607844, 0.9137255, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_d2pp6"]
 albedo_color = Color(0.8, 0.79607844, 0.9137255, 1)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u8wmi"]
-albedo_color = Color(0.85177183, 0.6330548, 0.9625457, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o5tgd"]
 albedo_color = Color(0.92254144, 0.75580174, 0.6214965, 1)
@@ -462,7 +458,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00015226007, 0.69999987, 0.
 shape = SubResource("CapsuleShape3D_mnw0l")
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=1023283323]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0207168, -0.3700519)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0207168, -0.14750487)
 
 [node name="RayCast3D" type="RayCast3D" parent="Camera3D" unique_id=114076117]
 target_position = Vector3(0, 0, -10)
@@ -494,14 +490,9 @@ mesh = ExtResource("5_7oing")
 surface_material_override/0 = SubResource("StandardMaterial3D_u7cuq")
 
 [node name="left arm" type="MeshInstance3D" parent="." unique_id=1758040231]
-transform = Transform3D(-0.007039649, -0.014551067, 0.09868488, 0.021124423, 0.09646917, 0.015731234, -0.09748953, 0.021954048, -0.0037172574, -0.34110227, -0.9196204, -0.4232682)
+transform = Transform3D(-0.0070396475, -0.014551067, 0.09868488, 0.021124419, 0.09646917, 0.015731234, -0.09748952, 0.021954048, -0.0037172574, -0.34110227, -0.9196204, -0.4232682)
 mesh = ExtResource("5_7oing")
 surface_material_override/0 = SubResource("StandardMaterial3D_d2pp6")
-
-[node name="head" type="MeshInstance3D" parent="." unique_id=1557458554]
-transform = Transform3D(-4.371139e-09, 0, 0.1, 0, 0.1, 0, -0.1, 0, -4.371139e-09, 0.26720843, -0.92393035, -0.3217395)
-mesh = ExtResource("6_5stf6")
-surface_material_override/0 = SubResource("StandardMaterial3D_u8wmi")
 
 [node name="palm2" type="MeshInstance3D" parent="." unique_id=2037992206]
 transform = Transform3D(-4.371139e-09, 0, 0.1, 0, 0.09999999, 0, -0.1, 0, -4.371139e-09, -0.0029781237, 0.28917417, -0.32060456)

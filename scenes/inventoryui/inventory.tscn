@@ -27,3 +27,31 @@ layout_mode = 2
 [node name="Slot4" type="Label" parent="MarginContainer/HBoxContainer" unique_id=2074804023]
 custom_minimum_size = Vector2(150, 60)
 layout_mode = 2
+
+[node name="InventoryPanel" type="PanelContainer" parent="." unique_id=1549992541]
+visible = false
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="MarginContainer" type="MarginContainer" parent="InventoryPanel" unique_id=1988411817]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="InventoryPanel/MarginContainer" unique_id=1906088636]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="InventoryPanel/MarginContainer/VBoxContainer" unique_id=323063307]
+layout_mode = 2
+
+[node name="ItemList" type="ItemList" parent="InventoryPanel/MarginContainer/VBoxContainer" unique_id=170117703]
+custom_minimum_size = Vector2(350, 400)
+layout_mode = 2
+
+[node name="CraftList" type="ItemList" parent="InventoryPanel/MarginContainer/VBoxContainer" unique_id=2116318541]
+custom_minimum_size = Vector2(350, 400)
+layout_mode = 2
+
+[node name="CRAFTING" type="Label" parent="InventoryPanel/MarginContainer/VBoxContainer" unique_id=1938822854]
+layout_mode = 2
+
+[node name="Hint" type="Label" parent="InventoryPanel/MarginContainer/VBoxContainer" unique_id=1773053016]
+layout_mode = 2
