@@ -1,0 +1,73 @@
+[gd_scene format=3 uid="uid://q85tanjnf3rt"]
+
+[ext_resource type="PackedScene" path="res://assets/player/RogueModel.tscn" id="2_4kuee"]
+[ext_resource type="Script" path="res://core/player/PlayerController.gd" id="1_controller"]
+[ext_resource type="Script" path="res://core/inventory/Inventory.gd" id="2_inventory"]
+[ext_resource type="Script" path="res://core/player/VoxelInteractor.gd" id="3_interactor"]
+[ext_resource type="Script" path="res://core/player/PlayerVisual.gd" id="4_visual"]
+[ext_resource type="Texture2D" path="res://assets/generated/pistol.png" id="5_pistol_texture"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_player"]
+radius = 0.4
+height = 1.9
+
+[sub_resource type="BoxMesh" id="BoxMesh_hand"]
+size = Vector3(0.32, 0.22, 0.32)
+
+[sub_resource type="StandardMaterial3D" id="Mat_skin"]
+albedo_color = Color(0.56, 0.36, 0.22, 1)
+
+[node name="Player" type="CharacterBody3D" unique_id=444961606 groups=["player_character"]]
+script = ExtResource("1_controller")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1863161501]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.95, 0)
+shape = SubResource("CapsuleShape3D_player")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=895782775]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.58, -0.4971416)
+current = true
+
+[node name="RayCast3D" type="RayCast3D" parent="Camera3D" unique_id=540717086]
+target_position = Vector3(0, 0, -10)
+
+[node name="VoxelViewer" type="VoxelViewer" parent="Camera3D" unique_id=843170432]
+view_distance = 64
+
+[node name="FirstPersonHand" type="MeshInstance3D" parent="Camera3D" unique_id=19571399]
+visible = false
+cast_shadow = 0
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.48, -0.37, -0.82)
+mesh = SubResource("BoxMesh_hand")
+surface_material_override/0 = SubResource("Mat_skin")
+
+[node name="FirstPersonTool" type="Sprite3D" parent="Camera3D" unique_id=918549743]
+visible = false
+cast_shadow = 0
+transform = Transform3D(0.9135454, 0.40673664, 0, -0.40673664, 0.9135454, 0, 0, 0, 1, 0.46, -0.39, -0.95)
+pixel_size = 0.032
+texture_filter = 1
+
+[node name="FirstPersonPistol" type="Sprite3D" parent="Camera3D" unique_id=2100000002]
+cast_shadow = 0
+transform = Transform3D(0.9135454, 0.40673664, 0, -0.40673664, 0.9135454, 0, 0, 0, 1, 0.44, -0.17, -0.8)
+visible = false
+flip_h = true
+pixel_size = 0.011
+no_depth_test = true
+texture_filter = 1
+render_priority = 100
+texture = ExtResource("5_pistol_texture")
+
+[node name="Inventory" type="Node" parent="." unique_id=1751967946 groups=["player"]]
+script = ExtResource("2_inventory")
+
+[node name="VoxelInteractor" type="Node" parent="." unique_id=966451806]
+script = ExtResource("3_interactor")
+
+[node name="PlayerVisual" type="Node3D" parent="." unique_id=1463078501]
+script = ExtResource("4_visual")
+held_tool_path = NodePath("Body/PoseRoot/Rogue/Rig_Medium/Skeleton3D/RightHand/HeldTool")
+pistol_path = NodePath("Body/PoseRoot/Rogue/Rig_Medium/Skeleton3D/RightHand/Pistol")
+
+[node name="Body" parent="PlayerVisual" instance=ExtResource("2_4kuee")]

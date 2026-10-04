@@ -1,0 +1,99 @@
+[gd_scene format=3 uid="uid://bq2u12d3tgb5o"]
+
+[ext_resource type="Script" uid="uid://bq7fndd5r8osb" path="res://core/ui/MainMenu.gd" id="1_menu"]
+
+[node name="MainMenu" type="ScrollContainer" unique_id=1023226139]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_menu")
+
+[node name="Center" type="CenterContainer" parent="." unique_id=1035042152]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="VBox" type="VBoxContainer" parent="Center" unique_id=885721733]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="Title" type="Label" parent="Center/VBox" unique_id=2086657117]
+layout_mode = 2
+text = "Powered by GO.VW"
+
+[node name="WorldHeading" type="Label" parent="Center/VBox"]
+layout_mode = 2
+text = "Choose World"
+
+[node name="WorldList" type="ItemList" parent="Center/VBox"]
+custom_minimum_size = Vector2(560, 115)
+layout_mode = 2
+
+[node name="WorldInfo" type="Label" parent="Center/VBox"]
+layout_mode = 2
+text = "Select a world"
+
+[node name="Refresh" type="Button" parent="Center/VBox"]
+layout_mode = 2
+text = "Refresh Worlds"
+
+[node name="Delete" type="Button" parent="Center/VBox"]
+layout_mode = 2
+size_flags_horizontal = 0
+disabled = true
+text = "Delete Selected World…"
+
+[node name="DeleteConfirmation" type="ConfirmationDialog" parent="."]
+title = "Delete world permanently?"
+size = Vector2i(540, 220)
+exclusive = true
+ok_button_text = "Delete Permanently"
+cancel_button_text = "Cancel"
+
+[node name="WorldName" type="LineEdit" parent="Center/VBox"]
+layout_mode = 2
+placeholder_text = "New world name"
+
+[node name="Seed" type="LineEdit" parent="Center/VBox"]
+layout_mode = 2
+text = "1337"
+placeholder_text = "Signed integer seed"
+
+[node name="Create" type="Button" parent="Center/VBox"]
+layout_mode = 2
+text = "Create New World"
+
+[node name="Status" type="Label" parent="Center/VBox"]
+custom_minimum_size = Vector2(560, 40)
+layout_mode = 2
+autowrap_mode = 2
+
+[node name="Host" type="Button" parent="Center/VBox" unique_id=1124622052]
+layout_mode = 2
+text = "Host Selected World"
+
+[node name="IP" type="LineEdit" parent="Center/VBox" unique_id=1916602418]
+layout_mode = 2
+placeholder_text = "127.0.0.1"
+
+[node name="Join" type="Button" parent="Center/VBox" unique_id=103466476]
+layout_mode = 2
+text = "Join"
+
+[node name="Mods" type="Button" parent="Center/VBox" unique_id=40696347]
+layout_mode = 2
+text = "Show Mods"
+
+[node name="ModsInfo" type="Label" parent="Center/VBox" unique_id=834252853]
+visible = false
+custom_minimum_size = Vector2(560, 0)
+layout_mode = 2
+autowrap_mode = 2
+text = "Loaded mods:"
+
+[node name="Quit" type="Button" parent="Center/VBox" unique_id=2054520910]
+layout_mode = 2
+text = "Quit"

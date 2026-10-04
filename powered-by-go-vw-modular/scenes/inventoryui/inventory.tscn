@@ -1,0 +1,41 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://core/ui/InventoryUI.gd" id="1_ui"]
+
+[node name="InventoryUI" type="CanvasLayer"]
+script = ExtResource("1_ui")
+
+[node name="Hotbar" type="HBoxContainer" parent="."]
+offset_left = -296.0
+offset_top = -92.0
+offset_right = 296.0
+offset_bottom = -12.0
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = 4
+
+[node name="InventoryPanel" type="PanelContainer" parent="."]
+visible = false
+offset_left = 40.0
+offset_top = 100.0
+offset_right = 500.0
+offset_bottom = 620.0
+
+[node name="Box" type="VBoxContainer" parent="InventoryPanel"]
+theme_override_constants/separation = 8
+
+[node name="Title" type="Label" parent="InventoryPanel/Box"]
+text = "Inventory"
+
+[node name="ItemList" type="ItemList" parent="InventoryPanel/Box"]
+custom_minimum_size = Vector2(400, 250)
+
+[node name="CraftList" type="ItemList" parent="InventoryPanel/Box"]
+custom_minimum_size = Vector2(400, 150)
+
+[node name="Hint" type="Label" parent="InventoryPanel/Box"]
+text = "Select an item."

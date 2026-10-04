@@ -1,0 +1,4 @@
+[gd_resource type="VoxelBlockyModelEmpty" format=3]
+
+[resource]
+resource_name = "air"

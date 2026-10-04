@@ -1,0 +1,332 @@
+{
+  "content/core/models/dirt.tres": {
+    "side": "dirt",
+    "top": "dirt",
+    "bottom": "dirt",
+    "tint": null
+  },
+  "content/core/models/stone.tres": {
+    "side": "stone",
+    "top": "stone",
+    "bottom": "stone",
+    "tint": null
+  },
+  "content/core/models/sand.tres": {
+    "side": "sand",
+    "top": "sand",
+    "bottom": "sand",
+    "tint": null
+  },
+  "content/core/models/snow.tres": {
+    "side": "snow",
+    "top": "snow",
+    "bottom": "snow",
+    "tint": null
+  },
+  "content/core/models/gravel.tres": {
+    "side": "gravel",
+    "top": "gravel",
+    "bottom": "gravel",
+    "tint": null
+  },
+  "content/core/models/bedrock.tres": {
+    "side": "bedrock",
+    "top": "bedrock",
+    "bottom": "bedrock",
+    "tint": null
+  },
+  "content/core/models/ice.tres": {
+    "side": "ice",
+    "top": "ice",
+    "bottom": "ice",
+    "tint": null
+  },
+  "content/core/models/iron.tres": {
+    "side": "iron_ore",
+    "top": "iron_ore",
+    "bottom": "iron_ore",
+    "tint": null
+  },
+  "content/core/models/coal.tres": {
+    "side": "coal_ore",
+    "top": "coal_ore",
+    "bottom": "coal_ore",
+    "tint": null
+  },
+  "content/core/models/gold.tres": {
+    "side": "gold_ore",
+    "top": "gold_ore",
+    "bottom": "gold_ore",
+    "tint": null
+  },
+  "content/core/models/diamond.tres": {
+    "side": "diamond_ore",
+    "top": "diamond_ore",
+    "bottom": "diamond_ore",
+    "tint": null
+  },
+  "content/core/models/grass.tres": {
+    "side": "grass_block_side",
+    "top": "grass_block_top",
+    "bottom": "dirt",
+    "tint": [
+      125,
+      182,
+      70
+    ]
+  },
+  "content/core/models/log.tres": {
+    "side": "oak_log",
+    "top": "oak_log_top",
+    "bottom": "oak_log_top",
+    "tint": null
+  },
+  "content/core/models/leaves.tres": {
+    "side": "oak_leaves",
+    "top": "oak_leaves",
+    "bottom": "oak_leaves",
+    "tint": [
+      94,
+      156,
+      59
+    ]
+  },
+  "content/core/models/sandstone.tres": {
+    "side": "sandstone",
+    "top": "sandstone_top",
+    "bottom": "sandstone_bottom",
+    "tint": null
+  },
+  "content/core/models/cactus.tres": {
+    "side": "cactus_side",
+    "top": "cactus_top",
+    "bottom": "cactus_bottom",
+    "tint": null
+  },
+  "content/core/models/flower_red.tres": {
+    "side": "poppy",
+    "top": "poppy",
+    "bottom": "poppy",
+    "tint": null
+  },
+  "content/core/models/flower_yellow.tres": {
+    "side": "dandelion",
+    "top": "dandelion",
+    "bottom": "dandelion",
+    "tint": null
+  },
+  "content/core/models/tall_grass.tres": {
+    "side": "grass",
+    "top": "grass",
+    "bottom": "grass",
+    "tint": [
+      125,
+      182,
+      70
+    ]
+  },
+  "content/core/models/water.tres": {
+    "side": "water_still",
+    "top": "water_still",
+    "bottom": "water_still",
+    "tint": [
+      64,
+      130,
+      225
+    ]
+  },
+  "mods/frontier_survival/models/copper_ore.tres": {
+    "side": "copper_ore",
+    "top": "copper_ore",
+    "bottom": "copper_ore",
+    "tint": null
+  },
+  "mods/frontier_survival/models/tin_ore.tres": {
+    "side": "iron_ore",
+    "top": "iron_ore",
+    "bottom": "iron_ore",
+    "tint": [
+      195,
+      225,
+      239
+    ]
+  },
+  "mods/frontier_survival/models/silver_ore.tres": {
+    "side": "iron_ore",
+    "top": "iron_ore",
+    "bottom": "iron_ore",
+    "tint": [
+      220,
+      232,
+      255
+    ]
+  },
+  "mods/frontier_survival/models/mese_ore.tres": {
+    "side": "gold_ore",
+    "top": "gold_ore",
+    "bottom": "gold_ore",
+    "tint": null
+  },
+  "mods/frontier_survival/models/murexium_ore.tres": {
+    "side": "diamond_ore",
+    "top": "diamond_ore",
+    "bottom": "diamond_ore",
+    "tint": [
+      217,
+      153,
+      255
+    ]
+  },
+  "mods/frontier_survival/models/copper_block.tres": {
+    "side": "copper_block",
+    "top": "copper_block",
+    "bottom": "copper_block",
+    "tint": null
+  },
+  "mods/frontier_survival/models/tin_block.tres": {
+    "side": "iron_block",
+    "top": "iron_block",
+    "bottom": "iron_block",
+    "tint": [
+      195,
+      225,
+      239
+    ]
+  },
+  "mods/frontier_survival/models/bronze_block.tres": {
+    "side": "copper_block",
+    "top": "copper_block",
+    "bottom": "copper_block",
+    "tint": [
+      230,
+      205,
+      139
+    ]
+  },
+  "mods/frontier_survival/models/steel_block.tres": {
+    "side": "iron_block",
+    "top": "iron_block",
+    "bottom": "iron_block",
+    "tint": [
+      157,
+      168,
+      181
+    ]
+  },
+  "mods/frontier_survival/models/silver_block.tres": {
+    "side": "iron_block",
+    "top": "iron_block",
+    "bottom": "iron_block",
+    "tint": null
+  },
+  "mods/frontier_survival/models/mese_block.tres": {
+    "side": "gold_block",
+    "top": "gold_block",
+    "bottom": "gold_block",
+    "tint": null
+  },
+  "mods/frontier_survival/models/murexium_block.tres": {
+    "side": "amethyst_block",
+    "top": "amethyst_block",
+    "bottom": "amethyst_block",
+    "tint": null
+  },
+  "mods/frontier_survival/models/obsidian_brick.tres": {
+    "side": "polished_blackstone_bricks",
+    "top": "polished_blackstone_bricks",
+    "bottom": "polished_blackstone_bricks",
+    "tint": [
+      190,
+      170,
+      225
+    ]
+  },
+  "mods/frontier_survival/models/granite_brick.tres": {
+    "side": "stone_bricks",
+    "top": "stone_bricks",
+    "bottom": "stone_bricks",
+    "tint": [
+      224,
+      185,
+      166
+    ]
+  },
+  "mods/frontier_survival/models/dark_plank.tres": {
+    "side": "spruce_planks",
+    "top": "spruce_planks",
+    "bottom": "spruce_planks",
+    "tint": null
+  },
+  "mods/frontier_survival/models/weathered_plank.tres": {
+    "side": "oak_planks",
+    "top": "oak_planks",
+    "bottom": "oak_planks",
+    "tint": [
+      185,
+      182,
+      171
+    ]
+  },
+  "mods/frontier_survival/models/cherry_plank.tres": {
+    "side": "birch_planks",
+    "top": "birch_planks",
+    "bottom": "birch_planks",
+    "tint": [
+      255,
+      181,
+      188
+    ]
+  },
+  "mods/frontier_survival/models/ebony_plank.tres": {
+    "side": "dark_oak_planks",
+    "top": "dark_oak_planks",
+    "bottom": "dark_oak_planks",
+    "tint": null
+  },
+  "mods/frontier_survival/models/badland_grass.tres": {
+    "side": "grass_block_side",
+    "top": "grass_block_top",
+    "bottom": "dirt",
+    "tint": [
+      181,
+      155,
+      74
+    ]
+  },
+  "mods/frontier_survival/models/prairie_grass.tres": {
+    "side": "grass_block_side",
+    "top": "grass_block_top",
+    "bottom": "dirt",
+    "tint": [
+      150,
+      191,
+      78
+    ]
+  },
+  "mods/frontier_survival/models/japanese_grass.tres": {
+    "side": "grass_block_side",
+    "top": "grass_block_top",
+    "bottom": "dirt",
+    "tint": [
+      91,
+      167,
+      71
+    ]
+  },
+  "mods/frontier_survival/models/bamboo_grass.tres": {
+    "side": "grass_block_side",
+    "top": "grass_block_top",
+    "bottom": "dirt",
+    "tint": [
+      94,
+      194,
+      91
+    ]
+  },
+  "mods/frontier_survival/models/frost_grass.tres": {
+    "side": "grass_block_snow",
+    "top": "snow",
+    "bottom": "dirt",
+    "tint": null
+  }
+}

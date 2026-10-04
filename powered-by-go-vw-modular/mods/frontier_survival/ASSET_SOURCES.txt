@@ -1,0 +1,8 @@
+Supplied asset packs used by this build:
+- 8x_tp_5664.zip
+- assorted_textures_1.zip
+- assorted_textures_2.zip
+
+Original filenames were normalized when copied into the mod.
+No external license assertion is made here; retain the provenance/licensing
+information associated with the supplied packs when redistributing the mod.

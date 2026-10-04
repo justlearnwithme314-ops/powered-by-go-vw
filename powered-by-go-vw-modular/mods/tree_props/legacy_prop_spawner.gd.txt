@@ -1,0 +1,605 @@
+extends GameMod
+## Replaces the old blocky worldgen trees with the imported 3D tree models.
+##
+## The core "core:trees" worldgen stage no longer runs. This mod re-derives
+## the exact same deterministic tree spots around the local player using the
+## shared WorldNoise and spawns the matching model variant as a prop.
+##
+## Trees are pure props: they write no voxel blocks (any leftover log trunk
+## is cleared on spawn), they can be felled by hitting them repeatedly, the
+## wood_hit sound plays on every hit, and props hidden behind terrain stop
+## rendering while the player cannot see them.
+
+const TREE_MESH_PATH := "res://assets/3d/trees/voxel_tree.obj"
+const PALETTE_PATH := "res://assets/3d/trees/Textures/mdgm7dr3.png"
+const SOUND_PATH := "res://assets/sounds/wood_hit.mp3"
+
+const AIR := "core:air"
+const LOG := "core:log"
+const LEAVES := "core:leaves"
+
+const TREE_THRESHOLD := 0.72 # same threshold the old worldgen stage used
+const SCAN_RADIUS := 96
+const FREE_RADIUS := 136
+const RESCAN_INTERVAL := 2.0
+const MIN_SPACING := 4 # minimum Chebyshev distance between spawned trees
+const TRUNK_MIN_DY := 1
+const TRUNK_MAX_DY := 6 # legacy trunks are 4..6 logs tall
+const HIT_REACH := 8.0 # same reach the core block interaction uses
+const HITS_TO_BREAK := 4 # left clicks needed to fell a tree
+const LOS_INTERVAL := 0.35 # seconds between visibility checks
+const LOS_MIN_DISTANCE := 20.0 # never occlusion-cull this close
+const LOS_SLACK := 2.0 # ignore blockers this close to the target
+const LOS_TARGET_HEIGHT := 4.0 # ray aim point above the tree base
+const LOS_TOP_KEY := "los_top" # per-tree canopy-top aim offset
+const DROP_LOG_MIN := 4
+const DROP_LOG_SPREAD := 3 # logs granted on felling: 4..6
+const DROP_LEAF_MIN := 2
+const DROP_LEAF_SPREAD := 3 # leaves granted on felling: 2..4
+
+var _api: ModAPI
+var _world_node: Node3D
+var _noise: WorldNoise
+var _player: Node3D
+var _spawner: Node3D
+var _variants: Array = []
+var _offsets: Array = []
+var _material: StandardMaterial3D
+var _wood_sound: AudioStream
+var _spawned: Dictionary = {} # Vector2i(x, z) -> Area3D holding mesh + hitbox
+var _cleaned: Dictionary = {} # Vector2i(x, z) -> grass y, -1 = no grass
+var _tree_pos: Array[Vector2i] = [] # pinned tree columns, persisted in mod storage
+var _tree_pos_set: Dictionary = {} # Vector2i -> true, lookup for _tree_pos
+var _pin_dirty := false
+var _hits: Dictionary = {} # Vector2i(x, z) -> hits taken this session
+var _destroyed: Dictionary = {} # Vector2i(x, z) -> true, felled and persisted
+var _destroyed_dirty := false
+
+
+## GameMod is RefCounted, so input handling needs a scene-tree node of our own.
+class TreeInput extends Node:
+	var mod = null
+
+	func _input(event: InputEvent) -> void:
+		if mod != null:
+			mod._on_tree_input(event)
+
+
+func register(api: ModAPI) -> void:
+	_api = api
+	api.on(GameEvents.WORLD_READY, Callable(self, "_on_world_ready"))
+	api.on(GameEvents.WORLD_STOPPING, Callable(self, "_on_world_stopping"))
+	api.on(GameEvents.PLAYER_SPAWNED, Callable(self, "_on_player_spawned"))
+	api.on(GameEvents.PLAYER_DESPAWNED, Callable(self, "_on_player_despawned"))
+
+
+func _on_world_ready(event: Dictionary) -> Dictionary:
+	_world_node = event.get("world") as Node3D
+	var world_seed := int(event.get("seed", 1337))
+	_noise = WorldNoise.new(world_seed)
+	_spawned.clear()
+	_cleaned.clear()
+	_hits.clear()
+	_tree_pos.clear()
+	_tree_pos_set.clear()
+	_destroyed.clear()
+	var stored = _api.storage.get_value("trees", [])
+	if stored is Array:
+		for entry in stored:
+			if entry is Array and entry.size() >= 2:
+				var p := Vector2i(int(entry[0]), int(entry[1]))
+				_tree_pos.append(p)
+				_tree_pos_set[p] = true
+	var felled = _api.storage.get_value("destroyed", [])
+	if felled is Array:
+		for entry in felled:
+			if entry is Array and entry.size() >= 2:
+				_destroyed[Vector2i(int(entry[0]), int(entry[1]))] = true
+	_prepare_assets()
+
+	if _world_node == null or _variants.is_empty():
+		return event
+
+	_spawner = Node3D.new()
+	_spawner.name = "TreeProps"
+	_world_node.add_child(_spawner)
+
+	var rescan := Timer.new()
+	rescan.wait_time = RESCAN_INTERVAL
+	rescan.autostart = true
+	rescan.timeout.connect(_rescan)
+	_spawner.add_child(rescan)
+
+	var los := Timer.new()
+	los.wait_time = LOS_INTERVAL
+	los.autostart = true
+	los.timeout.connect(_update_visibility)
+	_spawner.add_child(los)
+
+	var watcher := TreeInput.new()
+	watcher.mod = self
+	_spawner.add_child(watcher)
+	return event
+
+
+func _on_world_stopping(event: Dictionary) -> Dictionary:
+	_world_node = null
+	_noise = null
+	_spawner = null
+	_player = null
+	_spawned.clear()
+	_cleaned.clear()
+	_hits.clear()
+	return event
+
+
+func _on_player_spawned(event: Dictionary) -> Dictionary:
+	var player := event.get("player") as Node3D
+	if player == null or not player.is_multiplayer_authority():
+		return event
+	_player = player
+	_api.log(
+		("[SPAWN] t=%.1f p=(%.1f, %.1f, %.1f) yaw=%.2f"
+		+ " spawnpt=(%.1f, %.1f, %.1f)")
+		% [
+			Time.get_ticks_msec() / 1000.0,
+			player.global_position.x, player.global_position.y,
+			player.global_position.z, player.rotation.y,
+			(GameAPI.session as Node).get("spawn_point").global_position.x,
+			(GameAPI.session as Node).get("spawn_point").global_position.y,
+			(GameAPI.session as Node).get("spawn_point").global_position.z,
+		]
+	)
+	_rescan()
+	return event
+
+
+func _on_player_despawned(event: Dictionary) -> Dictionary:
+	if (event.get("player") as Node3D) == _player:
+		_player = null
+	return event
+
+
+func _prepare_assets() -> void:
+	if not _variants.is_empty():
+		return
+
+	var source := _api.load_asset(TREE_MESH_PATH) as ArrayMesh
+	if source == null:
+		_api.log("[TreeProps] Missing mesh: %s" % TREE_MESH_PATH)
+		return
+
+	for surface_index in source.get_surface_count():
+		var arrays := source.surface_get_arrays(surface_index)
+		var mesh := ArrayMesh.new()
+		mesh.add_surface_from_arrays(Mesh.PRIMITIVE_TRIANGLES, arrays)
+		var aabb := mesh.get_aabb()
+		_variants.append(mesh)
+		_offsets.append(Vector3(
+			-aabb.get_center().x,
+			-aabb.position.y,
+			-aabb.get_center().z
+		))
+
+	_material = StandardMaterial3D.new()
+	var palette: Variant = _api.load_asset(PALETTE_PATH)
+	if palette is Texture2D:
+		_material.albedo_texture = palette
+	else:
+		_api.log("[TreeProps] Missing palette: %s" % PALETTE_PATH)
+	_material.texture_filter = BaseMaterial3D.TEXTURE_FILTER_NEAREST
+	_material.roughness = 1.0
+
+	_wood_sound = _load_sound()
+	if _wood_sound == null:
+		_api.log("[TreeProps] Missing sound: %s" % SOUND_PATH)
+
+	_api.log("[TreeProps] Loaded %d tree variants." % _variants.size())
+
+
+func _log_nav() -> void:
+	# TEMPORARY test telemetry: nearest spawned tree + aim corrections.
+	if _spawned.is_empty():
+		return
+	var cam := _spawner.get_viewport().get_camera_3d()
+	var yaw := _player.rotation.y
+	var pitch := cam.rotation.x if cam != null else 0.0
+	var p := _player.global_position
+	var best_pos := Vector2i.ZERO
+	var best_d := 1.0e9
+	var best_dx := 0.0
+	var best_dz := 0.0
+	for pos: Vector2i in _spawned:
+		var node: Variant = _spawned[pos]
+		if not (node is Node3D) or not is_instance_valid(node):
+			continue
+		var t := (node as Node3D).global_position
+		var dx := t.x - p.x
+		var dz := t.z - p.z
+		var d := sqrt(dx * dx + dz * dz)
+		if d < best_d:
+			best_d = d
+			best_pos = pos
+			best_dx = dx
+			best_dz = dz
+	var yaw_needed := atan2(best_dx, best_dz) - PI
+	var diff := fmod(yaw - yaw_needed + PI, TAU)
+	if diff < 0.0:
+		diff += TAU
+	diff -= PI
+	var ground := int(_cleaned.get(best_pos, 32))
+	var aim := float(ground) + 5.5
+	var pitch_needed := atan2(aim - (p.y + 1.6), best_d)
+	var dy_needed := -(pitch_needed - pitch) / 0.002
+	var fwd := Input.is_action_pressed("move_forward")
+	var spd := float(_player.get("speed"))
+	_api.log(
+		("[NAV] t=%.1f p=(%.1f, %.1f, %.1f) yaw=%.2f pitch=%.2f"
+		+ " spd=%.1f fwd=%d cap=%d | tree=%s d=%.1f dx_need=%.0f dy_need=%.0f")
+		% [
+			Time.get_ticks_msec() / 1000.0,
+			p.x, p.y, p.z, yaw, pitch, spd, 1 if fwd else 0,
+			1 if Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED else 0,
+			best_pos, best_d, diff / 0.002, dy_needed,
+		]
+	)
+
+
+func _rescan() -> void:
+	if _player == null or _noise == null or _spawner == null:
+		return
+	if _api == null or not _api.world.is_ready() or _variants.is_empty():
+		return
+
+	var px := int(floor(_player.global_position.x))
+	var pz := int(floor(_player.global_position.z))
+
+	# Pass 1: same deterministic candidates the old worldgen stage used.
+	var candidates: Array[Vector2i] = []
+	for dz in range(-SCAN_RADIUS, SCAN_RADIUS + 1):
+		for dx in range(-SCAN_RADIUS, SCAN_RADIUS + 1):
+			var cx := px + dx
+			var cz := pz + dz
+			if _noise.trees.get_noise_2d(cx, cz) >= TREE_THRESHOLD:
+				candidates.append(Vector2i(cx, cz))
+	candidates.sort_custom(_sort_pos)
+
+	# Pass 2: pinned tree columns first (stable layout across sessions), then
+	# any column that already holds a persisted trunk, then fresh spots under
+	# the spacing rule. Everything accepted is pinned for future sessions.
+	var accepted: Array[Vector2i] = []
+	var fresh: Array[Vector2i] = []
+	for pos in candidates:
+		if _destroyed.has(pos):
+			continue # the player felled this tree
+		var ground := _ground_for(pos)
+		if ground < 0:
+			continue # not streamed in yet, or snow/sand biome
+		if _tree_pos_set.has(pos) or _has_trunk(pos.x, ground, pos.y):
+			if _can_build_column(pos.x, ground, pos.y):
+				accepted.append(pos)
+				_pin(pos)
+			else:
+				# Legacy trunk whose column can no longer host a tree.
+				_clear_trunk(pos.x, ground, pos.y)
+			continue
+		fresh.append(pos)
+	for pos in fresh:
+		var ground := int(_cleaned[pos])
+		if _spacing_blocked(pos, accepted):
+			continue
+		if not _can_build_column(pos.x, ground, pos.y):
+			continue
+		accepted.append(pos)
+		_pin(pos)
+
+	# Pass 3: spawn the prop meshes, clearing any legacy log trunk first.
+	for pos in accepted:
+		_spawn_at(pos)
+
+	_free_distant(px, pz)
+
+	_flush_storage()
+	_log_nav()
+
+
+func _pin(pos: Vector2i) -> void:
+	if _tree_pos_set.has(pos):
+		return
+	_tree_pos.append(pos)
+	_tree_pos_set[pos] = true
+	_pin_dirty = true
+
+
+func _on_tree_input(event: InputEvent) -> void:
+	if _spawner == null or _player == null:
+		return
+	if not (event is InputEventMouseButton):
+		return
+	var click := event as InputEventMouseButton
+	if not click.pressed or click.button_index != MOUSE_BUTTON_LEFT:
+		return
+	if Input.get_mouse_mode() != Input.MOUSE_MODE_CAPTURED:
+		return
+	var camera := _spawner.get_viewport().get_camera_3d()
+	if camera == null:
+		return
+	var query := PhysicsRayQueryParameters3D.create(
+		camera.global_position,
+		camera.global_position - camera.global_transform.basis.z * HIT_REACH
+	)
+	query.collide_with_areas = true
+	if _player is CollisionObject3D:
+		var exclude: Array[RID] = [(_player as CollisionObject3D).get_rid()]
+		query.exclude = exclude
+	var hit: Dictionary = _spawner.get_world_3d().direct_space_state.intersect_ray(query)
+	if hit.is_empty():
+		return
+	var tree := hit.get("collider") as Node
+	if tree == null or not tree.has_meta("tree_pos"):
+		return
+	# The tree took this click, so the terrain behind it stays intact.
+	_spawner.get_viewport().set_input_as_handled()
+	_hit_tree(tree)
+
+
+func _hit_tree(tree: Node) -> void:
+	var pos: Vector2i = tree.get_meta("tree_pos")
+	_hits[pos] = int(_hits.get(pos, 0)) + 1
+	_play_sound(tree)
+	if int(_hits[pos]) < HITS_TO_BREAK:
+		return
+	_fell_tree(pos, tree)
+
+
+func _fell_tree(pos: Vector2i, tree: Node) -> void:
+	_hits.erase(pos)
+	_spawned.erase(pos)
+	if is_instance_valid(tree):
+		tree.queue_free()
+	if _tree_pos_set.has(pos):
+		_tree_pos.erase(pos)
+		_tree_pos_set.erase(pos)
+		_pin_dirty = true
+	_destroyed[pos] = true
+	_destroyed_dirty = true
+	_flush_storage()
+	_grant_felling_drops(pos)
+	_api.log("[TreeProps] Felled tree at %s" % pos)
+
+
+func _grant_felling_drops(pos: Vector2i) -> void:
+	if _player == null:
+		return
+	var inventory := _player.get_node_or_null("Inventory") as Inventory
+	if inventory == null:
+		return
+	var logs := DROP_LOG_MIN + absi(hash(pos)) % DROP_LOG_SPREAD
+	var leaves := DROP_LEAF_MIN + absi(hash(pos)) % DROP_LEAF_SPREAD
+	if not inventory.add_item(LOG, logs):
+		_api.log("[TreeProps] Could not add %d %s" % [logs, LOG])
+	if not inventory.add_item(LEAVES, leaves):
+		_api.log("[TreeProps] Could not add %d %s" % [leaves, LEAVES])
+
+
+func _play_sound(tree: Node) -> void:
+	if _wood_sound == null or not (tree is Node3D):
+		return
+	var player := AudioStreamPlayer3D.new()
+	player.stream = _wood_sound
+	player.unit_size = 6.0
+	player.max_distance = 48.0
+	_spawner.add_child(player)
+	player.global_position = (tree as Node3D).global_position + Vector3(0.0, 3.0, 0.0)
+	player.finished.connect(player.queue_free)
+	player.play()
+
+
+func _update_visibility() -> void:
+	if _spawner == null or _player == null:
+		return
+	var camera := _spawner.get_viewport().get_camera_3d()
+	if camera == null:
+		return
+	var eye := camera.global_position
+	for pos: Vector2i in _spawned:
+		var node: Variant = _spawned[pos]
+		if not (node is Node3D) or not is_instance_valid(node):
+			continue
+		var body := node as Node3D
+		var mid := body.global_position + Vector3(0.0, LOS_TARGET_HEIGHT, 0.0)
+		if eye.distance_to(mid) <= LOS_MIN_DISTANCE:
+			body.visible = true # never hide trees the player is close to
+			continue
+		var seen := _ray_clear(eye, mid, body)
+		if seen:
+			# A second ray to the canopy top keeps trees visible when only
+			# their crown peeks over terrain or terrain steps.
+			var top_offset: Vector3 = body.get_meta(
+				LOS_TOP_KEY, Vector3(0.0, LOS_TARGET_HEIGHT, 0.0)
+			)
+			seen = _ray_clear(eye, body.global_position + top_offset, body)
+		body.visible = seen
+
+
+func _ray_clear(eye: Vector3, target: Vector3, body: Node3D) -> bool:
+	var dist := eye.distance_to(target)
+	var query := PhysicsRayQueryParameters3D.create(eye, target)
+	query.collide_with_areas = true
+	var exclude: Array[RID] = []
+	if body is CollisionObject3D:
+		exclude.append((body as CollisionObject3D).get_rid())
+	if _player is CollisionObject3D:
+		exclude.append((_player as CollisionObject3D).get_rid())
+	query.exclude = exclude
+	var hit: Dictionary = _spawner.get_world_3d().direct_space_state.intersect_ray(query)
+	if hit.is_empty():
+		return true
+	var blocker := eye.distance_to(hit["position"] as Vector3)
+	return blocker >= dist - LOS_SLACK
+
+
+func _clear_trunk(x: int, ground: int, z: int) -> void:
+	# Older versions grew a log column here; trees are props now.
+	for dy in range(TRUNK_MIN_DY, TRUNK_MAX_DY + 1):
+		var p := Vector3i(x, ground + dy, z)
+		if _api.world.get_block_id(p) == LOG:
+			_api.world.set_block(p, AIR)
+
+
+func _load_sound() -> AudioStream:
+	# Prefer the imported resource once the editor has scanned the file.
+	if FileAccess.file_exists(SOUND_PATH + ".import"):
+		var imported = _api.load_asset(SOUND_PATH)
+		if imported is AudioStream:
+			return imported
+	# Decode the raw mp3 so the sound works before the first import too.
+	var file := FileAccess.open(SOUND_PATH, FileAccess.READ)
+	if file == null:
+		return null
+	var stream := AudioStreamMP3.new()
+	stream.data = file.get_buffer(file.get_length())
+	return stream
+
+
+func _flush_storage() -> void:
+	if not _pin_dirty and not _destroyed_dirty:
+		return
+	var arr: Array = []
+	for p in _tree_pos:
+		arr.append([p.x, p.y])
+	_api.storage.set_value("trees", arr)
+	var dead: Array = []
+	for p in _destroyed:
+		dead.append([p.x, p.y])
+	_api.storage.set_value("destroyed", dead)
+	_api.save_storage()
+	_pin_dirty = false
+	_destroyed_dirty = false
+
+
+func _sort_pos(a: Vector2i, b: Vector2i) -> bool:
+	if a.y != b.y:
+		return a.y < b.y
+	return a.x < b.x
+
+
+func _ground_for(pos: Vector2i) -> int:
+	if _cleaned.has(pos):
+		return int(_cleaned[pos])
+	var ground := _compute_ground(pos.x, pos.y)
+	# -2 means the surface chunk has not streamed in yet; retry those only.
+	if ground != -2:
+		_cleaned[pos] = ground
+	return ground
+
+
+func _compute_ground(x: int, z: int) -> int:
+	# Same surface and biome math as the core terrain stage, so placement
+	# needs no voxel scan and is immune to partial chunk streaming.
+	var temperature := _noise.temperature.get_noise_2d(x, z)
+	if temperature < -0.15:
+		return -1 # snow surface
+	if temperature > 0.45 and _noise.humidity.get_noise_2d(x, z) < 0.0:
+		return -1 # sand surface
+	var surface := int(_noise.terrain.get_noise_2d(x, z) * 24.0) + 32
+	if _api.world.get_block_id(Vector3i(x, surface, z)) == AIR:
+		return -2 # surface chunk not streamed in yet
+	return surface
+
+
+func _spacing_blocked(pos: Vector2i, accepted: Array[Vector2i]) -> bool:
+	for other: Vector2i in accepted:
+		if _too_close(pos, other):
+			return true
+	for other: Vector2i in _spawned:
+		if _too_close(pos, other):
+			return true
+	# Felled spots stay clear so no neighbour fills the hole.
+	for other: Vector2i in _destroyed:
+		if _too_close(pos, other):
+			return true
+	return false
+
+
+func _too_close(a: Vector2i, b: Vector2i) -> bool:
+	return absi(a.x - b.x) < MIN_SPACING and absi(a.y - b.y) < MIN_SPACING
+
+
+func _spawn_at(pos: Vector2i) -> void:
+	if _spawned.has(pos) or not _cleaned.has(pos):
+		return
+	var ground := int(_cleaned[pos])
+	if ground < 0:
+		return
+	if not _can_build_column(pos.x, ground, pos.y):
+		return
+	_clear_trunk(pos.x, ground, pos.y)
+
+	var variant := absi(hash(pos)) % _variants.size()
+	var source: ArrayMesh = _variants[variant]
+	var tree := Area3D.new()
+	tree.name = "Tree_%d_%d" % [pos.x, pos.y]
+	tree.position = (
+		Vector3(pos.x + 0.5, float(ground + 1), pos.y + 0.5)
+		+ _offsets[variant]
+	)
+	var mesh := MeshInstance3D.new()
+	mesh.mesh = source
+	mesh.material_override = _material
+	tree.add_child(mesh)
+	var shape := CollisionShape3D.new()
+	var box := BoxShape3D.new()
+	var aabb := source.get_aabb()
+	box.size = aabb.size
+	shape.shape = box
+	shape.position = aabb.position + aabb.size * 0.5
+	tree.add_child(shape)
+	tree.set_meta("tree_pos", pos)
+	tree.set_meta(
+		LOS_TOP_KEY,
+		Vector3(aabb.get_center().x, aabb.end.y, aabb.get_center().z)
+	)
+	_spawner.add_child(tree)
+	_spawned[pos] = tree
+	_hits[pos] = 0
+	_api.log("[TreeProps] Spawned tree at %s" % pos)
+
+
+func _can_build_column(x: int, ground: int, z: int) -> bool:
+	return _first_solid(x, ground, z) == ""
+
+
+func _first_solid(x: int, ground: int, z: int) -> String:
+	for dy in range(TRUNK_MIN_DY, TRUNK_MAX_DY + 1):
+		var bid := _api.world.get_block_id(Vector3i(x, ground + dy, z))
+		if not _is_passable(bid):
+			return "%s@%d" % [bid, ground + dy]
+	return ""
+
+
+func _has_trunk(x: int, ground: int, z: int) -> bool:
+	for dy in range(TRUNK_MIN_DY, TRUNK_MAX_DY + 1):
+		if _api.world.get_block_id(Vector3i(x, ground + dy, z)) == LOG:
+			return true
+	return false
+
+
+func _is_passable(bid: String) -> bool:
+	if bid == LOG:
+		return true
+	var def: Dictionary = _api.content.blocks.get(bid, {})
+	return not bool(def.get("solid", true))
+
+
+
+func _free_distant(px: int, pz: int) -> void:
+	var stale: Array = []
+	for pos: Vector2i in _spawned:
+		if absi(pos.x - px) > FREE_RADIUS or absi(pos.y - pz) > FREE_RADIUS:
+			stale.append(pos)
+	for pos: Vector2i in stale:
+		var node: Variant = _spawned[pos]
+		if node is Node and is_instance_valid(node):
+			(node as Node).queue_free()
+		_spawned.erase(pos)

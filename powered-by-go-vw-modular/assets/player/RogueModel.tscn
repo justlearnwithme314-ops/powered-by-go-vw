@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3]
+[ext_resource type="PackedScene" path="res://assets/KayKit_Adventurers_2.0_FREE/Characters/gltf/Rogue.glb" id="1_rogue"]
+[ext_resource type="Script" path="res://assets/player/RogueModel.gd" id="2_adapter"]
+[ext_resource type="Texture2D" path="res://assets/generated/pistol.png" id="3_pistol"]
+
+[node name="Body" type="Node3D"]
+script = ExtResource("2_adapter")
+[node name="PoseRoot" type="Node3D" parent="."]
+[node name="Rogue" parent="PoseRoot" instance=ExtResource("1_rogue")]
+# Rest bounds: -0.002025 .. 2.178328; normalize to 1.9m, face player -Z.
+position = Vector3(0, 0.001765, 0)
+rotation = Vector3(0, 3.14159265, 0)
+scale = Vector3(0.871419, 0.871419, 0.871419)
+[node name="RightHand" type="BoneAttachment3D" parent="PoseRoot/Rogue/Rig_Medium/Skeleton3D"]
+bone_name = "handslot.r"
+[node name="HeldTool" type="Sprite3D" parent="PoseRoot/Rogue/Rig_Medium/Skeleton3D/RightHand"]
+position = Vector3(0, 0.05, 0)
+pixel_size = 0.022
+texture_filter = 1
+[node name="Pistol" type="Sprite3D" parent="PoseRoot/Rogue/Rig_Medium/Skeleton3D/RightHand"]
+position = Vector3(0, 0.08, 0)
+pixel_size = 0.006
+texture_filter = 1
+visible = false
+texture = ExtResource("3_pistol")
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../PoseRoot/Rogue")
+[editable path="PoseRoot/Rogue"]

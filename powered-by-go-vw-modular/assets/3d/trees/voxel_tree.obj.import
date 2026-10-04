@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bq3hei1f38a7h"
+path="res://.godot/imported/voxel_tree.obj-f1a33b082ed79ea4ea9cfdb6867f65e9.mesh"
+
+[deps]
+
+files=["res://.godot/imported/voxel_tree.obj-f1a33b082ed79ea4ea9cfdb6867f65e9.mesh"]
+
+source_file="res://assets/3d/trees/voxel_tree.obj"
+dest_files=["res://.godot/imported/voxel_tree.obj-f1a33b082ed79ea4ea9cfdb6867f65e9.mesh", "res://.godot/imported/voxel_tree.obj-f1a33b082ed79ea4ea9cfdb6867f65e9.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

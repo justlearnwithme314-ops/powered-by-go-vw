@@ -1,0 +1,14 @@
+[gd_resource type="VoxelBlockyModelCube" load_steps=2 format=3]
+
+[ext_resource type="Material" path="res://assets/block_textures/blocks.tres" id="1"]
+
+[resource]
+material_override_0 = ExtResource("1")
+atlas_size_in_tiles = Vector2i(8, 8)
+resource_name = "granite_brick"
+tile_left = Vector2i(6, 4)
+tile_right = Vector2i(6, 4)
+tile_front = Vector2i(6, 4)
+tile_back = Vector2i(6, 4)
+tile_top = Vector2i(6, 4)
+tile_bottom = Vector2i(6, 4)

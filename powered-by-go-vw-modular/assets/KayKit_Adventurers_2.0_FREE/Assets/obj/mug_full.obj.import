@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://gxtv27akpg8b"
+path="res://.godot/imported/mug_full.obj-bc72c99e2370cdeff2e9d15540c7fbdc.mesh"
+
+[deps]
+
+files=["res://.godot/imported/mug_full.obj-bc72c99e2370cdeff2e9d15540c7fbdc.mesh"]
+
+source_file="res://assets/KayKit_Adventurers_2.0_FREE/Assets/obj/mug_full.obj"
+dest_files=["res://.godot/imported/mug_full.obj-bc72c99e2370cdeff2e9d15540c7fbdc.mesh", "res://.godot/imported/mug_full.obj-bc72c99e2370cdeff2e9d15540c7fbdc.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false
