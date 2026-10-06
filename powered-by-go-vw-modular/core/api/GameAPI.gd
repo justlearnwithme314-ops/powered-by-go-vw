@@ -14,6 +14,10 @@ var world: VoxelWorldService
 var edits: WorldEditService
 var mods: ModLoader
 var crafting: CraftingService
+var stations: BlockEntityService
+var inventory_commands: InventoryCommandService
+var item_instances: ItemInstanceService
+var entities := EntityRegistry.new()
 var base_mod_api: ModAPI
 
 
@@ -43,10 +47,20 @@ func initialize() -> void:
 	world = VoxelWorldService.new(content, events)
 	edits = WorldEditService.new(content, world, events)
 	crafting = CraftingService.new(content, events)
+	stations = BlockEntityService.new(content, world)
+	crafting.stations = stations
+	inventory_commands = InventoryCommandService.new(stations, crafting)
+	item_instances = ItemInstanceService.new(content)
+	inventory_commands.item_instances = item_instances
+	crafting.item_instances = item_instances
 	base_mod_api = ModAPI.new(
 		content, events, world_generation, world, edits, crafting
 	)
 	base_mod_api.saves = saves
+	base_mod_api.stations = stations
+	base_mod_api.inventory_commands = inventory_commands
+	base_mod_api.item_instances = item_instances
+	base_mod_api.entities = entities
 	mods = ModLoader.new()
 
 	mods.load_all(base_mod_api)

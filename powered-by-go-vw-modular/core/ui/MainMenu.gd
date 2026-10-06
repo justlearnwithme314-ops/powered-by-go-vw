@@ -85,6 +85,13 @@ func _create_world() -> void:
 
 
 func _ready() -> void:
+	var skin_button := Button.new()
+	skin_button.text = "Select player skin (64x64 PNG)"
+	$Center/VBox.add_child(skin_button)
+	skin_button.pressed.connect(func():
+		var service := get_node_or_null("/root/SkinService")
+		if service != null:
+			service.open_picker())
 	delete_button.pressed.connect(_request_delete)
 	delete_dialog.confirmed.connect(_confirm_delete)
 	delete_dialog.canceled.connect(_cancel_delete)

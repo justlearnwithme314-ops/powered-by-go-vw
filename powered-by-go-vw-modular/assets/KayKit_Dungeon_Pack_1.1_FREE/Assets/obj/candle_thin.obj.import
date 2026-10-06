@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://b5dxqqew2nrgx"
+path="res://.godot/imported/candle_thin.obj-cdda08c97e9f59b9a2ca2fc43282b1dc.mesh"
+
+[deps]
+
+files=["res://.godot/imported/candle_thin.obj-cdda08c97e9f59b9a2ca2fc43282b1dc.mesh"]
+
+source_file="res://assets/KayKit_Dungeon_Pack_1.1_FREE/Assets/obj/candle_thin.obj"
+dest_files=["res://.godot/imported/candle_thin.obj-cdda08c97e9f59b9a2ca2fc43282b1dc.mesh", "res://.godot/imported/candle_thin.obj-cdda08c97e9f59b9a2ca2fc43282b1dc.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

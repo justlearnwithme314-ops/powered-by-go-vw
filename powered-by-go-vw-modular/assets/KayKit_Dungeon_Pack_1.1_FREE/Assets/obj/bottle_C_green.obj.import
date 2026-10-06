@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cn73r6xsqwe6s"
+path="res://.godot/imported/bottle_C_green.obj-c2da6e8296e2e457b17b0d7ac9f9ea4a.mesh"
+
+[deps]
+
+files=["res://.godot/imported/bottle_C_green.obj-c2da6e8296e2e457b17b0d7ac9f9ea4a.mesh"]
+
+source_file="res://assets/KayKit_Dungeon_Pack_1.1_FREE/Assets/obj/bottle_C_green.obj"
+dest_files=["res://.godot/imported/bottle_C_green.obj-c2da6e8296e2e457b17b0d7ac9f9ea4a.mesh", "res://.godot/imported/bottle_C_green.obj-c2da6e8296e2e457b17b0d7ac9f9ea4a.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

@@ -10,6 +10,10 @@ extends RefCounted
 const API_VERSION := 1
 
 var saves: WorldSaveService
+var stations: BlockEntityService
+var inventory_commands: InventoryCommandService
+var item_instances: ItemInstanceService
+var entities: EntityRegistry
 var content: ContentRegistry
 var events: EventBus
 var world_generation: WorldGenerationPipeline
@@ -59,9 +63,10 @@ func register_recipe(
 	recipe_id: String,
 	output_id: String,
 	count: int,
-	ingredients: Dictionary
+	ingredients: Dictionary,
+	options: Dictionary = {}
 ) -> bool:
-	return content.register_recipe(recipe_id, output_id, count, ingredients)
+	return content.register_recipe(recipe_id, output_id, count, ingredients, options)
 
 
 func register_worldgen_stage(
@@ -70,6 +75,12 @@ func register_worldgen_stage(
 	callback: Callable
 ) -> bool:
 	return world_generation.register_stage(stage_id, order, callback)
+
+func configure_recipe(recipe_id: String, options: Dictionary) -> bool:
+	return content.configure_recipe(recipe_id, options)
+
+func configure_item_properties(item_id: String, properties: Dictionary) -> bool:
+	return content.configure_item_properties(item_id, properties)
 
 
 func on(event_name: String, callback: Callable, priority: int = 0) -> void:

@@ -56,6 +56,14 @@ func list_worlds() -> Array[Dictionary]:
 				var id: String = filename.get_basename()
 				if filename.ends_with(".player.json"):
 					id = filename.trim_suffix(".player.json")
+				elif filename.ends_with(".drops.json"):
+					id = filename.trim_suffix(".drops.json")
+				elif filename.ends_with(".entities.json"):
+					id = filename.trim_suffix(".entities.json")
+				elif filename.ends_with(".creatures.json"):
+					id = filename.trim_suffix(".creatures.json")
+				elif filename.ends_with(".stations.json"):
+					id = filename.trim_suffix(".stations.json")
 				if not ids.has(id):
 					ids.append(id)
 	ids.sort()
@@ -67,7 +75,7 @@ func list_worlds() -> Array[Dictionary]:
 func create_world(display_name: String, seed_text: String, compatibility: Dictionary = {}) -> Dictionary:
 	var title: String = display_name.strip_edges()
 	if title.is_empty() or title.length() > 80:
-		return {"success": false, "error": "Enter a world name (1–80 characters)."}
+		return {"success": false, "error": "Enter a world name (1-80 characters)."}
 	var text: String = seed_text.strip_edges()
 	if not text.is_valid_int() or text.length() > 11 or not seed_valid(text.to_int()):
 		return {"success": false, "error": "Enter a signed integer seed from -2147483648 to 2147483647."}
@@ -135,7 +143,7 @@ func delete_world(id: String) -> Dictionary:
 			break
 		probe = parent
 	var paths: Array[String] = []
-	for suffix: String in [".sqlite", ".sqlite-wal", ".sqlite-shm", ".player.json", ".json"]:
+	for suffix: String in [".sqlite", ".sqlite-wal", ".sqlite-shm", ".player.json", ".player.json.tmp", ".player.json.bak", ".player.json.pre_slots.bak", ".drops.json", ".drops.json.tmp", ".drops.json.bak", ".entities.json", ".entities.json.tmp", ".entities.json.bak", ".creatures.json", ".creatures.json.tmp", ".creatures.json.bak", ".stations.json", ".stations.json.tmp", ".stations.json.bak", ".json"]:
 		var path: String = root.path_join(id + suffix).simplify_path()
 		if path.get_base_dir() != root:
 			return {"success": false, "error": "Save path escaped its directory; no files removed."}

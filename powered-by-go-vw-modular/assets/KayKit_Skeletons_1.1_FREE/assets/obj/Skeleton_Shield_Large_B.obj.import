@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://defxv6y3l86g3"
+path="res://.godot/imported/Skeleton_Shield_Large_B.obj-a3fd126d58698b52cf8991ba0259260f.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Skeleton_Shield_Large_B.obj-a3fd126d58698b52cf8991ba0259260f.mesh"]
+
+source_file="res://assets/KayKit_Skeletons_1.1_FREE/assets/obj/Skeleton_Shield_Large_B.obj"
+dest_files=["res://.godot/imported/Skeleton_Shield_Large_B.obj-a3fd126d58698b52cf8991ba0259260f.mesh", "res://.godot/imported/Skeleton_Shield_Large_B.obj-a3fd126d58698b52cf8991ba0259260f.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

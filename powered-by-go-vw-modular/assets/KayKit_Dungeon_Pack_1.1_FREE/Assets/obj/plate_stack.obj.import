@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cb0qlt45r8lu0"
+path="res://.godot/imported/plate_stack.obj-c1f743b3475b08fa453c2a01f5c19eb0.mesh"
+
+[deps]
+
+files=["res://.godot/imported/plate_stack.obj-c1f743b3475b08fa453c2a01f5c19eb0.mesh"]
+
+source_file="res://assets/KayKit_Dungeon_Pack_1.1_FREE/Assets/obj/plate_stack.obj"
+dest_files=["res://.godot/imported/plate_stack.obj-c1f743b3475b08fa453c2a01f5c19eb0.mesh", "res://.godot/imported/plate_stack.obj-c1f743b3475b08fa453c2a01f5c19eb0.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

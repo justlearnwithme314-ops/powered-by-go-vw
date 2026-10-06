@@ -56,6 +56,16 @@ shared global service has been added to the API contract.
 
 ## 3. Stable IDs
 
+Crafting ingredients may use `#namespace:tag` selectors, such as
+`{"#core:planks": 4}`. Set matching item `tags` to `["core:planks"]`;
+automatically generated block items inherit the block's tags. Shaped grid cells
+accept the same selectors. `api.content.ingredient_matches(item_id, selector)`
+checks a single item; `resolve_ingredients(requirements, available_counts)`
+returns `{success, items}` with concrete consumable counts, allocating each
+unit once even across overlapping selectors. Matching tag items must be
+registered before registering a recipe using that tag. These selectors are
+supported by crafting; furnace processing still uses concrete item IDs.
+
 Always use namespaced strings:
 
 ```gdscript
@@ -305,3 +315,61 @@ joining is not newly supported. NetworkManager and RPCs are unchanged.
 
 `tests/WorldSaves.gd` uses unique `user://world_save_tests/` fixtures and never
 touches real saves. Fixtures are intentionally retained (no deletion).
+
+## Click mining
+
+Blocks can declare `breakable` (default true), `preferred_tool`, `required_tool`
+and `mining_level`. Items declare `properties.tool_type`, `mining_level`,
+`break_power` and `mining_interval` (seconds between accepted clicks).
+`content.get_mining_profile(item_id, block_id)` returns allowed/reason/hits/interval.
+Preferred tools gain hit strength and swing speed; other tools use hand speed.
+Required tools must match both category and minimum strength. The edit service
+also checks these requirements for player edits, including remote players.
+BLOCK_HIT cancellation stops that click contributing progress.
+Each press contributes one hit; holding repeats hits at the tool's interval.
+Progress resets on target,
+item or mouse capture changes. A small HUD below the crosshair shows hits
+remaining or the missing tool requirement. Tool strength is a material tier,
+not consumable durability. Bedrock and water are unbreakable.
+
+VoxelInteractor exposes `mining_progress(position, progress)` with normalized
+accepted damage, `mining_cleared`, and `block_feedback(block_id, position, action)`
+where action is hit, break or place. Break/place feedback follows successful local
+results or network acknowledgements. The core:block_feedback mod listens to these
+signals for eight-stage crack rendering and material impact sounds. Held swings
+use the existing replicated animation timer. Placement repeats every 0.2 seconds;
+network placement waits for acknowledgement before another inventory expenditure.
+
+## Progression and survival extension APIs
+
+Use api.stations (BlockEntityService) to register block capabilities and named
+containers, check reach, read copied records, update processing state and persist
+local world data. Use api.inventory_commands.request(actor, action, args) for
+validated craft, repair and station transfers; never accept caller-supplied stacks.
+Current command ownership is local only: real multiplayer peers are rejected.
+
+Use api.item_instances to prepare durable stacks, resolve effective stats, spend
+condition and quote/commit repairs. Modifier IDs must be registered and namespaced;
+unknown metadata survives transfers and saves. Recipe options include station,
+method and duration; configure_item_properties/configure_recipe run at registration.
+
+PRIMARY_ACTION lets a mod handle a physical attack before voxel mining.
+PLAYER_DIED and PLAYER_RESPAWNED expose lifecycle events. DamageReceiver is the
+opt-in damage interface. The gameplay_disabled actor metadata suppresses core
+movement/interaction and inventory commands while dead. Do not assume these hooks
+provide network authority. See the three survival feature-mod READMEs and smoke tests.
+
+## Creatures and composed entity behavior
+
+Register namespaced definitions through api.entities; feature models and behavior
+remain mod-owned. EntityRegistry exposes spawn and receipt-based spawn_loot. Visual
+scripts implement setup/animate; optional abilities implement setup/tick/decide,
+interact and save_state/restore. Use entity lifecycle events and DamageReceiver.
+VoxelWorldService exposes is_loaded/is_solid/can_stand for bounded terrain paths.
+
+The entity framework supplies host-authoritative creature combat, profile inventory
+and loot transactions. Inventory.network_adapter routes remote slot commands;
+load_snapshot(state, true) preserves cursor ownership for a trusted server mirror.
+Only a server-resolved actor may carry inventory_authority metadata. Read
+mods/entity_framework/README.md before extending networking: shared stations and
+all previous survival systems are not implicitly authoritative through this API.

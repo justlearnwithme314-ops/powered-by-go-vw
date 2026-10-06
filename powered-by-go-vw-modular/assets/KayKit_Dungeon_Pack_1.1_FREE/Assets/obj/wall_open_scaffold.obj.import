@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bmxod7d7nlm1p"
+path="res://.godot/imported/wall_open_scaffold.obj-4b58f0ec2da0ff236704bcf2639b94fd.mesh"
+
+[deps]
+
+files=["res://.godot/imported/wall_open_scaffold.obj-4b58f0ec2da0ff236704bcf2639b94fd.mesh"]
+
+source_file="res://assets/KayKit_Dungeon_Pack_1.1_FREE/Assets/obj/wall_open_scaffold.obj"
+dest_files=["res://.godot/imported/wall_open_scaffold.obj-4b58f0ec2da0ff236704bcf2639b94fd.mesh", "res://.godot/imported/wall_open_scaffold.obj-4b58f0ec2da0ff236704bcf2639b94fd.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

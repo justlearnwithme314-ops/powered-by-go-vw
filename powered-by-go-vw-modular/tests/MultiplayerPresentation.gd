@@ -79,7 +79,7 @@ func run() -> void:
 		check(client_owner.position.x == 99, "Owner ignores echoed state")
 		var visual: PlayerVisual = host_remote.get_node("PlayerVisual")
 		visual._update_pose(3.0)
-		var model: RoguePlayerModel = visual.body as RoguePlayerModel
+		var model: Node3D = visual.body
 		check(model.state == (&"idle" if pose.get("sitting", false) or pose.get("lying", false) or pose.get("rolling", false) else &"walk"), "Remote animation follows pose and velocity")
 		check(absf(model.get_animation_phase() - 0.4) < 0.001, "Animation phase matches source")
 		check(visual.pistol.visible and not visual.first_person_pistol.visible, "Remote held pistol stays third person")
@@ -89,7 +89,7 @@ func run() -> void:
 	check(client_remote.remote_airborne, "Host airborne state reaches client without vertical displacement")
 	var remote_visual: PlayerVisual = client_remote.get_node("PlayerVisual")
 	remote_visual._update_pose(0.0)
-	check((remote_visual.body as RoguePlayerModel).state == &"jump", "Jump remains active at apex")
+	check(remote_visual.body.get("state") == &"jump", "Jump remains active at apex")
 	# A second snapshot blends instead of teleporting, including wrapped yaw.
 	var before: Vector3 = client_remote.position
 	host.submit_player_sync(1, Vector3(3, 3, 4), 0.8, -0.5, "", {"velocity": Vector3.ZERO})

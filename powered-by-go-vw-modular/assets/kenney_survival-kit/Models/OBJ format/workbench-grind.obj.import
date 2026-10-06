@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dh5h2cudm6krv"
+path="res://.godot/imported/workbench-grind.obj-7cb2a2db9403763ad5cf276fb3e04413.mesh"
+
+[deps]
+
+files=["res://.godot/imported/workbench-grind.obj-7cb2a2db9403763ad5cf276fb3e04413.mesh"]
+
+source_file="res://assets/kenney_survival-kit/Models/OBJ format/workbench-grind.obj"
+dest_files=["res://.godot/imported/workbench-grind.obj-7cb2a2db9403763ad5cf276fb3e04413.mesh", "res://.godot/imported/workbench-grind.obj-7cb2a2db9403763ad5cf276fb3e04413.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

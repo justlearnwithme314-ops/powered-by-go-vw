@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://72ej5281ddor"
+path="res://.godot/imported/trunk_small_A.obj-c10568a5b33a04e17626857df15c3d2e.mesh"
+
+[deps]
+
+files=["res://.godot/imported/trunk_small_A.obj-c10568a5b33a04e17626857df15c3d2e.mesh"]
+
+source_file="res://assets/KayKit_Dungeon_Pack_1.1_FREE/Assets/obj/trunk_small_A.obj"
+dest_files=["res://.godot/imported/trunk_small_A.obj-c10568a5b33a04e17626857df15c3d2e.mesh", "res://.godot/imported/trunk_small_A.obj-c10568a5b33a04e17626857df15c3d2e.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

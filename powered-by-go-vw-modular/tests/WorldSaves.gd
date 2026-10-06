@@ -103,6 +103,7 @@ func test_delete_isolated_world_and_preserve_neighbors() -> void:
 func test_default_catalog_only_lists_existing_saves() -> void:
 	setup()
 	assert(service.list_worlds().is_empty())
+
 	_write(service.metadata_path("default"), '{"seed":1337}')
 	assert(service.list_worlds().size() == 1)
 	assert(service.list_worlds()[0].save_name == "default")
@@ -161,3 +162,28 @@ func test_legacy_metadata_and_launch_wiring() -> void:
 	var manager: String = FileAccess.get_file_as_string("res://core/network/GameManager.gd")
 	assert(manager.contains("GameAPI.saves.state_path(save_id)"))
 	assert(manager.contains("GameAPI.saves.state_load_path(save_id)"))
+
+func test_drop_sidecars_share_world_identity_and_delete() -> void:
+	setup()
+	var result := service.create_world("Drop fixture", "12")
+	var id := str(result.save_name)
+	for suffix in [".drops.json", ".drops.json.tmp", ".drops.json.bak"]:
+		_write(service.root_path.path_join(id + suffix), "{}")
+	assert(service.list_worlds().size() == 1)
+	assert(service.list_worlds()[0].save_name == id)
+	assert(service.delete_world(id).success)
+	for suffix in [".drops.json", ".drops.json.tmp", ".drops.json.bak"]:
+		assert(not FileAccess.file_exists(service.root_path.path_join(id + suffix)))
+	assert(service.list_worlds().is_empty())
+
+func test_station_sidecar_catalog_and_delete() -> void:
+	setup()
+	var created := service.create_world("Stations", "53")
+	assert(created.success)
+	var id := str(created.save_name)
+	for suffix in [".entities.json", ".entities.json.tmp", ".entities.json.bak", ".creatures.json", ".creatures.json.tmp", ".creatures.json.bak"]:
+		_write(service.root_path.path_join(id + suffix), "fixture")
+	assert(service.list_worlds().size() == 1 and service.list_worlds()[0].save_name == id)
+	assert(service.delete_world(id).success)
+	for suffix in [".entities.json", ".entities.json.tmp", ".entities.json.bak", ".creatures.json", ".creatures.json.tmp", ".creatures.json.bak"]:
+		assert(not FileAccess.file_exists(service.root_path.path_join(id + suffix)))

@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://q85tanjnf3rt"]
 
-[ext_resource type="PackedScene" path="res://assets/player/RogueModel.tscn" id="2_4kuee"]
+[ext_resource type="Script" path="res://mods/player_skins/PlayerBody.gd" id="2_4kuee"]
 [ext_resource type="Script" path="res://core/player/PlayerController.gd" id="1_controller"]
 [ext_resource type="Script" path="res://core/inventory/Inventory.gd" id="2_inventory"]
 [ext_resource type="Script" path="res://core/player/VoxelInteractor.gd" id="3_interactor"]
@@ -67,7 +67,8 @@ script = ExtResource("3_interactor")
 
 [node name="PlayerVisual" type="Node3D" parent="." unique_id=1463078501]
 script = ExtResource("4_visual")
-held_tool_path = NodePath("Body/PoseRoot/Rogue/Rig_Medium/Skeleton3D/RightHand/HeldTool")
-pistol_path = NodePath("Body/PoseRoot/Rogue/Rig_Medium/Skeleton3D/RightHand/Pistol")
+held_tool_path = NodePath("Body/Rig/RightArm/RightHand/HeldTool")
+pistol_path = NodePath("Body/Rig/RightArm/RightHand/Pistol")
 
-[node name="Body" parent="PlayerVisual" instance=ExtResource("2_4kuee")]
+[node name="Body" type="Node3D" parent="PlayerVisual"]
+script = ExtResource("2_4kuee")

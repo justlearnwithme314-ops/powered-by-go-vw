@@ -123,7 +123,7 @@ func remove_movement_extension(extension: Node) -> void:
 	_extensions.erase(extension)
 
 func gameplay_input_enabled() -> bool:
-	return is_multiplayer_authority() and not _capture_input_blocked and Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED
+	return is_multiplayer_authority() and not bool(get_meta("gameplay_disabled", false)) and not _capture_input_blocked and Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED
 
 
 func _enter_tree() -> void:
@@ -154,6 +154,8 @@ func _ready() -> void:
 
 func _unhandled_input(event: InputEvent) -> void:
 	if not is_multiplayer_authority():
+		return
+	if bool(get_meta("gameplay_disabled", false)):
 		return
 
 	# Escape toggles between gameplay/captured mouse and free mouse.
@@ -220,8 +222,10 @@ func _unhandled_input(event: InputEvent) -> void:
 	if not gameplay_input_enabled():
 		return
 	if event is InputEventKey and event.pressed and not event.echo:
-		if event.keycode >= KEY_1 and event.keycode <= KEY_8:
+		if event.keycode >= KEY_1 and event.keycode <= KEY_9:
 			inventory.set_selected_slot(event.keycode - KEY_1)
+		elif event.keycode == KEY_0:
+			inventory.set_selected_slot(9)
 	for extension: Node in _extensions.duplicate():
 		if is_instance_valid(extension) and extension.has_method("movement_input"):
 			if bool(extension.call("movement_input", event)):

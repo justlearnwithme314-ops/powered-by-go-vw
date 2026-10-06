@@ -49,6 +49,32 @@ func detach() -> void:
 func is_ready() -> bool:
 	return terrain != null and tool != null
 
+## Air from an unloaded area is not traversable terrain.
+func is_loaded(position: Vector3i) -> bool:
+	return tool != null and tool.is_area_editable(AABB(Vector3(position), Vector3.ONE))
+
+func is_solid(position: Vector3i) -> bool:
+	return bool(content.get_block(get_block_id(position)).get("solid", false))
+
+func can_stand(position: Vector3i, height: int = 2) -> bool:
+	if not is_loaded(position + Vector3i.DOWN) or not is_solid(position + Vector3i.DOWN):
+		return false
+	for y in range(height):
+		var cell := position + Vector3i(0, y, 0)
+		if not is_loaded(cell) or is_solid(cell) or get_block_id(cell) == "core:water":
+			return false
+	return true
+
+## Authority-side terrain loading for remote actors, without exposing the backend.
+func track_actor(actor: Node3D, distance: int = 64) -> Node3D:
+	if actor.has_node("AuthorityWorldViewer"):
+		return actor.get_node("AuthorityWorldViewer") as Node3D
+	var viewer := VoxelViewer.new()
+	viewer.name = "AuthorityWorldViewer"
+	viewer.view_distance = clampi(distance, 16, 64)
+	actor.add_child(viewer)
+	return viewer
+
 
 func get_voxel(pos: Vector3i) -> int:
 	if tool == null:
@@ -66,7 +92,7 @@ func set_voxel(pos: Vector3i, voxel_id: int) -> bool:
 
 	tool.channel = VoxelBuffer.CHANNEL_TYPE
 	tool.set_voxel(pos, voxel_id)
-	return true
+	return int(tool.get_voxel(pos)) == voxel_id
 
 
 func set_block(pos: Vector3i, block_id: String) -> bool:

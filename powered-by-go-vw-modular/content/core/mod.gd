@@ -139,6 +139,10 @@ func _register_block(
 		"solid": solid,
 		"transparent": transparent,
 		"hardness": hardness,
+		"breakable": block_id not in [AIR, WATER, BEDROCK],
+		"preferred_tool": _mining_tool(block_id),
+		"required_tool": "pickaxe" if _mining_tool(block_id) == "pickaxe" else "",
+		"mining_level": 3 if block_id in [GOLD, DIAMOND] else (2 if block_id == IRON else 1),
 		"drops": [] if block_id == AIR else [{"item": block_id, "count": 1}],
 		"tags": ["block"],
 	})
@@ -182,8 +186,16 @@ func _stage_terrain(ctx: WorldGenContext) -> void:
 
 func _stage_caves(ctx: WorldGenContext) -> void:
 	var size := ctx.buffer.get_size()
+	var tunnels_a := ctx.noise.get_custom_3d("core:cave_tunnel_a", 0.035, 1)
+	var tunnels_b := ctx.noise.get_custom_3d("core:cave_tunnel_b", 0.035, 1)
+	var chambers := ctx.noise.get_custom_3d("core:cave_chambers", 0.045, 2)
+	var entrances := ctx.noise.get_custom_2d("core:cave_entrances", 0.025, 1)
 	for z in range(size.z):
 		for x in range(size.x):
+			var wx := ctx.origin.x + x
+			var wz := ctx.origin.z + z
+			var surface := int(ctx.noise.terrain.get_noise_2d(wx, wz) * 24.0) + 32
+			var allow_entrance := entrances.get_noise_2d(wx, wz) > 0.45
 			for y in range(size.y):
 				var wy := ctx.origin.y + y
 				if wy < 4 or wy > 120:
@@ -191,12 +203,16 @@ func _stage_caves(ctx: WorldGenContext) -> void:
 
 				var local := Vector3i(x, y, z)
 				var block_id := ctx.get_block_id_local(local)
-				if block_id == AIR:
+				if block_id == AIR or block_id == BEDROCK or surface - wy < 0:
 					continue
 
-				var wx := ctx.origin.x + x
-				var wz := ctx.origin.z + z
-				if ctx.noise.caves.get_noise_3d(wx, wy, wz) > 0.62:
+				var depth := surface - wy
+				if depth < 5 and not allow_entrance:
+					continue
+				# Intersecting noise bands form connected tubes across chunk boundaries.
+				var tunnel := absf(tunnels_a.get_noise_3d(wx, wy * 1.35, wz)) < 0.13 and absf(tunnels_b.get_noise_3d(wx, wy * 1.35, wz)) < 0.13
+				var chamber := depth >= 8 and chambers.get_noise_3d(wx, wy * 1.4, wz) > 0.48
+				if tunnel or chamber:
 					ctx.set_voxel_local(local, AIR)
 
 
@@ -216,13 +232,13 @@ func _stage_ores(ctx: WorldGenContext) -> void:
 				var value := ctx.noise.ores.get_noise_3d(wx, wy, wz)
 				var ore := STONE
 
-				if wy < 5 and value > 0.82:
+				if wy >= 4 and wy < 12 and value > 0.70:
 					ore = DIAMOND
-				elif wy < 16 and value > 0.72:
+				elif wy < 22 and value > 0.60:
 					ore = GOLD
-				elif wy < 48 and value > 0.65:
+				elif wy < 48 and value > 0.48:
 					ore = IRON
-				elif value > 0.55:
+				elif value > 0.38:
 					ore = COAL
 
 				ctx.set_voxel_local(local, ore)
@@ -270,3 +286,13 @@ func _stage_trees(ctx: WorldGenContext) -> void:
 							and ctx.get_block_id_local(leaf_pos) == AIR
 						):
 							ctx.set_voxel_local(leaf_pos, LEAVES)
+
+
+func _mining_tool(block_id: String) -> String:
+	if block_id in [STONE, IRON, COAL, GOLD, DIAMOND, SANDSTONE, ICE]:
+		return "pickaxe"
+	if block_id == LOG:
+		return "axe"
+	if block_id in [GRASS, DIRT, SAND, SNOW, GRAVEL]:
+		return "shovel"
+	return ""

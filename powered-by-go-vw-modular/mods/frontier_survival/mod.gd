@@ -128,6 +128,7 @@ func register(api: ModAPI) -> void:
 	api.on(GameEvents.PLAYER_SPAWNED, Callable(self, "_on_player_spawned"), 100)
 	api.on(GameEvents.PLAYER_DESPAWNED, Callable(self, "_on_player_despawned"), 100)
 	api.on(GameEvents.GAME_STOPPING, Callable(self, "_on_game_stopping"), 100)
+	api.on(GameEvents.WORLD_STOPPING, Callable(self, "_on_world_stopping"), 300)
 
 	api.log("Frontier Survival loaded: survival, metallurgy, food, biomes and deep vaults enabled.")
 
@@ -199,6 +200,9 @@ func _register_block(
 		"display_name": display_name,
 		"model": api.load_asset("models/%s.tres" % model_name),
 		"hardness": hardness,
+		"preferred_tool": "axe" if "wood" in tags else ("shovel" if "grass" in tags else "pickaxe"),
+		"required_tool": "" if "wood" in tags or "grass" in tags else "pickaxe",
+		"mining_level": 7 if "murexium" in tags else (5 if "mese" in tags else (6 if "obsidian" in tags else 2)),
 		"solid": true,
 		"transparent": false,
 		"drops": drops,
@@ -292,6 +296,8 @@ func _register_tool_set(
 			"properties": {
 				"break_power": power,
 				"tool_type": kind,
+				"mining_level": ["wood", "stone", "bronze", "steel", "mese", "diamond", "murexium"].find(material) + 1,
+				"mining_interval": 0.38 - 0.035 * ["wood", "stone", "bronze", "steel", "mese", "diamond", "murexium"].find(material),
 				"material": material,
 			},
 			"icon": api.asset(icon_paths[kind]),
@@ -458,23 +464,23 @@ func _register_worldgen(api: ModAPI) -> void:
 
 
 func _generate_copper(ctx: WorldGenContext) -> void:
-	_generate_ore(ctx, "frontier:copper", 12, 46, 0.67, COPPER_ORE)
+	_generate_ore(ctx, "frontier:copper", 12, 46, 0.48, COPPER_ORE)
 
 
 func _generate_tin(ctx: WorldGenContext) -> void:
-	_generate_ore(ctx, "frontier:tin", 8, 38, 0.70, TIN_ORE)
+	_generate_ore(ctx, "frontier:tin", 8, 38, 0.52, TIN_ORE)
 
 
 func _generate_silver(ctx: WorldGenContext) -> void:
-	_generate_ore(ctx, "frontier:silver", 4, 30, 0.77, SILVER_ORE)
+	_generate_ore(ctx, "frontier:silver", 4, 30, 0.60, SILVER_ORE)
 
 
 func _generate_mese(ctx: WorldGenContext) -> void:
-	_generate_ore(ctx, "frontier:mese", 2, 20, 0.86, MESE_ORE)
+	_generate_ore(ctx, "frontier:mese", 4, 20, 0.68, MESE_ORE)
 
 
 func _generate_murexium(ctx: WorldGenContext) -> void:
-	_generate_ore(ctx, "frontier:murexium", 2, 12, 0.91, MUREXIUM_ORE)
+	_generate_ore(ctx, "frontier:murexium", 4, 12, 0.74, MUREXIUM_ORE)
 
 
 func _generate_ore(
@@ -614,6 +620,8 @@ func _on_before_block_break(event: Dictionary) -> Dictionary:
 
 
 func _on_item_use(event: Dictionary) -> Dictionary:
+	if bool(event.get("handled", false)):
+		return event
 	var item_id: String = str(event.get("item_id", ""))
 	if not _is_food(item_id):
 		return event
@@ -645,43 +653,28 @@ func _on_player_spawned(event: Dictionary) -> Dictionary:
 	var peer_id := int(event.get("peer_id", 1))
 	var inventory := player.get_node_or_null("Inventory") as Inventory
 
-	# Only the locally-owned player gets the survival state and starter kit.
+	# Only the locally-owned player gets the local survival state.
 	# GameManager loads a saved local inventory before this event fires, so a
 	# returning player keeps their inventory instead of being reset every spawn.
 	if not player.is_multiplayer_authority():
 		return event
 
-	if inventory != null and inventory.items.is_empty():
-		inventory.add_item(STONE_PICKAXE, 1)
-		inventory.add_item(STONE_AXE, 1)
-		inventory.add_item(STONE_SHOVEL, 1)
-		inventory.add_item(BREAD, 3)
-		inventory.add_item(APPLE, 2)
-		inventory.add_item("core:stick", 12)
-		inventory.add_item("core:dirt", 24)
-		inventory.add_item("core:stone", 24)
-
-		inventory.assign_to_hotbar(STONE_PICKAXE, 0)
-		inventory.assign_to_hotbar(STONE_AXE, 1)
-		inventory.assign_to_hotbar(STONE_SHOVEL, 2)
-		inventory.assign_to_hotbar(BREAD, 3)
-		inventory.assign_to_hotbar(APPLE, 4)
-		inventory.assign_to_hotbar("core:dirt", 5)
-		inventory.assign_to_hotbar("core:stone", 6)
+	# Saved equipment is retained. Empty inventory starts with gathering/hand recipes.
 
 	if _vitals_script == null or player.get_node_or_null("FrontierVitals") != null:
 		return event
 
 	var vitals: Node = _vitals_script.new()
 	vitals.name = "FrontierVitals"
+	vitals.set("world_api", _api)
 	vitals.set_meta("frontier_heart_texture", _heart_path)
 	vitals.set_meta("frontier_stamina_bg", _stamina_bg_path)
 	vitals.set_meta("frontier_stamina_fg", _stamina_fg_path)
 	player.add_child(vitals)
 
 	var saved_hunger: float = 18.0
-	if _api.storage != null:
-		saved_hunger = float(_api.storage.get_value("hunger_local", 18.0))
+	if not _api.stations.path.is_empty():
+		saved_hunger = float(_api.stations.player_data("frontier:vitals").get("hunger", 18.0))
 	vitals.call("initialize_state", clampf(saved_hunger, 0.0, 20.0))
 	_active_vitals[peer_id] = vitals
 
@@ -703,7 +696,7 @@ func _on_game_stopping(event: Dictionary) -> Dictionary:
 
 
 func _save_vitals(peer_id: int) -> void:
-	if _api == null or _api.storage == null:
+	if _api == null or _api.stations.path.is_empty():
 		return
 
 	var vitals: Node = _active_vitals.get(peer_id)
@@ -711,4 +704,10 @@ func _save_vitals(peer_id: int) -> void:
 		return
 
 	var hunger: float = float(vitals.get("hunger"))
-	_api.storage.set_value("hunger_local", hunger)
+	_api.stations.set_player_data("frontier:vitals", {"hunger": hunger})
+	_api.stations.save()
+
+func _on_world_stopping(event: Dictionary) -> Dictionary:
+	for peer_id in _active_vitals.keys():
+		_save_vitals(int(peer_id))
+	return event

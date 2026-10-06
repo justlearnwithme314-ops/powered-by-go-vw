@@ -14,6 +14,7 @@ var player: CharacterBody3D
 var inventory: Inventory
 
 var hunger: float = 18.0
+var world_api: ModAPI
 var stamina: float = MAX_STAMINA
 var poison_seconds: float = 0.0
 
@@ -22,6 +23,16 @@ var _hunger_label: Label
 var _stamina_bar: TextureProgressBar
 var _status_label: Label
 var _base_speed: float = NORMAL_SPEED
+
+func _exit_tree() -> void:
+	if world_api == null or world_api.stations.path.is_empty():
+		return
+	world_api.stations.set_player_data("frontier:vitals", {"hunger": hunger})
+	var survival := world_api.stations.player_data("survival:player_survival")
+	if not survival.is_empty():
+		survival.merge({"hunger":hunger,"stamina":stamina,"poison_seconds":poison_seconds}, true)
+		world_api.stations.set_player_data("survival:player_survival", survival)
+	world_api.stations.save()
 var _ui_update_timer: float = 0.0
 
 

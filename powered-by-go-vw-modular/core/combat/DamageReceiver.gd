@@ -8,7 +8,7 @@ signal depleted(context: Dictionary)
 @export var health: float = 100.0
 
 func receive_damage(amount: float, context: Dictionary) -> void:
-	if amount <= 0.0 or health <= 0.0:
+	if not is_finite(amount) or amount <= 0.0 or health <= 0.0:
 		return
 	var applied: float = minf(health, amount)
 	health -= applied

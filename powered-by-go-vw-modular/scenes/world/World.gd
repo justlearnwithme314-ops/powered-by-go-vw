@@ -62,7 +62,7 @@ func _safe_save_name() -> String:
 
 
 func _save_metadata_path() -> String:
-	return "user://worlds/%s.json" % _safe_save_name()
+	return GameAPI.saves.metadata_path(_safe_save_name())
 
 
 func _check_save_compatibility() -> void:
@@ -78,7 +78,7 @@ func _check_save_compatibility() -> void:
 	var metadata_path := _save_metadata_path()
 
 	if not FileAccess.file_exists(metadata_path):
-		DirAccess.make_dir_recursive_absolute("user://worlds")
+		DirAccess.make_dir_recursive_absolute(GameAPI.saves.root_path)
 		var new_file := FileAccess.open(metadata_path, FileAccess.WRITE)
 		if new_file:
 			new_file.store_string(JSON.stringify(expected, "\t"))
@@ -93,7 +93,8 @@ func _check_save_compatibility() -> void:
 
 	var mismatches: Array[String] = []
 	for key in expected:
-		if str(parsed.get(key, "")) != str(expected[key]):
+		var matches := int(parsed.get(key, 0)) == int(expected[key]) if key in ["seed", "api_version"] else str(parsed.get(key, "")) == str(expected[key])
+		if not matches:
 			mismatches.append(str(key))
 
 	if warn_on_content_mismatch and not mismatches.is_empty():
@@ -137,7 +138,7 @@ func _configure_persistence() -> void:
 		)
 		return
 
-	var save_dir := "user://worlds"
+	var save_dir := GameAPI.saves.root_path
 	DirAccess.make_dir_recursive_absolute(save_dir)
 
 	_stream = ClassDB.instantiate("VoxelStreamSQLite")

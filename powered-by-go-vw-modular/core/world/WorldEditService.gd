@@ -22,6 +22,8 @@ func _init(
 
 
 func break_block(player: Node, pos: Vector3i) -> Dictionary:
+	if player != null and bool(player.get_meta("gameplay_disabled", false)):
+		return {"success": false, "reason": "player_inactive"}
 	var block_id: String = world.get_block_id(pos)
 
 	if block_id == ContentRegistry.AIR_ID:
@@ -35,6 +37,16 @@ func break_block(player: Node, pos: Vector3i) -> Dictionary:
 			"success": false,
 			"reason": "unknown_block"
 		}
+
+	var inventory: Inventory = player.get_node_or_null("Inventory") as Inventory if player != null else null
+	if inventory != null:
+		var item_id := inventory.get_selected_item_id()
+		if not player.is_multiplayer_authority() and not bool(player.get_meta("inventory_authority", false)):
+			var visual := player.get_node_or_null("PlayerVisual") as PlayerVisual
+			item_id = visual.held_item_id if visual != null else ""
+		var profile := content.get_mining_profile(item_id, block_id)
+		if not bool(profile.allowed):
+			return {"success": false, "reason": profile.reason}
 
 	var block_data: Dictionary = content.get_block(block_id)
 
@@ -102,6 +114,8 @@ func break_block(player: Node, pos: Vector3i) -> Dictionary:
 
 
 func place_block(player: Node, pos: Vector3i, item_id: String) -> Dictionary:
+	if player != null and bool(player.get_meta("gameplay_disabled", false)):
+		return {"success": false, "reason": "player_inactive"}
 	if not content.has_item(item_id):
 		return {"success": false, "reason": "unknown_item"}
 

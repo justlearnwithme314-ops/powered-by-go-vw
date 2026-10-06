@@ -8,7 +8,7 @@ const LOG := "core:log"
 const LEAVES := "core:leaves"
 const CELL_SIZE := 8
 const CANOPY_RADIUS := 2
-const TREE_THRESHOLD := 0.72
+const TREE_THRESHOLD := 0.30
 
 func register(api: ModAPI) -> void:
 	# After terrain/caves/ores, before Frontier's grass repaint (450).

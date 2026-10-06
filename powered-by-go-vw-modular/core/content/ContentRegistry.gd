@@ -174,7 +174,8 @@ func register_recipe(
 	recipe_id: String,
 	output_id: String,
 	output_count: int,
-	ingredients: Dictionary
+	ingredients: Dictionary,
+	options: Dictionary = {}
 ) -> bool:
 	if not _can_register("recipes"):
 		return false
@@ -194,7 +195,7 @@ func register_recipe(
 	for item_id in ingredients:
 		var item_key := str(item_id)
 		var amount := int(ingredients[item_id])
-		if amount <= 0 or not items.has(item_key):
+		if amount <= 0 or (not items.has(item_key) and (not item_key.begins_with("#") or get_item_ids_with_tag(item_key.substr(1)).is_empty())):
 			push_error(
 				"[ContentRegistry] Recipe '%s' has invalid ingredient '%s'."
 				% [recipe_id, item_key]
@@ -207,7 +208,24 @@ func register_recipe(
 		"output": output_id,
 		"count": maxi(output_count, 1),
 		"ingredients": normalized_ingredients,
+		"station": str(options.get("station", "hand")),
+		"method": str(options.get("method", "craft")),
+		"duration": maxf(float(options.get("duration", 0.0)), 0.0),
 	}
+	return true
+
+func configure_recipe(recipe_id: String, options: Dictionary) -> bool:
+	if not _can_register("recipes") or not recipes.has(recipe_id):
+		return false
+	for field in ["station", "method", "duration"]:
+		if options.has(field):
+			recipes[recipe_id][field] = options[field]
+	return true
+
+func configure_item_properties(item_id: String, properties: Dictionary) -> bool:
+	if not _can_register("items") or not items.has(item_id):
+		return false
+	items[item_id].properties.merge(properties.duplicate(true), true)
 	return true
 
 
@@ -278,8 +296,48 @@ func get_item_ids_with_tag(tag: String) -> Array[String]:
 
 
 func get_item_display_name(item_id: String) -> String:
+	if item_id.begins_with("#"):
+		return "Any " + item_id.substr(1).get_slice(":", 1).replace("_", " ").capitalize()
 	var item := get_item(item_id)
 	return str(item.get("display_name", "Unknown")) if not item.is_empty() else "Unknown"
+
+
+func ingredient_matches(item_id: String, ingredient: String) -> bool:
+	if ingredient.begins_with("#"):
+		return ingredient.substr(1) in get_item(item_id).get("tags", [])
+	return item_id == ingredient
+
+
+## Resolve ingredient selectors to concrete counts without reusing items,
+## even when exact IDs and overlapping tags appear in the same recipe.
+func resolve_ingredients(ingredients: Dictionary, available: Dictionary) -> Dictionary:
+	var owners := {}
+	for selector in ingredients:
+		for unit in range(int(ingredients[selector])):
+			if not _assign_ingredient(str(selector), available, owners, {}):
+				return {"success": false, "items": {}}
+	var resolved := {}
+	for id in owners:
+		if not owners[id].is_empty():
+			resolved[id] = owners[id].size()
+	return {"success": true, "items": resolved}
+
+
+func _assign_ingredient(selector: String, available: Dictionary, owners: Dictionary, visited: Dictionary) -> bool:
+	for id in available:
+		if visited.has(id) or not ingredient_matches(str(id), selector) or int(available[id]) <= 0:
+			continue
+		visited[id] = true
+		if not owners.has(id): owners[id] = []
+		var assigned: Array = owners[id]
+		if assigned.size() < int(available[id]):
+			assigned.append(selector)
+			return true
+		for i in range(assigned.size()):
+			if _assign_ingredient(str(assigned[i]), available, owners, visited):
+				assigned[i] = selector
+				return true
+	return false
 
 
 func get_block_display_name(block_id: String) -> String:
@@ -299,16 +357,31 @@ func get_placement_block(item_id: String) -> String:
 	return str(get_item(item_id).get("place_block", ""))
 
 
-func get_break_hits(item_id: String, block_id: String) -> int:
+func get_mining_profile(item_id: String, block_id: String, overrides: Dictionary = {}) -> Dictionary:
 	var block := get_block(block_id)
-	if block.is_empty():
-		return 999999
+	var props: Dictionary = get_item(item_id).get("properties", {})
+	if not overrides.is_empty():
+		props = overrides
+	var preferred := str(block.get("preferred_tool", ""))
+	var required := str(block.get("required_tool", ""))
+	var kind := str(props.get("tool_type", ""))
+	var reason := ""
+	if block.is_empty() or not bool(block.get("breakable", true)):
+		reason = "Unbreakable"
+	elif not required.is_empty() and kind != required:
+		reason = "Requires a %s" % required
+	elif not required.is_empty() and int(props.get("mining_level", 0)) < int(block.get("mining_level", 0)):
+		reason = "Requires %s strength %d" % [required, int(block.mining_level)]
+	var effective := not preferred.is_empty() and kind == preferred
+	var power := maxf(float(props.get("break_power", 1.0)), 1.0) if effective else 1.0
+	var hits := maxi(ceili(maxf(float(block.get("hardness", 1.0)), 0.1) * 3.0 / sqrt(power)), 1)
+	var interval := float(props.get("mining_interval", 0.4)) if effective else 0.4
+	return {"allowed": reason.is_empty(), "reason": reason, "hits": hits, "interval": clampf(interval, 0.12, 0.8) * 0.5}
 
-	var hardness := maxf(float(block.get("hardness", 1.0)), 0.1)
-	var item := get_item(item_id)
-	var properties: Dictionary = item.get("properties", {})
-	var power := maxf(float(properties.get("break_power", 1.0)), 0.1)
-	return maxi(ceili(hardness / power), 1)
+
+func get_break_hits(item_id: String, block_id: String) -> int:
+	var profile := get_mining_profile(item_id, block_id)
+	return int(profile.hits) if bool(profile.allowed) else -1
 
 
 # ------------------------------------------------------------------
@@ -474,7 +547,7 @@ func get_content_signature() -> String:
 	for block_id in blocks.keys():
 		var block: Dictionary = blocks[block_id]
 		entries.append(
-			"block|%s|%d|%s|%s|%s|%s|%s|%s"
+			"block|%s|%d|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s"
 			% [
 				block_id,
 				int(block.get("voxel_id", 0)),
@@ -484,31 +557,39 @@ func get_content_signature() -> String:
 				str(block.get("transparent", false)),
 				JSON.stringify(block.get("tags", [])),
 				JSON.stringify(block.get("drops", [])),
+				str(block.get("breakable", true)),
+				str(block.get("preferred_tool", "")),
+				str(block.get("required_tool", "")),
+				str(block.get("mining_level", 0)),
 			]
 		)
 
 	for item_id in items.keys():
 		var item: Dictionary = items[item_id]
 		entries.append(
-			"item|%s|%s|%d|%s|%s"
+			"item|%s|%s|%d|%s|%s|%s"
 			% [
 				item_id,
 				str(item.get("display_name", "")),
 				int(item.get("stack_size", 64)),
 				str(item.get("place_block", "")),
 				JSON.stringify(item.get("properties", {})),
+				JSON.stringify(item.get("tags", [])),
 			]
 		)
 
 	for recipe_id in recipes.keys():
 		var recipe: Dictionary = recipes[recipe_id]
 		entries.append(
-			"recipe|%s|%s|%d|%s"
+			"recipe|%s|%s|%d|%s|%s|%s|%s"
 			% [
 				recipe_id,
 				str(recipe["output"]),
 				int(recipe["count"]),
 				JSON.stringify(recipe["ingredients"]),
+				str(recipe.get("station", "hand")),
+				str(recipe.get("method", "craft")),
+				str(recipe.get("duration", 0.0)),
 			]
 		)
 

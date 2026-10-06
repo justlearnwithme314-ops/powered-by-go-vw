@@ -13,6 +13,16 @@ extends RefCounted
 
 var content: ContentRegistry
 var events: EventBus
+var stations: BlockEntityService
+var item_instances: ItemInstanceService
+var grid_service: RefCounted
+
+func _ingredients(inventory: Object, recipe: Dictionary) -> Dictionary:
+	var available := {}
+	for id in content.get_item_ids():
+		var count := int(inventory.call("get_item_count", id))
+		if count > 0: available[id] = count
+	return content.resolve_ingredients(recipe.get("ingredients", {}), available)
 
 
 func _init(p_content: ContentRegistry, p_events: EventBus) -> void:
@@ -31,8 +41,13 @@ func can_craft(inventory: Object, recipe_id: String) -> bool:
 
 	if recipe.is_empty():
 		return false
+	if not requirement(inventory, recipe_id).is_empty():
+		return false
 
-	var ingredients: Dictionary = recipe.get("ingredients", {})
+	var resolved := _ingredients(inventory, recipe)
+	if not resolved.success:
+		return false
+	var ingredients: Dictionary = resolved.items
 
 	for item_id in ingredients:
 		var logical_item_id: String = str(item_id)
@@ -48,7 +63,23 @@ func can_craft(inventory: Object, recipe_id: String) -> bool:
 		if owned < required:
 			return false
 
+	if inventory.has_method("can_exchange"):
+		return bool(inventory.call("can_exchange", ingredients, {"id": str(recipe.get("output", "")), "count": int(recipe.get("count", 1))}))
 	return true
+
+func requirement(inventory: Object, recipe_id: String) -> String:
+	var recipe := content.get_recipe(recipe_id)
+	if recipe.is_empty():
+		return "Unknown recipe"
+	if str(recipe.get("method", "craft")) != "craft":
+		return "Requires fuel-based furnace processing"
+	var station := str(recipe.get("station", "hand"))
+	if station == "hand":
+		return ""
+	var player := inventory.get_parent() as Node3D if inventory is Node else null
+	if stations == null or player == null or station not in stations.capabilities(player):
+		return "Requires nearby %s" % station
+	return ""
 
 
 func craft(
@@ -75,6 +106,9 @@ func craft(
 			"success": false,
 			"reason": "unknown_recipe",
 		}
+	var missing_station := requirement(inventory, recipe_id)
+	if not missing_station.is_empty():
+		return {"success": false, "reason": missing_station}
 
 	if not can_craft(inventory, recipe_id):
 		return {
@@ -100,7 +134,27 @@ func craft(
 			"reason": "cancelled",
 		}
 
-	var ingredients: Dictionary = recipe.get("ingredients", {})
+	if inventory.has_method("craft_transaction"):
+		if not can_craft(inventory, recipe_id):
+			return {"success": false, "reason": "Crafting context changed"}
+		var output_id := str(event.get("output", recipe.get("output", "")))
+		var output_count := maxi(int(event.get("count", recipe.get("count", 1))), 1)
+		if not content.has_item(output_id):
+			return {"success": false, "reason": "invalid_output"}
+		var output_stack := {"id": output_id, "count": output_count}
+		if item_instances != null and output_count == 1:
+			output_stack = item_instances.prepare(output_stack)
+		var resolved := _ingredients(inventory, recipe)
+		if not resolved.success or not bool(inventory.call("craft_transaction", resolved.items, output_stack)):
+			return {"success": false, "reason": "ingredients_or_capacity"}
+		var result := {"success": true, "recipe_id": recipe_id, "output": output_id, "count": output_count}
+		events.emit(GameEvents.AFTER_CRAFT, {"player": player, "inventory": inventory, "recipe_id": recipe_id, "recipe": recipe, "result": result})
+		return result
+
+	var resolved := _ingredients(inventory, recipe)
+	if not resolved.success:
+		return {"success": false, "reason": "missing_ingredients"}
+	var ingredients: Dictionary = resolved.items
 	var removed_items: Array[Dictionary] = []
 
 	# Remove all ingredients.

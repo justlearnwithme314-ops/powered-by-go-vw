@@ -301,3 +301,70 @@ joining is not newly supported. NetworkManager and RPCs are unchanged.
 
 `tests/WorldSaves.gd` uses unique `user://world_save_tests/` fixtures and never
 touches real saves. Fixtures are intentionally retained (no deletion).
+
+## Slot inventory foundation
+
+SlotContainer is the generic storage model: fixed capacity, per-slot predicates,
+metadata-aware merging and atomic transfers/recipe exchange. Slot reads and
+snapshots are deep copies. Revisions advance before transfer notifications.
+Inventory wraps 34 player slots (first ten form the hotbar) and five equipment
+slots. Items declare accepted equipment positions in properties.equipment_slots.
+
+Use get_slot, add_stack (exact added/remainder), move_stack, equip, unequip and
+craft_transaction. Legacy add_item is all-or-nothing; callers must handle false.
+The transitional grant_item preserves reward overflow in recovery storage. items
+and hotbar are compatibility views: modifying their returned arrays cannot mutate
+inventory state. Concrete stack selection will be exposed by the new slot UI.
+
+Snapshot version 2 stores slots, equipment, selection and recovery. Old snapshots
+migrate without discarding overflow or unavailable mod items. Recovery is saved
+and can be reclaimed through the inventory panel when space exists. Networking
+must subsequently route these operations through authoritative commands; phase 1
+preserves the existing local ownership model.
+
+## Inventory slot interface and world dropping
+
+The inventory panel exposes 24 backpack slots, ten hotbar slots and filtered
+ equipment slots. Left click/drag moves, merges or swaps; right click takes half
+or places one; Shift-click transfers between backpack and hotbar. Double click
+collects compatible stacks into the held stack up to its limit. Group & sort
+compacts only the backpack, retaining hotbar assignments. Hovering a slot and
+pressing 1-9 or 0 moves its actual stack to that hotbar position.
+
+Cursor stacks belong to Inventory's single-slot cursor container, are included
+in version-2 snapshots, and return on closing/rebinding UI. Reloaded cursor stacks
+return to inventory or persisted recovery. Invalid drags return safely. UI reads
+copies and delegates mutations to Inventory/SlotContainer.
+
+Q drops one item; Ctrl+Q drops a stack. Clicking/dragging outside the open panel
+also drops the held stack (right-click drops one). InventoryDrops creates small
+world meshes/sprites with a pickup delay and partial collection. These records
+are saved in the world's .drops.json sidecar; catalog/deletion include that data.
+This bridge is single-player only. Multiplayer world dropping returns an explicit
+failure without consuming anything, pending authoritative shared inventory work.
+Mining rewards still enter inventory through the existing grant path.
+
+Hotbar keys are 1-9 and 0 (the tenth slot). Version-2 snapshots include hotbar_size;
+old eight-slot snapshots gain two empty hotbar slots before their backpack, keeping
+old stack positions and quantities intact. Backpack capacity remains 24 slots.
+
+### Local progression services
+
+GameAPI exposes BlockEntityService, InventoryCommandService and ItemInstanceService.
+Feature mods implement crafting stations, tool condition and player survival over
+these generic services. The local world .entities.json contains station containers,
+processing state, inventory and namespaced player data. Atomic container mutations
+and bounded revision/request validation prevent local transfer/replay mistakes.
+Terrain and dropped-item persistence remain separate, and shared server inventory
+and combat authority are pending. New survival/progression is currently single-player.
+
+### Creature framework
+
+EntityRegistry is the generic ModAPI entry point; entity_framework owns actors,
+movement, composable abilities, spawning, snapshots and world loot transactions.
+first_creatures supplies the pig and melee skeleton definitions/assets. Single-player
+entity data is a namespace in the combined .entities.json snapshot. Network hosts
+use .creatures.json for creature state, loot and credential-scoped server inventories;
+clients mirror inventories through validated slot commands and scoped receipt saves.
+Damage and item stats remain on the host. Existing terrain/manual-drop persistence
+and shared station/survival networking remain outside this creature ledger.

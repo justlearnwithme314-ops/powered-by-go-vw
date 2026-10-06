@@ -234,6 +234,10 @@ func _load_manifest(manifest: Dictionary) -> void:
 		root_path
 	)
 	mod_api.saves = _api.saves
+	mod_api.stations = _api.stations
+	mod_api.inventory_commands = _api.inventory_commands
+	mod_api.item_instances = _api.item_instances
+	mod_api.entities = _api.entities
 	_mod_apis.append(mod_api)
 
 	print(

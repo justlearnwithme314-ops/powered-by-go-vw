@@ -44,6 +44,9 @@ func _ready() -> void:
 		_state_path = GameAPI.saves.state_path(save_id)
 		_state_load_path = GameAPI.saves.state_load_path(save_id)
 	GameAPI.session = self
+	var drops: Node = preload("res://core/inventory/InventoryDrops.gd").new()
+	drops.name = "InventoryDrops"
+	add_child(drops)
 	GameAPI.events.emit(GameEvents.GAME_STARTED, {"game": self})
 
 	if not NetworkManager.player_connected.is_connected(_on_player_connected):
@@ -646,6 +649,19 @@ func _block_overlaps_player(
 # Local player persistence
 # ------------------------------------------------------------------
 
+func set_network_world_scope(scope: String) -> void:
+	if scope.length() != 32 or scope.hex_decode().size() != 16 or _local_player == null:
+		return
+	var destination := "user://network_profiles/" + scope + ".player.json"
+	DirAccess.make_dir_recursive_absolute(destination.get_base_dir())
+	var backup := destination + ".pre_authority.json"
+	if not FileAccess.file_exists(backup):
+		var file := FileAccess.open(backup, FileAccess.WRITE)
+		if file != null:
+			file.store_string(JSON.stringify((_local_player.get_node("Inventory") as Inventory).get_snapshot()))
+	_state_path = destination
+	_state_load_path = destination
+
 func _on_local_inventory_changed() -> void:
 	_inventory_dirty = true
 	_inventory_save_timer = 0.0
@@ -662,6 +678,14 @@ func _load_local_player_state(player: CharacterBody3D) -> void:
 	if inventory == null:
 		return
 
+	if not GameAPI.stations.path.is_empty():
+		if not GameAPI.stations.writable:
+			_state_path = ""
+			return
+		if GameAPI.stations.has_saved_inventory():
+			GameAPI.stations.bind_inventory(inventory)
+			return
+		GameAPI.stations.bind_inventory(inventory)
 	if _state_load_path.is_empty() or not FileAccess.file_exists(_state_load_path):
 		return
 
@@ -678,40 +702,66 @@ func _load_local_player_state(player: CharacterBody3D) -> void:
 	)
 
 	if parsed is Dictionary:
+		if int(parsed.get("version", 1)) > 2:
+			push_warning("[GameManager] Newer inventory format found; original save will not be overwritten.")
+			_state_path = ""
+			GameAPI.stations.writable = false
+			return
+		# Preserve the original before the first versioned inventory migration.
+		if int(parsed.get("version", 1)) < 2:
+			var backup_path := _state_load_path + ".pre_slots.bak"
+			if not FileAccess.file_exists(backup_path):
+				var backup_error := DirAccess.copy_absolute(_state_load_path, backup_path)
+				if backup_error != OK:
+					push_warning("[GameManager] Inventory migration backup failed; keeping the original save.")
+					_state_path = ""
+					GameAPI.stations.writable = false
 		inventory.load_snapshot(parsed)
+	else:
+		push_warning("[GameManager] Invalid inventory save; original save will not be overwritten.")
+		_state_path = ""
+		GameAPI.stations.writable = false
 
 
-func _save_local_player_state() -> void:
+func _save_local_player_state() -> bool:
 	if (
 		_local_player == null
 		or not is_instance_valid(_local_player)
 	):
-		return
+		return false
 
 	var inventory: Inventory = (
 		_local_player.get_node_or_null("Inventory") as Inventory
 	)
 
 	if inventory == null:
-		return
+		return false
 
 	if _state_path.is_empty():
-		return
+		return false
+	if GameAPI.stations.inventory == inventory and not GameAPI.stations.path.is_empty():
+		if not GameAPI.stations.save():
+			push_warning("[GameManager] Combined station/inventory save failed; previous snapshot retained.")
+			return false
 	DirAccess.make_dir_recursive_absolute(_state_path.get_base_dir())
-	var file: FileAccess = FileAccess.open(
-		_state_path,
-		FileAccess.WRITE
-	)
-
+	var temp_path := _state_path + ".tmp"
+	var file := FileAccess.open(temp_path, FileAccess.WRITE)
 	if file == null:
-		push_warning(
-			"[GameManager] Could not save local player state."
-		)
-		return
-
-	file.store_string(
-		JSON.stringify(
-			inventory.get_snapshot(),
-			"\t"
-		)
-	)
+		push_warning("[GameManager] Could not save local player state.")
+		return false
+	file.store_string(JSON.stringify(inventory.get_snapshot(), "\t"))
+	file.flush()
+	var write_error := file.get_error()
+	file.close()
+	if write_error != OK:
+		push_warning("[GameManager] Inventory write failed; retaining previous save.")
+		return false
+	if FileAccess.file_exists(_state_path):
+		var backup_error := DirAccess.copy_absolute(_state_path, _state_path + ".bak")
+		if backup_error != OK:
+			push_warning("[GameManager] Inventory backup failed; retaining previous save.")
+			return false
+	var rename_error := DirAccess.rename_absolute(temp_path, _state_path)
+	if rename_error != OK:
+		push_warning("[GameManager] Could not replace inventory save; temporary snapshot retained.")
+	return rename_error == OK

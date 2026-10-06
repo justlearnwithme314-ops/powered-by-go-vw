@@ -27,7 +27,7 @@ var network_animation_phase: float = -1.0
 var first_person_rig: Node3D
 var held_block: MeshInstance3D
 var view_block: MeshInstance3D
-const SWING_DURATION: float = 0.32
+const SWING_DURATION: float = 0.16
 
 func play_interaction_swing() -> void:
 	if player is PlayerController:
@@ -80,7 +80,8 @@ func _ready() -> void:
 			node.cast_shadow = GeometryInstance3D.SHADOW_CASTING_SETTING_OFF
 	if body.has_method("create_first_person_rig"):
 		first_person_rig = body.call("create_first_person_rig", player.get_node("Camera3D") as Camera3D) as Node3D
-		view_block = _block_holder(first_person_rig.get_node("PoseRoot/Rogue/Rig_Medium/Skeleton3D/RightHand"))
+		var socket: Node = first_person_rig.call("get_item_socket") if first_person_rig.has_method("get_item_socket") else first_person_rig.get_node("PoseRoot/Rogue/Rig_Medium/Skeleton3D/RightHand")
+		view_block = _block_holder(socket)
 		view_block.cast_shadow = GeometryInstance3D.SHADOW_CASTING_SETTING_OFF
 
 	_update_tool_visuals()
@@ -180,7 +181,7 @@ func _update_tool_visuals() -> void:
 	if first_person_pistol != null:
 		first_person_pistol.visible = false
 	if first_person_rig != null:
-		var socket: Node = first_person_rig.get_node("PoseRoot/Rogue/Rig_Medium/Skeleton3D/RightHand")
+		var socket: Node = first_person_rig.call("get_item_socket") if first_person_rig.has_method("get_item_socket") else first_person_rig.get_node("PoseRoot/Rogue/Rig_Medium/Skeleton3D/RightHand")
 		_set_socket_item(socket.get_node("HeldTool") as Sprite3D, socket.get_node("Pistol") as Sprite3D, view_block, texture, block_mesh, is_pistol, has_handle)
 
 func _block_holder(socket: Node) -> MeshInstance3D:
