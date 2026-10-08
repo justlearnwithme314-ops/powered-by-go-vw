@@ -1,0 +1,1 @@
+{"id":"survival:basics","name":"Core Survival Content","version":"1.0.0","api_version":1,"entry":"mod.gd","dependencies":["crafting:shaped","building:transparent_blocks","survival:player_survival"]}

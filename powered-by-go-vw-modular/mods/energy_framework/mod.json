@@ -1,0 +1,11 @@
+{
+	"api_version": 1,
+	"dependencies": [
+		"industry:machines",
+		"survival:crafting_progression"
+	],
+	"entry": "mod.gd",
+	"id": "industry:energy",
+	"name": "Energy Framework",
+	"version": "1.0.0"
+}

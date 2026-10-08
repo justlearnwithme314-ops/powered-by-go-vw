@@ -1,0 +1,343 @@
+{
+	"blocks": [
+		{
+			"display_name": "Polished Granite",
+			"drops": [
+				{
+					"count": 1,
+					"item": "building:polished_granite"
+				}
+			],
+			"hardness": 1.5,
+			"id": "building:polished_granite",
+			"mining_level": 1,
+			"preferred_tool": "pickaxe",
+			"required_tool": "pickaxe",
+			"tags": [
+				"block",
+				"stone",
+				"building:decorative"
+			],
+			"textures": {
+				"side": "res://assets/minecraft-inspired-textures-free/block/polished_granite.png"
+			}
+		},
+		{
+			"display_name": "Polished Diorite",
+			"drops": [
+				{
+					"count": 1,
+					"item": "building:polished_diorite"
+				}
+			],
+			"hardness": 1.5,
+			"id": "building:polished_diorite",
+			"mining_level": 1,
+			"preferred_tool": "pickaxe",
+			"required_tool": "pickaxe",
+			"tags": [
+				"block",
+				"stone",
+				"building:decorative"
+			],
+			"textures": {
+				"side": "res://assets/minecraft-inspired-textures-free/block/polished_diorite.png"
+			}
+		},
+		{
+			"display_name": "Polished Andesite",
+			"drops": [
+				{
+					"count": 1,
+					"item": "building:polished_andesite"
+				}
+			],
+			"hardness": 1.5,
+			"id": "building:polished_andesite",
+			"mining_level": 1,
+			"preferred_tool": "pickaxe",
+			"required_tool": "pickaxe",
+			"tags": [
+				"block",
+				"stone",
+				"building:decorative"
+			],
+			"textures": {
+				"side": "res://assets/minecraft-inspired-textures-free/block/polished_andesite.png"
+			}
+		},
+		{
+			"display_name": "Mossy Stone Bricks",
+			"drops": [
+				{
+					"count": 1,
+					"item": "building:mossy_stone_bricks"
+				}
+			],
+			"hardness": 1.5,
+			"id": "building:mossy_stone_bricks",
+			"mining_level": 1,
+			"preferred_tool": "pickaxe",
+			"required_tool": "pickaxe",
+			"tags": [
+				"block",
+				"stone",
+				"building:decorative"
+			],
+			"textures": {
+				"side": "res://assets/minecraft-inspired-textures-free/block/mossy_stone_bricks.png"
+			}
+		},
+		{
+			"display_name": "Chiseled Stone Bricks",
+			"drops": [
+				{
+					"count": 1,
+					"item": "building:chiseled_stone_bricks"
+				}
+			],
+			"hardness": 1.5,
+			"id": "building:chiseled_stone_bricks",
+			"mining_level": 1,
+			"preferred_tool": "pickaxe",
+			"required_tool": "pickaxe",
+			"tags": [
+				"block",
+				"stone",
+				"building:decorative"
+			],
+			"textures": {
+				"side": "res://assets/minecraft-inspired-textures-free/block/chiseled_stone_bricks.png"
+			}
+		},
+		{
+			"display_name": "Smooth Sandstone",
+			"drops": [
+				{
+					"count": 1,
+					"item": "building:smooth_sandstone"
+				}
+			],
+			"hardness": 1.5,
+			"id": "building:smooth_sandstone",
+			"mining_level": 1,
+			"preferred_tool": "pickaxe",
+			"required_tool": "pickaxe",
+			"tags": [
+				"block",
+				"stone",
+				"building:decorative"
+			],
+			"textures": {
+				"side": "res://assets/minecraft-inspired-textures-free/block/sandstone_top.png"
+			}
+		},
+		{
+			"display_name": "Cut Sandstone",
+			"drops": [
+				{
+					"count": 1,
+					"item": "building:cut_sandstone"
+				}
+			],
+			"hardness": 1.5,
+			"id": "building:cut_sandstone",
+			"mining_level": 1,
+			"preferred_tool": "pickaxe",
+			"required_tool": "pickaxe",
+			"tags": [
+				"block",
+				"stone",
+				"building:decorative"
+			],
+			"textures": {
+				"side": "res://assets/minecraft-inspired-textures-free/block/cut_sandstone.png"
+			}
+		},
+		{
+			"display_name": "Quartz Bricks",
+			"drops": [
+				{
+					"count": 1,
+					"item": "building:quartz_bricks"
+				}
+			],
+			"hardness": 1.5,
+			"id": "building:quartz_bricks",
+			"mining_level": 1,
+			"preferred_tool": "pickaxe",
+			"required_tool": "pickaxe",
+			"tags": [
+				"block",
+				"stone",
+				"building:decorative"
+			],
+			"textures": {
+				"side": "res://assets/minecraft-inspired-textures-free/block/quartz_bricks.png"
+			}
+		}
+	],
+	"recipes": [
+		{
+			"count": 4,
+			"id": "building:polished_granite_recipe",
+			"ingredients": {
+				"core:stone": 4
+			},
+			"method": "craft",
+			"output": "building:polished_granite",
+			"pattern": [
+				[
+					"core:stone",
+					"core:stone"
+				],
+				[
+					"core:stone",
+					"core:stone"
+				]
+			],
+			"station": "workbench"
+		},
+		{
+			"count": 4,
+			"id": "building:polished_diorite_recipe",
+			"ingredients": {
+				"core:stone": 4
+			},
+			"method": "craft",
+			"output": "building:polished_diorite",
+			"pattern": [
+				[
+					"core:stone",
+					"core:stone"
+				],
+				[
+					"core:stone",
+					"core:stone"
+				]
+			],
+			"station": "workbench"
+		},
+		{
+			"count": 4,
+			"id": "building:polished_andesite_recipe",
+			"ingredients": {
+				"core:stone": 4
+			},
+			"method": "craft",
+			"output": "building:polished_andesite",
+			"pattern": [
+				[
+					"core:stone",
+					"core:stone"
+				],
+				[
+					"core:stone",
+					"core:stone"
+				]
+			],
+			"station": "workbench"
+		},
+		{
+			"count": 4,
+			"id": "building:mossy_stone_bricks_recipe",
+			"ingredients": {
+				"core:stone": 4
+			},
+			"method": "craft",
+			"output": "building:mossy_stone_bricks",
+			"pattern": [
+				[
+					"core:stone",
+					"core:stone"
+				],
+				[
+					"core:stone",
+					"core:stone"
+				]
+			],
+			"station": "workbench"
+		},
+		{
+			"count": 4,
+			"id": "building:chiseled_stone_bricks_recipe",
+			"ingredients": {
+				"core:stone": 4
+			},
+			"method": "craft",
+			"output": "building:chiseled_stone_bricks",
+			"pattern": [
+				[
+					"core:stone",
+					"core:stone"
+				],
+				[
+					"core:stone",
+					"core:stone"
+				]
+			],
+			"station": "workbench"
+		},
+		{
+			"count": 4,
+			"id": "building:smooth_sandstone_recipe",
+			"ingredients": {
+				"core:stone": 4
+			},
+			"method": "craft",
+			"output": "building:smooth_sandstone",
+			"pattern": [
+				[
+					"core:stone",
+					"core:stone"
+				],
+				[
+					"core:stone",
+					"core:stone"
+				]
+			],
+			"station": "workbench"
+		},
+		{
+			"count": 4,
+			"id": "building:cut_sandstone_recipe",
+			"ingredients": {
+				"core:stone": 4
+			},
+			"method": "craft",
+			"output": "building:cut_sandstone",
+			"pattern": [
+				[
+					"core:stone",
+					"core:stone"
+				],
+				[
+					"core:stone",
+					"core:stone"
+				]
+			],
+			"station": "workbench"
+		},
+		{
+			"count": 4,
+			"id": "building:quartz_bricks_recipe",
+			"ingredients": {
+				"core:stone": 4
+			},
+			"method": "craft",
+			"output": "building:quartz_bricks",
+			"pattern": [
+				[
+					"core:stone",
+					"core:stone"
+				],
+				[
+					"core:stone",
+					"core:stone"
+				]
+			],
+			"station": "workbench"
+		}
+	],
+	"schema_version": 1
+}

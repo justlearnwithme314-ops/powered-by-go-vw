@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://d7bvkw6rq63s"]
+
+[ext_resource type="Script" path="res://tests/RecordT05T06.gd" id="1_pyvww"]
+
+[node name="RecordT05T06" type="Node" unique_id=175980068]
+script = ExtResource("1_pyvww")

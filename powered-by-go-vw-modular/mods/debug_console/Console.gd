@@ -85,8 +85,11 @@ func _resolve(value: String, ids: Array) -> String:
 		return value
 	var matches: Array[String] = []
 	for id in ids:
-		if str(id).get_slice(":", 1) == value or str(id).get_slice(":", 1) == "box_" + value:
+		if str(id).get_slice(":", 1) == value:
 			matches.append(str(id))
+	if not matches.is_empty(): return matches[0] if matches.size() == 1 else ""
+	for id in ids:
+		if str(id).get_slice(":", 1) == "box_" + value: matches.append(str(id))
 	return matches[0] if matches.size() == 1 else ""
 
 func execute(line: String) -> String:
@@ -146,7 +149,9 @@ func execute(line: String) -> String:
 				var hit = api.world.raycast(position + Vector3.UP * 8, Vector3.DOWN, 24)
 				if hit != null:
 					position = Vector3(hit.position) + Vector3(0.5,1.05,0.5)
-			return "Summoned " + id if api.entities.spawn(id, position) != null else "Could not summon (world unavailable or entity limit)."
+			if api.entities.spawn(id,position) != null: return "Summoned " + id
+			var runtime: Node = api.entities.runtime
+			return "Could not summon: " + str(runtime.get("last_spawn_error")) if is_instance_valid(runtime) else "Could not summon: world entity runtime unavailable."
 		"time":
 			if args.size() != 3 or args[1] != "set":
 				return "Usage: time set <day|noon|night|midnight|0..23999>"

@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://d13qokryjsehs"]
+
+[ext_resource type="Script" uid="uid://dpgghsgwbbh31" path="res://tests/WriteT05T06.gd" id="1_q10hl"]
+
+[node name="WriteT12Metadata" type="Node" unique_id=1796984556]
+script = ExtResource("1_q10hl")

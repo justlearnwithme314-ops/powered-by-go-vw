@@ -17,6 +17,7 @@ func _ready() -> void:
 	entities = BlockEntityService.new(GameAPI.content, world)
 	entities.register_kind("survival:workbench", ["workbench"], {})
 	entities.register_kind("survival:furnace", ["furnace"], {"input": 4, "fuel": 1, "output": 1})
+	entities.register_kind("survival:chest", [], {"storage": 27})
 	var recipes := CraftingService.new(GameAPI.content, GameAPI.events)
 	recipes.stations = entities
 	commands = InventoryCommandService.new(entities, recipes)
@@ -63,6 +64,21 @@ func _ready() -> void:
 	runtime.setup(api)
 	runtime.set_process(false)
 	runtime.tick_furnace(furnace, 0.0)
+	# A processor station may use the same container names without smelting.
+	var mock_block_id := "test:furnace_like_station"
+	entities.register_kind(mock_block_id, [], {"input": 4, "fuel": 1, "output": 1})
+	var mock_pos := Vector3i(-2, 0, 0)
+	world.blocks[mock_pos] = mock_block_id
+	var mock_station := entities.ensure(mock_pos)
+	assert(not mock_station.is_empty())
+	entities.container(mock_station, "input").insert({"id": "frontier:iron_lump", "count": 1})
+	entities.container(mock_station, "fuel").insert({"id": "core:log", "count": 1})
+	entities.update_state(mock_station, {"test_marker": "unchanged"})
+	var mock_before := entities.record(mock_station)
+	runtime.tick_furnace(mock_station, 8.0)
+	assert(entities.record(mock_station) == mock_before, "Direct furnace ticks must ignore non-furnace stations")
+	runtime._process(8.0)
+	assert(entities.record(mock_station) == mock_before, "The runtime loop must ignore non-furnace stations")
 	var input := entities.container(furnace, "input")
 	var fuel := entities.container(furnace, "fuel")
 	var output := entities.container(furnace, "output")
@@ -144,6 +160,19 @@ func _ready() -> void:
 	entities.bind_inventory(inventory)
 	runtime.open_station(player, furnace)
 	assert(runtime._ui != null)
+	runtime._ui.close()
+	var chest_pos := Vector3i(4, 0, 0)
+	world.blocks[chest_pos] = "survival:chest"
+	var chest := entities.ensure(chest_pos)
+	assert(not chest.is_empty())
+	var station_mod: Object = (load("res://mods/crafting_progression/mod.gd") as Script).new()
+	station_mod.set("_api", api)
+	station_mod.set("_active_world", self)
+	station_mod.set("_runtime", runtime)
+	var chest_use: Dictionary = station_mod.call("_used", {"player": player, "hit": {"position": chest_pos}, "handled": false})
+	assert(bool(chest_use.handled), "Right-click interaction is consumed for a chest")
+	assert(runtime._ui != null, "A registered chest opens through the actual interaction handler")
+	assert(entities.container(chest, "storage").size() == 27)
 	if "--capture" in OS.get_cmdline_user_args():
 		await get_tree().process_frame
 		await get_tree().process_frame

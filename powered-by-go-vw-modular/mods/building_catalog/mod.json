@@ -1,0 +1,11 @@
+{
+	"api_version": 1,
+	"dependencies": [
+		"core:base",
+		"crafting:shaped"
+	],
+	"entry": "mod.gd",
+	"id": "building:catalog",
+	"name": "Decorative Building Blocks",
+	"version": "1.0.0"
+}

@@ -23,7 +23,7 @@ func setup(definition: Dictionary) -> void:
 		head = _part("Head", Vector3(8,8,8), Vector2.ZERO, Vector3(0,18,0), Vector3(0,4,0), Vector3.ONE)
 		_part("Torso", Vector3(8,12,4), Vector2(16,16), Vector3(0,18,0), Vector3(0,-6,0), Vector3.ONE)
 		for x in [-2,2]:
-			for z in [-3,3]:
+			for z in [-4,4]:
 				limbs.append(_part("Foot", Vector3(4,6,4), Vector2(0,16), Vector3(x,6,z), Vector3(0,-3,0), Vector3.ONE))
 
 func animate(state: String, time: float, hurt: float) -> void:
@@ -35,4 +35,6 @@ func animate(state: String, time: float, hurt: float) -> void:
 	else:
 		for i in range(limbs.size()):
 			limbs[i].rotation.x = sin(time * 8.0 + (PI if i in [1,2] else 0.0)) * 0.45 if moving else 0.0
+		body.scale = Vector3.ONE * (1.0 + minf(time / 1.5, 1.0) * 0.15) if state == "fuse" else Vector3.ONE
+		material.albedo_color = Color(2,2,2) if state == "fuse" and sin(time*25) > 0 else Color.WHITE
 	body.rotation.z = PI * 0.5 if state == "dead" else sin(time * 30.0) * 0.08 if hurt > 0 else 0.0

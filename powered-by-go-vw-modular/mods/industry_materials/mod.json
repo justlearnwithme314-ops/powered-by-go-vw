@@ -1,0 +1,11 @@
+{
+	"api_version": 1,
+	"dependencies": [
+		"frontier:survival",
+		"crafting:shaped"
+	],
+	"entry": "mod.gd",
+	"id": "industry:materials",
+	"name": "Industrial Materials",
+	"version": "1.0.0"
+}

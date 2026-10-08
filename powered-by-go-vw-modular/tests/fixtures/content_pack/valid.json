@@ -1,0 +1,60 @@
+{
+	"blocks": [
+		{
+			"display_name": "Catalog Block",
+			"drops": [
+				{
+					"count": 1,
+					"item": "test:catalog_block"
+				}
+			],
+			"hardness": 1.5,
+			"id": "test:catalog_block",
+			"mining_level": 1,
+			"preferred_tool": "pickaxe",
+			"required_tool": "pickaxe",
+			"tags": [
+				"block",
+				"test"
+			],
+			"textures": {
+				"bottom": "res://assets/minecraft-inspired-textures-free/block/oak_planks.png",
+				"front": "res://assets/minecraft-inspired-textures-free/block/oak_planks.png",
+				"side": "res://assets/minecraft-inspired-textures-free/block/oak_planks.png",
+				"top": "res://assets/minecraft-inspired-textures-free/block/oak_planks.png"
+			},
+			"tint": [
+				1.0,
+				1.0,
+				1.0,
+				1.0
+			]
+		}
+	],
+	"items": [
+		{
+			"display_name": "Test Token",
+			"icon": "res://assets/minecraft-inspired-textures-free/block/oak_planks.png",
+			"id": "test:token",
+			"properties": {},
+			"stack_size": 16,
+			"tags": [
+				"test:token"
+			]
+		}
+	],
+	"recipes": [
+		{
+			"count": 2,
+			"duration": 0.0,
+			"id": "test:token_recipe",
+			"ingredients": {
+				"#material": 1
+			},
+			"method": "craft",
+			"output": "test:token",
+			"station": "hand"
+		}
+	],
+	"schema_version": 1
+}

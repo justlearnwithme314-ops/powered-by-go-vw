@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://237rohjcoror"]
+
+[ext_resource type="Script" uid="uid://50g3saxrnkgu" path="res://tests/PlayerPlacementGuardSmoke.gd" id="1_pkigf"]
+
+[node name="PlayerPlacementGuardSmoke" type="Node" unique_id=1540479669]
+script = ExtResource("1_pkigf")

@@ -1,6 +1,8 @@
 class_name WorldEditService
 extends RefCounted
 
+const PlayerPlacementGuard = preload("res://core/world/PlayerPlacementGuard.gd")
+
 ## High-level block operations.
 ##
 ## This is intentionally separate from VoxelWorldService so mods can
@@ -126,6 +128,8 @@ func place_block(player: Node, pos: Vector3i, item_id: String) -> Dictionary:
 	var block_id := content.get_placement_block(item_id)
 	if block_id.is_empty() or not content.has_block(block_id):
 		return {"success": false, "reason": "not_placeable"}
+	if player != null and PlayerPlacementGuard.overlaps_player_cell(player, pos):
+		return {"success": false, "reason": "player_collision"}
 
 	var before := events.emit(GameEvents.BEFORE_BLOCK_PLACE, {
 		"player": player,

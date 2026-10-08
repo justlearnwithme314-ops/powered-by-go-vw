@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://cks7jrrgt1nvk"]
+
+[ext_resource type="Script" uid="uid://fiewla14t5hh" path="res://tests/WriteT10Metadata.gd" id="1_u3vkw"]
+
+[node name="WriteT10Metadata" type="Node" unique_id=1983754978]
+script = ExtResource("1_u3vkw")

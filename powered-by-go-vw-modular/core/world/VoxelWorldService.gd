@@ -35,6 +35,48 @@ func _init(p_content: ContentRegistry, p_events: EventBus = null) -> void:
 	events = p_events
 
 
+## Construct the standard six-sided cube model used by JSON content packs.
+## Face keys: side (required), top, bottom and front (optional, default side).
+func build_cube_model(textures: Dictionary, tint: Color = Color.WHITE, transparent: bool = false) -> VoxelBlockyModelCube:
+	if not textures.get("side") is Texture2D:
+		return null
+	var side: Image = textures.side.get_image()
+	if side == null or side.is_empty():
+		return null
+	side.convert(Image.FORMAT_RGBA8)
+	var atlas := Image.create(side.get_width() * 4, side.get_height(), false, Image.FORMAT_RGBA8)
+	var tiles: Dictionary = {"side": side, "top": side, "bottom": side, "front": side}
+	for face: String in textures:
+		var texture := textures[face] as Texture2D
+		if texture == null:
+			return null
+		var image := texture.get_image()
+		if image == null or image.is_empty():
+			return null
+		image.convert(Image.FORMAT_RGBA8)
+		if image.get_size() != side.get_size():
+			return null
+		tiles[face] = image
+	var face_names := ["side", "top", "bottom", "front"]
+	for index in range(face_names.size()):
+		var face_name: String = face_names[index]
+		atlas.blit_rect(tiles[face_name], Rect2i(Vector2i.ZERO, side.get_size()), Vector2i(side.get_width() * index, 0))
+	var material := StandardMaterial3D.new()
+	material.albedo_texture = ImageTexture.create_from_image(atlas)
+	material.albedo_color = tint
+	material.texture_filter = BaseMaterial3D.TEXTURE_FILTER_NEAREST
+	material.roughness = 1.0
+	if transparent:
+		material.transparency = BaseMaterial3D.TRANSPARENCY_ALPHA
+	var model := VoxelBlockyModelCube.new()
+	model.atlas_size_in_tiles = Vector2i(4, 1)
+	model.tile_top = Vector2i(1, 0)
+	model.tile_bottom = Vector2i(2, 0)
+	model.tile_front = Vector2i(3, 0)
+	model.set_material_override(0, material)
+	return model
+
+
 func attach(new_terrain: VoxelTerrain) -> void:
 	terrain = new_terrain
 	tool = terrain.get_voxel_tool()

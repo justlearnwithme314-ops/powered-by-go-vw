@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://nu0xo3uoeuc2"]
+
+[ext_resource type="Script" uid="uid://c5ls5c6af6ndm" path="res://tests/MachineSmoke.gd" id="1_vpk2d"]
+
+[node name="MachineSmoke" type="Node3D" unique_id=2012061701]
+script = ExtResource("1_vpk2d")

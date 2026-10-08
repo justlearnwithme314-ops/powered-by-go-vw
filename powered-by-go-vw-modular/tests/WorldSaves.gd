@@ -181,9 +181,71 @@ func test_station_sidecar_catalog_and_delete() -> void:
 	var created := service.create_world("Stations", "53")
 	assert(created.success)
 	var id := str(created.save_name)
-	for suffix in [".entities.json", ".entities.json.tmp", ".entities.json.bak", ".creatures.json", ".creatures.json.tmp", ".creatures.json.bak"]:
+	for suffix in [".entities.json", ".entities.json.tmp", ".entities.json.bak", ".creatures.json", ".creatures.json.tmp", ".creatures.json.bak", ".farming.json", ".farming.json.tmp"]:
 		_write(service.root_path.path_join(id + suffix), "fixture")
 	assert(service.list_worlds().size() == 1 and service.list_worlds()[0].save_name == id)
 	assert(service.delete_world(id).success)
-	for suffix in [".entities.json", ".entities.json.tmp", ".entities.json.bak", ".creatures.json", ".creatures.json.tmp", ".creatures.json.bak"]:
+	for suffix in [".entities.json", ".entities.json.tmp", ".entities.json.bak", ".creatures.json", ".creatures.json.tmp", ".creatures.json.bak", ".farming.json", ".farming.json.tmp"]:
 		assert(not FileAccess.file_exists(service.root_path.path_join(id + suffix)))
+
+
+func test_world_profile_defaults_flags_and_switching() -> void:
+	var profiles := WorldProfileService.new()
+	assert(profiles.mode() == "survival")
+	assert(not profiles.enabled("industry:machines"))
+	var first := profiles.activate({
+		"game_mode": "creative",
+		"feature_flags": {"industry:machines": true, "future:unknown": true},
+	})
+	assert(profiles.mode() == "creative")
+	assert(profiles.enabled("industry:machines"))
+	assert(not first.feature_flags.has("future:unknown"))
+	first.feature_flags["industry:machines"] = false
+	assert(profiles.enabled("industry:machines"))
+	profiles.activate({"game_mode": "survival", "feature_flags": {}})
+	assert(profiles.mode() == "survival")
+	assert(not profiles.enabled("industry:machines"))
+	profiles.set_replica({"game_mode": "invalid", "feature_flags": {"combat:projectiles": true}})
+	assert(profiles.mode() == "survival")
+	assert(profiles.enabled("combat:projectiles"))
+	profiles.clear()
+	assert(profiles.mode() == "survival")
+	assert(not profiles.enabled("combat:projectiles"))
+
+
+func test_world_catalog_preserves_unknown_metadata_safely() -> void:
+	setup()
+	var created: Dictionary = service.create_world("Metadata", "77", {
+		"api_version": 1,
+		"custom_extension": {"value": 42},
+		"save_name": "../spoof",
+		"valid": false,
+	})
+	assert(created.success)
+	var catalog: Dictionary = service.read_world(created.save_name)
+	assert(catalog.valid)
+	assert(catalog.save_name == created.save_name)
+	assert(catalog.seed == 77)
+	assert(catalog.custom_extension.value == 42)
+
+
+func test_world_profiles_are_world_specific() -> void:
+	setup()
+	var creative_flags := {"industry:machines": true, "sandbox:explosives": true}
+	var creative := service.create_world("Creative Profile", "701", {
+		"profile_version": 1,
+		"game_mode": "creative",
+		"feature_flags": creative_flags,
+	})
+	var survival := service.create_world("Survival Profile", "702", {
+		"profile_version": 1,
+		"game_mode": "survival",
+		"feature_flags": {},
+	})
+	assert(creative.success and survival.success)
+	var profiles := WorldProfileService.new()
+	profiles.activate(service.read_world(creative.save_name))
+	assert(profiles.mode() == "creative" and profiles.enabled("industry:machines"))
+	profiles.activate(service.read_world(survival.save_name))
+	assert(profiles.mode() == "survival" and not profiles.enabled("industry:machines"))
+	assert(profiles.enabled("industry:machines") == false)

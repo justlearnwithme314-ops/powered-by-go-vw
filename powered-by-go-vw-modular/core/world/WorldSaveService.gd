@@ -44,7 +44,14 @@ func read_world(id: String) -> Dictionary:
 	if not data is Dictionary or not seed_valid(data.get("seed")):
 		result.error = "Invalid metadata: restore %s from backup (original integer seed required); do not recreate this save." % path
 		return result
-	result.merge({"seed": int(data.seed), "valid": true, "display_name": str(data.get("display_name", id))}, true)
+	# Preserve extension metadata, but restore catalog-owned fields afterward so
+	# serialized values can never spoof the filename or validity state.
+	result.merge(data, true)
+	result.save_name = id
+	result.seed = int(data.seed)
+	result.valid = true
+	result.error = ""
+	result.display_name = str(data.get("display_name", id))
 	return result
 
 func list_worlds() -> Array[Dictionary]:
@@ -64,6 +71,8 @@ func list_worlds() -> Array[Dictionary]:
 					id = filename.trim_suffix(".creatures.json")
 				elif filename.ends_with(".stations.json"):
 					id = filename.trim_suffix(".stations.json")
+				elif filename.ends_with(".farming.json"):
+					id = filename.trim_suffix(".farming.json")
 				if not ids.has(id):
 					ids.append(id)
 	ids.sort()
@@ -143,7 +152,7 @@ func delete_world(id: String) -> Dictionary:
 			break
 		probe = parent
 	var paths: Array[String] = []
-	for suffix: String in [".sqlite", ".sqlite-wal", ".sqlite-shm", ".player.json", ".player.json.tmp", ".player.json.bak", ".player.json.pre_slots.bak", ".drops.json", ".drops.json.tmp", ".drops.json.bak", ".entities.json", ".entities.json.tmp", ".entities.json.bak", ".creatures.json", ".creatures.json.tmp", ".creatures.json.bak", ".stations.json", ".stations.json.tmp", ".stations.json.bak", ".json"]:
+	for suffix: String in [".sqlite", ".sqlite-wal", ".sqlite-shm", ".player.json", ".player.json.tmp", ".player.json.bak", ".player.json.pre_slots.bak", ".drops.json", ".drops.json.tmp", ".drops.json.bak", ".entities.json", ".entities.json.tmp", ".entities.json.bak", ".creatures.json", ".creatures.json.tmp", ".creatures.json.bak", ".stations.json", ".stations.json.tmp", ".stations.json.bak", ".farming.json", ".farming.json.tmp", ".json"]:
 		var path: String = root.path_join(id + suffix).simplify_path()
 		if path.get_base_dir() != root:
 			return {"success": false, "error": "Save path escaped its directory; no files removed."}

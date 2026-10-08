@@ -1,0 +1,1 @@
+{"id":"building:transparent_blocks","name":"Transparent Building Blocks","version":"1.0.0","api_version":1,"entry":"mod.gd","dependencies":["survival:crafting_progression"]}

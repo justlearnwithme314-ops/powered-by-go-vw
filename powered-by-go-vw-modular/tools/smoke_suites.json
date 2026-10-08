@@ -1,0 +1,36 @@
+{
+	"suites": {
+		"content": [
+			{
+				"scene": "CreativeCatalogSmoke.tscn",
+				"success_marker": "Creative catalog smoke passed:"
+			},
+			{
+				"scene": "ContentPackSmoke.tscn",
+				"success_marker": "Content pack smoke passed:"
+			},
+			{
+				"scene": "MachineSmoke.tscn",
+				"success_marker": "Machine smoke passed:"
+			},
+			{
+				"scene": "EnergySmoke.tscn",
+				"success_marker": "Energy smoke passed:"
+			}
+		],
+		"foundation": [
+			{
+				"scene": "InventoryFoundationSmoke.tscn",
+				"success_marker": "Inventory foundation smoke passed:"
+			},
+			{
+				"scene": "WorldSaveCatalogSmoke.tscn",
+				"success_marker": "World save suite completed:"
+			},
+			{
+				"scene": "CraftingStationsSmoke.tscn",
+				"success_marker": "Crafting stations PASS:"
+			}
+		]
+	}
+}

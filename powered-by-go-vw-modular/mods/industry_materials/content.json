@@ -1,0 +1,112 @@
+{
+	"items": [
+		{
+			"display_name": "Copper Wire",
+			"icon": "res://assets/minecraft-inspired-textures-free/item/copper_ingot.png",
+			"id": "industry:copper_wire",
+			"properties": {},
+			"stack_size": 64.0,
+			"tags": [
+				"resource",
+				"industry:material"
+			]
+		},
+		{
+			"display_name": "Iron Plate",
+			"icon": "res://assets/minecraft-inspired-textures-free/item/iron_ingot.png",
+			"id": "industry:iron_plate",
+			"properties": {},
+			"stack_size": 64.0,
+			"tags": [
+				"resource",
+				"industry:material"
+			]
+		},
+		{
+			"display_name": "Machine Frame",
+			"icon": "res://assets/minecraft-inspired-textures-free/block/iron_block.png",
+			"id": "industry:machine_frame",
+			"properties": {},
+			"stack_size": 64.0,
+			"tags": [
+				"resource",
+				"industry:material"
+			]
+		},
+		{
+			"display_name": "Iron Dust",
+			"icon": "res://assets/minecraft-inspired-textures-free/item/iron_nugget.png",
+			"id": "industry:iron_dust",
+			"properties": {},
+			"stack_size": 64.0,
+			"tags": [
+				"resource",
+				"industry:material",
+				"industry:ore_dust"
+			]
+		}
+	],
+	"recipes": [
+		{
+			"count": 4.0,
+			"id": "industry:copper_wire_recipe",
+			"ingredients": {
+				"frontier:copper_ingot": 2.0
+			},
+			"method": "craft",
+			"output": "industry:copper_wire",
+			"pattern": [
+				[
+					"frontier:copper_ingot",
+					"frontier:copper_ingot"
+				]
+			],
+			"station": "workbench"
+		},
+		{
+			"count": 2.0,
+			"id": "industry:iron_plate_recipe",
+			"ingredients": {
+				"frontier:iron_ingot": 2.0
+			},
+			"method": "craft",
+			"output": "industry:iron_plate",
+			"pattern": [
+				[
+					"frontier:iron_ingot",
+					"frontier:iron_ingot"
+				]
+			],
+			"station": "workbench"
+		},
+		{
+			"count": 1.0,
+			"id": "industry:machine_frame_recipe",
+			"ingredients": {
+				"industry:copper_wire": 1.0,
+				"industry:iron_plate": 7.0
+			},
+			"method": "craft",
+			"output": "industry:machine_frame",
+			"pattern": [
+				[
+					"industry:iron_plate",
+					"industry:copper_wire",
+					"industry:iron_plate"
+				],
+				[
+					"industry:iron_plate",
+					"",
+					"industry:iron_plate"
+				],
+				[
+					"industry:iron_plate",
+					"industry:iron_plate",
+					"industry:iron_plate"
+				]
+			],
+			"station": "workbench"
+		}
+	],
+	"schema_version": 1.0
+}

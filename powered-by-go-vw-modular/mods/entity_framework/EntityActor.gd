@@ -111,6 +111,7 @@ func _physics_process(delta: float) -> void:
 	for ability in abilities:
 		if ability.has_method("tick"):
 			ability.call("tick", self, delta)
+	if dead: return
 	# Unloaded terrain cannot be mistaken for free space.
 	if not runtime.api.world.is_loaded(Vector3i((global_position - Vector3.UP * 0.1).floor())):
 		velocity = Vector3.ZERO
@@ -168,7 +169,7 @@ func _physics_process(delta: float) -> void:
 	_last = global_position
 	velocity.y -= 22.0 * delta
 	move_and_slide()
-	visual.call("animate", state if velocity.length() > 0.2 or state in ["windup", "recover"] else "idle", state_time, _hurt_clock)
+	visual.call("animate", state if velocity.length() > 0.2 or state in ["windup", "recover", "fuse"] else "idle", state_time, _hurt_clock)
 
 func _decide() -> void:
 	for ability in abilities:

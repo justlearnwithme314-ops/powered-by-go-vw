@@ -1,8 +1,11 @@
 extends Node3D
 
-const ACTOR = preload("EntityActor.gd")
-const PATH = preload("GridPath.gd")
+const ACTOR = preload("res://mods/entity_framework/EntityActor.gd")
+const PATH = preload("res://mods/entity_framework/GridPath.gd")
 const STATE := "entities:world"
+const NATURAL_RECORD_LIMIT := 256
+const MAX_SAVED_ENTITIES := 1024
+var last_spawn_error := ""
 var api: ModAPI
 var actors: Dictionary = {}
 var records: Dictionary = {}
@@ -44,6 +47,7 @@ func setup(context: ModAPI) -> void:
 	api = context
 	_commands = InventoryCommandService.new(api.stations, api.crafting)
 	_commands.item_instances = api.item_instances
+	_commands.profile = api.profile
 	_networked = multiplayer.multiplayer_peer != null and not multiplayer.multiplayer_peer is OfflineMultiplayerPeer
 	_authority = not _networked or multiplayer.is_server()
 	if _networked and _authority:
@@ -120,13 +124,20 @@ func valid_loot(record: Variant) -> bool:
 	return record is Dictionary and finite_vector(record.get("position")) and record.get("stack") is Dictionary and int(record.stack.get("count", 0)) > 0
 
 func spawn(kind: String, position: Vector3) -> Node3D:
-	if not authority() or not writable or api.entities.definition(kind).is_empty() or records.size() >= 256 or not finite_vector(array(position)):
+	last_spawn_error = ""
+	if not authority(): last_spawn_error = "only the host can spawn mobs."
+	elif not writable: last_spawn_error = "entity save is unreadable or read-only."
+	elif api.entities.definition(kind).is_empty(): last_spawn_error = "unknown mob ID."
+	elif records.size() >= MAX_SAVED_ENTITIES: last_spawn_error = "saved mob limit reached (%d)." % MAX_SAVED_ENTITIES
+	elif not finite_vector(array(position)): last_spawn_error = "invalid spawn coordinates."
+	if not last_spawn_error.is_empty():
 		return null
 	var id := Crypto.new().generate_random_bytes(16).hex_encode()
 	var record := {"id": id, "kind": kind, "position": array(position), "home": array(position), "health": api.entities.definition(kind).health, "dead": false}
 	records[id] = record
 	var actor := instantiate_record(record)
 	if not save_state():
+		last_spawn_error = "could not write the world's entity save."
 		records.erase(id)
 		_remove_actor(id)
 		return null
@@ -188,8 +199,9 @@ func damage_player(player: Node3D, amount: float, source: Node3D) -> void:
 	if authority():
 		DamageReceiver.deliver(player, amount, {"source": source, "damage_type": "physical"})
 
-func commit_death(actor: Node3D, _context: Dictionary) -> bool:
-	if not writable or not authority() or loot.size() + actor.definition.get("loot", []).size() > 512:
+func commit_death(actor: Node3D, context: Dictionary) -> bool:
+	var death_loot: Array = actor.definition.get("loot",[]) if bool(context.get("drop_loot",true)) else []
+	if not writable or not authority() or loot.size() + death_loot.size() > 512:
 		return false
 	var previous := records.duplicate(true)
 	var old_loot := loot.duplicate(true)
@@ -199,8 +211,8 @@ func commit_death(actor: Node3D, _context: Dictionary) -> bool:
 	record.dead = true
 	record.health = 0
 	records[actor.entity_id] = record
-	for i in range(actor.definition.get("loot", []).size()):
-		var stack: Dictionary = actor.definition.loot[i].duplicate(true)
+	for i in range(death_loot.size()):
+		var stack: Dictionary = death_loot[i].duplicate(true)
 		var id := "%s:%s:%d" % [_extra.scope, actor.entity_id, i]
 		loot[id] = {"stack": stack, "position": array(actor.global_position + Vector3.UP * 0.25)}
 	if not persist():
@@ -355,7 +367,7 @@ func _remove_actor(id: String) -> void:
 
 func spawn_attempt() -> void:
 	var active := players()
-	if active.is_empty() or records.size() >= 256:
+	if active.is_empty() or records.size() >= NATURAL_RECORD_LIMIT:
 		return
 	var player: Node3D = active[_rng.randi_range(0, active.size() - 1)]
 	var counts := {}
@@ -384,7 +396,8 @@ func spawn_attempt() -> void:
 				if not api.world.is_loaded(ground):
 					continue
 				var block_id := api.world.get_block_id(ground)
-				if block_id in ["core:log", "core:leaves"]:
+				var ground_tags: Array = api.content.get_block(block_id).get("tags", [])
+				if block_id in ["core:log", "core:leaves"] or "core:logs" in ground_tags or "leaves" in ground_tags:
 					continue
 				if api.world.can_stand(feet, ceili(float(definition.get("height", 2.0)))):
 					cell = feet
@@ -556,15 +569,16 @@ func join_world(token: String) -> void:
 			if vitals != null and vitals.has_method("restore"):
 				vitals.call("restore", profiles.get(key, {}).get("creature_vitals", {}))
 	if persist():
-		joined.rpc_id(peer, str(_extra.scope))
+		joined.rpc_id(peer, str(_extra.scope), api.profile.snapshot())
 		for player in players(true):
 			if player.get_multiplayer_authority() == peer:
 				publish_inventory(player)
 
 @rpc("authority", "reliable")
-func joined(scope: String) -> void:
+func joined(scope: String, host_profile: Dictionary) -> void:
 	if authority():
 		return
+	api.profile.set_replica(host_profile)
 	_joined = true
 	world_id = scope
 	for player in players(true):
@@ -706,14 +720,22 @@ func request_interaction(id: String) -> void:
 
 func inventory_request(player: Node, action: String, arguments: Dictionary) -> Dictionary:
 	if authority():
-		return _commands.request(player, action, arguments)
+		var inventory := player.get_node_or_null("Inventory") as Inventory
+		if inventory == null:
+			return {"success": false, "reason": "Inventory missing"}
+		var before := inventory.get_snapshot()
+		var result := _commands.request(player, action, arguments)
+		if bool(result.get("success", false)) and not save_inventory(player):
+			inventory.load_snapshot(before, true)
+			return {"success": false, "reason": "Could not save inventory"}
+		return result
 	_command_id += 1
 	request_inventory.rpc_id(1, _command_id, action, arguments)
 	return {"success": false, "pending": true, "reason": "Waiting for server"}
 
 @rpc("any_peer", "reliable")
 func request_inventory(id: int, action: String, arguments: Dictionary) -> void:
-	if not authority() or action not in ["select", "move", "equip", "unequip", "click", "return_cursor", "collect", "quick_transfer", "organize", "recover", "craft", "repair", "grid_resize", "grid_click", "grid_craft", "grid_return"] or JSON.stringify(arguments).length() > 2048:
+	if not authority() or action not in ["select", "move", "equip", "unequip", "click", "return_cursor", "collect", "quick_transfer", "organize", "recover", "craft", "repair", "grid_resize", "grid_click", "grid_craft", "grid_return", "creative_grant"] or JSON.stringify(arguments).length() > 2048:
 		return
 	var peer := multiplayer.get_remote_sender_id()
 	if not _peer_keys.has(peer) or id <= int(_command_highwater.get(peer, 0)):

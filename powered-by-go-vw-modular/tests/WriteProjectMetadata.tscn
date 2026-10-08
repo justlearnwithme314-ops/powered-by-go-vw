@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://b638hiawk1y3q"]
+
+[ext_resource type="Script" uid="uid://c5ls5c6af6ndm" path="res://tests/MachineSmoke.gd" id="1_iloxa"]
+
+[node name="WriteProjectMetadata" type="Node" unique_id=733683157]
+script = ExtResource("1_iloxa")

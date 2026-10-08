@@ -404,7 +404,14 @@ func build_voxel_library() -> VoxelBlockyLibrary:
 	for block_id in blocks:
 		var voxel_id := int(blocks[block_id]["voxel_id"])
 		if voxel_id >= 0 and voxel_id < models.size():
-			models[voxel_id] = blocks[block_id]["model"]
+			var block: Dictionary = blocks[block_id]
+			var model := block.model.duplicate() as VoxelBlockyModel
+			# Material alpha alone does not inform the voxel mesher's face culling.
+			if bool(block.get("transparent", false)):
+				model.transparency_index = int(block.get("transparency_index", 1))
+				model.culls_neighbors = bool(block.get("culls_neighbors", false))
+				model.lod_skirts_enabled = false
+			models[voxel_id] = model
 
 	var library := VoxelBlockyLibrary.new()
 	library.set_models(models)

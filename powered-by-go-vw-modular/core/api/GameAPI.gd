@@ -15,8 +15,11 @@ var edits: WorldEditService
 var mods: ModLoader
 var crafting: CraftingService
 var stations: BlockEntityService
+var machines: MachineRegistry
+var energy: EnergyService
 var inventory_commands: InventoryCommandService
 var item_instances: ItemInstanceService
+var profile := WorldProfileService.new()
 var entities := EntityRegistry.new()
 var base_mod_api: ModAPI
 
@@ -48,8 +51,12 @@ func initialize() -> void:
 	edits = WorldEditService.new(content, world, events)
 	crafting = CraftingService.new(content, events)
 	stations = BlockEntityService.new(content, world)
+	machines = MachineRegistry.new(content, stations)
+	energy = EnergyService.new(content, stations, world)
 	crafting.stations = stations
 	inventory_commands = InventoryCommandService.new(stations, crafting)
+	profile = WorldProfileService.new()
+	inventory_commands.profile = profile
 	item_instances = ItemInstanceService.new(content)
 	inventory_commands.item_instances = item_instances
 	crafting.item_instances = item_instances
@@ -58,8 +65,11 @@ func initialize() -> void:
 	)
 	base_mod_api.saves = saves
 	base_mod_api.stations = stations
+	base_mod_api.machines = machines
+	base_mod_api.energy = energy
 	base_mod_api.inventory_commands = inventory_commands
 	base_mod_api.item_instances = item_instances
+	base_mod_api.profile = profile
 	base_mod_api.entities = entities
 	mods = ModLoader.new()
 

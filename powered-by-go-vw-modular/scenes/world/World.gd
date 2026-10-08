@@ -13,6 +13,7 @@ var _stream = null
 
 func _ready() -> void:
 	GameAPI.ensure_ready()
+	GameAPI.profile.clear()
 
 	var config: Dictionary = GameAPI.saves.selected_config()
 	if not config.is_empty():
@@ -42,6 +43,7 @@ func _ready() -> void:
 	_configure_generator()
 	_configure_mesher()
 	GameAPI.world.attach(voxel_terrain)
+	GameAPI.profile.activate(config)
 	GameAPI.events.emit(GameEvents.WORLD_READY, {
 		"world": self,
 		"terrain": voxel_terrain,
@@ -163,3 +165,4 @@ func _exit_tree() -> void:
 		GameAPI.world.detach()
 	if GameAPI.saves.active_world_id == _safe_save_name():
 		GameAPI.saves.active_world_id = ""
+	GameAPI.profile.clear()

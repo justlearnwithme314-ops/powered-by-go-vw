@@ -1,0 +1,11 @@
+{
+	"api_version": 1,
+	"dependencies": [
+		"survival:crafting_progression",
+		"crafting:shaped"
+	],
+	"entry": "mod.gd",
+	"id": "industry:machines",
+	"name": "Industrial Machines",
+	"version": "1.0.0"
+}

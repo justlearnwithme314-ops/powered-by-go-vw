@@ -7,6 +7,7 @@ const CHARCOAL := "survival:charcoal"
 var _api: ModAPI
 var _runtime_script: Script
 var _runtime: Node
+var _active_world: Node
 
 func register(api: ModAPI) -> void:
 	_api = api
@@ -42,6 +43,7 @@ func register(api: ModAPI) -> void:
 
 func _world_ready(event: Dictionary) -> Dictionary:
 	var world: Node = event.get("world") as Node
+	_active_world = world
 	if world == null:
 		return event
 	var peer := world.multiplayer.multiplayer_peer
@@ -50,16 +52,24 @@ func _world_ready(event: Dictionary) -> Dictionary:
 		_api.stations.activate("")
 		return event
 	_api.stations.activate(_api.saves.root_path.path_join(_api.saves.active_world_id + (".stations.json" if networked else ".entities.json")))
+	_start_runtime(world)
+	return event
+
+func _start_runtime(world: Node) -> void:
+	if world == null or _runtime_script == null:
+		return
+	if is_instance_valid(_runtime):
+		return
 	_runtime = _runtime_script.new() as Node
 	_runtime.name = "CraftingStations"
 	world.add_child(_runtime)
 	_runtime.call("setup", _api)
-	return event
 
 func _world_stopping(event: Dictionary) -> Dictionary:
 	if not _api.stations.path.is_empty():
 		_api.stations.save()
 	_runtime = null
+	_active_world = null
 	_api.stations.activate("")
 	return event
 
@@ -69,8 +79,9 @@ func _placed(event: Dictionary) -> Dictionary:
 	return event
 
 func _before_break(event: Dictionary) -> Dictionary:
-	if _api.stations.kinds.has(str(event.get("block_id", ""))) and not _api.stations.path.is_empty() and not _api.stations.writable:
-		event.cancelled = true
+	# A damaged/older station sidecar must not make its blocks indestructible.
+	# Keep the original sidecar untouched when it is unreadable; normal writable
+	# worlds still spill the station contents in _broken().
 	return event
 
 func _broken(event: Dictionary) -> Dictionary:
@@ -87,17 +98,34 @@ func _used(event: Dictionary) -> Dictionary:
 	if bool(event.get("handled", false)):
 		return event
 	var hit: Variant = event.get("hit")
-	if hit == null or not _api.stations.kinds.has(_api.world.get_block_id(hit.position)):
+	if hit == null:
 		return event
-	if Input.is_key_pressed(KEY_SHIFT):
+	var station_block := _api.world.get_block_id(hit.position)
+	if not _api.stations.kinds.has(station_block):
+		return event
+	# Shift is also the sprint key; keep its place-through behavior for workbenches,
+	# but don't make a chest impossible to open while sprinting.
+	if Input.is_key_pressed(KEY_SHIFT) and station_block != "survival:chest":
 		return event
 	event.handled = true
 	var player := event.player as Node3D
-	if _runtime == null or not _api.stations.writable:
-		push_warning("[Stations] Open the furnace on the host; remote station interfaces are not implemented yet.")
+	var world: Node = _active_world
+	var peer: MultiplayerPeer = world.multiplayer.multiplayer_peer if world != null else null
+	var remote_client: bool = peer != null and not peer is OfflineMultiplayerPeer and not world.multiplayer.is_server()
+	if _runtime == null and not remote_client:
+		_start_runtime(world)
+	if not _api.stations.writable:
+		push_warning("[Stations] Cannot open this station because its save data failed validation. The original save is preserved.")
+		return event
+	if _runtime == null:
+		push_warning("[Stations] Station UI is unavailable on a multiplayer client; open it on the host.")
 		return event
 	var id := _api.stations.ensure(hit.position)
-	if id.is_empty() or not _api.stations.accessible(player, id):
+	if id.is_empty():
+		push_warning("[Stations] Could not create or find station data at %s." % hit.position)
+		return event
+	if not _api.stations.accessible(player, id):
+		push_warning("[Stations] Station is out of reach or its block no longer matches its saved data.")
 		return event
 	if _api.world.get_block_id(hit.position) == BENCH:
 		player.get_tree().call_group("inventory_ui", "set_open", true)

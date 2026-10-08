@@ -11,8 +11,11 @@ const API_VERSION := 1
 
 var saves: WorldSaveService
 var stations: BlockEntityService
+var machines: MachineRegistry
+var energy: EnergyService
 var inventory_commands: InventoryCommandService
 var item_instances: ItemInstanceService
+var profile: WorldProfileService
 var entities: EntityRegistry
 var content: ContentRegistry
 var events: EventBus
@@ -75,6 +78,11 @@ func register_worldgen_stage(
 	callback: Callable
 ) -> bool:
 	return world_generation.register_stage(stage_id, order, callback)
+
+
+func register_content_pack(path: String) -> Dictionary:
+	return ContentPackLoader.new().register_pack(self, path)
+
 
 func configure_recipe(recipe_id: String, options: Dictionary) -> bool:
 	return content.configure_recipe(recipe_id, options)

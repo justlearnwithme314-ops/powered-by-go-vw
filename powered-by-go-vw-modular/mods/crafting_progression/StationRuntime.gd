@@ -14,7 +14,11 @@ func _process(delta: float) -> void:
 	if _api == null or not _api.stations.writable:
 		return
 	for id in _api.stations.ids():
-		if _api.stations.container(str(id), "input") != null:
+		var record := _api.stations.record(str(id))
+		if (
+			str(record.get("block_id", "")) == "survival:furnace"
+			and _api.stations.container(str(id), "input") != null
+		):
 			tick_furnace(str(id), delta)
 	_save_timer += delta
 	if _save_timer >= 1.0:
@@ -24,11 +28,13 @@ func _process(delta: float) -> void:
 
 func tick_furnace(id: String, delta: float) -> void:
 	var record := _api.stations.record(id)
-	if record.is_empty():
+	if record.is_empty() or str(record.get("block_id", "")) != "survival:furnace":
 		return
 	var input := _api.stations.container(id, "input")
 	var fuel := _api.stations.container(id, "fuel")
 	var output := _api.stations.container(id, "output")
+	if input == null or fuel == null or output == null:
+		return
 	if not _configured.has(id) or _configured[id] != input:
 		fuel.set_filter(0, _accept_fuel)
 		for slot in range(input.size()):

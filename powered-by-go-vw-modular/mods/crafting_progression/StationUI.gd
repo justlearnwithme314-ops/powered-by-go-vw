@@ -44,20 +44,23 @@ func setup(player: Node3D, id: String, api: ModAPI) -> void:
 	var box := VBoxContainer.new()
 	margin.add_child(box)
 	var heading := Label.new()
-	heading.text = "Furnace"
+	var block_id := str(_api.stations.record(_id).block_id)
+	var storage_only := _api.stations.container(_id,"storage") != null
+	heading.text = _api.content.get_block_display_name(block_id)
 	heading.add_theme_font_size_override("font_size", 22)
 	box.add_child(heading)
 	_status = Label.new()
 	box.add_child(_status)
 	var row := HBoxContainer.new()
 	box.add_child(row)
-	for container_name in ["input", "fuel", "output"]:
+	for container_name in _api.stations.kinds[block_id].slots:
 		var column := VBoxContainer.new()
 		row.add_child(column)
 		var title := Label.new()
 		title.text = str(container_name).capitalize()
 		column.add_child(title)
-		var slots := HBoxContainer.new()
+		var slots := GridContainer.new()
+		slots.columns = 9 if container_name == "storage" else 4
 		column.add_child(slots)
 		var container := _api.stations.container(_id, container_name)
 		var buttons: Array[Button] = []
@@ -73,8 +76,10 @@ func setup(player: Node3D, id: String, api: ModAPI) -> void:
 	_burn = ProgressBar.new()
 	_burn.custom_minimum_size = Vector2(0, 12)
 	box.add_child(_burn)
+	_progress.visible = not storage_only
+	_burn.visible = not storage_only
 	var inventory_title := Label.new()
-	inventory_title.text = "Inventory — select an item, then click an input or fuel slot"
+	inventory_title.text = "Inventory — select an item, then click a storage slot" if storage_only else "Inventory — select an item, then click an input or fuel slot"
 	box.add_child(inventory_title)
 	var grid := GridContainer.new()
 	grid.columns = 10
@@ -86,6 +91,7 @@ func setup(player: Node3D, id: String, api: ModAPI) -> void:
 		_inventory_buttons.append(button)
 	_hint = Label.new()
 	_hint.text = "Left click transfers a stack; right click transfers one. Click output to collect."
+	if storage_only: _hint.text = "Left-click transfers a stack; right-click transfers one. Deselect inventory to retrieve."
 	_hint.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	box.add_child(_hint)
 	var close_button := Button.new()
@@ -96,7 +102,7 @@ func setup(player: Node3D, id: String, api: ModAPI) -> void:
 
 func _slot_button() -> Button:
 	var button := Button.new()
-	button.custom_minimum_size = Vector2(70, 58)
+	button.custom_minimum_size = Vector2(70, 42 if _api.stations.container(_id,"storage") != null else 58)
 	button.expand_icon = true
 	button.add_theme_constant_override("icon_max_width", 28)
 	return button
@@ -156,6 +162,9 @@ func refresh() -> void:
 		var container := _api.stations.container(_id, name)
 		for index in range(container.size()):
 			_paint(_station_buttons[name][index], container.stack_at(index))
+	if _api.stations.container(_id,"storage") != null:
+		_status.text = "27 storage slots — contents saved with this world"
+		return
 	var state: Dictionary = _api.stations.record(_id).state
 	var recipe := _api.content.get_recipe(str(state.get("recipe", "")))
 	_progress.max_value = maxf(float(recipe.get("duration", 8.0)), 0.1)

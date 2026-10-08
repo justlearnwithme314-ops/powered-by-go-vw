@@ -53,7 +53,7 @@ func receive_damage(amount: float, context: Dictionary) -> void:
 	var kind := str(context.get("damage_type", "physical"))
 	if _spawn_protection > 0.0:
 		return
-	var physical := kind in ["physical", "projectile"]
+	var physical := kind in ["physical", "projectile", "explosion"]
 	if physical and _hurt_time > 0.0:
 		return
 	var applied := amount

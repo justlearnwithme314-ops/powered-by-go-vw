@@ -1,0 +1,3315 @@
+# Local asset texture catalog
+
+Scanned 2026-10-07. File availability only: this is not a list of implemented gameplay content. Counts include variants, animation frames, atlases, previews and UI images.
+
+## 3d (1 images)
+
+- 3d/trees/Textures/mdgm7dr3.png
+
+## assorted_textures_1 (212 images)
+
+- assorted_textures_1/animalia_guano_bucket.png
+- assorted_textures_1/animalia_milk_bucket.png
+- assorted_textures_1/badland_bowl.png
+- assorted_textures_1/bubble.png
+- assorted_textures_1/bucket_cactus.png
+- assorted_textures_1/bucket_lava.png
+- assorted_textures_1/bucket_river_water.png
+- assorted_textures_1/bucket_water.png
+- assorted_textures_1/bucket.png
+- assorted_textures_1/chicken_noodle_soup.png
+- assorted_textures_1/coins_bucket_scrap_gold.png
+- assorted_textures_1/default_acacia_sapling.png
+- assorted_textures_1/default_acacia_tree_alt.png
+- assorted_textures_1/default_acacia_wood.png
+- assorted_textures_1/default_apple_gold.png
+- assorted_textures_1/default_apple.png
+- assorted_textures_1/default_aspen_sapling.png
+- assorted_textures_1/default_aspen_tree.png
+- assorted_textures_1/default_aspen_wood.png
+- assorted_textures_1/default_bronze_block.png
+- assorted_textures_1/default_bronze_ingot.png
+- assorted_textures_1/default_coal_block.png
+- assorted_textures_1/default_coal_lump.png
+- assorted_textures_1/default_cobble.png
+- assorted_textures_1/default_copper_block.png
+- assorted_textures_1/default_copper_ingot.png
+- assorted_textures_1/default_copper_lump.png
+- assorted_textures_1/default_coral_skeleton.png
+- assorted_textures_1/default_desert_sand_alt_2.png
+- assorted_textures_1/default_desert_sand_alt.png
+- assorted_textures_1/default_desert_sandstone_block.png
+- assorted_textures_1/default_desert_sandstone_brick.png
+- assorted_textures_1/default_desert_sandstone.png
+- assorted_textures_1/default_diamond_block.png
+- assorted_textures_1/default_diamond.png
+- assorted_textures_1/default_glass_detail.png
+- assorted_textures_1/default_glass.png
+- assorted_textures_1/default_gold_block.png
+- assorted_textures_1/default_gold_ingot.png
+- assorted_textures_1/default_gold_lump.png
+- assorted_textures_1/default_grass_side.png
+- assorted_textures_1/default_grass.png
+- assorted_textures_1/default_iron_lump.png
+- assorted_textures_1/default_junglesapling.png
+- assorted_textures_1/default_junglewood.png
+- assorted_textures_1/default_mese_block.png
+- assorted_textures_1/default_mese_crystal_fragment.png
+- assorted_textures_1/default_mese_crystal.png
+- assorted_textures_1/default_mineral_coal.png
+- assorted_textures_1/default_mineral_copper.png
+- assorted_textures_1/default_mineral_diamond_alt.png
+- assorted_textures_1/default_mineral_diamond.png
+- assorted_textures_1/default_mineral_gold.png
+- assorted_textures_1/default_mineral_iron.png
+- assorted_textures_1/default_mineral_mese.png
+- assorted_textures_1/default_mineral_tin.png
+- assorted_textures_1/default_mossycobble.png
+- assorted_textures_1/default_obsidian_block.png
+- assorted_textures_1/default_obsidian_brick.png
+- assorted_textures_1/default_obsidian_glass.png
+- assorted_textures_1/default_obsidian_shard.png
+- assorted_textures_1/default_obsidian.png
+- assorted_textures_1/default_pine_sapling.png
+- assorted_textures_1/default_pine_wood.png
+- assorted_textures_1/default_sand_alt.png
+- assorted_textures_1/default_sandstone.png
+- assorted_textures_1/default_sapling.png
+- assorted_textures_1/default_silver_sand_alt.png
+- assorted_textures_1/default_silver_sandstone.png
+- assorted_textures_1/default_snowball.png
+- assorted_textures_1/default_steel_block.png
+- assorted_textures_1/default_steel_ingot.png
+- assorted_textures_1/default_stick.png
+- assorted_textures_1/default_tin_block.png
+- assorted_textures_1/default_tin_ingot.png
+- assorted_textures_1/default_tin_lump.png
+- assorted_textures_1/default_tool_bronzeaxe.png
+- assorted_textures_1/default_tool_bronzepick.png
+- assorted_textures_1/default_tool_bronzeshovel.png
+- assorted_textures_1/default_tool_bronzesword.png
+- assorted_textures_1/default_tool_diamondaxe.png
+- assorted_textures_1/default_tool_diamondpick.png
+- assorted_textures_1/default_tool_diamondshovel.png
+- assorted_textures_1/default_tool_diamondsword.png
+- assorted_textures_1/default_tool_goldaxe.png
+- assorted_textures_1/default_tool_goldpick.png
+- assorted_textures_1/default_tool_goldshovel.png
+- assorted_textures_1/default_tool_goldsword.png
+- assorted_textures_1/default_tool_meseaxe.png
+- assorted_textures_1/default_tool_mesepick.png
+- assorted_textures_1/default_tool_meseshovel.png
+- assorted_textures_1/default_tool_mesesword.png
+- assorted_textures_1/default_tool_steelaxe.png
+- assorted_textures_1/default_tool_steelpick.png
+- assorted_textures_1/default_tool_steelshovel.png
+- assorted_textures_1/default_tool_steelsword.png
+- assorted_textures_1/default_tool_stoneaxe.png
+- assorted_textures_1/default_tool_stonepick.png
+- assorted_textures_1/default_tool_stoneshovel.png
+- assorted_textures_1/default_tool_stonesword.png
+- assorted_textures_1/default_tool_woodaxe.png
+- assorted_textures_1/default_tool_woodpick.png
+- assorted_textures_1/default_tool_woodshovel.png
+- assorted_textures_1/default_tool_woodsword.png
+- assorted_textures_1/default_torch_on_floor_animated.png
+- assorted_textures_1/default_torch_on_floor.png
+- assorted_textures_1/default_wood.png
+- assorted_textures_1/ebiomes_birch_tree.png
+- assorted_textures_1/ebiomes_bucket_peas_alt.png
+- assorted_textures_1/ebiomes_bucket_peas.png
+- assorted_textures_1/ebiomes_bucket_swamp_water.png
+- assorted_textures_1/ebiomes_downy_birch_tree.png
+- assorted_textures_1/ethereal_bowl.png
+- assorted_textures_1/ethereal_charcoal_lump.png
+- assorted_textures_1/ethereal_hearty_stew.png
+- assorted_textures_1/ethereal_illumishroom_cyan.png
+- assorted_textures_1/ethereal_illumishroom_green.png
+- assorted_textures_1/ethereal_illumishroom_red.png
+- assorted_textures_1/ethereal_mushroom_soup.png
+- assorted_textures_1/ethereal_strawberry.png
+- assorted_textures_1/ethereal_teriyaki_beef.png
+- assorted_textures_1/farming_bread.png
+- assorted_textures_1/farming_tool_bronzehoe.png
+- assorted_textures_1/farming_tool_diamondhoe.png
+- assorted_textures_1/farming_tool_goldhoe.png
+- assorted_textures_1/farming_tool_mesehoe.png
+- assorted_textures_1/farming_tool_steelhoe.png
+- assorted_textures_1/farming_tool_stonehoe.png
+- assorted_textures_1/farming_tool_woodhoe.png
+- assorted_textures_1/flowers_chrysanthemum_green.png
+- assorted_textures_1/flowers_dandelion_white.png
+- assorted_textures_1/flowers_dandelion_yellow.png
+- assorted_textures_1/flowers_geranium.png
+- assorted_textures_1/flowers_mushroom_brown.png
+- assorted_textures_1/flowers_mushroom_red.png
+- assorted_textures_1/flowers_rose.png
+- assorted_textures_1/flowers_tulip_black.png
+- assorted_textures_1/flowers_tulip.png
+- assorted_textures_1/flowers_viola.png
+- assorted_textures_1/glass bottle 2.png
+- assorted_textures_1/glass bottle.png
+- assorted_textures_1/gold wood plank.png
+- assorted_textures_1/granite_block.png
+- assorted_textures_1/granite_brick.png
+- assorted_textures_1/granite.png
+- assorted_textures_1/heart.png
+- assorted_textures_1/lilac.png
+- assorted_textures_1/lott_mapgen_bucket_mordor_water.png
+- assorted_textures_1/lottachievements_crowned_skull.png
+- assorted_textures_1/lottacievements_skull.png
+- assorted_textures_1/mesecraft_furniture_breadslice.png
+- assorted_textures_1/more_ores_mineral_mithril.png
+- assorted_textures_1/more_ores_mineral_silver.png
+- assorted_textures_1/moreores_mithril_block_alt.png
+- assorted_textures_1/moreores_mithril_block.png
+- assorted_textures_1/moreores_mithril_ingot.png
+- assorted_textures_1/moreores_mithril_lump.png
+- assorted_textures_1/moreores_silver_block.png
+- assorted_textures_1/moreores_silver_ingot.png
+- assorted_textures_1/moreores_silver_lump.png
+- assorted_textures_1/moreores_tool_mithrilaxe.png
+- assorted_textures_1/moreores_tool_mithrilhoe.png
+- assorted_textures_1/moreores_tool_mithrilpick.png
+- assorted_textures_1/moreores_tool_mithrilshovel.png
+- assorted_textures_1/moreores_tool_mithrilsword.png
+- assorted_textures_1/moreores_tool_silveraxe.png
+- assorted_textures_1/moreores_tool_silverhoe.png
+- assorted_textures_1/moreores_tool_silverpick.png
+- assorted_textures_1/moreores_tool_silvershovel.png
+- assorted_textures_1/moreores_tool_silversword.png
+- assorted_textures_1/Murexium mineral.png
+- assorted_textures_1/Murexium ore.png
+- assorted_textures_1/mushroom_soup.png
+- assorted_textures_1/nether_brick_deep_alt.png
+- assorted_textures_1/nether_brick_deep.png
+- assorted_textures_1/nether_glowstone_deep.png
+- assorted_textures_1/nether_glowstone.png
+- assorted_textures_1/nether_hinge_wood.png
+- assorted_textures_1/nether_ignishroom_woodwood orange.png
+- assorted_textures_1/nether_murexium_block.png
+- assorted_textures_1/nether_murexium_ingot.png
+- assorted_textures_1/nether_nether_ingot.png
+- assorted_textures_1/nether_nether_lump.png
+- assorted_textures_1/nether_rack_deep.png
+- assorted_textures_1/nether_rack.png
+- assorted_textures_1/nether_sand.png
+- assorted_textures_1/nether_tool_murexium_axe.png
+- assorted_textures_1/nether_tool_murexium_hoe.png
+- assorted_textures_1/nether_tool_murexium_pick.png
+- assorted_textures_1/nether_tool_murexium_shovel.png
+- assorted_textures_1/nether_tool_murexium_sword.png
+- assorted_textures_1/nether_tool_netheraxe.png
+- assorted_textures_1/nether_tool_netherhoe.png
+- assorted_textures_1/nether_tool_netherpick.png
+- assorted_textures_1/nether_tool_nethershovel.png
+- assorted_textures_1/nether_tool_nethersword.png
+- assorted_textures_1/sponge_wet.png
+- assorted_textures_1/sponge.png
+- assorted_textures_1/stairs_glass_outer_stairside.png
+- assorted_textures_1/stairs_glass_split.png
+- assorted_textures_1/stairs_glass_stairside.png
+- assorted_textures_1/stairs_obsidian_glass_stairside.png
+- assorted_textures_1/stairst_obsidian_glass_outer_stairside.png
+- assorted_textures_1/stairst_obsidian_glass_split.png
+- assorted_textures_1/stamina_hud_bg.png
+- assorted_textures_1/stamina_hud_fg.png
+- assorted_textures_1/stamina_hud_poison.png
+- assorted_textures_1/technic_bucket_corium.png
+- assorted_textures_1/tomato_soup.png
+- assorted_textures_1/xcopper_oxidized_block.png
+- assorted_textures_1/xpanes_edge_obsidian.png
+- assorted_textures_1/xpanes_edge.png
+
+## assorted_textures_2 (86 images)
+
+- assorted_textures_2/apple eaten.png
+- assorted_textures_2/apple gold.png
+- assorted_textures_2/apple green 2.png
+- assorted_textures_2/apple redo.png
+- assorted_textures_2/Aspen wood planks.png
+- assorted_textures_2/badland_grass_side.png
+- assorted_textures_2/badland_grass.png
+- assorted_textures_2/bambooforest_bamboo_grass_side.png
+- assorted_textures_2/bambooforest_bamboo_grass.png
+- assorted_textures_2/banana 2.png
+- assorted_textures_2/bell pepper.png
+- assorted_textures_2/blue banana 2.png
+- assorted_textures_2/blue potato.png
+- assorted_textures_2/blue tomato.png
+- assorted_textures_2/bread hunger.png
+- assorted_textures_2/bronze ingot.png
+- assorted_textures_2/bucket_overlay.png
+- assorted_textures_2/carrot.png
+- assorted_textures_2/Cayenne pepper.png
+- assorted_textures_2/cherry blossom wood plank.png
+- assorted_textures_2/cherry.png
+- assorted_textures_2/copper ingot 1.png
+- assorted_textures_2/copper ingot.png
+- assorted_textures_2/corn.png
+- assorted_textures_2/crystal 2.png
+- assorted_textures_2/crystal.png
+- assorted_textures_2/dark wood plank.png
+- assorted_textures_2/default_diamond_alt.png
+- assorted_textures_2/default_diamond_block_alt.png
+- assorted_textures_2/default_dry_grass_side.png
+- assorted_textures_2/default_dry_grass.png
+- assorted_textures_2/default_grass_side_alt.png
+- assorted_textures_2/default_mese_block_alt.png
+- assorted_textures_2/default_torch_2.png
+- assorted_textures_2/default_torch_3.png
+- assorted_textures_2/default_torch_4.png
+- assorted_textures_2/default_torch_on_floor_animated_alt.png
+- assorted_textures_2/Devil's down alt.png
+- assorted_textures_2/Devil's down.png
+- assorted_textures_2/dorwinion_grass_side.png
+- assorted_textures_2/dorwinion_grass.png
+- assorted_textures_2/ebony plank.png
+- assorted_textures_2/emerald.png
+- assorted_textures_2/ethereal_grass_bamboo_side.png
+- assorted_textures_2/ethereal_grass_bamboo_top.png
+- assorted_textures_2/flowers_mushroom_brown_alt.png
+- assorted_textures_2/fractal.png
+- assorted_textures_2/frost_land_grass_side.png
+- assorted_textures_2/frost_land_grass.png
+- assorted_textures_2/glazed terracotta_alt.png
+- assorted_textures_2/glazed terracotta.png
+- assorted_textures_2/glow mushroom poisonous cap.png
+- assorted_textures_2/green tomato.png
+- assorted_textures_2/Hades Hinge.png
+- assorted_textures_2/heart_alt.png
+- assorted_textures_2/japaneseforest_japanese_grass_side.png
+- assorted_textures_2/japaneseforest_japanese_grass.png
+- assorted_textures_2/mini pumpkin.png
+- assorted_textures_2/morel mushroom.png
+- assorted_textures_2/mug.png
+- assorted_textures_2/mushroom brown.png
+- assorted_textures_2/mushroom button.png
+- assorted_textures_2/mushroom grey.png
+- assorted_textures_2/mushroom poison.png
+- assorted_textures_2/mushroom red.png
+- assorted_textures_2/mushroom.png
+- assorted_textures_2/nether_rack_deep_alt_2.png
+- assorted_textures_2/nether_sand_alt.png
+- assorted_textures_2/nightshade_nightshade_grass_side.png
+- assorted_textures_2/nightshade_nightshade_grass.png
+- assorted_textures_2/potato.png
+- assorted_textures_2/prairie_grass_side.png
+- assorted_textures_2/prairie_grass.png
+- assorted_textures_2/purple carrot.png
+- assorted_textures_2/red banana.png
+- assorted_textures_2/red wood plank 2.png
+- assorted_textures_2/robin egg.png
+- assorted_textures_2/ruby.png
+- assorted_textures_2/sliced bread.png
+- assorted_textures_2/Thai chilis.png
+- assorted_textures_2/tomato.png
+- assorted_textures_2/turnip 2.png
+- assorted_textures_2/wood acacia plank.png
+- assorted_textures_2/wood plank 2.png
+- assorted_textures_2/wood plank.png
+- assorted_textures_2/wood weathered plank.png
+
+## block_breaking (13 images)
+
+- block_breaking/cracks-0.png
+- block_breaking/cracks-1.png
+- block_breaking/cracks-2.png
+- block_breaking/cracks-3.png
+- block_breaking/cracks-4.png
+- block_breaking/cracks-5.png
+- block_breaking/cracks-6.png
+- block_breaking/cracks-7.png
+- block_breaking/cracks-atlas.png
+- block_breaking/cracks-grid.png
+- block_breaking/cracks-preview.png
+- block_breaking/cracks-source-v2.png
+- block_breaking/cracks-source.png
+
+## block_textures (2 images)
+
+- block_textures/atlas.png
+- block_textures/preview.png
+
+## blocky_textures (19 images)
+
+- blocky_textures/bear.png
+- blocky_textures/bee.png
+- blocky_textures/blze.png
+- blocky_textures/creeper.png
+- blocky_textures/endermit.png
+- blocky_textures/ghast.png
+- blocky_textures/glowing_squid.png
+- blocky_textures/hoglin.png
+- blocky_textures/magma_cube.png
+- blocky_textures/pig.png
+- blocky_textures/piglin.png
+- blocky_textures/skeleton.png
+- blocky_textures/slime.png
+- blocky_textures/snowman.png
+- blocky_textures/spider.png
+- blocky_textures/squid.png
+- blocky_textures/vex.png
+- blocky_textures/zombie_piglin.png
+- blocky_textures/zombie.png
+
+## Free-Guns-Icon-32x32-Pixel-Pack (41 images)
+
+- Free-Guns-Icon-32x32-Pixel-Pack/1 Icons/Icon29_01.png
+- Free-Guns-Icon-32x32-Pixel-Pack/1 Icons/Icon29_02.png
+- Free-Guns-Icon-32x32-Pixel-Pack/1 Icons/Icon29_03.png
+- Free-Guns-Icon-32x32-Pixel-Pack/1 Icons/Icon29_04.png
+- Free-Guns-Icon-32x32-Pixel-Pack/1 Icons/Icon29_05.png
+- Free-Guns-Icon-32x32-Pixel-Pack/1 Icons/Icon29_06.png
+- Free-Guns-Icon-32x32-Pixel-Pack/1 Icons/Icon29_07.png
+- Free-Guns-Icon-32x32-Pixel-Pack/1 Icons/Icon29_08.png
+- Free-Guns-Icon-32x32-Pixel-Pack/1 Icons/Icon29_09.png
+- Free-Guns-Icon-32x32-Pixel-Pack/1 Icons/Icon29_10.png
+- Free-Guns-Icon-32x32-Pixel-Pack/1 Icons/Icon29_11.png
+- Free-Guns-Icon-32x32-Pixel-Pack/1 Icons/Icon29_12.png
+- Free-Guns-Icon-32x32-Pixel-Pack/1 Icons/Icon29_13.png
+- Free-Guns-Icon-32x32-Pixel-Pack/1 Icons/Icon29_14.png
+- Free-Guns-Icon-32x32-Pixel-Pack/1 Icons/Icon29_15.png
+- Free-Guns-Icon-32x32-Pixel-Pack/1 Icons/Icon29_16.png
+- Free-Guns-Icon-32x32-Pixel-Pack/1 Icons/Icon29_17.png
+- Free-Guns-Icon-32x32-Pixel-Pack/1 Icons/Icon29_18.png
+- Free-Guns-Icon-32x32-Pixel-Pack/1 Icons/Icon29_19.png
+- Free-Guns-Icon-32x32-Pixel-Pack/1 Icons/Icon29_20.png
+- Free-Guns-Icon-32x32-Pixel-Pack/1 Icons/Icon29_21.png
+- Free-Guns-Icon-32x32-Pixel-Pack/1 Icons/Icon29_22.png
+- Free-Guns-Icon-32x32-Pixel-Pack/1 Icons/Icon29_23.png
+- Free-Guns-Icon-32x32-Pixel-Pack/1 Icons/Icon29_24.png
+- Free-Guns-Icon-32x32-Pixel-Pack/1 Icons/Icon29_25.png
+- Free-Guns-Icon-32x32-Pixel-Pack/1 Icons/Icon29_26.png
+- Free-Guns-Icon-32x32-Pixel-Pack/1 Icons/Icon29_27.png
+- Free-Guns-Icon-32x32-Pixel-Pack/1 Icons/Icon29_28.png
+- Free-Guns-Icon-32x32-Pixel-Pack/1 Icons/Icon29_29.png
+- Free-Guns-Icon-32x32-Pixel-Pack/1 Icons/Icon29_30.png
+- Free-Guns-Icon-32x32-Pixel-Pack/1 Icons/Icon29_31.png
+- Free-Guns-Icon-32x32-Pixel-Pack/1 Icons/Icon29_32.png
+- Free-Guns-Icon-32x32-Pixel-Pack/1 Icons/Icon29_33.png
+- Free-Guns-Icon-32x32-Pixel-Pack/1 Icons/Icon29_34.png
+- Free-Guns-Icon-32x32-Pixel-Pack/1 Icons/Icon29_35.png
+- Free-Guns-Icon-32x32-Pixel-Pack/1 Icons/Icon29_36.png
+- Free-Guns-Icon-32x32-Pixel-Pack/1 Icons/Icon29_37.png
+- Free-Guns-Icon-32x32-Pixel-Pack/1 Icons/Icon29_38.png
+- Free-Guns-Icon-32x32-Pixel-Pack/1 Icons/Icon29_39.png
+- Free-Guns-Icon-32x32-Pixel-Pack/1 Icons/Icon29_40.png
+- Free-Guns-Icon-32x32-Pixel-Pack/Coupon by craftpix.pdf.png
+
+## generated (2 images)
+
+- generated/pistol_ammo.png
+- generated/pistol.png
+
+## KayKit_Adventurers_2.0_FREE (50 images)
+
+- KayKit_Adventurers_2.0_FREE/Assets/fbx(unity)/barbarian_texture.png
+- KayKit_Adventurers_2.0_FREE/Assets/fbx(unity)/knight_texture.png
+- KayKit_Adventurers_2.0_FREE/Assets/fbx(unity)/mage_texture.png
+- KayKit_Adventurers_2.0_FREE/Assets/fbx(unity)/ranger_texture.png
+- KayKit_Adventurers_2.0_FREE/Assets/fbx(unity)/rogue_texture.png
+- KayKit_Adventurers_2.0_FREE/Assets/fbx/barbarian_texture.png
+- KayKit_Adventurers_2.0_FREE/Assets/fbx/knight_texture.png
+- KayKit_Adventurers_2.0_FREE/Assets/fbx/mage_texture.png
+- KayKit_Adventurers_2.0_FREE/Assets/fbx/ranger_texture.png
+- KayKit_Adventurers_2.0_FREE/Assets/fbx/rogue_texture.png
+- KayKit_Adventurers_2.0_FREE/Assets/gltf/barbarian_texture.png
+- KayKit_Adventurers_2.0_FREE/Assets/gltf/knight_texture.png
+- KayKit_Adventurers_2.0_FREE/Assets/gltf/mage_texture.png
+- KayKit_Adventurers_2.0_FREE/Assets/gltf/ranger_texture.png
+- KayKit_Adventurers_2.0_FREE/Assets/gltf/rogue_texture.png
+- KayKit_Adventurers_2.0_FREE/Assets/obj/barbarian_texture.png
+- KayKit_Adventurers_2.0_FREE/Assets/obj/knight_texture.png
+- KayKit_Adventurers_2.0_FREE/Assets/obj/mage_texture.png
+- KayKit_Adventurers_2.0_FREE/Assets/obj/ranger_texture.png
+- KayKit_Adventurers_2.0_FREE/Assets/obj/rogue_texture.png
+- KayKit_Adventurers_2.0_FREE/Characters/fbx/barbarian_texture.png
+- KayKit_Adventurers_2.0_FREE/Characters/fbx/knight_texture.png
+- KayKit_Adventurers_2.0_FREE/Characters/fbx/mage_texture.png
+- KayKit_Adventurers_2.0_FREE/Characters/fbx/ranger_texture.png
+- KayKit_Adventurers_2.0_FREE/Characters/fbx/rogue_texture.png
+- KayKit_Adventurers_2.0_FREE/Characters/gltf/Barbarian_barbarian_texture.png
+- KayKit_Adventurers_2.0_FREE/Characters/gltf/barbarian_texture.png
+- KayKit_Adventurers_2.0_FREE/Characters/gltf/Knight_knight_texture.png
+- KayKit_Adventurers_2.0_FREE/Characters/gltf/knight_texture.png
+- KayKit_Adventurers_2.0_FREE/Characters/gltf/Mage_mage_texture.png
+- KayKit_Adventurers_2.0_FREE/Characters/gltf/mage_texture.png
+- KayKit_Adventurers_2.0_FREE/Characters/gltf/Ranger_ranger_texture.png
+- KayKit_Adventurers_2.0_FREE/Characters/gltf/ranger_texture.png
+- KayKit_Adventurers_2.0_FREE/Characters/gltf/Rogue_Hooded_rogue_texture.png
+- KayKit_Adventurers_2.0_FREE/Characters/gltf/Rogue_rogue_texture.png
+- KayKit_Adventurers_2.0_FREE/Characters/gltf/rogue_texture.png
+- KayKit_Adventurers_2.0_FREE/contents.png
+- KayKit_Adventurers_2.0_FREE/Samples/barbarian_Large.png
+- KayKit_Adventurers_2.0_FREE/Samples/barbarian.png
+- KayKit_Adventurers_2.0_FREE/Samples/druid.png
+- KayKit_Adventurers_2.0_FREE/Samples/engineer.png
+- KayKit_Adventurers_2.0_FREE/Samples/knight.png
+- KayKit_Adventurers_2.0_FREE/Samples/mage.png
+- KayKit_Adventurers_2.0_FREE/Samples/ranger.png
+- KayKit_Adventurers_2.0_FREE/Samples/rogue.png
+- KayKit_Adventurers_2.0_FREE/Textures/barbarian_texture.png
+- KayKit_Adventurers_2.0_FREE/Textures/knight_texture.png
+- KayKit_Adventurers_2.0_FREE/Textures/mage_texture.png
+- KayKit_Adventurers_2.0_FREE/Textures/ranger_texture.png
+- KayKit_Adventurers_2.0_FREE/Textures/rogue_texture.png
+
+## KayKit_Dungeon_Pack_1.1_FREE (23 images)
+
+- KayKit_Dungeon_Pack_1.1_FREE/Assets/fbx(unity)/dungeon_texture.png
+- KayKit_Dungeon_Pack_1.1_FREE/Assets/fbx/dungeon_texture.png
+- KayKit_Dungeon_Pack_1.1_FREE/Assets/gltf/dungeon_texture.png
+- KayKit_Dungeon_Pack_1.1_FREE/Assets/obj/dungeon_texture.png
+- KayKit_Dungeon_Pack_1.1_FREE/Assets/textures/dungeon_texture.png
+- KayKit_Dungeon_Pack_1.1_FREE/contents.png
+- KayKit_Dungeon_Pack_1.1_FREE/Samples/Dungeon_sample_big.png
+- KayKit_Dungeon_Pack_1.1_FREE/Samples/Dungeon_sample1.png
+- KayKit_Dungeon_Pack_1.1_FREE/Samples/Dungeon_sample10.png
+- KayKit_Dungeon_Pack_1.1_FREE/Samples/Dungeon_sample11.png
+- KayKit_Dungeon_Pack_1.1_FREE/Samples/Dungeon_sample12.png
+- KayKit_Dungeon_Pack_1.1_FREE/Samples/Dungeon_sample2.png
+- KayKit_Dungeon_Pack_1.1_FREE/Samples/Dungeon_sample3.png
+- KayKit_Dungeon_Pack_1.1_FREE/Samples/Dungeon_sample4.png
+- KayKit_Dungeon_Pack_1.1_FREE/Samples/Dungeon_sample5.png
+- KayKit_Dungeon_Pack_1.1_FREE/Samples/Dungeon_sample6.png
+- KayKit_Dungeon_Pack_1.1_FREE/Samples/Dungeon_sample7.png
+- KayKit_Dungeon_Pack_1.1_FREE/Samples/Dungeon_sample8.png
+- KayKit_Dungeon_Pack_1.1_FREE/Samples/Dungeon_sample9.png
+- KayKit_Dungeon_Pack_1.1_FREE/Samples/extra_content1.png
+- KayKit_Dungeon_Pack_1.1_FREE/Samples/extra_content2.png
+- KayKit_Dungeon_Pack_1.1_FREE/Samples/extra_textures.png
+- KayKit_Dungeon_Pack_1.1_FREE/Samples/source_content.png
+
+## KayKit_Skeletons_1.1_FREE (16 images)
+
+- KayKit_Skeletons_1.1_FREE/assets/fbx(unity)/skeleton_texture.png
+- KayKit_Skeletons_1.1_FREE/assets/fbx/skeleton_texture.png
+- KayKit_Skeletons_1.1_FREE/assets/gltf/skeleton_texture.png
+- KayKit_Skeletons_1.1_FREE/assets/obj/skeleton_texture.png
+- KayKit_Skeletons_1.1_FREE/characters/fbx/skeleton_texture.png
+- KayKit_Skeletons_1.1_FREE/characters/gltf/Skeleton_Mage_skeleton_texture.png
+- KayKit_Skeletons_1.1_FREE/characters/gltf/Skeleton_Minion_skeleton_texture.png
+- KayKit_Skeletons_1.1_FREE/characters/gltf/Skeleton_Rogue_skeleton_texture.png
+- KayKit_Skeletons_1.1_FREE/characters/gltf/skeleton_texture.png
+- KayKit_Skeletons_1.1_FREE/characters/gltf/Skeleton_Warrior_skeleton_texture.png
+- KayKit_Skeletons_1.1_FREE/contents.png
+- KayKit_Skeletons_1.1_FREE/samples/mage.png
+- KayKit_Skeletons_1.1_FREE/samples/minion.png
+- KayKit_Skeletons_1.1_FREE/samples/rogue.png
+- KayKit_Skeletons_1.1_FREE/samples/warrior.png
+- KayKit_Skeletons_1.1_FREE/texture/skeleton_texture.png
+
+## kenney_blaster-kit_2.1 (46 images)
+
+- kenney_blaster-kit_2.1/Models/FBX format/Textures/colormap.png
+- kenney_blaster-kit_2.1/Models/GLB format/Textures/colormap.png
+- kenney_blaster-kit_2.1/Models/OBJ format/Textures/colormap.png
+- kenney_blaster-kit_2.1/Models/Textures/variation-a.png
+- kenney_blaster-kit_2.1/Preview (Variation A).png
+- kenney_blaster-kit_2.1/Preview.png
+- kenney_blaster-kit_2.1/Previews/blaster-a.png
+- kenney_blaster-kit_2.1/Previews/blaster-b.png
+- kenney_blaster-kit_2.1/Previews/blaster-c.png
+- kenney_blaster-kit_2.1/Previews/blaster-d.png
+- kenney_blaster-kit_2.1/Previews/blaster-e.png
+- kenney_blaster-kit_2.1/Previews/blaster-f.png
+- kenney_blaster-kit_2.1/Previews/blaster-g.png
+- kenney_blaster-kit_2.1/Previews/blaster-h.png
+- kenney_blaster-kit_2.1/Previews/blaster-i.png
+- kenney_blaster-kit_2.1/Previews/blaster-j.png
+- kenney_blaster-kit_2.1/Previews/blaster-k.png
+- kenney_blaster-kit_2.1/Previews/blaster-l.png
+- kenney_blaster-kit_2.1/Previews/blaster-m.png
+- kenney_blaster-kit_2.1/Previews/blaster-n.png
+- kenney_blaster-kit_2.1/Previews/blaster-o.png
+- kenney_blaster-kit_2.1/Previews/blaster-p.png
+- kenney_blaster-kit_2.1/Previews/blaster-q.png
+- kenney_blaster-kit_2.1/Previews/blaster-r.png
+- kenney_blaster-kit_2.1/Previews/bullet-foam-thick.png
+- kenney_blaster-kit_2.1/Previews/bullet-foam-tip-thick.png
+- kenney_blaster-kit_2.1/Previews/bullet-foam-tip.png
+- kenney_blaster-kit_2.1/Previews/bullet-foam.png
+- kenney_blaster-kit_2.1/Previews/clip-large.png
+- kenney_blaster-kit_2.1/Previews/clip-small.png
+- kenney_blaster-kit_2.1/Previews/crate-medium.png
+- kenney_blaster-kit_2.1/Previews/crate-small.png
+- kenney_blaster-kit_2.1/Previews/crate-wide.png
+- kenney_blaster-kit_2.1/Previews/grenade-a.png
+- kenney_blaster-kit_2.1/Previews/grenade-b.png
+- kenney_blaster-kit_2.1/Previews/scope-large-a.png
+- kenney_blaster-kit_2.1/Previews/scope-large-b.png
+- kenney_blaster-kit_2.1/Previews/scope-small.png
+- kenney_blaster-kit_2.1/Previews/silencer-larger.png
+- kenney_blaster-kit_2.1/Previews/silencer-small.png
+- kenney_blaster-kit_2.1/Previews/smoke.png
+- kenney_blaster-kit_2.1/Previews/target-detail.png
+- kenney_blaster-kit_2.1/Previews/target-fragment-large.png
+- kenney_blaster-kit_2.1/Previews/target-fragment-small.png
+- kenney_blaster-kit_2.1/Previews/target-large.png
+- kenney_blaster-kit_2.1/Previews/target-small.png
+
+## kenney_impact-sounds (0 images)
+
+
+## kenney_particle-pack (193 images)
+
+- kenney_particle-pack/PNG (Black background)/circle_01.png
+- kenney_particle-pack/PNG (Black background)/circle_02.png
+- kenney_particle-pack/PNG (Black background)/circle_03.png
+- kenney_particle-pack/PNG (Black background)/circle_04.png
+- kenney_particle-pack/PNG (Black background)/circle_05.png
+- kenney_particle-pack/PNG (Black background)/dirt_01.png
+- kenney_particle-pack/PNG (Black background)/dirt_02.png
+- kenney_particle-pack/PNG (Black background)/dirt_03.png
+- kenney_particle-pack/PNG (Black background)/fire_01.png
+- kenney_particle-pack/PNG (Black background)/fire_02.png
+- kenney_particle-pack/PNG (Black background)/flame_01.png
+- kenney_particle-pack/PNG (Black background)/flame_02.png
+- kenney_particle-pack/PNG (Black background)/flame_03.png
+- kenney_particle-pack/PNG (Black background)/flame_04.png
+- kenney_particle-pack/PNG (Black background)/flame_05.png
+- kenney_particle-pack/PNG (Black background)/flame_06.png
+- kenney_particle-pack/PNG (Black background)/flare_01.png
+- kenney_particle-pack/PNG (Black background)/light_01.png
+- kenney_particle-pack/PNG (Black background)/light_02.png
+- kenney_particle-pack/PNG (Black background)/light_03.png
+- kenney_particle-pack/PNG (Black background)/magic_01.png
+- kenney_particle-pack/PNG (Black background)/magic_02.png
+- kenney_particle-pack/PNG (Black background)/magic_03.png
+- kenney_particle-pack/PNG (Black background)/magic_04.png
+- kenney_particle-pack/PNG (Black background)/magic_05.png
+- kenney_particle-pack/PNG (Black background)/muzzle_01.png
+- kenney_particle-pack/PNG (Black background)/muzzle_02.png
+- kenney_particle-pack/PNG (Black background)/muzzle_03.png
+- kenney_particle-pack/PNG (Black background)/muzzle_04.png
+- kenney_particle-pack/PNG (Black background)/muzzle_05.png
+- kenney_particle-pack/PNG (Black background)/Rotated/flame_05_rotated.png
+- kenney_particle-pack/PNG (Black background)/Rotated/flame_06_rotated.png
+- kenney_particle-pack/PNG (Black background)/Rotated/muzzle_01_rotated.png
+- kenney_particle-pack/PNG (Black background)/Rotated/muzzle_02_rotated.png
+- kenney_particle-pack/PNG (Black background)/Rotated/muzzle_03_rotated.png
+- kenney_particle-pack/PNG (Black background)/Rotated/muzzle_04_rotated.png
+- kenney_particle-pack/PNG (Black background)/Rotated/muzzle_05_rotated.png
+- kenney_particle-pack/PNG (Black background)/Rotated/spark_05_rotated.png
+- kenney_particle-pack/PNG (Black background)/Rotated/spark_06_rotated.png
+- kenney_particle-pack/PNG (Black background)/Rotated/trace_01_rotated.png
+- kenney_particle-pack/PNG (Black background)/Rotated/trace_02_rotated.png
+- kenney_particle-pack/PNG (Black background)/Rotated/trace_03_rotated.png
+- kenney_particle-pack/PNG (Black background)/Rotated/trace_04_rotated.png
+- kenney_particle-pack/PNG (Black background)/Rotated/trace_05_rotated.png
+- kenney_particle-pack/PNG (Black background)/Rotated/trace_06_rotated.png
+- kenney_particle-pack/PNG (Black background)/Rotated/trace_07_rotated.png
+- kenney_particle-pack/PNG (Black background)/scorch_01.png
+- kenney_particle-pack/PNG (Black background)/scorch_02.png
+- kenney_particle-pack/PNG (Black background)/scorch_03.png
+- kenney_particle-pack/PNG (Black background)/scratch_01.png
+- kenney_particle-pack/PNG (Black background)/slash_01.png
+- kenney_particle-pack/PNG (Black background)/slash_02.png
+- kenney_particle-pack/PNG (Black background)/slash_03.png
+- kenney_particle-pack/PNG (Black background)/slash_04.png
+- kenney_particle-pack/PNG (Black background)/smoke_01.png
+- kenney_particle-pack/PNG (Black background)/smoke_02.png
+- kenney_particle-pack/PNG (Black background)/smoke_03.png
+- kenney_particle-pack/PNG (Black background)/smoke_04.png
+- kenney_particle-pack/PNG (Black background)/smoke_05.png
+- kenney_particle-pack/PNG (Black background)/smoke_06.png
+- kenney_particle-pack/PNG (Black background)/smoke_07.png
+- kenney_particle-pack/PNG (Black background)/smoke_08.png
+- kenney_particle-pack/PNG (Black background)/smoke_09.png
+- kenney_particle-pack/PNG (Black background)/smoke_10.png
+- kenney_particle-pack/PNG (Black background)/spark_01.png
+- kenney_particle-pack/PNG (Black background)/spark_02.png
+- kenney_particle-pack/PNG (Black background)/spark_03.png
+- kenney_particle-pack/PNG (Black background)/spark_04.png
+- kenney_particle-pack/PNG (Black background)/spark_05.png
+- kenney_particle-pack/PNG (Black background)/spark_06.png
+- kenney_particle-pack/PNG (Black background)/spark_07.png
+- kenney_particle-pack/PNG (Black background)/star_01.png
+- kenney_particle-pack/PNG (Black background)/star_02.png
+- kenney_particle-pack/PNG (Black background)/star_03.png
+- kenney_particle-pack/PNG (Black background)/star_04.png
+- kenney_particle-pack/PNG (Black background)/star_05.png
+- kenney_particle-pack/PNG (Black background)/star_06.png
+- kenney_particle-pack/PNG (Black background)/star_07.png
+- kenney_particle-pack/PNG (Black background)/star_08.png
+- kenney_particle-pack/PNG (Black background)/star_09.png
+- kenney_particle-pack/PNG (Black background)/symbol_01.png
+- kenney_particle-pack/PNG (Black background)/symbol_02.png
+- kenney_particle-pack/PNG (Black background)/trace_01.png
+- kenney_particle-pack/PNG (Black background)/trace_02.png
+- kenney_particle-pack/PNG (Black background)/trace_03.png
+- kenney_particle-pack/PNG (Black background)/trace_04.png
+- kenney_particle-pack/PNG (Black background)/trace_05.png
+- kenney_particle-pack/PNG (Black background)/trace_06.png
+- kenney_particle-pack/PNG (Black background)/trace_07.png
+- kenney_particle-pack/PNG (Black background)/twirl_01.png
+- kenney_particle-pack/PNG (Black background)/twirl_02.png
+- kenney_particle-pack/PNG (Black background)/twirl_03.png
+- kenney_particle-pack/PNG (Black background)/window_01.png
+- kenney_particle-pack/PNG (Black background)/window_02.png
+- kenney_particle-pack/PNG (Black background)/window_03.png
+- kenney_particle-pack/PNG (Black background)/window_04.png
+- kenney_particle-pack/PNG (Transparent)/circle_01.png
+- kenney_particle-pack/PNG (Transparent)/circle_02.png
+- kenney_particle-pack/PNG (Transparent)/circle_03.png
+- kenney_particle-pack/PNG (Transparent)/circle_04.png
+- kenney_particle-pack/PNG (Transparent)/circle_05.png
+- kenney_particle-pack/PNG (Transparent)/dirt_01.png
+- kenney_particle-pack/PNG (Transparent)/dirt_02.png
+- kenney_particle-pack/PNG (Transparent)/dirt_03.png
+- kenney_particle-pack/PNG (Transparent)/fire_01.png
+- kenney_particle-pack/PNG (Transparent)/fire_02.png
+- kenney_particle-pack/PNG (Transparent)/flame_01.png
+- kenney_particle-pack/PNG (Transparent)/flame_02.png
+- kenney_particle-pack/PNG (Transparent)/flame_03.png
+- kenney_particle-pack/PNG (Transparent)/flame_04.png
+- kenney_particle-pack/PNG (Transparent)/flame_05.png
+- kenney_particle-pack/PNG (Transparent)/flame_06.png
+- kenney_particle-pack/PNG (Transparent)/flare_01.png
+- kenney_particle-pack/PNG (Transparent)/light_01.png
+- kenney_particle-pack/PNG (Transparent)/light_02.png
+- kenney_particle-pack/PNG (Transparent)/light_03.png
+- kenney_particle-pack/PNG (Transparent)/magic_01.png
+- kenney_particle-pack/PNG (Transparent)/magic_02.png
+- kenney_particle-pack/PNG (Transparent)/magic_03.png
+- kenney_particle-pack/PNG (Transparent)/magic_04.png
+- kenney_particle-pack/PNG (Transparent)/magic_05.png
+- kenney_particle-pack/PNG (Transparent)/muzzle_01.png
+- kenney_particle-pack/PNG (Transparent)/muzzle_02.png
+- kenney_particle-pack/PNG (Transparent)/muzzle_03.png
+- kenney_particle-pack/PNG (Transparent)/muzzle_04.png
+- kenney_particle-pack/PNG (Transparent)/muzzle_05.png
+- kenney_particle-pack/PNG (Transparent)/Rotated/flame_05_rotated.png
+- kenney_particle-pack/PNG (Transparent)/Rotated/flame_06_rotated.png
+- kenney_particle-pack/PNG (Transparent)/Rotated/muzzle_01_rotated.png
+- kenney_particle-pack/PNG (Transparent)/Rotated/muzzle_02_rotated.png
+- kenney_particle-pack/PNG (Transparent)/Rotated/muzzle_03_rotated.png
+- kenney_particle-pack/PNG (Transparent)/Rotated/muzzle_04_rotated.png
+- kenney_particle-pack/PNG (Transparent)/Rotated/muzzle_05_rotated.png
+- kenney_particle-pack/PNG (Transparent)/Rotated/spark_05_rotated.png
+- kenney_particle-pack/PNG (Transparent)/Rotated/spark_06_rotated.png
+- kenney_particle-pack/PNG (Transparent)/Rotated/trace_01_rotated.png
+- kenney_particle-pack/PNG (Transparent)/Rotated/trace_02_rotated.png
+- kenney_particle-pack/PNG (Transparent)/Rotated/trace_03_rotated.png
+- kenney_particle-pack/PNG (Transparent)/Rotated/trace_04_rotated.png
+- kenney_particle-pack/PNG (Transparent)/Rotated/trace_05_rotated.png
+- kenney_particle-pack/PNG (Transparent)/Rotated/trace_06_rotated.png
+- kenney_particle-pack/PNG (Transparent)/Rotated/trace_07_rotated.png
+- kenney_particle-pack/PNG (Transparent)/scorch_01.png
+- kenney_particle-pack/PNG (Transparent)/scorch_02.png
+- kenney_particle-pack/PNG (Transparent)/scorch_03.png
+- kenney_particle-pack/PNG (Transparent)/scratch_01.png
+- kenney_particle-pack/PNG (Transparent)/slash_01.png
+- kenney_particle-pack/PNG (Transparent)/slash_02.png
+- kenney_particle-pack/PNG (Transparent)/slash_03.png
+- kenney_particle-pack/PNG (Transparent)/slash_04.png
+- kenney_particle-pack/PNG (Transparent)/smoke_01.png
+- kenney_particle-pack/PNG (Transparent)/smoke_02.png
+- kenney_particle-pack/PNG (Transparent)/smoke_03.png
+- kenney_particle-pack/PNG (Transparent)/smoke_04.png
+- kenney_particle-pack/PNG (Transparent)/smoke_05.png
+- kenney_particle-pack/PNG (Transparent)/smoke_06.png
+- kenney_particle-pack/PNG (Transparent)/smoke_07.png
+- kenney_particle-pack/PNG (Transparent)/smoke_08.png
+- kenney_particle-pack/PNG (Transparent)/smoke_09.png
+- kenney_particle-pack/PNG (Transparent)/smoke_10.png
+- kenney_particle-pack/PNG (Transparent)/spark_01.png
+- kenney_particle-pack/PNG (Transparent)/spark_02.png
+- kenney_particle-pack/PNG (Transparent)/spark_03.png
+- kenney_particle-pack/PNG (Transparent)/spark_04.png
+- kenney_particle-pack/PNG (Transparent)/spark_05.png
+- kenney_particle-pack/PNG (Transparent)/spark_06.png
+- kenney_particle-pack/PNG (Transparent)/spark_07.png
+- kenney_particle-pack/PNG (Transparent)/star_01.png
+- kenney_particle-pack/PNG (Transparent)/star_02.png
+- kenney_particle-pack/PNG (Transparent)/star_03.png
+- kenney_particle-pack/PNG (Transparent)/star_04.png
+- kenney_particle-pack/PNG (Transparent)/star_05.png
+- kenney_particle-pack/PNG (Transparent)/star_06.png
+- kenney_particle-pack/PNG (Transparent)/star_07.png
+- kenney_particle-pack/PNG (Transparent)/star_08.png
+- kenney_particle-pack/PNG (Transparent)/star_09.png
+- kenney_particle-pack/PNG (Transparent)/symbol_01.png
+- kenney_particle-pack/PNG (Transparent)/symbol_02.png
+- kenney_particle-pack/PNG (Transparent)/trace_01.png
+- kenney_particle-pack/PNG (Transparent)/trace_02.png
+- kenney_particle-pack/PNG (Transparent)/trace_03.png
+- kenney_particle-pack/PNG (Transparent)/trace_04.png
+- kenney_particle-pack/PNG (Transparent)/trace_05.png
+- kenney_particle-pack/PNG (Transparent)/trace_06.png
+- kenney_particle-pack/PNG (Transparent)/trace_07.png
+- kenney_particle-pack/PNG (Transparent)/twirl_01.png
+- kenney_particle-pack/PNG (Transparent)/twirl_02.png
+- kenney_particle-pack/PNG (Transparent)/twirl_03.png
+- kenney_particle-pack/PNG (Transparent)/window_01.png
+- kenney_particle-pack/PNG (Transparent)/window_02.png
+- kenney_particle-pack/PNG (Transparent)/window_03.png
+- kenney_particle-pack/PNG (Transparent)/window_04.png
+- kenney_particle-pack/Preview.png
+
+## kenney_survival-kit (87 images)
+
+- kenney_survival-kit/Models/FBX format/Textures/colormap.png
+- kenney_survival-kit/Models/GLB format/Textures/colormap.png
+- kenney_survival-kit/Models/OBJ format/Textures/colormap.png
+- kenney_survival-kit/Models/Textures/variation-a.png
+- kenney_survival-kit/Preview (Variation A).png
+- kenney_survival-kit/Preview.png
+- kenney_survival-kit/Previews/barrel-open.png
+- kenney_survival-kit/Previews/barrel.png
+- kenney_survival-kit/Previews/bedroll-frame.png
+- kenney_survival-kit/Previews/bedroll-packed.png
+- kenney_survival-kit/Previews/bedroll.png
+- kenney_survival-kit/Previews/bottle-large.png
+- kenney_survival-kit/Previews/bottle.png
+- kenney_survival-kit/Previews/box-large-open.png
+- kenney_survival-kit/Previews/box-large.png
+- kenney_survival-kit/Previews/box-open.png
+- kenney_survival-kit/Previews/box.png
+- kenney_survival-kit/Previews/bucket.png
+- kenney_survival-kit/Previews/campfire-fishing-stand.png
+- kenney_survival-kit/Previews/campfire-pit.png
+- kenney_survival-kit/Previews/campfire-stand.png
+- kenney_survival-kit/Previews/chest.png
+- kenney_survival-kit/Previews/fence-doorway.png
+- kenney_survival-kit/Previews/fence-fortified.png
+- kenney_survival-kit/Previews/fence.png
+- kenney_survival-kit/Previews/fish-large.png
+- kenney_survival-kit/Previews/fish.png
+- kenney_survival-kit/Previews/floor-hole.png
+- kenney_survival-kit/Previews/floor-old.png
+- kenney_survival-kit/Previews/floor.png
+- kenney_survival-kit/Previews/grass-large.png
+- kenney_survival-kit/Previews/grass.png
+- kenney_survival-kit/Previews/metal-panel-narrow.png
+- kenney_survival-kit/Previews/metal-panel-screws-half.png
+- kenney_survival-kit/Previews/metal-panel-screws-narrow.png
+- kenney_survival-kit/Previews/metal-panel-screws.png
+- kenney_survival-kit/Previews/metal-panel.png
+- kenney_survival-kit/Previews/patch-grass-large.png
+- kenney_survival-kit/Previews/patch-grass.png
+- kenney_survival-kit/Previews/resource-planks.png
+- kenney_survival-kit/Previews/resource-stone-large.png
+- kenney_survival-kit/Previews/resource-stone.png
+- kenney_survival-kit/Previews/resource-wood.png
+- kenney_survival-kit/Previews/rock-a.png
+- kenney_survival-kit/Previews/rock-b.png
+- kenney_survival-kit/Previews/rock-c.png
+- kenney_survival-kit/Previews/rock-flat-grass.png
+- kenney_survival-kit/Previews/rock-flat.png
+- kenney_survival-kit/Previews/rock-sand-a.png
+- kenney_survival-kit/Previews/rock-sand-b.png
+- kenney_survival-kit/Previews/rock-sand-c.png
+- kenney_survival-kit/Previews/signpost-single.png
+- kenney_survival-kit/Previews/signpost.png
+- kenney_survival-kit/Previews/structure-canvas.png
+- kenney_survival-kit/Previews/structure-floor.png
+- kenney_survival-kit/Previews/structure-metal-doorway.png
+- kenney_survival-kit/Previews/structure-metal-floor.png
+- kenney_survival-kit/Previews/structure-metal-roof.png
+- kenney_survival-kit/Previews/structure-metal-wall.png
+- kenney_survival-kit/Previews/structure-metal.png
+- kenney_survival-kit/Previews/structure-roof.png
+- kenney_survival-kit/Previews/structure.png
+- kenney_survival-kit/Previews/tent-canvas-half.png
+- kenney_survival-kit/Previews/tent-canvas.png
+- kenney_survival-kit/Previews/tent.png
+- kenney_survival-kit/Previews/tool-axe-upgraded.png
+- kenney_survival-kit/Previews/tool-axe.png
+- kenney_survival-kit/Previews/tool-hammer-upgraded.png
+- kenney_survival-kit/Previews/tool-hammer.png
+- kenney_survival-kit/Previews/tool-hoe-upgraded.png
+- kenney_survival-kit/Previews/tool-hoe.png
+- kenney_survival-kit/Previews/tool-pickaxe-upgraded.png
+- kenney_survival-kit/Previews/tool-pickaxe.png
+- kenney_survival-kit/Previews/tool-shovel-upgraded.png
+- kenney_survival-kit/Previews/tool-shovel.png
+- kenney_survival-kit/Previews/tree-autumn-tall.png
+- kenney_survival-kit/Previews/tree-autumn-trunk.png
+- kenney_survival-kit/Previews/tree-autumn.png
+- kenney_survival-kit/Previews/tree-log-small.png
+- kenney_survival-kit/Previews/tree-log.png
+- kenney_survival-kit/Previews/tree-tall.png
+- kenney_survival-kit/Previews/tree-trunk.png
+- kenney_survival-kit/Previews/tree.png
+- kenney_survival-kit/Previews/workbench-anvil.png
+- kenney_survival-kit/Previews/workbench-grind.png
+- kenney_survival-kit/Previews/workbench.png
+- kenney_survival-kit/Sample.png
+
+## minecraft-inspired-textures-free (2359 images)
+
+- minecraft-inspired-textures-free/block/acacia_door_bottom.png
+- minecraft-inspired-textures-free/block/acacia_door_top.png
+- minecraft-inspired-textures-free/block/acacia_leaves.png
+- minecraft-inspired-textures-free/block/acacia_log_top.png
+- minecraft-inspired-textures-free/block/acacia_log.png
+- minecraft-inspired-textures-free/block/acacia_planks.png
+- minecraft-inspired-textures-free/block/acacia_sapling.png
+- minecraft-inspired-textures-free/block/acacia_trapdoor.png
+- minecraft-inspired-textures-free/block/activator_rail_on.png
+- minecraft-inspired-textures-free/block/activator_rail.png
+- minecraft-inspired-textures-free/block/allium.png
+- minecraft-inspired-textures-free/block/amethyst_block.png
+- minecraft-inspired-textures-free/block/amethyst_cluster.png
+- minecraft-inspired-textures-free/block/ancient_debris_side.png
+- minecraft-inspired-textures-free/block/ancient_debris_top.png
+- minecraft-inspired-textures-free/block/andesite.png
+- minecraft-inspired-textures-free/block/anvil_top.png
+- minecraft-inspired-textures-free/block/anvil.png
+- minecraft-inspired-textures-free/block/attached_melon_stem.png
+- minecraft-inspired-textures-free/block/attached_pumpkin_stem.png
+- minecraft-inspired-textures-free/block/azalea_leaves.png
+- minecraft-inspired-textures-free/block/azalea_plant.png
+- minecraft-inspired-textures-free/block/azalea_side.png
+- minecraft-inspired-textures-free/block/azalea_top.png
+- minecraft-inspired-textures-free/block/azure_bluet.png
+- minecraft-inspired-textures-free/block/bamboo_large_leaves.png
+- minecraft-inspired-textures-free/block/bamboo_singleleaf.png
+- minecraft-inspired-textures-free/block/bamboo_small_leaves.png
+- minecraft-inspired-textures-free/block/bamboo_stage0.png
+- minecraft-inspired-textures-free/block/bamboo_stalk.png
+- minecraft-inspired-textures-free/block/barrel_bottom.png
+- minecraft-inspired-textures-free/block/barrel_side.png
+- minecraft-inspired-textures-free/block/barrel_top_open.png
+- minecraft-inspired-textures-free/block/barrel_top.png
+- minecraft-inspired-textures-free/block/basalt_side.png
+- minecraft-inspired-textures-free/block/basalt_top.png
+- minecraft-inspired-textures-free/block/beacon.png
+- minecraft-inspired-textures-free/block/bedrock.png
+- minecraft-inspired-textures-free/block/bee_nest_bottom.png
+- minecraft-inspired-textures-free/block/bee_nest_front_honey.png
+- minecraft-inspired-textures-free/block/bee_nest_front.png
+- minecraft-inspired-textures-free/block/bee_nest_side.png
+- minecraft-inspired-textures-free/block/bee_nest_top.png
+- minecraft-inspired-textures-free/block/beehive_end.png
+- minecraft-inspired-textures-free/block/beehive_front_honey.png
+- minecraft-inspired-textures-free/block/beehive_front.png
+- minecraft-inspired-textures-free/block/beehive_side.png
+- minecraft-inspired-textures-free/block/beetroots_stage0.png
+- minecraft-inspired-textures-free/block/beetroots_stage1.png
+- minecraft-inspired-textures-free/block/beetroots_stage2.png
+- minecraft-inspired-textures-free/block/beetroots_stage3.png
+- minecraft-inspired-textures-free/block/bell_bottom.png
+- minecraft-inspired-textures-free/block/bell_side.png
+- minecraft-inspired-textures-free/block/bell_top.png
+- minecraft-inspired-textures-free/block/big_dripleaf_side.png
+- minecraft-inspired-textures-free/block/big_dripleaf_stem.png
+- minecraft-inspired-textures-free/block/big_dripleaf_tip.png
+- minecraft-inspired-textures-free/block/big_dripleaf_top.png
+- minecraft-inspired-textures-free/block/birch_door_bottom.png
+- minecraft-inspired-textures-free/block/birch_door_top.png
+- minecraft-inspired-textures-free/block/birch_leaves.png
+- minecraft-inspired-textures-free/block/birch_log_top.png
+- minecraft-inspired-textures-free/block/birch_log.png
+- minecraft-inspired-textures-free/block/birch_planks.png
+- minecraft-inspired-textures-free/block/birch_sapling.png
+- minecraft-inspired-textures-free/block/birch_trapdoor.png
+- minecraft-inspired-textures-free/block/black_candle_lit.png
+- minecraft-inspired-textures-free/block/black_candle.png
+- minecraft-inspired-textures-free/block/black_concrete_powder.png
+- minecraft-inspired-textures-free/block/black_concrete.png
+- minecraft-inspired-textures-free/block/black_glazed_terracotta.png
+- minecraft-inspired-textures-free/block/black_shulker_box.png
+- minecraft-inspired-textures-free/block/black_stained_glass_pane_top.png
+- minecraft-inspired-textures-free/block/black_stained_glass.png
+- minecraft-inspired-textures-free/block/black_terracotta.png
+- minecraft-inspired-textures-free/block/black_wool.png
+- minecraft-inspired-textures-free/block/blackstone_top.png
+- minecraft-inspired-textures-free/block/blackstone.png
+- minecraft-inspired-textures-free/block/blast_furnace_front_on.png
+- minecraft-inspired-textures-free/block/blast_furnace_front.png
+- minecraft-inspired-textures-free/block/blast_furnace_side.png
+- minecraft-inspired-textures-free/block/blast_furnace_top.png
+- minecraft-inspired-textures-free/block/blue_candle_lit.png
+- minecraft-inspired-textures-free/block/blue_candle.png
+- minecraft-inspired-textures-free/block/blue_concrete_powder.png
+- minecraft-inspired-textures-free/block/blue_concrete.png
+- minecraft-inspired-textures-free/block/blue_glazed_terracotta.png
+- minecraft-inspired-textures-free/block/blue_ice.png
+- minecraft-inspired-textures-free/block/blue_orchid.png
+- minecraft-inspired-textures-free/block/blue_shulker_box.png
+- minecraft-inspired-textures-free/block/blue_stained_glass_pane_top.png
+- minecraft-inspired-textures-free/block/blue_stained_glass.png
+- minecraft-inspired-textures-free/block/blue_terracotta.png
+- minecraft-inspired-textures-free/block/blue_wool.png
+- minecraft-inspired-textures-free/block/bone_block_side.png
+- minecraft-inspired-textures-free/block/bone_block_top.png
+- minecraft-inspired-textures-free/block/bookshelf.png
+- minecraft-inspired-textures-free/block/brain_coral_block.png
+- minecraft-inspired-textures-free/block/brain_coral_fan.png
+- minecraft-inspired-textures-free/block/brain_coral.png
+- minecraft-inspired-textures-free/block/brewing_stand_base.png
+- minecraft-inspired-textures-free/block/brewing_stand.png
+- minecraft-inspired-textures-free/block/bricks.png
+- minecraft-inspired-textures-free/block/brown_candle_lit.png
+- minecraft-inspired-textures-free/block/brown_candle.png
+- minecraft-inspired-textures-free/block/brown_concrete_powder.png
+- minecraft-inspired-textures-free/block/brown_concrete.png
+- minecraft-inspired-textures-free/block/brown_glazed_terracotta.png
+- minecraft-inspired-textures-free/block/brown_mushroom_block.png
+- minecraft-inspired-textures-free/block/brown_mushroom.png
+- minecraft-inspired-textures-free/block/brown_shulker_box.png
+- minecraft-inspired-textures-free/block/brown_stained_glass_pane_top.png
+- minecraft-inspired-textures-free/block/brown_stained_glass.png
+- minecraft-inspired-textures-free/block/brown_terracotta.png
+- minecraft-inspired-textures-free/block/brown_wool.png
+- minecraft-inspired-textures-free/block/bubble_coral_block.png
+- minecraft-inspired-textures-free/block/bubble_coral_fan.png
+- minecraft-inspired-textures-free/block/bubble_coral.png
+- minecraft-inspired-textures-free/block/budding_amethyst.png
+- minecraft-inspired-textures-free/block/cactus_bottom.png
+- minecraft-inspired-textures-free/block/cactus_side.png
+- minecraft-inspired-textures-free/block/cactus_top.png
+- minecraft-inspired-textures-free/block/cake_bottom.png
+- minecraft-inspired-textures-free/block/cake_inner.png
+- minecraft-inspired-textures-free/block/cake_side.png
+- minecraft-inspired-textures-free/block/cake_top.png
+- minecraft-inspired-textures-free/block/calcite.png
+- minecraft-inspired-textures-free/block/campfire_fire.png
+- minecraft-inspired-textures-free/block/campfire_log_lit.png
+- minecraft-inspired-textures-free/block/campfire_log.png
+- minecraft-inspired-textures-free/block/candle_lit.png
+- minecraft-inspired-textures-free/block/candle.png
+- minecraft-inspired-textures-free/block/carrots_stage0.png
+- minecraft-inspired-textures-free/block/carrots_stage1.png
+- minecraft-inspired-textures-free/block/carrots_stage2.png
+- minecraft-inspired-textures-free/block/carrots_stage3.png
+- minecraft-inspired-textures-free/block/cartography_table_side1.png
+- minecraft-inspired-textures-free/block/cartography_table_side2.png
+- minecraft-inspired-textures-free/block/cartography_table_side3.png
+- minecraft-inspired-textures-free/block/cartography_table_top.png
+- minecraft-inspired-textures-free/block/carved_pumpkin.png
+- minecraft-inspired-textures-free/block/cauldron_bottom.png
+- minecraft-inspired-textures-free/block/cauldron_inner.png
+- minecraft-inspired-textures-free/block/cauldron_side.png
+- minecraft-inspired-textures-free/block/cauldron_top.png
+- minecraft-inspired-textures-free/block/cave_vines_lit.png
+- minecraft-inspired-textures-free/block/cave_vines_plant_lit.png
+- minecraft-inspired-textures-free/block/cave_vines_plant.png
+- minecraft-inspired-textures-free/block/cave_vines.png
+- minecraft-inspired-textures-free/block/chain_command_block_back.png
+- minecraft-inspired-textures-free/block/chain_command_block_conditional.png
+- minecraft-inspired-textures-free/block/chain_command_block_front.png
+- minecraft-inspired-textures-free/block/chain_command_block_side.png
+- minecraft-inspired-textures-free/block/chain.png
+- minecraft-inspired-textures-free/block/chipped_anvil_top.png
+- minecraft-inspired-textures-free/block/chiseled_deepslate.png
+- minecraft-inspired-textures-free/block/chiseled_nether_bricks.png
+- minecraft-inspired-textures-free/block/chiseled_polished_blackstone.png
+- minecraft-inspired-textures-free/block/chiseled_quartz_block_top.png
+- minecraft-inspired-textures-free/block/chiseled_quartz_block.png
+- minecraft-inspired-textures-free/block/chiseled_red_sandstone.png
+- minecraft-inspired-textures-free/block/chiseled_sandstone.png
+- minecraft-inspired-textures-free/block/chiseled_stone_bricks.png
+- minecraft-inspired-textures-free/block/chorus_flower_dead.png
+- minecraft-inspired-textures-free/block/chorus_flower.png
+- minecraft-inspired-textures-free/block/chorus_plant.png
+- minecraft-inspired-textures-free/block/clay.png
+- minecraft-inspired-textures-free/block/coal_block.png
+- minecraft-inspired-textures-free/block/coal_ore.png
+- minecraft-inspired-textures-free/block/coarse_dirt.png
+- minecraft-inspired-textures-free/block/cobbled_deepslate.png
+- minecraft-inspired-textures-free/block/cobblestone.png
+- minecraft-inspired-textures-free/block/cobweb.png
+- minecraft-inspired-textures-free/block/cocoa_stage0.png
+- minecraft-inspired-textures-free/block/cocoa_stage1.png
+- minecraft-inspired-textures-free/block/cocoa_stage2.png
+- minecraft-inspired-textures-free/block/command_block_back.png
+- minecraft-inspired-textures-free/block/command_block_conditional.png
+- minecraft-inspired-textures-free/block/command_block_front.png
+- minecraft-inspired-textures-free/block/command_block_side.png
+- minecraft-inspired-textures-free/block/comparator_on.png
+- minecraft-inspired-textures-free/block/comparator.png
+- minecraft-inspired-textures-free/block/composter_bottom.png
+- minecraft-inspired-textures-free/block/composter_compost.png
+- minecraft-inspired-textures-free/block/composter_ready.png
+- minecraft-inspired-textures-free/block/composter_side.png
+- minecraft-inspired-textures-free/block/composter_top.png
+- minecraft-inspired-textures-free/block/conduit.png
+- minecraft-inspired-textures-free/block/copper_block.png
+- minecraft-inspired-textures-free/block/copper_ore.png
+- minecraft-inspired-textures-free/block/cornflower.png
+- minecraft-inspired-textures-free/block/cracked_deepslate_bricks.png
+- minecraft-inspired-textures-free/block/cracked_deepslate_tiles.png
+- minecraft-inspired-textures-free/block/cracked_nether_bricks.png
+- minecraft-inspired-textures-free/block/cracked_polished_blackstone_bricks.png
+- minecraft-inspired-textures-free/block/cracked_stone_bricks.png
+- minecraft-inspired-textures-free/block/crafting_table_front.png
+- minecraft-inspired-textures-free/block/crafting_table_side.png
+- minecraft-inspired-textures-free/block/crafting_table_top.png
+- minecraft-inspired-textures-free/block/crimson_door_bottom.png
+- minecraft-inspired-textures-free/block/crimson_door_top.png
+- minecraft-inspired-textures-free/block/crimson_fungus.png
+- minecraft-inspired-textures-free/block/crimson_nylium_side.png
+- minecraft-inspired-textures-free/block/crimson_nylium.png
+- minecraft-inspired-textures-free/block/crimson_planks.png
+- minecraft-inspired-textures-free/block/crimson_roots_pot.png
+- minecraft-inspired-textures-free/block/crimson_roots.png
+- minecraft-inspired-textures-free/block/crimson_stem_top.png
+- minecraft-inspired-textures-free/block/crimson_stem.png
+- minecraft-inspired-textures-free/block/crimson_trapdoor.png
+- minecraft-inspired-textures-free/block/crying_obsidian.png
+- minecraft-inspired-textures-free/block/cut_copper.png
+- minecraft-inspired-textures-free/block/cut_red_sandstone.png
+- minecraft-inspired-textures-free/block/cut_sandstone.png
+- minecraft-inspired-textures-free/block/cyan_candle_lit.png
+- minecraft-inspired-textures-free/block/cyan_candle.png
+- minecraft-inspired-textures-free/block/cyan_concrete_powder.png
+- minecraft-inspired-textures-free/block/cyan_concrete.png
+- minecraft-inspired-textures-free/block/cyan_glazed_terracotta.png
+- minecraft-inspired-textures-free/block/cyan_shulker_box.png
+- minecraft-inspired-textures-free/block/cyan_stained_glass_pane_top.png
+- minecraft-inspired-textures-free/block/cyan_stained_glass.png
+- minecraft-inspired-textures-free/block/cyan_terracotta.png
+- minecraft-inspired-textures-free/block/cyan_wool.png
+- minecraft-inspired-textures-free/block/damaged_anvil_top.png
+- minecraft-inspired-textures-free/block/dandelion.png
+- minecraft-inspired-textures-free/block/dark_oak_door_bottom.png
+- minecraft-inspired-textures-free/block/dark_oak_door_top.png
+- minecraft-inspired-textures-free/block/dark_oak_leaves.png
+- minecraft-inspired-textures-free/block/dark_oak_log_top.png
+- minecraft-inspired-textures-free/block/dark_oak_log.png
+- minecraft-inspired-textures-free/block/dark_oak_planks.png
+- minecraft-inspired-textures-free/block/dark_oak_sapling.png
+- minecraft-inspired-textures-free/block/dark_oak_trapdoor.png
+- minecraft-inspired-textures-free/block/dark_prismarine.png
+- minecraft-inspired-textures-free/block/daylight_detector_inverted_top.png
+- minecraft-inspired-textures-free/block/daylight_detector_side.png
+- minecraft-inspired-textures-free/block/daylight_detector_top.png
+- minecraft-inspired-textures-free/block/dead_brain_coral_block.png
+- minecraft-inspired-textures-free/block/dead_brain_coral_fan.png
+- minecraft-inspired-textures-free/block/dead_brain_coral.png
+- minecraft-inspired-textures-free/block/dead_bubble_coral_block.png
+- minecraft-inspired-textures-free/block/dead_bubble_coral_fan.png
+- minecraft-inspired-textures-free/block/dead_bubble_coral.png
+- minecraft-inspired-textures-free/block/dead_bush.png
+- minecraft-inspired-textures-free/block/dead_fire_coral_block.png
+- minecraft-inspired-textures-free/block/dead_fire_coral_fan.png
+- minecraft-inspired-textures-free/block/dead_fire_coral.png
+- minecraft-inspired-textures-free/block/dead_horn_coral_block.png
+- minecraft-inspired-textures-free/block/dead_horn_coral_fan.png
+- minecraft-inspired-textures-free/block/dead_horn_coral.png
+- minecraft-inspired-textures-free/block/dead_tube_coral_block.png
+- minecraft-inspired-textures-free/block/dead_tube_coral_fan.png
+- minecraft-inspired-textures-free/block/dead_tube_coral.png
+- minecraft-inspired-textures-free/block/debug.png
+- minecraft-inspired-textures-free/block/debug2.png
+- minecraft-inspired-textures-free/block/deepslate_bricks.png
+- minecraft-inspired-textures-free/block/deepslate_coal_ore.png
+- minecraft-inspired-textures-free/block/deepslate_copper_ore.png
+- minecraft-inspired-textures-free/block/deepslate_diamond_ore.png
+- minecraft-inspired-textures-free/block/deepslate_emerald_ore.png
+- minecraft-inspired-textures-free/block/deepslate_gold_ore.png
+- minecraft-inspired-textures-free/block/deepslate_iron_ore.png
+- minecraft-inspired-textures-free/block/deepslate_lapis_ore.png
+- minecraft-inspired-textures-free/block/deepslate_redstone_ore.png
+- minecraft-inspired-textures-free/block/deepslate_tiles.png
+- minecraft-inspired-textures-free/block/deepslate_top.png
+- minecraft-inspired-textures-free/block/deepslate.png
+- minecraft-inspired-textures-free/block/destroy_stage_0.png
+- minecraft-inspired-textures-free/block/destroy_stage_1.png
+- minecraft-inspired-textures-free/block/destroy_stage_2.png
+- minecraft-inspired-textures-free/block/destroy_stage_3.png
+- minecraft-inspired-textures-free/block/destroy_stage_4.png
+- minecraft-inspired-textures-free/block/destroy_stage_5.png
+- minecraft-inspired-textures-free/block/destroy_stage_6.png
+- minecraft-inspired-textures-free/block/destroy_stage_7.png
+- minecraft-inspired-textures-free/block/destroy_stage_8.png
+- minecraft-inspired-textures-free/block/destroy_stage_9.png
+- minecraft-inspired-textures-free/block/detector_rail_on.png
+- minecraft-inspired-textures-free/block/detector_rail.png
+- minecraft-inspired-textures-free/block/diamond_block.png
+- minecraft-inspired-textures-free/block/diamond_ore.png
+- minecraft-inspired-textures-free/block/diorite.png
+- minecraft-inspired-textures-free/block/dirt_path_side.png
+- minecraft-inspired-textures-free/block/dirt_path_top.png
+- minecraft-inspired-textures-free/block/dirt.png
+- minecraft-inspired-textures-free/block/dispenser_front_vertical.png
+- minecraft-inspired-textures-free/block/dispenser_front.png
+- minecraft-inspired-textures-free/block/dragon_egg.png
+- minecraft-inspired-textures-free/block/dried_kelp_bottom.png
+- minecraft-inspired-textures-free/block/dried_kelp_side.png
+- minecraft-inspired-textures-free/block/dried_kelp_top.png
+- minecraft-inspired-textures-free/block/dripstone_block.png
+- minecraft-inspired-textures-free/block/dropper_front_vertical.png
+- minecraft-inspired-textures-free/block/dropper_front.png
+- minecraft-inspired-textures-free/block/emerald_block.png
+- minecraft-inspired-textures-free/block/emerald_ore.png
+- minecraft-inspired-textures-free/block/enchanting_table_bottom.png
+- minecraft-inspired-textures-free/block/enchanting_table_side.png
+- minecraft-inspired-textures-free/block/enchanting_table_top.png
+- minecraft-inspired-textures-free/block/end_portal_frame_eye.png
+- minecraft-inspired-textures-free/block/end_portal_frame_side.png
+- minecraft-inspired-textures-free/block/end_portal_frame_top.png
+- minecraft-inspired-textures-free/block/end_rod.png
+- minecraft-inspired-textures-free/block/end_stone_bricks.png
+- minecraft-inspired-textures-free/block/end_stone.png
+- minecraft-inspired-textures-free/block/exposed_copper.png
+- minecraft-inspired-textures-free/block/exposed_cut_copper.png
+- minecraft-inspired-textures-free/block/farmland_moist.png
+- minecraft-inspired-textures-free/block/farmland.png
+- minecraft-inspired-textures-free/block/fern.png
+- minecraft-inspired-textures-free/block/fire_0.png
+- minecraft-inspired-textures-free/block/fire_1.png
+- minecraft-inspired-textures-free/block/fire_coral_block.png
+- minecraft-inspired-textures-free/block/fire_coral_fan.png
+- minecraft-inspired-textures-free/block/fire_coral.png
+- minecraft-inspired-textures-free/block/fletching_table_front.png
+- minecraft-inspired-textures-free/block/fletching_table_side.png
+- minecraft-inspired-textures-free/block/fletching_table_top.png
+- minecraft-inspired-textures-free/block/flower_pot.png
+- minecraft-inspired-textures-free/block/flowering_azalea_leaves.png
+- minecraft-inspired-textures-free/block/flowering_azalea_side.png
+- minecraft-inspired-textures-free/block/flowering_azalea_top.png
+- minecraft-inspired-textures-free/block/frogspawn.png
+- minecraft-inspired-textures-free/block/frosted_ice_0.png
+- minecraft-inspired-textures-free/block/frosted_ice_1.png
+- minecraft-inspired-textures-free/block/frosted_ice_2.png
+- minecraft-inspired-textures-free/block/frosted_ice_3.png
+- minecraft-inspired-textures-free/block/furnace_front_on.png
+- minecraft-inspired-textures-free/block/furnace_front.png
+- minecraft-inspired-textures-free/block/furnace_side.png
+- minecraft-inspired-textures-free/block/furnace_top.png
+- minecraft-inspired-textures-free/block/gilded_blackstone.png
+- minecraft-inspired-textures-free/block/glass_pane_top.png
+- minecraft-inspired-textures-free/block/glass.png
+- minecraft-inspired-textures-free/block/glow_item_frame.png
+- minecraft-inspired-textures-free/block/glow_lichen.png
+- minecraft-inspired-textures-free/block/glowstone.png
+- minecraft-inspired-textures-free/block/gold_block.png
+- minecraft-inspired-textures-free/block/gold_ore.png
+- minecraft-inspired-textures-free/block/granite.png
+- minecraft-inspired-textures-free/block/grass_block_side_overlay.png
+- minecraft-inspired-textures-free/block/grass_block_side.png
+- minecraft-inspired-textures-free/block/grass_block_snow.png
+- minecraft-inspired-textures-free/block/grass_block_top.png
+- minecraft-inspired-textures-free/block/grass.png
+- minecraft-inspired-textures-free/block/gravel.png
+- minecraft-inspired-textures-free/block/gray_candle_lit.png
+- minecraft-inspired-textures-free/block/gray_candle.png
+- minecraft-inspired-textures-free/block/gray_concrete_powder.png
+- minecraft-inspired-textures-free/block/gray_concrete.png
+- minecraft-inspired-textures-free/block/gray_glazed_terracotta.png
+- minecraft-inspired-textures-free/block/gray_shulker_box.png
+- minecraft-inspired-textures-free/block/gray_stained_glass_pane_top.png
+- minecraft-inspired-textures-free/block/gray_stained_glass.png
+- minecraft-inspired-textures-free/block/gray_terracotta.png
+- minecraft-inspired-textures-free/block/gray_wool.png
+- minecraft-inspired-textures-free/block/green_candle_lit.png
+- minecraft-inspired-textures-free/block/green_candle.png
+- minecraft-inspired-textures-free/block/green_concrete_powder.png
+- minecraft-inspired-textures-free/block/green_concrete.png
+- minecraft-inspired-textures-free/block/green_glazed_terracotta.png
+- minecraft-inspired-textures-free/block/green_shulker_box.png
+- minecraft-inspired-textures-free/block/green_stained_glass_pane_top.png
+- minecraft-inspired-textures-free/block/green_stained_glass.png
+- minecraft-inspired-textures-free/block/green_terracotta.png
+- minecraft-inspired-textures-free/block/green_wool.png
+- minecraft-inspired-textures-free/block/grindstone_pivot.png
+- minecraft-inspired-textures-free/block/grindstone_round.png
+- minecraft-inspired-textures-free/block/grindstone_side.png
+- minecraft-inspired-textures-free/block/hanging_roots.png
+- minecraft-inspired-textures-free/block/hay_block_side.png
+- minecraft-inspired-textures-free/block/hay_block_top.png
+- minecraft-inspired-textures-free/block/honey_block_bottom.png
+- minecraft-inspired-textures-free/block/honey_block_side.png
+- minecraft-inspired-textures-free/block/honey_block_top.png
+- minecraft-inspired-textures-free/block/honeycomb_block.png
+- minecraft-inspired-textures-free/block/hopper_inside.png
+- minecraft-inspired-textures-free/block/hopper_outside.png
+- minecraft-inspired-textures-free/block/hopper_top.png
+- minecraft-inspired-textures-free/block/horn_coral_block.png
+- minecraft-inspired-textures-free/block/horn_coral_fan.png
+- minecraft-inspired-textures-free/block/horn_coral.png
+- minecraft-inspired-textures-free/block/ice.png
+- minecraft-inspired-textures-free/block/iron_bars.png
+- minecraft-inspired-textures-free/block/iron_block.png
+- minecraft-inspired-textures-free/block/iron_door_bottom.png
+- minecraft-inspired-textures-free/block/iron_door_top.png
+- minecraft-inspired-textures-free/block/iron_ore.png
+- minecraft-inspired-textures-free/block/iron_trapdoor.png
+- minecraft-inspired-textures-free/block/item_frame.png
+- minecraft-inspired-textures-free/block/jack_o_lantern.png
+- minecraft-inspired-textures-free/block/jigsaw_bottom.png
+- minecraft-inspired-textures-free/block/jigsaw_lock.png
+- minecraft-inspired-textures-free/block/jigsaw_side.png
+- minecraft-inspired-textures-free/block/jigsaw_top.png
+- minecraft-inspired-textures-free/block/jukebox_side.png
+- minecraft-inspired-textures-free/block/jukebox_top.png
+- minecraft-inspired-textures-free/block/jungle_door_bottom.png
+- minecraft-inspired-textures-free/block/jungle_door_top.png
+- minecraft-inspired-textures-free/block/jungle_leaves.png
+- minecraft-inspired-textures-free/block/jungle_log_top.png
+- minecraft-inspired-textures-free/block/jungle_log.png
+- minecraft-inspired-textures-free/block/jungle_planks.png
+- minecraft-inspired-textures-free/block/jungle_sapling.png
+- minecraft-inspired-textures-free/block/jungle_trapdoor.png
+- minecraft-inspired-textures-free/block/kelp_plant.png
+- minecraft-inspired-textures-free/block/kelp.png
+- minecraft-inspired-textures-free/block/ladder.png
+- minecraft-inspired-textures-free/block/lantern.png
+- minecraft-inspired-textures-free/block/lapis_block.png
+- minecraft-inspired-textures-free/block/lapis_ore.png
+- minecraft-inspired-textures-free/block/large_amethyst_bud.png
+- minecraft-inspired-textures-free/block/large_fern_bottom.png
+- minecraft-inspired-textures-free/block/large_fern_top.png
+- minecraft-inspired-textures-free/block/lava_flow.png
+- minecraft-inspired-textures-free/block/lava_still.png
+- minecraft-inspired-textures-free/block/lectern_base.png
+- minecraft-inspired-textures-free/block/lectern_front.png
+- minecraft-inspired-textures-free/block/lectern_sides.png
+- minecraft-inspired-textures-free/block/lectern_top.png
+- minecraft-inspired-textures-free/block/lever.png
+- minecraft-inspired-textures-free/block/light_blue_candle_lit.png
+- minecraft-inspired-textures-free/block/light_blue_candle.png
+- minecraft-inspired-textures-free/block/light_blue_concrete_powder.png
+- minecraft-inspired-textures-free/block/light_blue_concrete.png
+- minecraft-inspired-textures-free/block/light_blue_glazed_terracotta.png
+- minecraft-inspired-textures-free/block/light_blue_shulker_box.png
+- minecraft-inspired-textures-free/block/light_blue_stained_glass_pane_top.png
+- minecraft-inspired-textures-free/block/light_blue_stained_glass.png
+- minecraft-inspired-textures-free/block/light_blue_terracotta.png
+- minecraft-inspired-textures-free/block/light_blue_wool.png
+- minecraft-inspired-textures-free/block/light_gray_candle_lit.png
+- minecraft-inspired-textures-free/block/light_gray_candle.png
+- minecraft-inspired-textures-free/block/light_gray_concrete_powder.png
+- minecraft-inspired-textures-free/block/light_gray_concrete.png
+- minecraft-inspired-textures-free/block/light_gray_glazed_terracotta.png
+- minecraft-inspired-textures-free/block/light_gray_shulker_box.png
+- minecraft-inspired-textures-free/block/light_gray_stained_glass_pane_top.png
+- minecraft-inspired-textures-free/block/light_gray_stained_glass.png
+- minecraft-inspired-textures-free/block/light_gray_terracotta.png
+- minecraft-inspired-textures-free/block/light_gray_wool.png
+- minecraft-inspired-textures-free/block/lightning_rod_on.png
+- minecraft-inspired-textures-free/block/lightning_rod.png
+- minecraft-inspired-textures-free/block/lilac_bottom.png
+- minecraft-inspired-textures-free/block/lilac_top.png
+- minecraft-inspired-textures-free/block/lily_of_the_valley.png
+- minecraft-inspired-textures-free/block/lily_pad.png
+- minecraft-inspired-textures-free/block/lime_candle_lit.png
+- minecraft-inspired-textures-free/block/lime_candle.png
+- minecraft-inspired-textures-free/block/lime_concrete_powder.png
+- minecraft-inspired-textures-free/block/lime_concrete.png
+- minecraft-inspired-textures-free/block/lime_glazed_terracotta.png
+- minecraft-inspired-textures-free/block/lime_shulker_box.png
+- minecraft-inspired-textures-free/block/lime_stained_glass_pane_top.png
+- minecraft-inspired-textures-free/block/lime_stained_glass.png
+- minecraft-inspired-textures-free/block/lime_terracotta.png
+- minecraft-inspired-textures-free/block/lime_wool.png
+- minecraft-inspired-textures-free/block/lodestone_side.png
+- minecraft-inspired-textures-free/block/lodestone_top.png
+- minecraft-inspired-textures-free/block/loom_bottom.png
+- minecraft-inspired-textures-free/block/loom_front.png
+- minecraft-inspired-textures-free/block/loom_side.png
+- minecraft-inspired-textures-free/block/loom_top.png
+- minecraft-inspired-textures-free/block/magenta_candle_lit.png
+- minecraft-inspired-textures-free/block/magenta_candle.png
+- minecraft-inspired-textures-free/block/magenta_concrete_powder.png
+- minecraft-inspired-textures-free/block/magenta_concrete.png
+- minecraft-inspired-textures-free/block/magenta_glazed_terracotta.png
+- minecraft-inspired-textures-free/block/magenta_shulker_box.png
+- minecraft-inspired-textures-free/block/magenta_stained_glass_pane_top.png
+- minecraft-inspired-textures-free/block/magenta_stained_glass.png
+- minecraft-inspired-textures-free/block/magenta_terracotta.png
+- minecraft-inspired-textures-free/block/magenta_wool.png
+- minecraft-inspired-textures-free/block/magma.png
+- minecraft-inspired-textures-free/block/mangrove_door_bottom.png
+- minecraft-inspired-textures-free/block/mangrove_door_top.png
+- minecraft-inspired-textures-free/block/mangrove_leaves.png
+- minecraft-inspired-textures-free/block/mangrove_log_top.png
+- minecraft-inspired-textures-free/block/mangrove_log.png
+- minecraft-inspired-textures-free/block/mangrove_planks.png
+- minecraft-inspired-textures-free/block/mangrove_propagule_hanging.png
+- minecraft-inspired-textures-free/block/mangrove_propagule.png
+- minecraft-inspired-textures-free/block/mangrove_roots_side.png
+- minecraft-inspired-textures-free/block/mangrove_roots_top.png
+- minecraft-inspired-textures-free/block/mangrove_trapdoor.png
+- minecraft-inspired-textures-free/block/medium_amethyst_bud.png
+- minecraft-inspired-textures-free/block/melon_side.png
+- minecraft-inspired-textures-free/block/melon_stem.png
+- minecraft-inspired-textures-free/block/melon_top.png
+- minecraft-inspired-textures-free/block/moss_block.png
+- minecraft-inspired-textures-free/block/mossy_cobblestone.png
+- minecraft-inspired-textures-free/block/mossy_stone_bricks.png
+- minecraft-inspired-textures-free/block/mud_bricks.png
+- minecraft-inspired-textures-free/block/mud.png
+- minecraft-inspired-textures-free/block/muddy_mangrove_roots_side.png
+- minecraft-inspired-textures-free/block/muddy_mangrove_roots_top.png
+- minecraft-inspired-textures-free/block/mushroom_block_inside.png
+- minecraft-inspired-textures-free/block/mushroom_stem.png
+- minecraft-inspired-textures-free/block/mycelium_side.png
+- minecraft-inspired-textures-free/block/mycelium_top.png
+- minecraft-inspired-textures-free/block/nether_bricks.png
+- minecraft-inspired-textures-free/block/nether_gold_ore.png
+- minecraft-inspired-textures-free/block/nether_portal.png
+- minecraft-inspired-textures-free/block/nether_quartz_ore.png
+- minecraft-inspired-textures-free/block/nether_sprouts.png
+- minecraft-inspired-textures-free/block/nether_wart_block.png
+- minecraft-inspired-textures-free/block/nether_wart_stage0.png
+- minecraft-inspired-textures-free/block/nether_wart_stage1.png
+- minecraft-inspired-textures-free/block/nether_wart_stage2.png
+- minecraft-inspired-textures-free/block/netherite_block.png
+- minecraft-inspired-textures-free/block/netherrack.png
+- minecraft-inspired-textures-free/block/note_block.png
+- minecraft-inspired-textures-free/block/oak_door_bottom.png
+- minecraft-inspired-textures-free/block/oak_door_top.png
+- minecraft-inspired-textures-free/block/oak_leaves.png
+- minecraft-inspired-textures-free/block/oak_log_top.png
+- minecraft-inspired-textures-free/block/oak_log.png
+- minecraft-inspired-textures-free/block/oak_planks.png
+- minecraft-inspired-textures-free/block/oak_sapling.png
+- minecraft-inspired-textures-free/block/oak_trapdoor.png
+- minecraft-inspired-textures-free/block/observer_back_on.png
+- minecraft-inspired-textures-free/block/observer_back.png
+- minecraft-inspired-textures-free/block/observer_front.png
+- minecraft-inspired-textures-free/block/observer_side.png
+- minecraft-inspired-textures-free/block/observer_top.png
+- minecraft-inspired-textures-free/block/obsidian.png
+- minecraft-inspired-textures-free/block/ochre_froglight_side.png
+- minecraft-inspired-textures-free/block/ochre_froglight_top.png
+- minecraft-inspired-textures-free/block/orange_candle_lit.png
+- minecraft-inspired-textures-free/block/orange_candle.png
+- minecraft-inspired-textures-free/block/orange_concrete_powder.png
+- minecraft-inspired-textures-free/block/orange_concrete.png
+- minecraft-inspired-textures-free/block/orange_glazed_terracotta.png
+- minecraft-inspired-textures-free/block/orange_shulker_box.png
+- minecraft-inspired-textures-free/block/orange_stained_glass_pane_top.png
+- minecraft-inspired-textures-free/block/orange_stained_glass.png
+- minecraft-inspired-textures-free/block/orange_terracotta.png
+- minecraft-inspired-textures-free/block/orange_tulip.png
+- minecraft-inspired-textures-free/block/orange_wool.png
+- minecraft-inspired-textures-free/block/oxeye_daisy.png
+- minecraft-inspired-textures-free/block/oxidized_copper.png
+- minecraft-inspired-textures-free/block/oxidized_cut_copper.png
+- minecraft-inspired-textures-free/block/packed_ice.png
+- minecraft-inspired-textures-free/block/packed_mud.png
+- minecraft-inspired-textures-free/block/pearlescent_froglight_side.png
+- minecraft-inspired-textures-free/block/pearlescent_froglight_top.png
+- minecraft-inspired-textures-free/block/peony_bottom.png
+- minecraft-inspired-textures-free/block/peony_top.png
+- minecraft-inspired-textures-free/block/pink_candle_lit.png
+- minecraft-inspired-textures-free/block/pink_candle.png
+- minecraft-inspired-textures-free/block/pink_concrete_powder.png
+- minecraft-inspired-textures-free/block/pink_concrete.png
+- minecraft-inspired-textures-free/block/pink_glazed_terracotta.png
+- minecraft-inspired-textures-free/block/pink_shulker_box.png
+- minecraft-inspired-textures-free/block/pink_stained_glass_pane_top.png
+- minecraft-inspired-textures-free/block/pink_stained_glass.png
+- minecraft-inspired-textures-free/block/pink_terracotta.png
+- minecraft-inspired-textures-free/block/pink_tulip.png
+- minecraft-inspired-textures-free/block/pink_wool.png
+- minecraft-inspired-textures-free/block/piston_bottom.png
+- minecraft-inspired-textures-free/block/piston_inner.png
+- minecraft-inspired-textures-free/block/piston_side.png
+- minecraft-inspired-textures-free/block/piston_top_sticky.png
+- minecraft-inspired-textures-free/block/piston_top.png
+- minecraft-inspired-textures-free/block/podzol_side.png
+- minecraft-inspired-textures-free/block/podzol_top.png
+- minecraft-inspired-textures-free/block/pointed_dripstone_down_base.png
+- minecraft-inspired-textures-free/block/pointed_dripstone_down_frustum.png
+- minecraft-inspired-textures-free/block/pointed_dripstone_down_middle.png
+- minecraft-inspired-textures-free/block/pointed_dripstone_down_tip_merge.png
+- minecraft-inspired-textures-free/block/pointed_dripstone_down_tip.png
+- minecraft-inspired-textures-free/block/pointed_dripstone_up_base.png
+- minecraft-inspired-textures-free/block/pointed_dripstone_up_frustum.png
+- minecraft-inspired-textures-free/block/pointed_dripstone_up_middle.png
+- minecraft-inspired-textures-free/block/pointed_dripstone_up_tip_merge.png
+- minecraft-inspired-textures-free/block/pointed_dripstone_up_tip.png
+- minecraft-inspired-textures-free/block/polished_andesite.png
+- minecraft-inspired-textures-free/block/polished_basalt_side.png
+- minecraft-inspired-textures-free/block/polished_basalt_top.png
+- minecraft-inspired-textures-free/block/polished_blackstone_bricks.png
+- minecraft-inspired-textures-free/block/polished_blackstone.png
+- minecraft-inspired-textures-free/block/polished_deepslate.png
+- minecraft-inspired-textures-free/block/polished_diorite.png
+- minecraft-inspired-textures-free/block/polished_granite.png
+- minecraft-inspired-textures-free/block/poppy.png
+- minecraft-inspired-textures-free/block/potatoes_stage0.png
+- minecraft-inspired-textures-free/block/potatoes_stage1.png
+- minecraft-inspired-textures-free/block/potatoes_stage2.png
+- minecraft-inspired-textures-free/block/potatoes_stage3.png
+- minecraft-inspired-textures-free/block/potted_azalea_bush_plant.png
+- minecraft-inspired-textures-free/block/potted_azalea_bush_side.png
+- minecraft-inspired-textures-free/block/potted_azalea_bush_top.png
+- minecraft-inspired-textures-free/block/potted_flowering_azalea_bush_plant.png
+- minecraft-inspired-textures-free/block/potted_flowering_azalea_bush_side.png
+- minecraft-inspired-textures-free/block/potted_flowering_azalea_bush_top.png
+- minecraft-inspired-textures-free/block/powder_snow.png
+- minecraft-inspired-textures-free/block/powered_rail_on.png
+- minecraft-inspired-textures-free/block/powered_rail.png
+- minecraft-inspired-textures-free/block/prismarine_bricks.png
+- minecraft-inspired-textures-free/block/prismarine.png
+- minecraft-inspired-textures-free/block/pumpkin_side.png
+- minecraft-inspired-textures-free/block/pumpkin_stem.png
+- minecraft-inspired-textures-free/block/pumpkin_top.png
+- minecraft-inspired-textures-free/block/purple_candle_lit.png
+- minecraft-inspired-textures-free/block/purple_candle.png
+- minecraft-inspired-textures-free/block/purple_concrete_powder.png
+- minecraft-inspired-textures-free/block/purple_concrete.png
+- minecraft-inspired-textures-free/block/purple_glazed_terracotta.png
+- minecraft-inspired-textures-free/block/purple_shulker_box.png
+- minecraft-inspired-textures-free/block/purple_stained_glass_pane_top.png
+- minecraft-inspired-textures-free/block/purple_stained_glass.png
+- minecraft-inspired-textures-free/block/purple_terracotta.png
+- minecraft-inspired-textures-free/block/purple_wool.png
+- minecraft-inspired-textures-free/block/purpur_block.png
+- minecraft-inspired-textures-free/block/purpur_pillar_top.png
+- minecraft-inspired-textures-free/block/purpur_pillar.png
+- minecraft-inspired-textures-free/block/quartz_block_bottom.png
+- minecraft-inspired-textures-free/block/quartz_block_side.png
+- minecraft-inspired-textures-free/block/quartz_block_top.png
+- minecraft-inspired-textures-free/block/quartz_bricks.png
+- minecraft-inspired-textures-free/block/quartz_pillar_top.png
+- minecraft-inspired-textures-free/block/quartz_pillar.png
+- minecraft-inspired-textures-free/block/rail_corner.png
+- minecraft-inspired-textures-free/block/rail.png
+- minecraft-inspired-textures-free/block/raw_copper_block.png
+- minecraft-inspired-textures-free/block/raw_gold_block.png
+- minecraft-inspired-textures-free/block/raw_iron_block.png
+- minecraft-inspired-textures-free/block/red_candle_lit.png
+- minecraft-inspired-textures-free/block/red_candle.png
+- minecraft-inspired-textures-free/block/red_concrete_powder.png
+- minecraft-inspired-textures-free/block/red_concrete.png
+- minecraft-inspired-textures-free/block/red_glazed_terracotta.png
+- minecraft-inspired-textures-free/block/red_mushroom_block.png
+- minecraft-inspired-textures-free/block/red_mushroom.png
+- minecraft-inspired-textures-free/block/red_nether_bricks.png
+- minecraft-inspired-textures-free/block/red_sand.png
+- minecraft-inspired-textures-free/block/red_sandstone_bottom.png
+- minecraft-inspired-textures-free/block/red_sandstone_top.png
+- minecraft-inspired-textures-free/block/red_sandstone.png
+- minecraft-inspired-textures-free/block/red_shulker_box.png
+- minecraft-inspired-textures-free/block/red_stained_glass_pane_top.png
+- minecraft-inspired-textures-free/block/red_stained_glass.png
+- minecraft-inspired-textures-free/block/red_terracotta.png
+- minecraft-inspired-textures-free/block/red_tulip.png
+- minecraft-inspired-textures-free/block/red_wool.png
+- minecraft-inspired-textures-free/block/redstone_block.png
+- minecraft-inspired-textures-free/block/redstone_dust_dot.png
+- minecraft-inspired-textures-free/block/redstone_dust_line0.png
+- minecraft-inspired-textures-free/block/redstone_dust_line1.png
+- minecraft-inspired-textures-free/block/redstone_dust_overlay.png
+- minecraft-inspired-textures-free/block/redstone_lamp_on.png
+- minecraft-inspired-textures-free/block/redstone_lamp.png
+- minecraft-inspired-textures-free/block/redstone_ore.png
+- minecraft-inspired-textures-free/block/redstone_torch_off.png
+- minecraft-inspired-textures-free/block/redstone_torch.png
+- minecraft-inspired-textures-free/block/reinforced_deepslate_bottom.png
+- minecraft-inspired-textures-free/block/reinforced_deepslate_side.png
+- minecraft-inspired-textures-free/block/reinforced_deepslate_top.png
+- minecraft-inspired-textures-free/block/repeater_on.png
+- minecraft-inspired-textures-free/block/repeater.png
+- minecraft-inspired-textures-free/block/repeating_command_block_back.png
+- minecraft-inspired-textures-free/block/repeating_command_block_conditional.png
+- minecraft-inspired-textures-free/block/repeating_command_block_front.png
+- minecraft-inspired-textures-free/block/repeating_command_block_side.png
+- minecraft-inspired-textures-free/block/respawn_anchor_bottom.png
+- minecraft-inspired-textures-free/block/respawn_anchor_side0.png
+- minecraft-inspired-textures-free/block/respawn_anchor_side1.png
+- minecraft-inspired-textures-free/block/respawn_anchor_side2.png
+- minecraft-inspired-textures-free/block/respawn_anchor_side3.png
+- minecraft-inspired-textures-free/block/respawn_anchor_side4.png
+- minecraft-inspired-textures-free/block/respawn_anchor_top_off.png
+- minecraft-inspired-textures-free/block/respawn_anchor_top.png
+- minecraft-inspired-textures-free/block/rooted_dirt.png
+- minecraft-inspired-textures-free/block/rose_bush_bottom.png
+- minecraft-inspired-textures-free/block/rose_bush_top.png
+- minecraft-inspired-textures-free/block/sand.png
+- minecraft-inspired-textures-free/block/sandstone_bottom.png
+- minecraft-inspired-textures-free/block/sandstone_top.png
+- minecraft-inspired-textures-free/block/sandstone.png
+- minecraft-inspired-textures-free/block/scaffolding_bottom.png
+- minecraft-inspired-textures-free/block/scaffolding_side.png
+- minecraft-inspired-textures-free/block/scaffolding_top.png
+- minecraft-inspired-textures-free/block/sculk_catalyst_bottom.png
+- minecraft-inspired-textures-free/block/sculk_catalyst_side_bloom.png
+- minecraft-inspired-textures-free/block/sculk_catalyst_side.png
+- minecraft-inspired-textures-free/block/sculk_catalyst_top_bloom.png
+- minecraft-inspired-textures-free/block/sculk_catalyst_top.png
+- minecraft-inspired-textures-free/block/sculk_sensor_bottom.png
+- minecraft-inspired-textures-free/block/sculk_sensor_side.png
+- minecraft-inspired-textures-free/block/sculk_sensor_tendril_active.png
+- minecraft-inspired-textures-free/block/sculk_sensor_tendril_inactive.png
+- minecraft-inspired-textures-free/block/sculk_sensor_top.png
+- minecraft-inspired-textures-free/block/sculk_shrieker_bottom.png
+- minecraft-inspired-textures-free/block/sculk_shrieker_can_summon_inner_top.png
+- minecraft-inspired-textures-free/block/sculk_shrieker_inner_top.png
+- minecraft-inspired-textures-free/block/sculk_shrieker_side.png
+- minecraft-inspired-textures-free/block/sculk_shrieker_top.png
+- minecraft-inspired-textures-free/block/sculk_vein.png
+- minecraft-inspired-textures-free/block/sculk.png
+- minecraft-inspired-textures-free/block/sea_lantern.png
+- minecraft-inspired-textures-free/block/sea_pickle.png
+- minecraft-inspired-textures-free/block/seagrass.png
+- minecraft-inspired-textures-free/block/shroomlight.png
+- minecraft-inspired-textures-free/block/shulker_box.png
+- minecraft-inspired-textures-free/block/slime_block.png
+- minecraft-inspired-textures-free/block/small_amethyst_bud.png
+- minecraft-inspired-textures-free/block/small_dripleaf_side.png
+- minecraft-inspired-textures-free/block/small_dripleaf_stem_bottom.png
+- minecraft-inspired-textures-free/block/small_dripleaf_stem_top.png
+- minecraft-inspired-textures-free/block/small_dripleaf_top.png
+- minecraft-inspired-textures-free/block/smithing_table_bottom.png
+- minecraft-inspired-textures-free/block/smithing_table_front.png
+- minecraft-inspired-textures-free/block/smithing_table_side.png
+- minecraft-inspired-textures-free/block/smithing_table_top.png
+- minecraft-inspired-textures-free/block/smoker_bottom.png
+- minecraft-inspired-textures-free/block/smoker_front_on.png
+- minecraft-inspired-textures-free/block/smoker_front.png
+- minecraft-inspired-textures-free/block/smoker_side.png
+- minecraft-inspired-textures-free/block/smoker_top.png
+- minecraft-inspired-textures-free/block/smooth_basalt.png
+- minecraft-inspired-textures-free/block/smooth_stone_slab_side.png
+- minecraft-inspired-textures-free/block/smooth_stone.png
+- minecraft-inspired-textures-free/block/snow.png
+- minecraft-inspired-textures-free/block/soul_campfire_fire.png
+- minecraft-inspired-textures-free/block/soul_campfire_log_lit.png
+- minecraft-inspired-textures-free/block/soul_fire_0.png
+- minecraft-inspired-textures-free/block/soul_fire_1.png
+- minecraft-inspired-textures-free/block/soul_lantern.png
+- minecraft-inspired-textures-free/block/soul_sand.png
+- minecraft-inspired-textures-free/block/soul_soil.png
+- minecraft-inspired-textures-free/block/soul_torch.png
+- minecraft-inspired-textures-free/block/spawner.png
+- minecraft-inspired-textures-free/block/sponge.png
+- minecraft-inspired-textures-free/block/spore_blossom_base.png
+- minecraft-inspired-textures-free/block/spore_blossom.png
+- minecraft-inspired-textures-free/block/spruce_door_bottom.png
+- minecraft-inspired-textures-free/block/spruce_door_top.png
+- minecraft-inspired-textures-free/block/spruce_leaves.png
+- minecraft-inspired-textures-free/block/spruce_log_top.png
+- minecraft-inspired-textures-free/block/spruce_log.png
+- minecraft-inspired-textures-free/block/spruce_planks.png
+- minecraft-inspired-textures-free/block/spruce_sapling.png
+- minecraft-inspired-textures-free/block/spruce_trapdoor.png
+- minecraft-inspired-textures-free/block/stone_bricks.png
+- minecraft-inspired-textures-free/block/stone.png
+- minecraft-inspired-textures-free/block/stonecutter_bottom.png
+- minecraft-inspired-textures-free/block/stonecutter_saw.png
+- minecraft-inspired-textures-free/block/stonecutter_side.png
+- minecraft-inspired-textures-free/block/stonecutter_top.png
+- minecraft-inspired-textures-free/block/stripped_acacia_log_top.png
+- minecraft-inspired-textures-free/block/stripped_acacia_log.png
+- minecraft-inspired-textures-free/block/stripped_birch_log_top.png
+- minecraft-inspired-textures-free/block/stripped_birch_log.png
+- minecraft-inspired-textures-free/block/stripped_crimson_stem_top.png
+- minecraft-inspired-textures-free/block/stripped_crimson_stem.png
+- minecraft-inspired-textures-free/block/stripped_dark_oak_log_top.png
+- minecraft-inspired-textures-free/block/stripped_dark_oak_log.png
+- minecraft-inspired-textures-free/block/stripped_jungle_log_top.png
+- minecraft-inspired-textures-free/block/stripped_jungle_log.png
+- minecraft-inspired-textures-free/block/stripped_mangrove_log_top.png
+- minecraft-inspired-textures-free/block/stripped_mangrove_log.png
+- minecraft-inspired-textures-free/block/stripped_oak_log_top.png
+- minecraft-inspired-textures-free/block/stripped_oak_log.png
+- minecraft-inspired-textures-free/block/stripped_spruce_log_top.png
+- minecraft-inspired-textures-free/block/stripped_spruce_log.png
+- minecraft-inspired-textures-free/block/stripped_warped_stem_top.png
+- minecraft-inspired-textures-free/block/stripped_warped_stem.png
+- minecraft-inspired-textures-free/block/structure_block_corner.png
+- minecraft-inspired-textures-free/block/structure_block_data.png
+- minecraft-inspired-textures-free/block/structure_block_load.png
+- minecraft-inspired-textures-free/block/structure_block_save.png
+- minecraft-inspired-textures-free/block/structure_block.png
+- minecraft-inspired-textures-free/block/sugar_cane.png
+- minecraft-inspired-textures-free/block/sunflower_back.png
+- minecraft-inspired-textures-free/block/sunflower_bottom.png
+- minecraft-inspired-textures-free/block/sunflower_front.png
+- minecraft-inspired-textures-free/block/sunflower_top.png
+- minecraft-inspired-textures-free/block/sweet_berry_bush_stage0.png
+- minecraft-inspired-textures-free/block/sweet_berry_bush_stage1.png
+- minecraft-inspired-textures-free/block/sweet_berry_bush_stage2.png
+- minecraft-inspired-textures-free/block/sweet_berry_bush_stage3.png
+- minecraft-inspired-textures-free/block/tall_grass_bottom.png
+- minecraft-inspired-textures-free/block/tall_grass_top.png
+- minecraft-inspired-textures-free/block/tall_seagrass_bottom.png
+- minecraft-inspired-textures-free/block/tall_seagrass_top.png
+- minecraft-inspired-textures-free/block/target_side.png
+- minecraft-inspired-textures-free/block/target_top.png
+- minecraft-inspired-textures-free/block/terracotta.png
+- minecraft-inspired-textures-free/block/tinted_glass.png
+- minecraft-inspired-textures-free/block/tnt_bottom.png
+- minecraft-inspired-textures-free/block/tnt_side.png
+- minecraft-inspired-textures-free/block/tnt_top.png
+- minecraft-inspired-textures-free/block/torch.png
+- minecraft-inspired-textures-free/block/tripwire_hook.png
+- minecraft-inspired-textures-free/block/tripwire.png
+- minecraft-inspired-textures-free/block/tube_coral_block.png
+- minecraft-inspired-textures-free/block/tube_coral_fan.png
+- minecraft-inspired-textures-free/block/tube_coral.png
+- minecraft-inspired-textures-free/block/tuff.png
+- minecraft-inspired-textures-free/block/turtle_egg_slightly_cracked.png
+- minecraft-inspired-textures-free/block/turtle_egg_very_cracked.png
+- minecraft-inspired-textures-free/block/turtle_egg.png
+- minecraft-inspired-textures-free/block/twisting_vines_plant.png
+- minecraft-inspired-textures-free/block/twisting_vines.png
+- minecraft-inspired-textures-free/block/verdant_froglight_side.png
+- minecraft-inspired-textures-free/block/verdant_froglight_top.png
+- minecraft-inspired-textures-free/block/vine.png
+- minecraft-inspired-textures-free/block/warped_door_bottom.png
+- minecraft-inspired-textures-free/block/warped_door_top.png
+- minecraft-inspired-textures-free/block/warped_fungus.png
+- minecraft-inspired-textures-free/block/warped_nylium_side.png
+- minecraft-inspired-textures-free/block/warped_nylium.png
+- minecraft-inspired-textures-free/block/warped_planks.png
+- minecraft-inspired-textures-free/block/warped_roots_pot.png
+- minecraft-inspired-textures-free/block/warped_roots.png
+- minecraft-inspired-textures-free/block/warped_stem_top.png
+- minecraft-inspired-textures-free/block/warped_stem.png
+- minecraft-inspired-textures-free/block/warped_trapdoor.png
+- minecraft-inspired-textures-free/block/warped_wart_block.png
+- minecraft-inspired-textures-free/block/water_flow.png
+- minecraft-inspired-textures-free/block/water_overlay.png
+- minecraft-inspired-textures-free/block/water_still.png
+- minecraft-inspired-textures-free/block/weathered_copper.png
+- minecraft-inspired-textures-free/block/weathered_cut_copper.png
+- minecraft-inspired-textures-free/block/weeping_vines_plant.png
+- minecraft-inspired-textures-free/block/weeping_vines.png
+- minecraft-inspired-textures-free/block/wet_sponge.png
+- minecraft-inspired-textures-free/block/wheat_stage0.png
+- minecraft-inspired-textures-free/block/wheat_stage1.png
+- minecraft-inspired-textures-free/block/wheat_stage2.png
+- minecraft-inspired-textures-free/block/wheat_stage3.png
+- minecraft-inspired-textures-free/block/wheat_stage4.png
+- minecraft-inspired-textures-free/block/wheat_stage5.png
+- minecraft-inspired-textures-free/block/wheat_stage6.png
+- minecraft-inspired-textures-free/block/wheat_stage7.png
+- minecraft-inspired-textures-free/block/white_candle_lit.png
+- minecraft-inspired-textures-free/block/white_candle.png
+- minecraft-inspired-textures-free/block/white_concrete_powder.png
+- minecraft-inspired-textures-free/block/white_concrete.png
+- minecraft-inspired-textures-free/block/white_glazed_terracotta.png
+- minecraft-inspired-textures-free/block/white_shulker_box.png
+- minecraft-inspired-textures-free/block/white_stained_glass_pane_top.png
+- minecraft-inspired-textures-free/block/white_stained_glass.png
+- minecraft-inspired-textures-free/block/white_terracotta.png
+- minecraft-inspired-textures-free/block/white_tulip.png
+- minecraft-inspired-textures-free/block/white_wool.png
+- minecraft-inspired-textures-free/block/wither_rose.png
+- minecraft-inspired-textures-free/block/yellow_candle_lit.png
+- minecraft-inspired-textures-free/block/yellow_candle.png
+- minecraft-inspired-textures-free/block/yellow_concrete_powder.png
+- minecraft-inspired-textures-free/block/yellow_concrete.png
+- minecraft-inspired-textures-free/block/yellow_glazed_terracotta.png
+- minecraft-inspired-textures-free/block/yellow_shulker_box.png
+- minecraft-inspired-textures-free/block/yellow_stained_glass_pane_top.png
+- minecraft-inspired-textures-free/block/yellow_stained_glass.png
+- minecraft-inspired-textures-free/block/yellow_terracotta.png
+- minecraft-inspired-textures-free/block/yellow_wool.png
+- minecraft-inspired-textures-free/colormap/foliage.png
+- minecraft-inspired-textures-free/colormap/grass.png
+- minecraft-inspired-textures-free/effect/dither.png
+- minecraft-inspired-textures-free/entity/alex.png
+- minecraft-inspired-textures-free/entity/allay/allay.png
+- minecraft-inspired-textures-free/entity/armorstand/wood.png
+- minecraft-inspired-textures-free/entity/axolotl/axolotl_blue.png
+- minecraft-inspired-textures-free/entity/axolotl/axolotl_cyan.png
+- minecraft-inspired-textures-free/entity/axolotl/axolotl_gold.png
+- minecraft-inspired-textures-free/entity/axolotl/axolotl_lucy.png
+- minecraft-inspired-textures-free/entity/axolotl/axolotl_wild.png
+- minecraft-inspired-textures-free/entity/banner_base.png
+- minecraft-inspired-textures-free/entity/banner/base.png
+- minecraft-inspired-textures-free/entity/banner/border.png
+- minecraft-inspired-textures-free/entity/banner/bricks.png
+- minecraft-inspired-textures-free/entity/banner/circle.png
+- minecraft-inspired-textures-free/entity/banner/creeper.png
+- minecraft-inspired-textures-free/entity/banner/cross.png
+- minecraft-inspired-textures-free/entity/banner/curly_border.png
+- minecraft-inspired-textures-free/entity/banner/diagonal_left.png
+- minecraft-inspired-textures-free/entity/banner/diagonal_right.png
+- minecraft-inspired-textures-free/entity/banner/diagonal_up_left.png
+- minecraft-inspired-textures-free/entity/banner/diagonal_up_right.png
+- minecraft-inspired-textures-free/entity/banner/flower.png
+- minecraft-inspired-textures-free/entity/banner/globe.png
+- minecraft-inspired-textures-free/entity/banner/gradient_up.png
+- minecraft-inspired-textures-free/entity/banner/gradient.png
+- minecraft-inspired-textures-free/entity/banner/half_horizontal_bottom.png
+- minecraft-inspired-textures-free/entity/banner/half_horizontal.png
+- minecraft-inspired-textures-free/entity/banner/half_vertical_right.png
+- minecraft-inspired-textures-free/entity/banner/half_vertical.png
+- minecraft-inspired-textures-free/entity/banner/mojang.png
+- minecraft-inspired-textures-free/entity/banner/piglin.png
+- minecraft-inspired-textures-free/entity/banner/rhombus.png
+- minecraft-inspired-textures-free/entity/banner/skull.png
+- minecraft-inspired-textures-free/entity/banner/small_stripes.png
+- minecraft-inspired-textures-free/entity/banner/square_bottom_left.png
+- minecraft-inspired-textures-free/entity/banner/square_bottom_right.png
+- minecraft-inspired-textures-free/entity/banner/square_top_left.png
+- minecraft-inspired-textures-free/entity/banner/square_top_right.png
+- minecraft-inspired-textures-free/entity/banner/straight_cross.png
+- minecraft-inspired-textures-free/entity/banner/stripe_bottom.png
+- minecraft-inspired-textures-free/entity/banner/stripe_center.png
+- minecraft-inspired-textures-free/entity/banner/stripe_downleft.png
+- minecraft-inspired-textures-free/entity/banner/stripe_downright.png
+- minecraft-inspired-textures-free/entity/banner/stripe_left.png
+- minecraft-inspired-textures-free/entity/banner/stripe_middle.png
+- minecraft-inspired-textures-free/entity/banner/stripe_right.png
+- minecraft-inspired-textures-free/entity/banner/stripe_top.png
+- minecraft-inspired-textures-free/entity/banner/triangle_bottom.png
+- minecraft-inspired-textures-free/entity/banner/triangle_top.png
+- minecraft-inspired-textures-free/entity/banner/triangles_bottom.png
+- minecraft-inspired-textures-free/entity/banner/triangles_top.png
+- minecraft-inspired-textures-free/entity/bat.png
+- minecraft-inspired-textures-free/entity/beacon_beam.png
+- minecraft-inspired-textures-free/entity/bear/polarbear.png
+- minecraft-inspired-textures-free/entity/bed/black.png
+- minecraft-inspired-textures-free/entity/bed/blue.png
+- minecraft-inspired-textures-free/entity/bed/brown.png
+- minecraft-inspired-textures-free/entity/bed/cyan.png
+- minecraft-inspired-textures-free/entity/bed/gray.png
+- minecraft-inspired-textures-free/entity/bed/green.png
+- minecraft-inspired-textures-free/entity/bed/light_blue.png
+- minecraft-inspired-textures-free/entity/bed/light_gray.png
+- minecraft-inspired-textures-free/entity/bed/lime.png
+- minecraft-inspired-textures-free/entity/bed/magenta.png
+- minecraft-inspired-textures-free/entity/bed/orange.png
+- minecraft-inspired-textures-free/entity/bed/pink.png
+- minecraft-inspired-textures-free/entity/bed/purple.png
+- minecraft-inspired-textures-free/entity/bed/red.png
+- minecraft-inspired-textures-free/entity/bed/white.png
+- minecraft-inspired-textures-free/entity/bed/yellow.png
+- minecraft-inspired-textures-free/entity/bee/bee_angry_nectar.png
+- minecraft-inspired-textures-free/entity/bee/bee_angry.png
+- minecraft-inspired-textures-free/entity/bee/bee_nectar.png
+- minecraft-inspired-textures-free/entity/bee/bee_stinger.png
+- minecraft-inspired-textures-free/entity/bee/bee.png
+- minecraft-inspired-textures-free/entity/bell/bell_body.png
+- minecraft-inspired-textures-free/entity/blaze.png
+- minecraft-inspired-textures-free/entity/boat/acacia.png
+- minecraft-inspired-textures-free/entity/boat/birch.png
+- minecraft-inspired-textures-free/entity/boat/dark_oak.png
+- minecraft-inspired-textures-free/entity/boat/jungle.png
+- minecraft-inspired-textures-free/entity/boat/mangrove.png
+- minecraft-inspired-textures-free/entity/boat/oak.png
+- minecraft-inspired-textures-free/entity/boat/spruce.png
+- minecraft-inspired-textures-free/entity/cat/all_black.png
+- minecraft-inspired-textures-free/entity/cat/black.png
+- minecraft-inspired-textures-free/entity/cat/british_shorthair.png
+- minecraft-inspired-textures-free/entity/cat/calico.png
+- minecraft-inspired-textures-free/entity/cat/cat_collar.png
+- minecraft-inspired-textures-free/entity/cat/jellie.png
+- minecraft-inspired-textures-free/entity/cat/ocelot.png
+- minecraft-inspired-textures-free/entity/cat/persian.png
+- minecraft-inspired-textures-free/entity/cat/ragdoll.png
+- minecraft-inspired-textures-free/entity/cat/red.png
+- minecraft-inspired-textures-free/entity/cat/siamese.png
+- minecraft-inspired-textures-free/entity/cat/tabby.png
+- minecraft-inspired-textures-free/entity/cat/white.png
+- minecraft-inspired-textures-free/entity/chest_boat/acacia.png
+- minecraft-inspired-textures-free/entity/chest_boat/birch.png
+- minecraft-inspired-textures-free/entity/chest_boat/dark_oak.png
+- minecraft-inspired-textures-free/entity/chest_boat/jungle.png
+- minecraft-inspired-textures-free/entity/chest_boat/mangrove.png
+- minecraft-inspired-textures-free/entity/chest_boat/oak.png
+- minecraft-inspired-textures-free/entity/chest_boat/spruce.png
+- minecraft-inspired-textures-free/entity/chest/christmas_left.png
+- minecraft-inspired-textures-free/entity/chest/christmas_right.png
+- minecraft-inspired-textures-free/entity/chest/christmas.png
+- minecraft-inspired-textures-free/entity/chest/ender.png
+- minecraft-inspired-textures-free/entity/chest/normal_left.png
+- minecraft-inspired-textures-free/entity/chest/normal_right.png
+- minecraft-inspired-textures-free/entity/chest/normal.png
+- minecraft-inspired-textures-free/entity/chest/trapped_left.png
+- minecraft-inspired-textures-free/entity/chest/trapped_right.png
+- minecraft-inspired-textures-free/entity/chest/trapped.png
+- minecraft-inspired-textures-free/entity/chicken.png
+- minecraft-inspired-textures-free/entity/conduit/base.png
+- minecraft-inspired-textures-free/entity/conduit/break_particle.png
+- minecraft-inspired-textures-free/entity/conduit/cage.png
+- minecraft-inspired-textures-free/entity/conduit/closed_eye.png
+- minecraft-inspired-textures-free/entity/conduit/open_eye.png
+- minecraft-inspired-textures-free/entity/conduit/wind_vertical.png
+- minecraft-inspired-textures-free/entity/conduit/wind.png
+- minecraft-inspired-textures-free/entity/cow/brown_mooshroom.png
+- minecraft-inspired-textures-free/entity/cow/cow.png
+- minecraft-inspired-textures-free/entity/cow/red_mooshroom.png
+- minecraft-inspired-textures-free/entity/creeper/creeper_armor.png
+- minecraft-inspired-textures-free/entity/creeper/creeper.png
+- minecraft-inspired-textures-free/entity/dolphin.png
+- minecraft-inspired-textures-free/entity/elytra.png
+- minecraft-inspired-textures-free/entity/enchanting_table_book.png
+- minecraft-inspired-textures-free/entity/end_crystal/end_crystal_beam.png
+- minecraft-inspired-textures-free/entity/end_crystal/end_crystal.png
+- minecraft-inspired-textures-free/entity/end_gateway_beam.png
+- minecraft-inspired-textures-free/entity/end_portal.png
+- minecraft-inspired-textures-free/entity/enderdragon/dragon_exploding.png
+- minecraft-inspired-textures-free/entity/enderdragon/dragon_eyes.png
+- minecraft-inspired-textures-free/entity/enderdragon/dragon_fireball.png
+- minecraft-inspired-textures-free/entity/enderdragon/dragon.png
+- minecraft-inspired-textures-free/entity/enderman/enderman_eyes.png
+- minecraft-inspired-textures-free/entity/enderman/enderman.png
+- minecraft-inspired-textures-free/entity/endermite.png
+- minecraft-inspired-textures-free/entity/experience_orb.png
+- minecraft-inspired-textures-free/entity/fish/cod.png
+- minecraft-inspired-textures-free/entity/fish/pufferfish.png
+- minecraft-inspired-textures-free/entity/fish/salmon.png
+- minecraft-inspired-textures-free/entity/fish/tropical_a_pattern_1.png
+- minecraft-inspired-textures-free/entity/fish/tropical_a_pattern_2.png
+- minecraft-inspired-textures-free/entity/fish/tropical_a_pattern_3.png
+- minecraft-inspired-textures-free/entity/fish/tropical_a_pattern_4.png
+- minecraft-inspired-textures-free/entity/fish/tropical_a_pattern_5.png
+- minecraft-inspired-textures-free/entity/fish/tropical_a_pattern_6.png
+- minecraft-inspired-textures-free/entity/fish/tropical_a.png
+- minecraft-inspired-textures-free/entity/fish/tropical_b_pattern_1.png
+- minecraft-inspired-textures-free/entity/fish/tropical_b_pattern_2.png
+- minecraft-inspired-textures-free/entity/fish/tropical_b_pattern_3.png
+- minecraft-inspired-textures-free/entity/fish/tropical_b_pattern_4.png
+- minecraft-inspired-textures-free/entity/fish/tropical_b_pattern_5.png
+- minecraft-inspired-textures-free/entity/fish/tropical_b_pattern_6.png
+- minecraft-inspired-textures-free/entity/fish/tropical_b.png
+- minecraft-inspired-textures-free/entity/fishing_hook.png
+- minecraft-inspired-textures-free/entity/fox/fox_sleep.png
+- minecraft-inspired-textures-free/entity/fox/fox.png
+- minecraft-inspired-textures-free/entity/fox/snow_fox_sleep.png
+- minecraft-inspired-textures-free/entity/fox/snow_fox.png
+- minecraft-inspired-textures-free/entity/frog/cold_frog.png
+- minecraft-inspired-textures-free/entity/frog/temperate_frog.png
+- minecraft-inspired-textures-free/entity/frog/warm_frog.png
+- minecraft-inspired-textures-free/entity/ghast/ghast_shooting.png
+- minecraft-inspired-textures-free/entity/ghast/ghast.png
+- minecraft-inspired-textures-free/entity/goat/goat.png
+- minecraft-inspired-textures-free/entity/guardian_beam.png
+- minecraft-inspired-textures-free/entity/guardian_elder.png
+- minecraft-inspired-textures-free/entity/guardian.png
+- minecraft-inspired-textures-free/entity/hoglin/hoglin.png
+- minecraft-inspired-textures-free/entity/hoglin/zoglin.png
+- minecraft-inspired-textures-free/entity/horse/armor/horse_armor_diamond.png
+- minecraft-inspired-textures-free/entity/horse/armor/horse_armor_gold.png
+- minecraft-inspired-textures-free/entity/horse/armor/horse_armor_iron.png
+- minecraft-inspired-textures-free/entity/horse/armor/horse_armor_leather.png
+- minecraft-inspired-textures-free/entity/horse/donkey.png
+- minecraft-inspired-textures-free/entity/horse/horse_black.png
+- minecraft-inspired-textures-free/entity/horse/horse_brown.png
+- minecraft-inspired-textures-free/entity/horse/horse_chestnut.png
+- minecraft-inspired-textures-free/entity/horse/horse_creamy.png
+- minecraft-inspired-textures-free/entity/horse/horse_darkbrown.png
+- minecraft-inspired-textures-free/entity/horse/horse_gray.png
+- minecraft-inspired-textures-free/entity/horse/horse_markings_blackdots.png
+- minecraft-inspired-textures-free/entity/horse/horse_markings_white.png
+- minecraft-inspired-textures-free/entity/horse/horse_markings_whitedots.png
+- minecraft-inspired-textures-free/entity/horse/horse_markings_whitefield.png
+- minecraft-inspired-textures-free/entity/horse/horse_skeleton.png
+- minecraft-inspired-textures-free/entity/horse/horse_white.png
+- minecraft-inspired-textures-free/entity/horse/horse_zombie.png
+- minecraft-inspired-textures-free/entity/horse/mule.png
+- minecraft-inspired-textures-free/entity/illager/evoker_fangs.png
+- minecraft-inspired-textures-free/entity/illager/evoker.png
+- minecraft-inspired-textures-free/entity/illager/illusioner.png
+- minecraft-inspired-textures-free/entity/illager/pillager.png
+- minecraft-inspired-textures-free/entity/illager/ravager.png
+- minecraft-inspired-textures-free/entity/illager/vex_charging.png
+- minecraft-inspired-textures-free/entity/illager/vex.png
+- minecraft-inspired-textures-free/entity/illager/vindicator.png
+- minecraft-inspired-textures-free/entity/iron_golem/iron_golem_crackiness_high.png
+- minecraft-inspired-textures-free/entity/iron_golem/iron_golem_crackiness_low.png
+- minecraft-inspired-textures-free/entity/iron_golem/iron_golem_crackiness_medium.png
+- minecraft-inspired-textures-free/entity/iron_golem/iron_golem.png
+- minecraft-inspired-textures-free/entity/lead_knot.png
+- minecraft-inspired-textures-free/entity/llama/brown.png
+- minecraft-inspired-textures-free/entity/llama/creamy.png
+- minecraft-inspired-textures-free/entity/llama/decor/black.png
+- minecraft-inspired-textures-free/entity/llama/decor/blue.png
+- minecraft-inspired-textures-free/entity/llama/decor/brown.png
+- minecraft-inspired-textures-free/entity/llama/decor/cyan.png
+- minecraft-inspired-textures-free/entity/llama/decor/gray.png
+- minecraft-inspired-textures-free/entity/llama/decor/green.png
+- minecraft-inspired-textures-free/entity/llama/decor/light_blue.png
+- minecraft-inspired-textures-free/entity/llama/decor/light_gray.png
+- minecraft-inspired-textures-free/entity/llama/decor/lime.png
+- minecraft-inspired-textures-free/entity/llama/decor/magenta.png
+- minecraft-inspired-textures-free/entity/llama/decor/orange.png
+- minecraft-inspired-textures-free/entity/llama/decor/pink.png
+- minecraft-inspired-textures-free/entity/llama/decor/purple.png
+- minecraft-inspired-textures-free/entity/llama/decor/red.png
+- minecraft-inspired-textures-free/entity/llama/decor/trader_llama.png
+- minecraft-inspired-textures-free/entity/llama/decor/white.png
+- minecraft-inspired-textures-free/entity/llama/decor/yellow.png
+- minecraft-inspired-textures-free/entity/llama/gray.png
+- minecraft-inspired-textures-free/entity/llama/spit.png
+- minecraft-inspired-textures-free/entity/llama/white.png
+- minecraft-inspired-textures-free/entity/minecart.png
+- minecraft-inspired-textures-free/entity/panda/aggressive_panda.png
+- minecraft-inspired-textures-free/entity/panda/brown_panda.png
+- minecraft-inspired-textures-free/entity/panda/lazy_panda.png
+- minecraft-inspired-textures-free/entity/panda/panda.png
+- minecraft-inspired-textures-free/entity/panda/playful_panda.png
+- minecraft-inspired-textures-free/entity/panda/weak_panda.png
+- minecraft-inspired-textures-free/entity/panda/worried_panda.png
+- minecraft-inspired-textures-free/entity/parrot/parrot_blue.png
+- minecraft-inspired-textures-free/entity/parrot/parrot_green.png
+- minecraft-inspired-textures-free/entity/parrot/parrot_grey.png
+- minecraft-inspired-textures-free/entity/parrot/parrot_red_blue.png
+- minecraft-inspired-textures-free/entity/parrot/parrot_yellow_blue.png
+- minecraft-inspired-textures-free/entity/phantom_eyes.png
+- minecraft-inspired-textures-free/entity/phantom.png
+- minecraft-inspired-textures-free/entity/pig/pig_saddle.png
+- minecraft-inspired-textures-free/entity/pig/pig.png
+- minecraft-inspired-textures-free/entity/piglin/piglin_brute.png
+- minecraft-inspired-textures-free/entity/piglin/piglin.png
+- minecraft-inspired-textures-free/entity/piglin/zombified_piglin.png
+- minecraft-inspired-textures-free/entity/projectiles/arrow.png
+- minecraft-inspired-textures-free/entity/projectiles/spectral_arrow.png
+- minecraft-inspired-textures-free/entity/projectiles/tipped_arrow.png
+- minecraft-inspired-textures-free/entity/rabbit/black.png
+- minecraft-inspired-textures-free/entity/rabbit/brown.png
+- minecraft-inspired-textures-free/entity/rabbit/caerbannog.png
+- minecraft-inspired-textures-free/entity/rabbit/gold.png
+- minecraft-inspired-textures-free/entity/rabbit/salt.png
+- minecraft-inspired-textures-free/entity/rabbit/toast.png
+- minecraft-inspired-textures-free/entity/rabbit/white_splotched.png
+- minecraft-inspired-textures-free/entity/rabbit/white.png
+- minecraft-inspired-textures-free/entity/sheep/sheep_fur.png
+- minecraft-inspired-textures-free/entity/sheep/sheep.png
+- minecraft-inspired-textures-free/entity/shield_base_nopattern.png
+- minecraft-inspired-textures-free/entity/shield_base.png
+- minecraft-inspired-textures-free/entity/shield/base.png
+- minecraft-inspired-textures-free/entity/shield/border.png
+- minecraft-inspired-textures-free/entity/shield/bricks.png
+- minecraft-inspired-textures-free/entity/shield/circle.png
+- minecraft-inspired-textures-free/entity/shield/creeper.png
+- minecraft-inspired-textures-free/entity/shield/cross.png
+- minecraft-inspired-textures-free/entity/shield/curly_border.png
+- minecraft-inspired-textures-free/entity/shield/diagonal_left.png
+- minecraft-inspired-textures-free/entity/shield/diagonal_right.png
+- minecraft-inspired-textures-free/entity/shield/diagonal_up_left.png
+- minecraft-inspired-textures-free/entity/shield/diagonal_up_right.png
+- minecraft-inspired-textures-free/entity/shield/flower.png
+- minecraft-inspired-textures-free/entity/shield/globe.png
+- minecraft-inspired-textures-free/entity/shield/gradient_up.png
+- minecraft-inspired-textures-free/entity/shield/gradient.png
+- minecraft-inspired-textures-free/entity/shield/half_horizontal_bottom.png
+- minecraft-inspired-textures-free/entity/shield/half_horizontal.png
+- minecraft-inspired-textures-free/entity/shield/half_vertical_right.png
+- minecraft-inspired-textures-free/entity/shield/half_vertical.png
+- minecraft-inspired-textures-free/entity/shield/mojang.png
+- minecraft-inspired-textures-free/entity/shield/piglin.png
+- minecraft-inspired-textures-free/entity/shield/rhombus.png
+- minecraft-inspired-textures-free/entity/shield/skull.png
+- minecraft-inspired-textures-free/entity/shield/small_stripes.png
+- minecraft-inspired-textures-free/entity/shield/square_bottom_left.png
+- minecraft-inspired-textures-free/entity/shield/square_bottom_right.png
+- minecraft-inspired-textures-free/entity/shield/square_top_left.png
+- minecraft-inspired-textures-free/entity/shield/square_top_right.png
+- minecraft-inspired-textures-free/entity/shield/straight_cross.png
+- minecraft-inspired-textures-free/entity/shield/stripe_bottom.png
+- minecraft-inspired-textures-free/entity/shield/stripe_center.png
+- minecraft-inspired-textures-free/entity/shield/stripe_downleft.png
+- minecraft-inspired-textures-free/entity/shield/stripe_downright.png
+- minecraft-inspired-textures-free/entity/shield/stripe_left.png
+- minecraft-inspired-textures-free/entity/shield/stripe_middle.png
+- minecraft-inspired-textures-free/entity/shield/stripe_right.png
+- minecraft-inspired-textures-free/entity/shield/stripe_top.png
+- minecraft-inspired-textures-free/entity/shield/triangle_bottom.png
+- minecraft-inspired-textures-free/entity/shield/triangle_top.png
+- minecraft-inspired-textures-free/entity/shield/triangles_bottom.png
+- minecraft-inspired-textures-free/entity/shield/triangles_top.png
+- minecraft-inspired-textures-free/entity/shulker/shulker_black.png
+- minecraft-inspired-textures-free/entity/shulker/shulker_blue.png
+- minecraft-inspired-textures-free/entity/shulker/shulker_brown.png
+- minecraft-inspired-textures-free/entity/shulker/shulker_cyan.png
+- minecraft-inspired-textures-free/entity/shulker/shulker_gray.png
+- minecraft-inspired-textures-free/entity/shulker/shulker_green.png
+- minecraft-inspired-textures-free/entity/shulker/shulker_light_blue.png
+- minecraft-inspired-textures-free/entity/shulker/shulker_light_gray.png
+- minecraft-inspired-textures-free/entity/shulker/shulker_lime.png
+- minecraft-inspired-textures-free/entity/shulker/shulker_magenta.png
+- minecraft-inspired-textures-free/entity/shulker/shulker_orange.png
+- minecraft-inspired-textures-free/entity/shulker/shulker_pink.png
+- minecraft-inspired-textures-free/entity/shulker/shulker_purple.png
+- minecraft-inspired-textures-free/entity/shulker/shulker_red.png
+- minecraft-inspired-textures-free/entity/shulker/shulker_white.png
+- minecraft-inspired-textures-free/entity/shulker/shulker_yellow.png
+- minecraft-inspired-textures-free/entity/shulker/shulker.png
+- minecraft-inspired-textures-free/entity/shulker/spark.png
+- minecraft-inspired-textures-free/entity/signs/acacia.png
+- minecraft-inspired-textures-free/entity/signs/birch.png
+- minecraft-inspired-textures-free/entity/signs/crimson.png
+- minecraft-inspired-textures-free/entity/signs/dark_oak.png
+- minecraft-inspired-textures-free/entity/signs/jungle.png
+- minecraft-inspired-textures-free/entity/signs/mangrove.png
+- minecraft-inspired-textures-free/entity/signs/oak.png
+- minecraft-inspired-textures-free/entity/signs/spruce.png
+- minecraft-inspired-textures-free/entity/signs/warped.png
+- minecraft-inspired-textures-free/entity/silverfish.png
+- minecraft-inspired-textures-free/entity/skeleton/skeleton.png
+- minecraft-inspired-textures-free/entity/skeleton/stray_overlay.png
+- minecraft-inspired-textures-free/entity/skeleton/stray.png
+- minecraft-inspired-textures-free/entity/skeleton/wither_skeleton.png
+- minecraft-inspired-textures-free/entity/slime/magmacube.png
+- minecraft-inspired-textures-free/entity/slime/slime.png
+- minecraft-inspired-textures-free/entity/snow_golem.png
+- minecraft-inspired-textures-free/entity/spider_eyes.png
+- minecraft-inspired-textures-free/entity/spider/cave_spider.png
+- minecraft-inspired-textures-free/entity/spider/spider.png
+- minecraft-inspired-textures-free/entity/squid/glow_squid.png
+- minecraft-inspired-textures-free/entity/squid/squid.png
+- minecraft-inspired-textures-free/entity/steve.png
+- minecraft-inspired-textures-free/entity/strider/strider_cold.png
+- minecraft-inspired-textures-free/entity/strider/strider_saddle.png
+- minecraft-inspired-textures-free/entity/strider/strider.png
+- minecraft-inspired-textures-free/entity/tadpole/tadpole.png
+- minecraft-inspired-textures-free/entity/trident_riptide.png
+- minecraft-inspired-textures-free/entity/trident.png
+- minecraft-inspired-textures-free/entity/turtle/big_sea_turtle.png
+- minecraft-inspired-textures-free/entity/villager/profession_level/diamond.png
+- minecraft-inspired-textures-free/entity/villager/profession_level/emerald.png
+- minecraft-inspired-textures-free/entity/villager/profession_level/gold.png
+- minecraft-inspired-textures-free/entity/villager/profession_level/iron.png
+- minecraft-inspired-textures-free/entity/villager/profession_level/stone.png
+- minecraft-inspired-textures-free/entity/villager/profession/armorer.png
+- minecraft-inspired-textures-free/entity/villager/profession/butcher.png
+- minecraft-inspired-textures-free/entity/villager/profession/cartographer.png
+- minecraft-inspired-textures-free/entity/villager/profession/cleric.png
+- minecraft-inspired-textures-free/entity/villager/profession/farmer.png
+- minecraft-inspired-textures-free/entity/villager/profession/fisherman.png
+- minecraft-inspired-textures-free/entity/villager/profession/fletcher.png
+- minecraft-inspired-textures-free/entity/villager/profession/leatherworker.png
+- minecraft-inspired-textures-free/entity/villager/profession/librarian.png
+- minecraft-inspired-textures-free/entity/villager/profession/mason.png
+- minecraft-inspired-textures-free/entity/villager/profession/nitwit.png
+- minecraft-inspired-textures-free/entity/villager/profession/shepherd.png
+- minecraft-inspired-textures-free/entity/villager/profession/toolsmith.png
+- minecraft-inspired-textures-free/entity/villager/profession/weaponsmith.png
+- minecraft-inspired-textures-free/entity/villager/type/desert.png
+- minecraft-inspired-textures-free/entity/villager/type/jungle.png
+- minecraft-inspired-textures-free/entity/villager/type/plains.png
+- minecraft-inspired-textures-free/entity/villager/type/savanna.png
+- minecraft-inspired-textures-free/entity/villager/type/snow.png
+- minecraft-inspired-textures-free/entity/villager/type/swamp.png
+- minecraft-inspired-textures-free/entity/villager/type/taiga.png
+- minecraft-inspired-textures-free/entity/villager/villager.png
+- minecraft-inspired-textures-free/entity/wandering_trader.png
+- minecraft-inspired-textures-free/entity/warden/warden_bioluminescent_layer.png
+- minecraft-inspired-textures-free/entity/warden/warden_heart.png
+- minecraft-inspired-textures-free/entity/warden/warden_pulsating_spots_1.png
+- minecraft-inspired-textures-free/entity/warden/warden_pulsating_spots_2.png
+- minecraft-inspired-textures-free/entity/warden/warden.png
+- minecraft-inspired-textures-free/entity/witch.png
+- minecraft-inspired-textures-free/entity/wither/wither_armor.png
+- minecraft-inspired-textures-free/entity/wither/wither_invulnerable.png
+- minecraft-inspired-textures-free/entity/wither/wither.png
+- minecraft-inspired-textures-free/entity/wolf/wolf_angry.png
+- minecraft-inspired-textures-free/entity/wolf/wolf_collar.png
+- minecraft-inspired-textures-free/entity/wolf/wolf_tame.png
+- minecraft-inspired-textures-free/entity/wolf/wolf.png
+- minecraft-inspired-textures-free/entity/zombie_villager/profession_level/diamond.png
+- minecraft-inspired-textures-free/entity/zombie_villager/profession_level/emerald.png
+- minecraft-inspired-textures-free/entity/zombie_villager/profession_level/gold.png
+- minecraft-inspired-textures-free/entity/zombie_villager/profession_level/iron.png
+- minecraft-inspired-textures-free/entity/zombie_villager/profession_level/stone.png
+- minecraft-inspired-textures-free/entity/zombie_villager/profession/armorer.png
+- minecraft-inspired-textures-free/entity/zombie_villager/profession/butcher.png
+- minecraft-inspired-textures-free/entity/zombie_villager/profession/cartographer.png
+- minecraft-inspired-textures-free/entity/zombie_villager/profession/cleric.png
+- minecraft-inspired-textures-free/entity/zombie_villager/profession/farmer.png
+- minecraft-inspired-textures-free/entity/zombie_villager/profession/fisherman.png
+- minecraft-inspired-textures-free/entity/zombie_villager/profession/fletcher.png
+- minecraft-inspired-textures-free/entity/zombie_villager/profession/leatherworker.png
+- minecraft-inspired-textures-free/entity/zombie_villager/profession/librarian.png
+- minecraft-inspired-textures-free/entity/zombie_villager/profession/mason.png
+- minecraft-inspired-textures-free/entity/zombie_villager/profession/nitwit.png
+- minecraft-inspired-textures-free/entity/zombie_villager/profession/shepherd.png
+- minecraft-inspired-textures-free/entity/zombie_villager/profession/toolsmith.png
+- minecraft-inspired-textures-free/entity/zombie_villager/profession/weaponsmith.png
+- minecraft-inspired-textures-free/entity/zombie_villager/type/desert.png
+- minecraft-inspired-textures-free/entity/zombie_villager/type/jungle.png
+- minecraft-inspired-textures-free/entity/zombie_villager/type/plains.png
+- minecraft-inspired-textures-free/entity/zombie_villager/type/savanna.png
+- minecraft-inspired-textures-free/entity/zombie_villager/type/snow.png
+- minecraft-inspired-textures-free/entity/zombie_villager/type/swamp.png
+- minecraft-inspired-textures-free/entity/zombie_villager/type/taiga.png
+- minecraft-inspired-textures-free/entity/zombie_villager/zombie_villager.png
+- minecraft-inspired-textures-free/entity/zombie/drowned_outer_layer.png
+- minecraft-inspired-textures-free/entity/zombie/drowned.png
+- minecraft-inspired-textures-free/entity/zombie/husk.png
+- minecraft-inspired-textures-free/entity/zombie/zombie.png
+- minecraft-inspired-textures-free/environment/clouds.png
+- minecraft-inspired-textures-free/environment/end_sky.png
+- minecraft-inspired-textures-free/environment/moon_phases.png
+- minecraft-inspired-textures-free/environment/rain.png
+- minecraft-inspired-textures-free/environment/snow.png
+- minecraft-inspired-textures-free/environment/sun.png
+- minecraft-inspired-textures-free/font/accented.png
+- minecraft-inspired-textures-free/font/ascii_sga.png
+- minecraft-inspired-textures-free/font/ascii.png
+- minecraft-inspired-textures-free/font/asciillager.png
+- minecraft-inspired-textures-free/font/nonlatin_european.png
+- minecraft-inspired-textures-free/font/unicode_page_00.png
+- minecraft-inspired-textures-free/font/unicode_page_01.png
+- minecraft-inspired-textures-free/font/unicode_page_02.png
+- minecraft-inspired-textures-free/font/unicode_page_03.png
+- minecraft-inspired-textures-free/font/unicode_page_04.png
+- minecraft-inspired-textures-free/font/unicode_page_05.png
+- minecraft-inspired-textures-free/font/unicode_page_06.png
+- minecraft-inspired-textures-free/font/unicode_page_07.png
+- minecraft-inspired-textures-free/font/unicode_page_09.png
+- minecraft-inspired-textures-free/font/unicode_page_0a.png
+- minecraft-inspired-textures-free/font/unicode_page_0b.png
+- minecraft-inspired-textures-free/font/unicode_page_0c.png
+- minecraft-inspired-textures-free/font/unicode_page_0d.png
+- minecraft-inspired-textures-free/font/unicode_page_0e.png
+- minecraft-inspired-textures-free/font/unicode_page_0f.png
+- minecraft-inspired-textures-free/font/unicode_page_10.png
+- minecraft-inspired-textures-free/font/unicode_page_11.png
+- minecraft-inspired-textures-free/font/unicode_page_12.png
+- minecraft-inspired-textures-free/font/unicode_page_13.png
+- minecraft-inspired-textures-free/font/unicode_page_14.png
+- minecraft-inspired-textures-free/font/unicode_page_15.png
+- minecraft-inspired-textures-free/font/unicode_page_16.png
+- minecraft-inspired-textures-free/font/unicode_page_17.png
+- minecraft-inspired-textures-free/font/unicode_page_18.png
+- minecraft-inspired-textures-free/font/unicode_page_19.png
+- minecraft-inspired-textures-free/font/unicode_page_1a.png
+- minecraft-inspired-textures-free/font/unicode_page_1b.png
+- minecraft-inspired-textures-free/font/unicode_page_1c.png
+- minecraft-inspired-textures-free/font/unicode_page_1d.png
+- minecraft-inspired-textures-free/font/unicode_page_1e.png
+- minecraft-inspired-textures-free/font/unicode_page_1f.png
+- minecraft-inspired-textures-free/font/unicode_page_20.png
+- minecraft-inspired-textures-free/font/unicode_page_21.png
+- minecraft-inspired-textures-free/font/unicode_page_22.png
+- minecraft-inspired-textures-free/font/unicode_page_23.png
+- minecraft-inspired-textures-free/font/unicode_page_24.png
+- minecraft-inspired-textures-free/font/unicode_page_25.png
+- minecraft-inspired-textures-free/font/unicode_page_26.png
+- minecraft-inspired-textures-free/font/unicode_page_27.png
+- minecraft-inspired-textures-free/font/unicode_page_28.png
+- minecraft-inspired-textures-free/font/unicode_page_29.png
+- minecraft-inspired-textures-free/font/unicode_page_2a.png
+- minecraft-inspired-textures-free/font/unicode_page_2b.png
+- minecraft-inspired-textures-free/font/unicode_page_2c.png
+- minecraft-inspired-textures-free/font/unicode_page_2d.png
+- minecraft-inspired-textures-free/font/unicode_page_2e.png
+- minecraft-inspired-textures-free/font/unicode_page_2f.png
+- minecraft-inspired-textures-free/font/unicode_page_30.png
+- minecraft-inspired-textures-free/font/unicode_page_31.png
+- minecraft-inspired-textures-free/font/unicode_page_32.png
+- minecraft-inspired-textures-free/font/unicode_page_33.png
+- minecraft-inspired-textures-free/font/unicode_page_34.png
+- minecraft-inspired-textures-free/font/unicode_page_35.png
+- minecraft-inspired-textures-free/font/unicode_page_36.png
+- minecraft-inspired-textures-free/font/unicode_page_37.png
+- minecraft-inspired-textures-free/font/unicode_page_38.png
+- minecraft-inspired-textures-free/font/unicode_page_39.png
+- minecraft-inspired-textures-free/font/unicode_page_3a.png
+- minecraft-inspired-textures-free/font/unicode_page_3b.png
+- minecraft-inspired-textures-free/font/unicode_page_3c.png
+- minecraft-inspired-textures-free/font/unicode_page_3d.png
+- minecraft-inspired-textures-free/font/unicode_page_3e.png
+- minecraft-inspired-textures-free/font/unicode_page_3f.png
+- minecraft-inspired-textures-free/font/unicode_page_40.png
+- minecraft-inspired-textures-free/font/unicode_page_41.png
+- minecraft-inspired-textures-free/font/unicode_page_42.png
+- minecraft-inspired-textures-free/font/unicode_page_43.png
+- minecraft-inspired-textures-free/font/unicode_page_44.png
+- minecraft-inspired-textures-free/font/unicode_page_45.png
+- minecraft-inspired-textures-free/font/unicode_page_46.png
+- minecraft-inspired-textures-free/font/unicode_page_47.png
+- minecraft-inspired-textures-free/font/unicode_page_48.png
+- minecraft-inspired-textures-free/font/unicode_page_49.png
+- minecraft-inspired-textures-free/font/unicode_page_4a.png
+- minecraft-inspired-textures-free/font/unicode_page_4b.png
+- minecraft-inspired-textures-free/font/unicode_page_4c.png
+- minecraft-inspired-textures-free/font/unicode_page_4d.png
+- minecraft-inspired-textures-free/font/unicode_page_4e.png
+- minecraft-inspired-textures-free/font/unicode_page_4f.png
+- minecraft-inspired-textures-free/font/unicode_page_50.png
+- minecraft-inspired-textures-free/font/unicode_page_51.png
+- minecraft-inspired-textures-free/font/unicode_page_52.png
+- minecraft-inspired-textures-free/font/unicode_page_53.png
+- minecraft-inspired-textures-free/font/unicode_page_54.png
+- minecraft-inspired-textures-free/font/unicode_page_55.png
+- minecraft-inspired-textures-free/font/unicode_page_56.png
+- minecraft-inspired-textures-free/font/unicode_page_57.png
+- minecraft-inspired-textures-free/font/unicode_page_58.png
+- minecraft-inspired-textures-free/font/unicode_page_59.png
+- minecraft-inspired-textures-free/font/unicode_page_5a.png
+- minecraft-inspired-textures-free/font/unicode_page_5b.png
+- minecraft-inspired-textures-free/font/unicode_page_5c.png
+- minecraft-inspired-textures-free/font/unicode_page_5d.png
+- minecraft-inspired-textures-free/font/unicode_page_5e.png
+- minecraft-inspired-textures-free/font/unicode_page_5f.png
+- minecraft-inspired-textures-free/font/unicode_page_60.png
+- minecraft-inspired-textures-free/font/unicode_page_61.png
+- minecraft-inspired-textures-free/font/unicode_page_62.png
+- minecraft-inspired-textures-free/font/unicode_page_63.png
+- minecraft-inspired-textures-free/font/unicode_page_64.png
+- minecraft-inspired-textures-free/font/unicode_page_65.png
+- minecraft-inspired-textures-free/font/unicode_page_66.png
+- minecraft-inspired-textures-free/font/unicode_page_67.png
+- minecraft-inspired-textures-free/font/unicode_page_68.png
+- minecraft-inspired-textures-free/font/unicode_page_69.png
+- minecraft-inspired-textures-free/font/unicode_page_6a.png
+- minecraft-inspired-textures-free/font/unicode_page_6b.png
+- minecraft-inspired-textures-free/font/unicode_page_6c.png
+- minecraft-inspired-textures-free/font/unicode_page_6d.png
+- minecraft-inspired-textures-free/font/unicode_page_6e.png
+- minecraft-inspired-textures-free/font/unicode_page_6f.png
+- minecraft-inspired-textures-free/font/unicode_page_70.png
+- minecraft-inspired-textures-free/font/unicode_page_71.png
+- minecraft-inspired-textures-free/font/unicode_page_72.png
+- minecraft-inspired-textures-free/font/unicode_page_73.png
+- minecraft-inspired-textures-free/font/unicode_page_74.png
+- minecraft-inspired-textures-free/font/unicode_page_75.png
+- minecraft-inspired-textures-free/font/unicode_page_76.png
+- minecraft-inspired-textures-free/font/unicode_page_77.png
+- minecraft-inspired-textures-free/font/unicode_page_78.png
+- minecraft-inspired-textures-free/font/unicode_page_79.png
+- minecraft-inspired-textures-free/font/unicode_page_7a.png
+- minecraft-inspired-textures-free/font/unicode_page_7b.png
+- minecraft-inspired-textures-free/font/unicode_page_7c.png
+- minecraft-inspired-textures-free/font/unicode_page_7d.png
+- minecraft-inspired-textures-free/font/unicode_page_7e.png
+- minecraft-inspired-textures-free/font/unicode_page_7f.png
+- minecraft-inspired-textures-free/font/unicode_page_80.png
+- minecraft-inspired-textures-free/font/unicode_page_81.png
+- minecraft-inspired-textures-free/font/unicode_page_82.png
+- minecraft-inspired-textures-free/font/unicode_page_83.png
+- minecraft-inspired-textures-free/font/unicode_page_84.png
+- minecraft-inspired-textures-free/font/unicode_page_85.png
+- minecraft-inspired-textures-free/font/unicode_page_86.png
+- minecraft-inspired-textures-free/font/unicode_page_87.png
+- minecraft-inspired-textures-free/font/unicode_page_88.png
+- minecraft-inspired-textures-free/font/unicode_page_89.png
+- minecraft-inspired-textures-free/font/unicode_page_8a.png
+- minecraft-inspired-textures-free/font/unicode_page_8b.png
+- minecraft-inspired-textures-free/font/unicode_page_8c.png
+- minecraft-inspired-textures-free/font/unicode_page_8d.png
+- minecraft-inspired-textures-free/font/unicode_page_8e.png
+- minecraft-inspired-textures-free/font/unicode_page_8f.png
+- minecraft-inspired-textures-free/font/unicode_page_90.png
+- minecraft-inspired-textures-free/font/unicode_page_91.png
+- minecraft-inspired-textures-free/font/unicode_page_92.png
+- minecraft-inspired-textures-free/font/unicode_page_93.png
+- minecraft-inspired-textures-free/font/unicode_page_94.png
+- minecraft-inspired-textures-free/font/unicode_page_95.png
+- minecraft-inspired-textures-free/font/unicode_page_96.png
+- minecraft-inspired-textures-free/font/unicode_page_97.png
+- minecraft-inspired-textures-free/font/unicode_page_98.png
+- minecraft-inspired-textures-free/font/unicode_page_99.png
+- minecraft-inspired-textures-free/font/unicode_page_9a.png
+- minecraft-inspired-textures-free/font/unicode_page_9b.png
+- minecraft-inspired-textures-free/font/unicode_page_9c.png
+- minecraft-inspired-textures-free/font/unicode_page_9d.png
+- minecraft-inspired-textures-free/font/unicode_page_9e.png
+- minecraft-inspired-textures-free/font/unicode_page_9f.png
+- minecraft-inspired-textures-free/font/unicode_page_a0.png
+- minecraft-inspired-textures-free/font/unicode_page_a1.png
+- minecraft-inspired-textures-free/font/unicode_page_a2.png
+- minecraft-inspired-textures-free/font/unicode_page_a3.png
+- minecraft-inspired-textures-free/font/unicode_page_a4.png
+- minecraft-inspired-textures-free/font/unicode_page_a5.png
+- minecraft-inspired-textures-free/font/unicode_page_a6.png
+- minecraft-inspired-textures-free/font/unicode_page_a7.png
+- minecraft-inspired-textures-free/font/unicode_page_a8.png
+- minecraft-inspired-textures-free/font/unicode_page_a9.png
+- minecraft-inspired-textures-free/font/unicode_page_aa.png
+- minecraft-inspired-textures-free/font/unicode_page_ab.png
+- minecraft-inspired-textures-free/font/unicode_page_ac.png
+- minecraft-inspired-textures-free/font/unicode_page_ad.png
+- minecraft-inspired-textures-free/font/unicode_page_ae.png
+- minecraft-inspired-textures-free/font/unicode_page_af.png
+- minecraft-inspired-textures-free/font/unicode_page_b0.png
+- minecraft-inspired-textures-free/font/unicode_page_b1.png
+- minecraft-inspired-textures-free/font/unicode_page_b2.png
+- minecraft-inspired-textures-free/font/unicode_page_b3.png
+- minecraft-inspired-textures-free/font/unicode_page_b4.png
+- minecraft-inspired-textures-free/font/unicode_page_b5.png
+- minecraft-inspired-textures-free/font/unicode_page_b6.png
+- minecraft-inspired-textures-free/font/unicode_page_b7.png
+- minecraft-inspired-textures-free/font/unicode_page_b8.png
+- minecraft-inspired-textures-free/font/unicode_page_b9.png
+- minecraft-inspired-textures-free/font/unicode_page_ba.png
+- minecraft-inspired-textures-free/font/unicode_page_bb.png
+- minecraft-inspired-textures-free/font/unicode_page_bc.png
+- minecraft-inspired-textures-free/font/unicode_page_bd.png
+- minecraft-inspired-textures-free/font/unicode_page_be.png
+- minecraft-inspired-textures-free/font/unicode_page_bf.png
+- minecraft-inspired-textures-free/font/unicode_page_c0.png
+- minecraft-inspired-textures-free/font/unicode_page_c1.png
+- minecraft-inspired-textures-free/font/unicode_page_c2.png
+- minecraft-inspired-textures-free/font/unicode_page_c3.png
+- minecraft-inspired-textures-free/font/unicode_page_c4.png
+- minecraft-inspired-textures-free/font/unicode_page_c5.png
+- minecraft-inspired-textures-free/font/unicode_page_c6.png
+- minecraft-inspired-textures-free/font/unicode_page_c7.png
+- minecraft-inspired-textures-free/font/unicode_page_c8.png
+- minecraft-inspired-textures-free/font/unicode_page_c9.png
+- minecraft-inspired-textures-free/font/unicode_page_ca.png
+- minecraft-inspired-textures-free/font/unicode_page_cb.png
+- minecraft-inspired-textures-free/font/unicode_page_cc.png
+- minecraft-inspired-textures-free/font/unicode_page_cd.png
+- minecraft-inspired-textures-free/font/unicode_page_ce.png
+- minecraft-inspired-textures-free/font/unicode_page_cf.png
+- minecraft-inspired-textures-free/font/unicode_page_d0.png
+- minecraft-inspired-textures-free/font/unicode_page_d1.png
+- minecraft-inspired-textures-free/font/unicode_page_d2.png
+- minecraft-inspired-textures-free/font/unicode_page_d3.png
+- minecraft-inspired-textures-free/font/unicode_page_d4.png
+- minecraft-inspired-textures-free/font/unicode_page_d5.png
+- minecraft-inspired-textures-free/font/unicode_page_d6.png
+- minecraft-inspired-textures-free/font/unicode_page_d7.png
+- minecraft-inspired-textures-free/font/unicode_page_f9.png
+- minecraft-inspired-textures-free/font/unicode_page_fa.png
+- minecraft-inspired-textures-free/font/unicode_page_fb.png
+- minecraft-inspired-textures-free/font/unicode_page_fc.png
+- minecraft-inspired-textures-free/font/unicode_page_fd.png
+- minecraft-inspired-textures-free/font/unicode_page_fe.png
+- minecraft-inspired-textures-free/font/unicode_page_ff.png
+- minecraft-inspired-textures-free/gui/accessibility.png
+- minecraft-inspired-textures-free/gui/advancements/backgrounds/adventure.png
+- minecraft-inspired-textures-free/gui/advancements/backgrounds/end.png
+- minecraft-inspired-textures-free/gui/advancements/backgrounds/husbandry.png
+- minecraft-inspired-textures-free/gui/advancements/backgrounds/nether.png
+- minecraft-inspired-textures-free/gui/advancements/backgrounds/stone.png
+- minecraft-inspired-textures-free/gui/advancements/tabs.png
+- minecraft-inspired-textures-free/gui/advancements/widgets.png
+- minecraft-inspired-textures-free/gui/advancements/window.png
+- minecraft-inspired-textures-free/gui/bars.png
+- minecraft-inspired-textures-free/gui/book.png
+- minecraft-inspired-textures-free/gui/checkbox.png
+- minecraft-inspired-textures-free/gui/container/anvil.png
+- minecraft-inspired-textures-free/gui/container/beacon.png
+- minecraft-inspired-textures-free/gui/container/blast_furnace.png
+- minecraft-inspired-textures-free/gui/container/brewing_stand.png
+- minecraft-inspired-textures-free/gui/container/bundle.png
+- minecraft-inspired-textures-free/gui/container/cartography_table.png
+- minecraft-inspired-textures-free/gui/container/crafting_table.png
+- minecraft-inspired-textures-free/gui/container/creative_inventory/tab_inventory.png
+- minecraft-inspired-textures-free/gui/container/creative_inventory/tab_item_search.png
+- minecraft-inspired-textures-free/gui/container/creative_inventory/tab_items.png
+- minecraft-inspired-textures-free/gui/container/creative_inventory/tabs.png
+- minecraft-inspired-textures-free/gui/container/dispenser.png
+- minecraft-inspired-textures-free/gui/container/enchanting_table.png
+- minecraft-inspired-textures-free/gui/container/furnace.png
+- minecraft-inspired-textures-free/gui/container/gamemode_switcher.png
+- minecraft-inspired-textures-free/gui/container/generic_54.png
+- minecraft-inspired-textures-free/gui/container/grindstone.png
+- minecraft-inspired-textures-free/gui/container/hopper.png
+- minecraft-inspired-textures-free/gui/container/horse.png
+- minecraft-inspired-textures-free/gui/container/inventory.png
+- minecraft-inspired-textures-free/gui/container/loom.png
+- minecraft-inspired-textures-free/gui/container/shulker_box.png
+- minecraft-inspired-textures-free/gui/container/smithing.png
+- minecraft-inspired-textures-free/gui/container/smoker.png
+- minecraft-inspired-textures-free/gui/container/stats_icons.png
+- minecraft-inspired-textures-free/gui/container/stonecutter.png
+- minecraft-inspired-textures-free/gui/container/villager2.png
+- minecraft-inspired-textures-free/gui/demo_background.png
+- minecraft-inspired-textures-free/gui/icons.png
+- minecraft-inspired-textures-free/gui/options_background.png
+- minecraft-inspired-textures-free/gui/presets/isles.png
+- minecraft-inspired-textures-free/gui/recipe_book.png
+- minecraft-inspired-textures-free/gui/recipe_button.png
+- minecraft-inspired-textures-free/gui/resource_packs.png
+- minecraft-inspired-textures-free/gui/server_selection.png
+- minecraft-inspired-textures-free/gui/social_interactions.png
+- minecraft-inspired-textures-free/gui/spectator_widgets.png
+- minecraft-inspired-textures-free/gui/stream_indicator.png
+- minecraft-inspired-textures-free/gui/title/background/panorama_0.png
+- minecraft-inspired-textures-free/gui/title/background/panorama_1.png
+- minecraft-inspired-textures-free/gui/title/background/panorama_2.png
+- minecraft-inspired-textures-free/gui/title/background/panorama_3.png
+- minecraft-inspired-textures-free/gui/title/background/panorama_4.png
+- minecraft-inspired-textures-free/gui/title/background/panorama_5.png
+- minecraft-inspired-textures-free/gui/title/background/panorama_overlay.png
+- minecraft-inspired-textures-free/gui/title/edition.png
+- minecraft-inspired-textures-free/gui/title/minecraft.png
+- minecraft-inspired-textures-free/gui/title/mojangstudios.png
+- minecraft-inspired-textures-free/gui/toasts.png
+- minecraft-inspired-textures-free/gui/widgets.png
+- minecraft-inspired-textures-free/gui/world_selection.png
+- minecraft-inspired-textures-free/item/acacia_boat.png
+- minecraft-inspired-textures-free/item/acacia_chest_boat.png
+- minecraft-inspired-textures-free/item/acacia_door.png
+- minecraft-inspired-textures-free/item/acacia_sign.png
+- minecraft-inspired-textures-free/item/amethyst_shard.png
+- minecraft-inspired-textures-free/item/apple.png
+- minecraft-inspired-textures-free/item/armor_stand.png
+- minecraft-inspired-textures-free/item/arrow.png
+- minecraft-inspired-textures-free/item/axolotl_bucket.png
+- minecraft-inspired-textures-free/item/baked_potato.png
+- minecraft-inspired-textures-free/item/bamboo.png
+- minecraft-inspired-textures-free/item/barrier.png
+- minecraft-inspired-textures-free/item/beef.png
+- minecraft-inspired-textures-free/item/beetroot_seeds.png
+- minecraft-inspired-textures-free/item/beetroot_soup.png
+- minecraft-inspired-textures-free/item/beetroot.png
+- minecraft-inspired-textures-free/item/bell.png
+- minecraft-inspired-textures-free/item/birch_boat.png
+- minecraft-inspired-textures-free/item/birch_chest_boat.png
+- minecraft-inspired-textures-free/item/birch_door.png
+- minecraft-inspired-textures-free/item/birch_sign.png
+- minecraft-inspired-textures-free/item/black_candle.png
+- minecraft-inspired-textures-free/item/black_dye.png
+- minecraft-inspired-textures-free/item/blaze_powder.png
+- minecraft-inspired-textures-free/item/blaze_rod.png
+- minecraft-inspired-textures-free/item/blue_candle.png
+- minecraft-inspired-textures-free/item/blue_dye.png
+- minecraft-inspired-textures-free/item/bone_meal.png
+- minecraft-inspired-textures-free/item/bone.png
+- minecraft-inspired-textures-free/item/book.png
+- minecraft-inspired-textures-free/item/bow_pulling_0.png
+- minecraft-inspired-textures-free/item/bow_pulling_1.png
+- minecraft-inspired-textures-free/item/bow_pulling_2.png
+- minecraft-inspired-textures-free/item/bow.png
+- minecraft-inspired-textures-free/item/bowl.png
+- minecraft-inspired-textures-free/item/bread.png
+- minecraft-inspired-textures-free/item/brewing_stand.png
+- minecraft-inspired-textures-free/item/brick.png
+- minecraft-inspired-textures-free/item/broken_elytra.png
+- minecraft-inspired-textures-free/item/brown_candle.png
+- minecraft-inspired-textures-free/item/brown_dye.png
+- minecraft-inspired-textures-free/item/bucket.png
+- minecraft-inspired-textures-free/item/bundle_filled.png
+- minecraft-inspired-textures-free/item/bundle.png
+- minecraft-inspired-textures-free/item/cake.png
+- minecraft-inspired-textures-free/item/campfire.png
+- minecraft-inspired-textures-free/item/candle.png
+- minecraft-inspired-textures-free/item/carrot_on_a_stick.png
+- minecraft-inspired-textures-free/item/carrot.png
+- minecraft-inspired-textures-free/item/cauldron.png
+- minecraft-inspired-textures-free/item/chain.png
+- minecraft-inspired-textures-free/item/chainmail_boots.png
+- minecraft-inspired-textures-free/item/chainmail_chestplate.png
+- minecraft-inspired-textures-free/item/chainmail_helmet.png
+- minecraft-inspired-textures-free/item/chainmail_leggings.png
+- minecraft-inspired-textures-free/item/charcoal.png
+- minecraft-inspired-textures-free/item/chest_minecart.png
+- minecraft-inspired-textures-free/item/chicken.png
+- minecraft-inspired-textures-free/item/chorus_fruit.png
+- minecraft-inspired-textures-free/item/clay_ball.png
+- minecraft-inspired-textures-free/item/clock_00.png
+- minecraft-inspired-textures-free/item/clock_01.png
+- minecraft-inspired-textures-free/item/clock_02.png
+- minecraft-inspired-textures-free/item/clock_03.png
+- minecraft-inspired-textures-free/item/clock_04.png
+- minecraft-inspired-textures-free/item/clock_05.png
+- minecraft-inspired-textures-free/item/clock_06.png
+- minecraft-inspired-textures-free/item/clock_07.png
+- minecraft-inspired-textures-free/item/clock_08.png
+- minecraft-inspired-textures-free/item/clock_09.png
+- minecraft-inspired-textures-free/item/clock_10.png
+- minecraft-inspired-textures-free/item/clock_11.png
+- minecraft-inspired-textures-free/item/clock_12.png
+- minecraft-inspired-textures-free/item/clock_13.png
+- minecraft-inspired-textures-free/item/clock_14.png
+- minecraft-inspired-textures-free/item/clock_15.png
+- minecraft-inspired-textures-free/item/clock_16.png
+- minecraft-inspired-textures-free/item/clock_17.png
+- minecraft-inspired-textures-free/item/clock_18.png
+- minecraft-inspired-textures-free/item/clock_19.png
+- minecraft-inspired-textures-free/item/clock_20.png
+- minecraft-inspired-textures-free/item/clock_21.png
+- minecraft-inspired-textures-free/item/clock_22.png
+- minecraft-inspired-textures-free/item/clock_23.png
+- minecraft-inspired-textures-free/item/clock_24.png
+- minecraft-inspired-textures-free/item/clock_25.png
+- minecraft-inspired-textures-free/item/clock_26.png
+- minecraft-inspired-textures-free/item/clock_27.png
+- minecraft-inspired-textures-free/item/clock_28.png
+- minecraft-inspired-textures-free/item/clock_29.png
+- minecraft-inspired-textures-free/item/clock_30.png
+- minecraft-inspired-textures-free/item/clock_31.png
+- minecraft-inspired-textures-free/item/clock_32.png
+- minecraft-inspired-textures-free/item/clock_33.png
+- minecraft-inspired-textures-free/item/clock_34.png
+- minecraft-inspired-textures-free/item/clock_35.png
+- minecraft-inspired-textures-free/item/clock_36.png
+- minecraft-inspired-textures-free/item/clock_37.png
+- minecraft-inspired-textures-free/item/clock_38.png
+- minecraft-inspired-textures-free/item/clock_39.png
+- minecraft-inspired-textures-free/item/clock_40.png
+- minecraft-inspired-textures-free/item/clock_41.png
+- minecraft-inspired-textures-free/item/clock_42.png
+- minecraft-inspired-textures-free/item/clock_43.png
+- minecraft-inspired-textures-free/item/clock_44.png
+- minecraft-inspired-textures-free/item/clock_45.png
+- minecraft-inspired-textures-free/item/clock_46.png
+- minecraft-inspired-textures-free/item/clock_47.png
+- minecraft-inspired-textures-free/item/clock_48.png
+- minecraft-inspired-textures-free/item/clock_49.png
+- minecraft-inspired-textures-free/item/clock_50.png
+- minecraft-inspired-textures-free/item/clock_51.png
+- minecraft-inspired-textures-free/item/clock_52.png
+- minecraft-inspired-textures-free/item/clock_53.png
+- minecraft-inspired-textures-free/item/clock_54.png
+- minecraft-inspired-textures-free/item/clock_55.png
+- minecraft-inspired-textures-free/item/clock_56.png
+- minecraft-inspired-textures-free/item/clock_57.png
+- minecraft-inspired-textures-free/item/clock_58.png
+- minecraft-inspired-textures-free/item/clock_59.png
+- minecraft-inspired-textures-free/item/clock_60.png
+- minecraft-inspired-textures-free/item/clock_61.png
+- minecraft-inspired-textures-free/item/clock_62.png
+- minecraft-inspired-textures-free/item/clock_63.png
+- minecraft-inspired-textures-free/item/coal.png
+- minecraft-inspired-textures-free/item/cocoa_beans.png
+- minecraft-inspired-textures-free/item/cod_bucket.png
+- minecraft-inspired-textures-free/item/cod.png
+- minecraft-inspired-textures-free/item/command_block_minecart.png
+- minecraft-inspired-textures-free/item/comparator.png
+- minecraft-inspired-textures-free/item/compass_00.png
+- minecraft-inspired-textures-free/item/compass_01.png
+- minecraft-inspired-textures-free/item/compass_02.png
+- minecraft-inspired-textures-free/item/compass_03.png
+- minecraft-inspired-textures-free/item/compass_04.png
+- minecraft-inspired-textures-free/item/compass_05.png
+- minecraft-inspired-textures-free/item/compass_06.png
+- minecraft-inspired-textures-free/item/compass_07.png
+- minecraft-inspired-textures-free/item/compass_08.png
+- minecraft-inspired-textures-free/item/compass_09.png
+- minecraft-inspired-textures-free/item/compass_10.png
+- minecraft-inspired-textures-free/item/compass_11.png
+- minecraft-inspired-textures-free/item/compass_12.png
+- minecraft-inspired-textures-free/item/compass_13.png
+- minecraft-inspired-textures-free/item/compass_14.png
+- minecraft-inspired-textures-free/item/compass_15.png
+- minecraft-inspired-textures-free/item/compass_16.png
+- minecraft-inspired-textures-free/item/compass_17.png
+- minecraft-inspired-textures-free/item/compass_18.png
+- minecraft-inspired-textures-free/item/compass_19.png
+- minecraft-inspired-textures-free/item/compass_20.png
+- minecraft-inspired-textures-free/item/compass_21.png
+- minecraft-inspired-textures-free/item/compass_22.png
+- minecraft-inspired-textures-free/item/compass_23.png
+- minecraft-inspired-textures-free/item/compass_24.png
+- minecraft-inspired-textures-free/item/compass_25.png
+- minecraft-inspired-textures-free/item/compass_26.png
+- minecraft-inspired-textures-free/item/compass_27.png
+- minecraft-inspired-textures-free/item/compass_28.png
+- minecraft-inspired-textures-free/item/compass_29.png
+- minecraft-inspired-textures-free/item/compass_30.png
+- minecraft-inspired-textures-free/item/compass_31.png
+- minecraft-inspired-textures-free/item/cooked_beef.png
+- minecraft-inspired-textures-free/item/cooked_chicken.png
+- minecraft-inspired-textures-free/item/cooked_cod.png
+- minecraft-inspired-textures-free/item/cooked_mutton.png
+- minecraft-inspired-textures-free/item/cooked_porkchop.png
+- minecraft-inspired-textures-free/item/cooked_rabbit.png
+- minecraft-inspired-textures-free/item/cooked_salmon.png
+- minecraft-inspired-textures-free/item/cookie.png
+- minecraft-inspired-textures-free/item/copper_ingot.png
+- minecraft-inspired-textures-free/item/creeper_banner_pattern.png
+- minecraft-inspired-textures-free/item/crimson_door.png
+- minecraft-inspired-textures-free/item/crimson_sign.png
+- minecraft-inspired-textures-free/item/crossbow_arrow.png
+- minecraft-inspired-textures-free/item/crossbow_firework.png
+- minecraft-inspired-textures-free/item/crossbow_pulling_0.png
+- minecraft-inspired-textures-free/item/crossbow_pulling_1.png
+- minecraft-inspired-textures-free/item/crossbow_pulling_2.png
+- minecraft-inspired-textures-free/item/crossbow_standby.png
+- minecraft-inspired-textures-free/item/cyan_candle.png
+- minecraft-inspired-textures-free/item/cyan_dye.png
+- minecraft-inspired-textures-free/item/dark_oak_boat.png
+- minecraft-inspired-textures-free/item/dark_oak_chest_boat.png
+- minecraft-inspired-textures-free/item/dark_oak_door.png
+- minecraft-inspired-textures-free/item/dark_oak_sign.png
+- minecraft-inspired-textures-free/item/diamond_axe.png
+- minecraft-inspired-textures-free/item/diamond_boots.png
+- minecraft-inspired-textures-free/item/diamond_chestplate.png
+- minecraft-inspired-textures-free/item/diamond_helmet.png
+- minecraft-inspired-textures-free/item/diamond_hoe.png
+- minecraft-inspired-textures-free/item/diamond_horse_armor.png
+- minecraft-inspired-textures-free/item/diamond_leggings.png
+- minecraft-inspired-textures-free/item/diamond_pickaxe.png
+- minecraft-inspired-textures-free/item/diamond_shovel.png
+- minecraft-inspired-textures-free/item/diamond_sword.png
+- minecraft-inspired-textures-free/item/diamond.png
+- minecraft-inspired-textures-free/item/disc_fragment_5.png
+- minecraft-inspired-textures-free/item/dragon_breath.png
+- minecraft-inspired-textures-free/item/dried_kelp.png
+- minecraft-inspired-textures-free/item/echo_shard.png
+- minecraft-inspired-textures-free/item/egg.png
+- minecraft-inspired-textures-free/item/elytra.png
+- minecraft-inspired-textures-free/item/emerald.png
+- minecraft-inspired-textures-free/item/empty_armor_slot_boots.png
+- minecraft-inspired-textures-free/item/empty_armor_slot_chestplate.png
+- minecraft-inspired-textures-free/item/empty_armor_slot_helmet.png
+- minecraft-inspired-textures-free/item/empty_armor_slot_leggings.png
+- minecraft-inspired-textures-free/item/empty_armor_slot_shield.png
+- minecraft-inspired-textures-free/item/enchanted_book.png
+- minecraft-inspired-textures-free/item/end_crystal.png
+- minecraft-inspired-textures-free/item/ender_eye.png
+- minecraft-inspired-textures-free/item/ender_pearl.png
+- minecraft-inspired-textures-free/item/experience_bottle.png
+- minecraft-inspired-textures-free/item/feather.png
+- minecraft-inspired-textures-free/item/fermented_spider_eye.png
+- minecraft-inspired-textures-free/item/filled_map_markings.png
+- minecraft-inspired-textures-free/item/filled_map.png
+- minecraft-inspired-textures-free/item/fire_charge.png
+- minecraft-inspired-textures-free/item/firework_rocket.png
+- minecraft-inspired-textures-free/item/firework_star_overlay.png
+- minecraft-inspired-textures-free/item/firework_star.png
+- minecraft-inspired-textures-free/item/fishing_rod_cast.png
+- minecraft-inspired-textures-free/item/fishing_rod.png
+- minecraft-inspired-textures-free/item/flint_and_steel.png
+- minecraft-inspired-textures-free/item/flint.png
+- minecraft-inspired-textures-free/item/flower_banner_pattern.png
+- minecraft-inspired-textures-free/item/flower_pot.png
+- minecraft-inspired-textures-free/item/furnace_minecart.png
+- minecraft-inspired-textures-free/item/ghast_tear.png
+- minecraft-inspired-textures-free/item/glass_bottle.png
+- minecraft-inspired-textures-free/item/glistering_melon_slice.png
+- minecraft-inspired-textures-free/item/globe_banner_pattern.png
+- minecraft-inspired-textures-free/item/glow_berries.png
+- minecraft-inspired-textures-free/item/glow_ink_sac.png
+- minecraft-inspired-textures-free/item/glow_item_frame.png
+- minecraft-inspired-textures-free/item/glowstone_dust.png
+- minecraft-inspired-textures-free/item/goat_horn.png
+- minecraft-inspired-textures-free/item/gold_ingot.png
+- minecraft-inspired-textures-free/item/gold_nugget.png
+- minecraft-inspired-textures-free/item/golden_apple.png
+- minecraft-inspired-textures-free/item/golden_axe.png
+- minecraft-inspired-textures-free/item/golden_boots.png
+- minecraft-inspired-textures-free/item/golden_carrot.png
+- minecraft-inspired-textures-free/item/golden_chestplate.png
+- minecraft-inspired-textures-free/item/golden_helmet.png
+- minecraft-inspired-textures-free/item/golden_hoe.png
+- minecraft-inspired-textures-free/item/golden_horse_armor.png
+- minecraft-inspired-textures-free/item/golden_leggings.png
+- minecraft-inspired-textures-free/item/golden_pickaxe.png
+- minecraft-inspired-textures-free/item/golden_shovel.png
+- minecraft-inspired-textures-free/item/golden_sword.png
+- minecraft-inspired-textures-free/item/gray_candle.png
+- minecraft-inspired-textures-free/item/gray_dye.png
+- minecraft-inspired-textures-free/item/green_candle.png
+- minecraft-inspired-textures-free/item/green_dye.png
+- minecraft-inspired-textures-free/item/gunpowder.png
+- minecraft-inspired-textures-free/item/heart_of_the_sea.png
+- minecraft-inspired-textures-free/item/honey_bottle.png
+- minecraft-inspired-textures-free/item/honeycomb.png
+- minecraft-inspired-textures-free/item/hopper_minecart.png
+- minecraft-inspired-textures-free/item/hopper.png
+- minecraft-inspired-textures-free/item/ink_sac.png
+- minecraft-inspired-textures-free/item/iron_axe.png
+- minecraft-inspired-textures-free/item/iron_boots.png
+- minecraft-inspired-textures-free/item/iron_chestplate.png
+- minecraft-inspired-textures-free/item/iron_door.png
+- minecraft-inspired-textures-free/item/iron_helmet.png
+- minecraft-inspired-textures-free/item/iron_hoe.png
+- minecraft-inspired-textures-free/item/iron_horse_armor.png
+- minecraft-inspired-textures-free/item/iron_ingot.png
+- minecraft-inspired-textures-free/item/iron_leggings.png
+- minecraft-inspired-textures-free/item/iron_nugget.png
+- minecraft-inspired-textures-free/item/iron_pickaxe.png
+- minecraft-inspired-textures-free/item/iron_shovel.png
+- minecraft-inspired-textures-free/item/iron_sword.png
+- minecraft-inspired-textures-free/item/item_frame.png
+- minecraft-inspired-textures-free/item/jungle_boat.png
+- minecraft-inspired-textures-free/item/jungle_chest_boat.png
+- minecraft-inspired-textures-free/item/jungle_door.png
+- minecraft-inspired-textures-free/item/jungle_sign.png
+- minecraft-inspired-textures-free/item/kelp.png
+- minecraft-inspired-textures-free/item/knowledge_book.png
+- minecraft-inspired-textures-free/item/lantern.png
+- minecraft-inspired-textures-free/item/lapis_lazuli.png
+- minecraft-inspired-textures-free/item/lava_bucket.png
+- minecraft-inspired-textures-free/item/lead.png
+- minecraft-inspired-textures-free/item/leather_boots_overlay.png
+- minecraft-inspired-textures-free/item/leather_boots.png
+- minecraft-inspired-textures-free/item/leather_chestplate_overlay.png
+- minecraft-inspired-textures-free/item/leather_chestplate.png
+- minecraft-inspired-textures-free/item/leather_helmet_overlay.png
+- minecraft-inspired-textures-free/item/leather_helmet.png
+- minecraft-inspired-textures-free/item/leather_horse_armor.png
+- minecraft-inspired-textures-free/item/leather_leggings_overlay.png
+- minecraft-inspired-textures-free/item/leather_leggings.png
+- minecraft-inspired-textures-free/item/leather.png
+- minecraft-inspired-textures-free/item/light_00.png
+- minecraft-inspired-textures-free/item/light_01.png
+- minecraft-inspired-textures-free/item/light_02.png
+- minecraft-inspired-textures-free/item/light_03.png
+- minecraft-inspired-textures-free/item/light_04.png
+- minecraft-inspired-textures-free/item/light_05.png
+- minecraft-inspired-textures-free/item/light_06.png
+- minecraft-inspired-textures-free/item/light_07.png
+- minecraft-inspired-textures-free/item/light_08.png
+- minecraft-inspired-textures-free/item/light_09.png
+- minecraft-inspired-textures-free/item/light_10.png
+- minecraft-inspired-textures-free/item/light_11.png
+- minecraft-inspired-textures-free/item/light_12.png
+- minecraft-inspired-textures-free/item/light_13.png
+- minecraft-inspired-textures-free/item/light_14.png
+- minecraft-inspired-textures-free/item/light_15.png
+- minecraft-inspired-textures-free/item/light_blue_candle.png
+- minecraft-inspired-textures-free/item/light_blue_dye.png
+- minecraft-inspired-textures-free/item/light_gray_candle.png
+- minecraft-inspired-textures-free/item/light_gray_dye.png
+- minecraft-inspired-textures-free/item/light.png
+- minecraft-inspired-textures-free/item/lime_candle.png
+- minecraft-inspired-textures-free/item/lime_dye.png
+- minecraft-inspired-textures-free/item/lingering_potion.png
+- minecraft-inspired-textures-free/item/magenta_candle.png
+- minecraft-inspired-textures-free/item/magenta_dye.png
+- minecraft-inspired-textures-free/item/magma_cream.png
+- minecraft-inspired-textures-free/item/mangrove_boat.png
+- minecraft-inspired-textures-free/item/mangrove_chest_boat.png
+- minecraft-inspired-textures-free/item/mangrove_door.png
+- minecraft-inspired-textures-free/item/mangrove_propagule.png
+- minecraft-inspired-textures-free/item/mangrove_sign.png
+- minecraft-inspired-textures-free/item/map.png
+- minecraft-inspired-textures-free/item/melon_seeds.png
+- minecraft-inspired-textures-free/item/melon_slice.png
+- minecraft-inspired-textures-free/item/milk_bucket.png
+- minecraft-inspired-textures-free/item/minecart.png
+- minecraft-inspired-textures-free/item/mojang_banner_pattern.png
+- minecraft-inspired-textures-free/item/mushroom_stew.png
+- minecraft-inspired-textures-free/item/music_disc_11.png
+- minecraft-inspired-textures-free/item/music_disc_13.png
+- minecraft-inspired-textures-free/item/music_disc_5.png
+- minecraft-inspired-textures-free/item/music_disc_blocks.png
+- minecraft-inspired-textures-free/item/music_disc_cat.png
+- minecraft-inspired-textures-free/item/music_disc_chirp.png
+- minecraft-inspired-textures-free/item/music_disc_far.png
+- minecraft-inspired-textures-free/item/music_disc_mall.png
+- minecraft-inspired-textures-free/item/music_disc_mellohi.png
+- minecraft-inspired-textures-free/item/music_disc_otherside.png
+- minecraft-inspired-textures-free/item/music_disc_pigstep.png
+- minecraft-inspired-textures-free/item/music_disc_stal.png
+- minecraft-inspired-textures-free/item/music_disc_strad.png
+- minecraft-inspired-textures-free/item/music_disc_wait.png
+- minecraft-inspired-textures-free/item/music_disc_ward.png
+- minecraft-inspired-textures-free/item/mutton.png
+- minecraft-inspired-textures-free/item/name_tag.png
+- minecraft-inspired-textures-free/item/nautilus_shell.png
+- minecraft-inspired-textures-free/item/nether_brick.png
+- minecraft-inspired-textures-free/item/nether_sprouts.png
+- minecraft-inspired-textures-free/item/nether_star.png
+- minecraft-inspired-textures-free/item/nether_wart.png
+- minecraft-inspired-textures-free/item/netherite_axe.png
+- minecraft-inspired-textures-free/item/netherite_boots.png
+- minecraft-inspired-textures-free/item/netherite_chestplate.png
+- minecraft-inspired-textures-free/item/netherite_helmet.png
+- minecraft-inspired-textures-free/item/netherite_hoe.png
+- minecraft-inspired-textures-free/item/netherite_ingot.png
+- minecraft-inspired-textures-free/item/netherite_leggings.png
+- minecraft-inspired-textures-free/item/netherite_pickaxe.png
+- minecraft-inspired-textures-free/item/netherite_scrap.png
+- minecraft-inspired-textures-free/item/netherite_shovel.png
+- minecraft-inspired-textures-free/item/netherite_sword.png
+- minecraft-inspired-textures-free/item/oak_boat.png
+- minecraft-inspired-textures-free/item/oak_chest_boat.png
+- minecraft-inspired-textures-free/item/oak_door.png
+- minecraft-inspired-textures-free/item/oak_sign.png
+- minecraft-inspired-textures-free/item/orange_candle.png
+- minecraft-inspired-textures-free/item/orange_dye.png
+- minecraft-inspired-textures-free/item/painting.png
+- minecraft-inspired-textures-free/item/paper.png
+- minecraft-inspired-textures-free/item/phantom_membrane.png
+- minecraft-inspired-textures-free/item/piglin_banner_pattern.png
+- minecraft-inspired-textures-free/item/pink_candle.png
+- minecraft-inspired-textures-free/item/pink_dye.png
+- minecraft-inspired-textures-free/item/pointed_dripstone.png
+- minecraft-inspired-textures-free/item/poisonous_potato.png
+- minecraft-inspired-textures-free/item/popped_chorus_fruit.png
+- minecraft-inspired-textures-free/item/porkchop.png
+- minecraft-inspired-textures-free/item/potato.png
+- minecraft-inspired-textures-free/item/potion_overlay.png
+- minecraft-inspired-textures-free/item/potion.png
+- minecraft-inspired-textures-free/item/powder_snow_bucket.png
+- minecraft-inspired-textures-free/item/prismarine_crystals.png
+- minecraft-inspired-textures-free/item/prismarine_shard.png
+- minecraft-inspired-textures-free/item/pufferfish_bucket.png
+- minecraft-inspired-textures-free/item/pufferfish.png
+- minecraft-inspired-textures-free/item/pumpkin_pie.png
+- minecraft-inspired-textures-free/item/pumpkin_seeds.png
+- minecraft-inspired-textures-free/item/purple_candle.png
+- minecraft-inspired-textures-free/item/purple_dye.png
+- minecraft-inspired-textures-free/item/quartz.png
+- minecraft-inspired-textures-free/item/rabbit_foot.png
+- minecraft-inspired-textures-free/item/rabbit_hide.png
+- minecraft-inspired-textures-free/item/rabbit_stew.png
+- minecraft-inspired-textures-free/item/rabbit.png
+- minecraft-inspired-textures-free/item/raw_copper.png
+- minecraft-inspired-textures-free/item/raw_gold.png
+- minecraft-inspired-textures-free/item/raw_iron.png
+- minecraft-inspired-textures-free/item/recovery_compass_00.png
+- minecraft-inspired-textures-free/item/recovery_compass_01.png
+- minecraft-inspired-textures-free/item/recovery_compass_02.png
+- minecraft-inspired-textures-free/item/recovery_compass_03.png
+- minecraft-inspired-textures-free/item/recovery_compass_04.png
+- minecraft-inspired-textures-free/item/recovery_compass_05.png
+- minecraft-inspired-textures-free/item/recovery_compass_06.png
+- minecraft-inspired-textures-free/item/recovery_compass_07.png
+- minecraft-inspired-textures-free/item/recovery_compass_08.png
+- minecraft-inspired-textures-free/item/recovery_compass_09.png
+- minecraft-inspired-textures-free/item/recovery_compass_10.png
+- minecraft-inspired-textures-free/item/recovery_compass_11.png
+- minecraft-inspired-textures-free/item/recovery_compass_12.png
+- minecraft-inspired-textures-free/item/recovery_compass_13.png
+- minecraft-inspired-textures-free/item/recovery_compass_14.png
+- minecraft-inspired-textures-free/item/recovery_compass_15.png
+- minecraft-inspired-textures-free/item/recovery_compass_16.png
+- minecraft-inspired-textures-free/item/recovery_compass_17.png
+- minecraft-inspired-textures-free/item/recovery_compass_18.png
+- minecraft-inspired-textures-free/item/recovery_compass_19.png
+- minecraft-inspired-textures-free/item/recovery_compass_20.png
+- minecraft-inspired-textures-free/item/recovery_compass_21.png
+- minecraft-inspired-textures-free/item/recovery_compass_22.png
+- minecraft-inspired-textures-free/item/recovery_compass_23.png
+- minecraft-inspired-textures-free/item/recovery_compass_24.png
+- minecraft-inspired-textures-free/item/recovery_compass_25.png
+- minecraft-inspired-textures-free/item/recovery_compass_26.png
+- minecraft-inspired-textures-free/item/recovery_compass_27.png
+- minecraft-inspired-textures-free/item/recovery_compass_28.png
+- minecraft-inspired-textures-free/item/recovery_compass_29.png
+- minecraft-inspired-textures-free/item/recovery_compass_30.png
+- minecraft-inspired-textures-free/item/recovery_compass_31.png
+- minecraft-inspired-textures-free/item/red_candle.png
+- minecraft-inspired-textures-free/item/red_dye.png
+- minecraft-inspired-textures-free/item/redstone.png
+- minecraft-inspired-textures-free/item/repeater.png
+- minecraft-inspired-textures-free/item/rotten_flesh.png
+- minecraft-inspired-textures-free/item/saddle.png
+- minecraft-inspired-textures-free/item/salmon_bucket.png
+- minecraft-inspired-textures-free/item/salmon.png
+- minecraft-inspired-textures-free/item/scute.png
+- minecraft-inspired-textures-free/item/sea_pickle.png
+- minecraft-inspired-textures-free/item/seagrass.png
+- minecraft-inspired-textures-free/item/shears.png
+- minecraft-inspired-textures-free/item/shulker_shell.png
+- minecraft-inspired-textures-free/item/skull_banner_pattern.png
+- minecraft-inspired-textures-free/item/slime_ball.png
+- minecraft-inspired-textures-free/item/snowball.png
+- minecraft-inspired-textures-free/item/soul_campfire.png
+- minecraft-inspired-textures-free/item/soul_lantern.png
+- minecraft-inspired-textures-free/item/spawn_egg_overlay.png
+- minecraft-inspired-textures-free/item/spawn_egg.png
+- minecraft-inspired-textures-free/item/spectral_arrow.png
+- minecraft-inspired-textures-free/item/spider_eye.png
+- minecraft-inspired-textures-free/item/splash_potion.png
+- minecraft-inspired-textures-free/item/spruce_boat.png
+- minecraft-inspired-textures-free/item/spruce_chest_boat.png
+- minecraft-inspired-textures-free/item/spruce_door.png
+- minecraft-inspired-textures-free/item/spruce_sign.png
+- minecraft-inspired-textures-free/item/spyglass_model.png
+- minecraft-inspired-textures-free/item/spyglass.png
+- minecraft-inspired-textures-free/item/stick.png
+- minecraft-inspired-textures-free/item/stone_axe.png
+- minecraft-inspired-textures-free/item/stone_hoe.png
+- minecraft-inspired-textures-free/item/stone_pickaxe.png
+- minecraft-inspired-textures-free/item/stone_shovel.png
+- minecraft-inspired-textures-free/item/stone_sword.png
+- minecraft-inspired-textures-free/item/string.png
+- minecraft-inspired-textures-free/item/structure_void.png
+- minecraft-inspired-textures-free/item/sugar_cane.png
+- minecraft-inspired-textures-free/item/sugar.png
+- minecraft-inspired-textures-free/item/suspicious_stew.png
+- minecraft-inspired-textures-free/item/sweet_berries.png
+- minecraft-inspired-textures-free/item/tadpole_bucket.png
+- minecraft-inspired-textures-free/item/tipped_arrow_base.png
+- minecraft-inspired-textures-free/item/tipped_arrow_head.png
+- minecraft-inspired-textures-free/item/tnt_minecart.png
+- minecraft-inspired-textures-free/item/totem_of_undying.png
+- minecraft-inspired-textures-free/item/trident.png
+- minecraft-inspired-textures-free/item/tropical_fish_bucket.png
+- minecraft-inspired-textures-free/item/tropical_fish.png
+- minecraft-inspired-textures-free/item/turtle_egg.png
+- minecraft-inspired-textures-free/item/turtle_helmet.png
+- minecraft-inspired-textures-free/item/warped_door.png
+- minecraft-inspired-textures-free/item/warped_fungus_on_a_stick.png
+- minecraft-inspired-textures-free/item/warped_sign.png
+- minecraft-inspired-textures-free/item/water_bucket.png
+- minecraft-inspired-textures-free/item/wheat_seeds.png
+- minecraft-inspired-textures-free/item/wheat.png
+- minecraft-inspired-textures-free/item/white_candle.png
+- minecraft-inspired-textures-free/item/white_dye.png
+- minecraft-inspired-textures-free/item/wooden_axe.png
+- minecraft-inspired-textures-free/item/wooden_hoe.png
+- minecraft-inspired-textures-free/item/wooden_pickaxe.png
+- minecraft-inspired-textures-free/item/wooden_shovel.png
+- minecraft-inspired-textures-free/item/wooden_sword.png
+- minecraft-inspired-textures-free/item/writable_book.png
+- minecraft-inspired-textures-free/item/written_book.png
+- minecraft-inspired-textures-free/item/yellow_candle.png
+- minecraft-inspired-textures-free/item/yellow_dye.png
+- minecraft-inspired-textures-free/map/map_background_checkerboard.png
+- minecraft-inspired-textures-free/map/map_background.png
+- minecraft-inspired-textures-free/map/map_icons.png
+- minecraft-inspired-textures-free/misc/enchanted_item_glint.png
+- minecraft-inspired-textures-free/misc/forcefield.png
+- minecraft-inspired-textures-free/misc/nausea.png
+- minecraft-inspired-textures-free/misc/powder_snow_outline.png
+- minecraft-inspired-textures-free/misc/pumpkinblur.png
+- minecraft-inspired-textures-free/misc/shadow.png
+- minecraft-inspired-textures-free/misc/spyglass_scope.png
+- minecraft-inspired-textures-free/misc/underwater.png
+- minecraft-inspired-textures-free/misc/unknown_pack.png
+- minecraft-inspired-textures-free/misc/unknown_server.png
+- minecraft-inspired-textures-free/misc/vignette.png
+- minecraft-inspired-textures-free/misc/white.png
+- minecraft-inspired-textures-free/mob_effect/absorption.png
+- minecraft-inspired-textures-free/mob_effect/bad_omen.png
+- minecraft-inspired-textures-free/mob_effect/blindness.png
+- minecraft-inspired-textures-free/mob_effect/conduit_power.png
+- minecraft-inspired-textures-free/mob_effect/darkness.png
+- minecraft-inspired-textures-free/mob_effect/dolphins_grace.png
+- minecraft-inspired-textures-free/mob_effect/fire_resistance.png
+- minecraft-inspired-textures-free/mob_effect/glowing.png
+- minecraft-inspired-textures-free/mob_effect/haste.png
+- minecraft-inspired-textures-free/mob_effect/health_boost.png
+- minecraft-inspired-textures-free/mob_effect/hero_of_the_village.png
+- minecraft-inspired-textures-free/mob_effect/hunger.png
+- minecraft-inspired-textures-free/mob_effect/instant_damage.png
+- minecraft-inspired-textures-free/mob_effect/instant_health.png
+- minecraft-inspired-textures-free/mob_effect/invisibility.png
+- minecraft-inspired-textures-free/mob_effect/jump_boost.png
+- minecraft-inspired-textures-free/mob_effect/levitation.png
+- minecraft-inspired-textures-free/mob_effect/luck.png
+- minecraft-inspired-textures-free/mob_effect/mining_fatigue.png
+- minecraft-inspired-textures-free/mob_effect/nausea.png
+- minecraft-inspired-textures-free/mob_effect/night_vision.png
+- minecraft-inspired-textures-free/mob_effect/poison.png
+- minecraft-inspired-textures-free/mob_effect/regeneration.png
+- minecraft-inspired-textures-free/mob_effect/resistance.png
+- minecraft-inspired-textures-free/mob_effect/saturation.png
+- minecraft-inspired-textures-free/mob_effect/slow_falling.png
+- minecraft-inspired-textures-free/mob_effect/slowness.png
+- minecraft-inspired-textures-free/mob_effect/speed.png
+- minecraft-inspired-textures-free/mob_effect/strength.png
+- minecraft-inspired-textures-free/mob_effect/unluck.png
+- minecraft-inspired-textures-free/mob_effect/water_breathing.png
+- minecraft-inspired-textures-free/mob_effect/weakness.png
+- minecraft-inspired-textures-free/mob_effect/wither.png
+- minecraft-inspired-textures-free/models/armor/chainmail_layer_1.png
+- minecraft-inspired-textures-free/models/armor/chainmail_layer_2.png
+- minecraft-inspired-textures-free/models/armor/diamond_layer_1.png
+- minecraft-inspired-textures-free/models/armor/diamond_layer_2.png
+- minecraft-inspired-textures-free/models/armor/gold_layer_1.png
+- minecraft-inspired-textures-free/models/armor/gold_layer_2.png
+- minecraft-inspired-textures-free/models/armor/iron_layer_1.png
+- minecraft-inspired-textures-free/models/armor/iron_layer_2.png
+- minecraft-inspired-textures-free/models/armor/leather_layer_1_overlay.png
+- minecraft-inspired-textures-free/models/armor/leather_layer_1.png
+- minecraft-inspired-textures-free/models/armor/leather_layer_2_overlay.png
+- minecraft-inspired-textures-free/models/armor/leather_layer_2.png
+- minecraft-inspired-textures-free/models/armor/netherite_layer_1.png
+- minecraft-inspired-textures-free/models/armor/netherite_layer_2.png
+- minecraft-inspired-textures-free/models/armor/turtle_layer_1.png
+- minecraft-inspired-textures-free/painting/alban.png
+- minecraft-inspired-textures-free/painting/aztec.png
+- minecraft-inspired-textures-free/painting/aztec2.png
+- minecraft-inspired-textures-free/painting/back.png
+- minecraft-inspired-textures-free/painting/bomb.png
+- minecraft-inspired-textures-free/painting/burning_skull.png
+- minecraft-inspired-textures-free/painting/bust.png
+- minecraft-inspired-textures-free/painting/courbet.png
+- minecraft-inspired-textures-free/painting/creebet.png
+- minecraft-inspired-textures-free/painting/donkey_kong.png
+- minecraft-inspired-textures-free/painting/earth.png
+- minecraft-inspired-textures-free/painting/fighters.png
+- minecraft-inspired-textures-free/painting/fire.png
+- minecraft-inspired-textures-free/painting/graham.png
+- minecraft-inspired-textures-free/painting/kebab.png
+- minecraft-inspired-textures-free/painting/match.png
+- minecraft-inspired-textures-free/painting/pigscene.png
+- minecraft-inspired-textures-free/painting/plant.png
+- minecraft-inspired-textures-free/painting/pointer.png
+- minecraft-inspired-textures-free/painting/pool.png
+- minecraft-inspired-textures-free/painting/sea.png
+- minecraft-inspired-textures-free/painting/skeleton.png
+- minecraft-inspired-textures-free/painting/skull_and_roses.png
+- minecraft-inspired-textures-free/painting/stage.png
+- minecraft-inspired-textures-free/painting/sunset.png
+- minecraft-inspired-textures-free/painting/void.png
+- minecraft-inspired-textures-free/painting/wanderer.png
+- minecraft-inspired-textures-free/painting/wasteland.png
+- minecraft-inspired-textures-free/painting/water.png
+- minecraft-inspired-textures-free/painting/wind.png
+- minecraft-inspired-textures-free/painting/wither.png
+- minecraft-inspired-textures-free/particle/angry.png
+- minecraft-inspired-textures-free/particle/big_smoke_0.png
+- minecraft-inspired-textures-free/particle/big_smoke_1.png
+- minecraft-inspired-textures-free/particle/big_smoke_10.png
+- minecraft-inspired-textures-free/particle/big_smoke_11.png
+- minecraft-inspired-textures-free/particle/big_smoke_2.png
+- minecraft-inspired-textures-free/particle/big_smoke_3.png
+- minecraft-inspired-textures-free/particle/big_smoke_4.png
+- minecraft-inspired-textures-free/particle/big_smoke_5.png
+- minecraft-inspired-textures-free/particle/big_smoke_6.png
+- minecraft-inspired-textures-free/particle/big_smoke_7.png
+- minecraft-inspired-textures-free/particle/big_smoke_8.png
+- minecraft-inspired-textures-free/particle/big_smoke_9.png
+- minecraft-inspired-textures-free/particle/bubble_pop_0.png
+- minecraft-inspired-textures-free/particle/bubble_pop_1.png
+- minecraft-inspired-textures-free/particle/bubble_pop_2.png
+- minecraft-inspired-textures-free/particle/bubble_pop_3.png
+- minecraft-inspired-textures-free/particle/bubble_pop_4.png
+- minecraft-inspired-textures-free/particle/bubble.png
+- minecraft-inspired-textures-free/particle/critical_hit.png
+- minecraft-inspired-textures-free/particle/damage.png
+- minecraft-inspired-textures-free/particle/drip_fall.png
+- minecraft-inspired-textures-free/particle/drip_hang.png
+- minecraft-inspired-textures-free/particle/drip_land.png
+- minecraft-inspired-textures-free/particle/effect_0.png
+- minecraft-inspired-textures-free/particle/effect_1.png
+- minecraft-inspired-textures-free/particle/effect_2.png
+- minecraft-inspired-textures-free/particle/effect_3.png
+- minecraft-inspired-textures-free/particle/effect_4.png
+- minecraft-inspired-textures-free/particle/effect_5.png
+- minecraft-inspired-textures-free/particle/effect_6.png
+- minecraft-inspired-textures-free/particle/effect_7.png
+- minecraft-inspired-textures-free/particle/enchanted_hit.png
+- minecraft-inspired-textures-free/particle/explosion_0.png
+- minecraft-inspired-textures-free/particle/explosion_1.png
+- minecraft-inspired-textures-free/particle/explosion_10.png
+- minecraft-inspired-textures-free/particle/explosion_11.png
+- minecraft-inspired-textures-free/particle/explosion_12.png
+- minecraft-inspired-textures-free/particle/explosion_13.png
+- minecraft-inspired-textures-free/particle/explosion_14.png
+- minecraft-inspired-textures-free/particle/explosion_15.png
+- minecraft-inspired-textures-free/particle/explosion_2.png
+- minecraft-inspired-textures-free/particle/explosion_3.png
+- minecraft-inspired-textures-free/particle/explosion_4.png
+- minecraft-inspired-textures-free/particle/explosion_5.png
+- minecraft-inspired-textures-free/particle/explosion_6.png
+- minecraft-inspired-textures-free/particle/explosion_7.png
+- minecraft-inspired-textures-free/particle/explosion_8.png
+- minecraft-inspired-textures-free/particle/explosion_9.png
+- minecraft-inspired-textures-free/particle/flame.png
+- minecraft-inspired-textures-free/particle/flash.png
+- minecraft-inspired-textures-free/particle/generic_0.png
+- minecraft-inspired-textures-free/particle/generic_1.png
+- minecraft-inspired-textures-free/particle/generic_2.png
+- minecraft-inspired-textures-free/particle/generic_3.png
+- minecraft-inspired-textures-free/particle/generic_4.png
+- minecraft-inspired-textures-free/particle/generic_5.png
+- minecraft-inspired-textures-free/particle/generic_6.png
+- minecraft-inspired-textures-free/particle/generic_7.png
+- minecraft-inspired-textures-free/particle/glint.png
+- minecraft-inspired-textures-free/particle/glitter_0.png
+- minecraft-inspired-textures-free/particle/glitter_1.png
+- minecraft-inspired-textures-free/particle/glitter_2.png
+- minecraft-inspired-textures-free/particle/glitter_3.png
+- minecraft-inspired-textures-free/particle/glitter_4.png
+- minecraft-inspired-textures-free/particle/glitter_5.png
+- minecraft-inspired-textures-free/particle/glitter_6.png
+- minecraft-inspired-textures-free/particle/glitter_7.png
+- minecraft-inspired-textures-free/particle/glow.png
+- minecraft-inspired-textures-free/particle/heart.png
+- minecraft-inspired-textures-free/particle/lava.png
+- minecraft-inspired-textures-free/particle/nautilus.png
+- minecraft-inspired-textures-free/particle/note.png
+- minecraft-inspired-textures-free/particle/sculk_charge_0.png
+- minecraft-inspired-textures-free/particle/sculk_charge_1.png
+- minecraft-inspired-textures-free/particle/sculk_charge_2.png
+- minecraft-inspired-textures-free/particle/sculk_charge_3.png
+- minecraft-inspired-textures-free/particle/sculk_charge_4.png
+- minecraft-inspired-textures-free/particle/sculk_charge_5.png
+- minecraft-inspired-textures-free/particle/sculk_charge_6.png
+- minecraft-inspired-textures-free/particle/sculk_charge_pop_0.png
+- minecraft-inspired-textures-free/particle/sculk_charge_pop_1.png
+- minecraft-inspired-textures-free/particle/sculk_charge_pop_2.png
+- minecraft-inspired-textures-free/particle/sculk_charge_pop_3.png
+- minecraft-inspired-textures-free/particle/sculk_soul_0.png
+- minecraft-inspired-textures-free/particle/sculk_soul_1.png
+- minecraft-inspired-textures-free/particle/sculk_soul_10.png
+- minecraft-inspired-textures-free/particle/sculk_soul_2.png
+- minecraft-inspired-textures-free/particle/sculk_soul_3.png
+- minecraft-inspired-textures-free/particle/sculk_soul_4.png
+- minecraft-inspired-textures-free/particle/sculk_soul_5.png
+- minecraft-inspired-textures-free/particle/sculk_soul_6.png
+- minecraft-inspired-textures-free/particle/sculk_soul_7.png
+- minecraft-inspired-textures-free/particle/sculk_soul_8.png
+- minecraft-inspired-textures-free/particle/sculk_soul_9.png
+- minecraft-inspired-textures-free/particle/sga_a.png
+- minecraft-inspired-textures-free/particle/sga_b.png
+- minecraft-inspired-textures-free/particle/sga_c.png
+- minecraft-inspired-textures-free/particle/sga_d.png
+- minecraft-inspired-textures-free/particle/sga_e.png
+- minecraft-inspired-textures-free/particle/sga_f.png
+- minecraft-inspired-textures-free/particle/sga_g.png
+- minecraft-inspired-textures-free/particle/sga_h.png
+- minecraft-inspired-textures-free/particle/sga_i.png
+- minecraft-inspired-textures-free/particle/sga_j.png
+- minecraft-inspired-textures-free/particle/sga_k.png
+- minecraft-inspired-textures-free/particle/sga_l.png
+- minecraft-inspired-textures-free/particle/sga_m.png
+- minecraft-inspired-textures-free/particle/sga_n.png
+- minecraft-inspired-textures-free/particle/sga_o.png
+- minecraft-inspired-textures-free/particle/sga_p.png
+- minecraft-inspired-textures-free/particle/sga_q.png
+- minecraft-inspired-textures-free/particle/sga_r.png
+- minecraft-inspired-textures-free/particle/sga_s.png
+- minecraft-inspired-textures-free/particle/sga_t.png
+- minecraft-inspired-textures-free/particle/sga_u.png
+- minecraft-inspired-textures-free/particle/sga_v.png
+- minecraft-inspired-textures-free/particle/sga_w.png
+- minecraft-inspired-textures-free/particle/sga_x.png
+- minecraft-inspired-textures-free/particle/sga_y.png
+- minecraft-inspired-textures-free/particle/sga_z.png
+- minecraft-inspired-textures-free/particle/shriek.png
+- minecraft-inspired-textures-free/particle/sonic_boom_0.png
+- minecraft-inspired-textures-free/particle/sonic_boom_1.png
+- minecraft-inspired-textures-free/particle/sonic_boom_10.png
+- minecraft-inspired-textures-free/particle/sonic_boom_11.png
+- minecraft-inspired-textures-free/particle/sonic_boom_12.png
+- minecraft-inspired-textures-free/particle/sonic_boom_13.png
+- minecraft-inspired-textures-free/particle/sonic_boom_14.png
+- minecraft-inspired-textures-free/particle/sonic_boom_15.png
+- minecraft-inspired-textures-free/particle/sonic_boom_2.png
+- minecraft-inspired-textures-free/particle/sonic_boom_3.png
+- minecraft-inspired-textures-free/particle/sonic_boom_4.png
+- minecraft-inspired-textures-free/particle/sonic_boom_5.png
+- minecraft-inspired-textures-free/particle/sonic_boom_6.png
+- minecraft-inspired-textures-free/particle/sonic_boom_7.png
+- minecraft-inspired-textures-free/particle/sonic_boom_8.png
+- minecraft-inspired-textures-free/particle/sonic_boom_9.png
+- minecraft-inspired-textures-free/particle/soul_0.png
+- minecraft-inspired-textures-free/particle/soul_1.png
+- minecraft-inspired-textures-free/particle/soul_10.png
+- minecraft-inspired-textures-free/particle/soul_2.png
+- minecraft-inspired-textures-free/particle/soul_3.png
+- minecraft-inspired-textures-free/particle/soul_4.png
+- minecraft-inspired-textures-free/particle/soul_5.png
+- minecraft-inspired-textures-free/particle/soul_6.png
+- minecraft-inspired-textures-free/particle/soul_7.png
+- minecraft-inspired-textures-free/particle/soul_8.png
+- minecraft-inspired-textures-free/particle/soul_9.png
+- minecraft-inspired-textures-free/particle/soul_fire_flame.png
+- minecraft-inspired-textures-free/particle/spark_0.png
+- minecraft-inspired-textures-free/particle/spark_1.png
+- minecraft-inspired-textures-free/particle/spark_2.png
+- minecraft-inspired-textures-free/particle/spark_3.png
+- minecraft-inspired-textures-free/particle/spark_4.png
+- minecraft-inspired-textures-free/particle/spark_5.png
+- minecraft-inspired-textures-free/particle/spark_6.png
+- minecraft-inspired-textures-free/particle/spark_7.png
+- minecraft-inspired-textures-free/particle/spell_0.png
+- minecraft-inspired-textures-free/particle/spell_1.png
+- minecraft-inspired-textures-free/particle/spell_2.png
+- minecraft-inspired-textures-free/particle/spell_3.png
+- minecraft-inspired-textures-free/particle/spell_4.png
+- minecraft-inspired-textures-free/particle/spell_5.png
+- minecraft-inspired-textures-free/particle/spell_6.png
+- minecraft-inspired-textures-free/particle/spell_7.png
+- minecraft-inspired-textures-free/particle/splash_0.png
+- minecraft-inspired-textures-free/particle/splash_1.png
+- minecraft-inspired-textures-free/particle/splash_2.png
+- minecraft-inspired-textures-free/particle/splash_3.png
+- minecraft-inspired-textures-free/particle/sweep_0.png
+- minecraft-inspired-textures-free/particle/sweep_1.png
+- minecraft-inspired-textures-free/particle/sweep_2.png
+- minecraft-inspired-textures-free/particle/sweep_3.png
+- minecraft-inspired-textures-free/particle/sweep_4.png
+- minecraft-inspired-textures-free/particle/sweep_5.png
+- minecraft-inspired-textures-free/particle/sweep_6.png
+- minecraft-inspired-textures-free/particle/sweep_7.png
+- minecraft-inspired-textures-free/particle/vibration.png
+
+## models (0 images)
+
+
+## player (1 images)
+
+- player/held-item-preview.png
+
+## sounds (0 images)
+
+
+## Styloo Guns Asset Pack GLTF FBX V1.1 (100 images)
+
+- Styloo Guns Asset Pack GLTF FBX V1.1/Styloo Guns Asset Pack GLTF FBX V1.1/Normal version Color and NormalMap/FBX/ak47_0.png
+- Styloo Guns Asset Pack GLTF FBX V1.1/Styloo Guns Asset Pack GLTF FBX V1.1/Normal version Color and NormalMap/FBX/ak47_1.png
+- Styloo Guns Asset Pack GLTF FBX V1.1/Styloo Guns Asset Pack GLTF FBX V1.1/Normal version Color and NormalMap/FBX/ak47variant_0.png
+- Styloo Guns Asset Pack GLTF FBX V1.1/Styloo Guns Asset Pack GLTF FBX V1.1/Normal version Color and NormalMap/FBX/ak47variant_1.png
+- Styloo Guns Asset Pack GLTF FBX V1.1/Styloo Guns Asset Pack GLTF FBX V1.1/Normal version Color and NormalMap/FBX/ammobox_low_0.png
+- Styloo Guns Asset Pack GLTF FBX V1.1/Styloo Guns Asset Pack GLTF FBX V1.1/Normal version Color and NormalMap/FBX/ammobox_low_1.png
+- Styloo Guns Asset Pack GLTF FBX V1.1/Styloo Guns Asset Pack GLTF FBX V1.1/Normal version Color and NormalMap/FBX/awp_0.png
+- Styloo Guns Asset Pack GLTF FBX V1.1/Styloo Guns Asset Pack GLTF FBX V1.1/Normal version Color and NormalMap/FBX/awp_1.png
+- Styloo Guns Asset Pack GLTF FBX V1.1/Styloo Guns Asset Pack GLTF FBX V1.1/Normal version Color and NormalMap/FBX/board_0.png
+- Styloo Guns Asset Pack GLTF FBX V1.1/Styloo Guns Asset Pack GLTF FBX V1.1/Normal version Color and NormalMap/FBX/board_1.png
+- Styloo Guns Asset Pack GLTF FBX V1.1/Styloo Guns Asset Pack GLTF FBX V1.1/Normal version Color and NormalMap/FBX/bullet1_0.png
+- Styloo Guns Asset Pack GLTF FBX V1.1/Styloo Guns Asset Pack GLTF FBX V1.1/Normal version Color and NormalMap/FBX/bullet1_1.png
+- Styloo Guns Asset Pack GLTF FBX V1.1/Styloo Guns Asset Pack GLTF FBX V1.1/Normal version Color and NormalMap/FBX/bulletPEW_0.png
+- Styloo Guns Asset Pack GLTF FBX V1.1/Styloo Guns Asset Pack GLTF FBX V1.1/Normal version Color and NormalMap/FBX/bulletPEW_1.png
+- Styloo Guns Asset Pack GLTF FBX V1.1/Styloo Guns Asset Pack GLTF FBX V1.1/Normal version Color and NormalMap/FBX/bulletshotgun_0.png
+- Styloo Guns Asset Pack GLTF FBX V1.1/Styloo Guns Asset Pack GLTF FBX V1.1/Normal version Color and NormalMap/FBX/bulletshotgun_1.png
+- Styloo Guns Asset Pack GLTF FBX V1.1/Styloo Guns Asset Pack GLTF FBX V1.1/Normal version Color and NormalMap/FBX/bulletsniper_0.png
+- Styloo Guns Asset Pack GLTF FBX V1.1/Styloo Guns Asset Pack GLTF FBX V1.1/Normal version Color and NormalMap/FBX/bulletsniper_1.png
+- Styloo Guns Asset Pack GLTF FBX V1.1/Styloo Guns Asset Pack GLTF FBX V1.1/Normal version Color and NormalMap/FBX/flashbang_low_0.png
+- Styloo Guns Asset Pack GLTF FBX V1.1/Styloo Guns Asset Pack GLTF FBX V1.1/Normal version Color and NormalMap/FBX/flashbang_low_1.png
+- Styloo Guns Asset Pack GLTF FBX V1.1/Styloo Guns Asset Pack GLTF FBX V1.1/Normal version Color and NormalMap/FBX/incendiary_low_0.png
+- Styloo Guns Asset Pack GLTF FBX V1.1/Styloo Guns Asset Pack GLTF FBX V1.1/Normal version Color and NormalMap/FBX/incendiary_low_1.png
+- Styloo Guns Asset Pack GLTF FBX V1.1/Styloo Guns Asset Pack GLTF FBX V1.1/Normal version Color and NormalMap/FBX/mac10_0.png
+- Styloo Guns Asset Pack GLTF FBX V1.1/Styloo Guns Asset Pack GLTF FBX V1.1/Normal version Color and NormalMap/FBX/mac10_1.png
+- Styloo Guns Asset Pack GLTF FBX V1.1/Styloo Guns Asset Pack GLTF FBX V1.1/Normal version Color and NormalMap/FBX/nade_low_0.png
+- Styloo Guns Asset Pack GLTF FBX V1.1/Styloo Guns Asset Pack GLTF FBX V1.1/Normal version Color and NormalMap/FBX/nade_low_1.png
+- Styloo Guns Asset Pack GLTF FBX V1.1/Styloo Guns Asset Pack GLTF FBX V1.1/Normal version Color and NormalMap/FBX/nadevariant_low_0.png
+- Styloo Guns Asset Pack GLTF FBX V1.1/Styloo Guns Asset Pack GLTF FBX V1.1/Normal version Color and NormalMap/FBX/nadevariant_low_1.png
+- Styloo Guns Asset Pack GLTF FBX V1.1/Styloo Guns Asset Pack GLTF FBX V1.1/Normal version Color and NormalMap/FBX/pew_0.png
+- Styloo Guns Asset Pack GLTF FBX V1.1/Styloo Guns Asset Pack GLTF FBX V1.1/Normal version Color and NormalMap/FBX/pew_1.png
+- Styloo Guns Asset Pack GLTF FBX V1.1/Styloo Guns Asset Pack GLTF FBX V1.1/Normal version Color and NormalMap/FBX/quadrocket_0.png
+- Styloo Guns Asset Pack GLTF FBX V1.1/Styloo Guns Asset Pack GLTF FBX V1.1/Normal version Color and NormalMap/FBX/quadrocket_1.png
+- Styloo Guns Asset Pack GLTF FBX V1.1/Styloo Guns Asset Pack GLTF FBX V1.1/Normal version Color and NormalMap/FBX/rocketlaucher_0.png
+- Styloo Guns Asset Pack GLTF FBX V1.1/Styloo Guns Asset Pack GLTF FBX V1.1/Normal version Color and NormalMap/FBX/rocketlaucher_1.png
+- Styloo Guns Asset Pack GLTF FBX V1.1/Styloo Guns Asset Pack GLTF FBX V1.1/Normal version Color and NormalMap/FBX/rocketlaunchervariant_0.png
+- Styloo Guns Asset Pack GLTF FBX V1.1/Styloo Guns Asset Pack GLTF FBX V1.1/Normal version Color and NormalMap/FBX/rocketlaunchervariant_1.png
+- Styloo Guns Asset Pack GLTF FBX V1.1/Styloo Guns Asset Pack GLTF FBX V1.1/Normal version Color and NormalMap/FBX/shotgun_0.png
+- Styloo Guns Asset Pack GLTF FBX V1.1/Styloo Guns Asset Pack GLTF FBX V1.1/Normal version Color and NormalMap/FBX/shotgun_1.png
+- Styloo Guns Asset Pack GLTF FBX V1.1/Styloo Guns Asset Pack GLTF FBX V1.1/Normal version Color and NormalMap/FBX/smoke_low_0.png
+- Styloo Guns Asset Pack GLTF FBX V1.1/Styloo Guns Asset Pack GLTF FBX V1.1/Normal version Color and NormalMap/FBX/smoke_low_1.png
+- Styloo Guns Asset Pack GLTF FBX V1.1/Styloo Guns Asset Pack GLTF FBX V1.1/Normal version Color and NormalMap/GLB/ak47_akmat_1.png
+- Styloo Guns Asset Pack GLTF FBX V1.1/Styloo Guns Asset Pack GLTF FBX V1.1/Normal version Color and NormalMap/GLB/ak47_akmat.png
+- Styloo Guns Asset Pack GLTF FBX V1.1/Styloo Guns Asset Pack GLTF FBX V1.1/Normal version Color and NormalMap/GLB/ak47variant_akmat_1.png
+- Styloo Guns Asset Pack GLTF FBX V1.1/Styloo Guns Asset Pack GLTF FBX V1.1/Normal version Color and NormalMap/GLB/ak47variant_akmat.png
+- Styloo Guns Asset Pack GLTF FBX V1.1/Styloo Guns Asset Pack GLTF FBX V1.1/Normal version Color and NormalMap/GLB/ammobox_low_ammoboxmat_color.png
+- Styloo Guns Asset Pack GLTF FBX V1.1/Styloo Guns Asset Pack GLTF FBX V1.1/Normal version Color and NormalMap/GLB/ammobox_low_ammoboxmat_normal.png
+- Styloo Guns Asset Pack GLTF FBX V1.1/Styloo Guns Asset Pack GLTF FBX V1.1/Normal version Color and NormalMap/GLB/awp_snipermat_color.png
+- Styloo Guns Asset Pack GLTF FBX V1.1/Styloo Guns Asset Pack GLTF FBX V1.1/Normal version Color and NormalMap/GLB/awp_snipermat_normal.png
+- Styloo Guns Asset Pack GLTF FBX V1.1/Styloo Guns Asset Pack GLTF FBX V1.1/Normal version Color and NormalMap/GLB/board_billmat_color.png
+- Styloo Guns Asset Pack GLTF FBX V1.1/Styloo Guns Asset Pack GLTF FBX V1.1/Normal version Color and NormalMap/GLB/board_billmat_normal.png
+- Styloo Guns Asset Pack GLTF FBX V1.1/Styloo Guns Asset Pack GLTF FBX V1.1/Normal version Color and NormalMap/GLB/bullet1_bulletmat_color.png
+- Styloo Guns Asset Pack GLTF FBX V1.1/Styloo Guns Asset Pack GLTF FBX V1.1/Normal version Color and NormalMap/GLB/bullet1_bulletmat_normal.png
+- Styloo Guns Asset Pack GLTF FBX V1.1/Styloo Guns Asset Pack GLTF FBX V1.1/Normal version Color and NormalMap/GLB/bulletPEW_bulletpew_color.png
+- Styloo Guns Asset Pack GLTF FBX V1.1/Styloo Guns Asset Pack GLTF FBX V1.1/Normal version Color and NormalMap/GLB/bulletPEW_bulletpew_normal.png
+- Styloo Guns Asset Pack GLTF FBX V1.1/Styloo Guns Asset Pack GLTF FBX V1.1/Normal version Color and NormalMap/GLB/bulletshotgun_bulletshotgunlow_color.png
+- Styloo Guns Asset Pack GLTF FBX V1.1/Styloo Guns Asset Pack GLTF FBX V1.1/Normal version Color and NormalMap/GLB/bulletshotgun_bulletshotgunlow_normal.png
+- Styloo Guns Asset Pack GLTF FBX V1.1/Styloo Guns Asset Pack GLTF FBX V1.1/Normal version Color and NormalMap/GLB/bulletsniper_bulletsnipermat_color.png
+- Styloo Guns Asset Pack GLTF FBX V1.1/Styloo Guns Asset Pack GLTF FBX V1.1/Normal version Color and NormalMap/GLB/bulletsniper_bulletsnipermat_normal.png
+- Styloo Guns Asset Pack GLTF FBX V1.1/Styloo Guns Asset Pack GLTF FBX V1.1/Normal version Color and NormalMap/GLB/flashbang_low_flashbangmat_color.png
+- Styloo Guns Asset Pack GLTF FBX V1.1/Styloo Guns Asset Pack GLTF FBX V1.1/Normal version Color and NormalMap/GLB/flashbang_low_flashbangmat_normal.png
+- Styloo Guns Asset Pack GLTF FBX V1.1/Styloo Guns Asset Pack GLTF FBX V1.1/Normal version Color and NormalMap/GLB/incendiary_low_incendiarymat_color.png
+- Styloo Guns Asset Pack GLTF FBX V1.1/Styloo Guns Asset Pack GLTF FBX V1.1/Normal version Color and NormalMap/GLB/incendiary_low_incendiarymat_normal.png
+- Styloo Guns Asset Pack GLTF FBX V1.1/Styloo Guns Asset Pack GLTF FBX V1.1/Normal version Color and NormalMap/GLB/mac10_mac10mat_color.png
+- Styloo Guns Asset Pack GLTF FBX V1.1/Styloo Guns Asset Pack GLTF FBX V1.1/Normal version Color and NormalMap/GLB/mac10_mac10mat_normal.png
+- Styloo Guns Asset Pack GLTF FBX V1.1/Styloo Guns Asset Pack GLTF FBX V1.1/Normal version Color and NormalMap/GLB/nade_low_nade_low_color.png
+- Styloo Guns Asset Pack GLTF FBX V1.1/Styloo Guns Asset Pack GLTF FBX V1.1/Normal version Color and NormalMap/GLB/nade_low_nade_low_normal.png
+- Styloo Guns Asset Pack GLTF FBX V1.1/Styloo Guns Asset Pack GLTF FBX V1.1/Normal version Color and NormalMap/GLB/nadevariant_low_nadevariant_low_color.png
+- Styloo Guns Asset Pack GLTF FBX V1.1/Styloo Guns Asset Pack GLTF FBX V1.1/Normal version Color and NormalMap/GLB/nadevariant_low_nadevariant_low_normal.png
+- Styloo Guns Asset Pack GLTF FBX V1.1/Styloo Guns Asset Pack GLTF FBX V1.1/Normal version Color and NormalMap/GLB/pew_pewfinal_color.png
+- Styloo Guns Asset Pack GLTF FBX V1.1/Styloo Guns Asset Pack GLTF FBX V1.1/Normal version Color and NormalMap/GLB/pew_pewfinal_normal.png
+- Styloo Guns Asset Pack GLTF FBX V1.1/Styloo Guns Asset Pack GLTF FBX V1.1/Normal version Color and NormalMap/GLB/quadrocket_quadrocket_color.png
+- Styloo Guns Asset Pack GLTF FBX V1.1/Styloo Guns Asset Pack GLTF FBX V1.1/Normal version Color and NormalMap/GLB/quadrocket_quadrocket_normal.png
+- Styloo Guns Asset Pack GLTF FBX V1.1/Styloo Guns Asset Pack GLTF FBX V1.1/Normal version Color and NormalMap/GLB/rocketlaucher_rocketmat_color.png
+- Styloo Guns Asset Pack GLTF FBX V1.1/Styloo Guns Asset Pack GLTF FBX V1.1/Normal version Color and NormalMap/GLB/rocketlaucher_rocketmat_normal.png
+- Styloo Guns Asset Pack GLTF FBX V1.1/Styloo Guns Asset Pack GLTF FBX V1.1/Normal version Color and NormalMap/GLB/rocketlaunchervariant_rocketmat_normal.png
+- Styloo Guns Asset Pack GLTF FBX V1.1/Styloo Guns Asset Pack GLTF FBX V1.1/Normal version Color and NormalMap/GLB/rocketlaunchervariant_rocketmatalt_low_color.png
+- Styloo Guns Asset Pack GLTF FBX V1.1/Styloo Guns Asset Pack GLTF FBX V1.1/Normal version Color and NormalMap/GLB/shotgun_shotgunfinal_color.png
+- Styloo Guns Asset Pack GLTF FBX V1.1/Styloo Guns Asset Pack GLTF FBX V1.1/Normal version Color and NormalMap/GLB/shotgun_shotgunfinal_normal.png
+- Styloo Guns Asset Pack GLTF FBX V1.1/Styloo Guns Asset Pack GLTF FBX V1.1/Normal version Color and NormalMap/GLB/smoke_low_smokemat_color.png
+- Styloo Guns Asset Pack GLTF FBX V1.1/Styloo Guns Asset Pack GLTF FBX V1.1/Normal version Color and NormalMap/GLB/smoke_low_smokemat_normal.png
+- Styloo Guns Asset Pack GLTF FBX V1.1/Styloo Guns Asset Pack GLTF FBX V1.1/zEmission version Color only/GLB/ak47_akmat.png
+- Styloo Guns Asset Pack GLTF FBX V1.1/Styloo Guns Asset Pack GLTF FBX V1.1/zEmission version Color only/GLB/ak47variant_akmat.png
+- Styloo Guns Asset Pack GLTF FBX V1.1/Styloo Guns Asset Pack GLTF FBX V1.1/zEmission version Color only/GLB/ammobox_low_ammoboxmat_color.png
+- Styloo Guns Asset Pack GLTF FBX V1.1/Styloo Guns Asset Pack GLTF FBX V1.1/zEmission version Color only/GLB/awp_snipermat_color.png
+- Styloo Guns Asset Pack GLTF FBX V1.1/Styloo Guns Asset Pack GLTF FBX V1.1/zEmission version Color only/GLB/board_billmat_color.png
+- Styloo Guns Asset Pack GLTF FBX V1.1/Styloo Guns Asset Pack GLTF FBX V1.1/zEmission version Color only/GLB/bullet1_bulletmat_color.png
+- Styloo Guns Asset Pack GLTF FBX V1.1/Styloo Guns Asset Pack GLTF FBX V1.1/zEmission version Color only/GLB/bulletPEW_bulletpew_color.png
+- Styloo Guns Asset Pack GLTF FBX V1.1/Styloo Guns Asset Pack GLTF FBX V1.1/zEmission version Color only/GLB/bulletshotgun_bulletshotgunlow_color.png
+- Styloo Guns Asset Pack GLTF FBX V1.1/Styloo Guns Asset Pack GLTF FBX V1.1/zEmission version Color only/GLB/bulletsniper_bulletsnipermat_color.png
+- Styloo Guns Asset Pack GLTF FBX V1.1/Styloo Guns Asset Pack GLTF FBX V1.1/zEmission version Color only/GLB/flashbang_low_flashbangmat_color.png
+- Styloo Guns Asset Pack GLTF FBX V1.1/Styloo Guns Asset Pack GLTF FBX V1.1/zEmission version Color only/GLB/incendiary_low_incendiarymat_color.png
+- Styloo Guns Asset Pack GLTF FBX V1.1/Styloo Guns Asset Pack GLTF FBX V1.1/zEmission version Color only/GLB/mac10_mac10mat_color.png
+- Styloo Guns Asset Pack GLTF FBX V1.1/Styloo Guns Asset Pack GLTF FBX V1.1/zEmission version Color only/GLB/nade_low_nade_low_color.png
+- Styloo Guns Asset Pack GLTF FBX V1.1/Styloo Guns Asset Pack GLTF FBX V1.1/zEmission version Color only/GLB/nadevariant_low_nadevariant_low_color.png
+- Styloo Guns Asset Pack GLTF FBX V1.1/Styloo Guns Asset Pack GLTF FBX V1.1/zEmission version Color only/GLB/pew_pewfinal_color.png
+- Styloo Guns Asset Pack GLTF FBX V1.1/Styloo Guns Asset Pack GLTF FBX V1.1/zEmission version Color only/GLB/quadrocket_quadrocket_color.png
+- Styloo Guns Asset Pack GLTF FBX V1.1/Styloo Guns Asset Pack GLTF FBX V1.1/zEmission version Color only/GLB/rocketlaucher_rocketmat_color.png
+- Styloo Guns Asset Pack GLTF FBX V1.1/Styloo Guns Asset Pack GLTF FBX V1.1/zEmission version Color only/GLB/rocketlaunchervariant_rocketmatalt_low_color.png
+- Styloo Guns Asset Pack GLTF FBX V1.1/Styloo Guns Asset Pack GLTF FBX V1.1/zEmission version Color only/GLB/shotgun_shotgunfinal_color.png
+- Styloo Guns Asset Pack GLTF FBX V1.1/Styloo Guns Asset Pack GLTF FBX V1.1/zEmission version Color only/GLB/smoke_low_smokemat_color.png
+

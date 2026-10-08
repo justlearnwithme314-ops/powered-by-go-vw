@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://cki64n86n065b"]
+
+[ext_resource type="Script" uid="uid://b2me6ue7uij7g" path="res://tests/InspectStationSaves.gd" id="1_ugaes"]
+
+[node name="InspectStationSaves" type="Node" unique_id=1888095237]
+script = ExtResource("1_ugaes")

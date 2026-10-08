@@ -393,10 +393,11 @@ func _refresh_recipes() -> void:
 	craft_list.clear()
 
 	var recipe_ids: Array[String] = GameAPI.content.get_recipe_ids()
-	if GameAPI.crafting.grid_service != null:
-		var desired: Vector2i = GameAPI.crafting.grid_service.call("dimensions",inventory.get_parent())
+	var recipe_player := inventory.get_parent() as Node3D
+	if GameAPI.crafting.grid_service != null and is_instance_valid(recipe_player) and recipe_player.is_inside_tree():
+		var desired: Vector2i = GameAPI.crafting.grid_service.call("dimensions",recipe_player)
 		if desired != Vector2i(inventory.crafting_width,inventory.crafting_height):
-			GameAPI.inventory_commands.request(inventory.get_parent(),"grid_resize")
+			GameAPI.inventory_commands.request(recipe_player,"grid_resize")
 		arrangement_label.text = "%d × %d grid • Right-click places one" % [inventory.crafting_width,inventory.crafting_height]
 		arrangement_grid.columns = inventory.crafting_width
 		if arrangement_slots.size() != inventory.crafting_grid.size():

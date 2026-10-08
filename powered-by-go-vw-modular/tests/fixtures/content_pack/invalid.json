@@ -1,0 +1,50 @@
+{
+	"blocks": [
+		{
+			"drops": [
+				{
+					"count": 1,
+					"item": "test:partial"
+				}
+			],
+			"id": "test:partial",
+			"tags": [
+				"block"
+			],
+			"textures": {
+				"side": "res://assets/minecraft-inspired-textures-free/block/oak_planks.png"
+			}
+		},
+		{
+			"id": "test:missing_texture",
+			"tags": [
+				"block"
+			],
+			"textures": {
+				"side": "missing.png"
+			}
+		}
+	],
+	"items": [
+		{
+			"display_name": "Test Token",
+			"icon": "res://assets/minecraft-inspired-textures-free/block/oak_planks.png",
+			"id": "test:token",
+			"stack_size": 16,
+			"tags": [
+				"test:token"
+			]
+		}
+	],
+	"recipes": [
+		{
+			"count": 1,
+			"id": "test:bad_recipe",
+			"ingredients": {
+				"#not_registered": 1
+			},
+			"output": "test:token"
+		}
+	],
+	"schema_version": 1
+}

@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://bti0f5nbsc80c"]
+
+[ext_resource type="Script" uid="uid://befdf3co8nwb2" path="res://tests/FixIndustryIcon.gd" id="1_y8kwj"]
+
+[node name="FixIndustryIcon" type="Node" unique_id=366217001]
+script = ExtResource("1_y8kwj")

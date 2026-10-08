@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://dtpwehgsvypm3"]
+
+[ext_resource type="Script" uid="uid://ca7t8s8ujq5a3" path="res://tests/ChestInteractionSmoke.gd" id="1_lpxre"]
+
+[node name="ChestInteractionSmoke" type="Node3D" unique_id=568519140]
+script = ExtResource("1_lpxre")

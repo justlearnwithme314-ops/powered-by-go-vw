@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://chfjhwalolll6"]
+
+[ext_resource type="Script" uid="uid://c06pfg4gcjmvi" path="res://tests/CreativeCatalogSmoke.gd" id="1_g0gtu"]
+
+[node name="CreativeCatalogSmoke" type="Node" unique_id=812281653]
+script = ExtResource("1_g0gtu")

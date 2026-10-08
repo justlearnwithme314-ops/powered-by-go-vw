@@ -6,6 +6,7 @@ extends RefCounted
 var stations: BlockEntityService
 var crafting: CraftingService
 var item_instances: ItemInstanceService
+var profile: WorldProfileService
 var _receipts: Dictionary = {}
 var _request_order: Array[String] = []
 var _highwater: Dictionary = {}
@@ -38,8 +39,12 @@ func execute(actor: Node, request: Dictionary) -> Dictionary:
 		return {"success": false, "reason": "Inventory missing"}
 	if bool(actor.get_meta("gameplay_disabled", false)):
 		return {"success": false, "reason": "Player cannot act right now"}
-	if actor.is_inside_tree() and actor.multiplayer.multiplayer_peer != null and not actor.multiplayer.multiplayer_peer is OfflineMultiplayerPeer and not bool(actor.get_meta("inventory_authority", false)):
-		return {"success": false, "reason": "Shared inventory commands require the forthcoming server ownership protocol"}
+	if actor.is_inside_tree() and actor.multiplayer.multiplayer_peer != null and not actor.multiplayer.multiplayer_peer is OfflineMultiplayerPeer:
+		# The host's own player inventory is already local and trusted. Requiring
+		# the remote ownership marker here blocked its chest/furnace transfers.
+		var local_host := actor.multiplayer.is_server() and actor.is_multiplayer_authority()
+		if not local_host and not bool(actor.get_meta("inventory_authority", false)):
+			return {"success": false, "reason": "Shared inventory commands require the forthcoming server ownership protocol"}
 	var request_id := int(request.get("request_id", 0))
 	if request_id <= 0:
 		return {"success": false, "reason": "Invalid request ID"}
@@ -55,6 +60,21 @@ func execute(actor: Node, request: Dictionary) -> Dictionary:
 	var action := str(request.get("action", ""))
 	var result := {"success": true}
 	match action:
+		"creative_grant":
+			var item_id := str(request.get("item_id", ""))
+			var definition := GameAPI.content.get_item(item_id)
+			if profile == null or profile.mode() != "creative":
+				result = {"success": false, "reason": "Creative mode is required"}
+			elif definition.is_empty():
+				result = {"success": false, "reason": "Unknown item"}
+			else:
+				var unique := item_instances != null and item_instances.durable(item_id)
+				var amount := 1 if unique else int(definition.get("stack_size", 64))
+				var grant := inventory.add_stack({"id": item_id, "count": amount}, true)
+				if int(grant.get("added", 0)) != amount:
+					result = {"success": false, "reason": "Inventory is full"}
+				else:
+					result = {"success": true, "item_id": item_id, "count": amount}
 		"grid_resize", "grid_click", "grid_craft", "grid_return":
 			result = crafting.grid_service.call("command", actor, inventory, action, request) if crafting.grid_service != null else {"success":false,"reason":"Grid unavailable"}
 		"select": inventory.set_selected_slot(int(request.get("index", 0)))

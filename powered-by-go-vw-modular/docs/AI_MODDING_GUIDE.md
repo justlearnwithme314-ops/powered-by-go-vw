@@ -56,6 +56,13 @@ shared global service has been added to the API contract.
 
 ## 3. Stable IDs
 
+Transparent block definitions (`transparent: true`) are mapped to native voxel
+models with a positive transparency index, neighbour culling disabled, and no
+LOD skirts. Alpha-cutout or alpha-blended materials are still required for
+visible transparency and light through texture gaps. Optional definition fields
+`transparency_index` (default 1) and `culls_neighbors` (default false for
+transparent blocks) customize this behavior. Opaque models retain normal culling.
+
 Crafting ingredients may use `#namespace:tag` selectors, such as
 `{"#core:planks": 4}`. Set matching item `tags` to `["core:planks"]`;
 automatically generated block items inherit the block's tags. Shaped grid cells

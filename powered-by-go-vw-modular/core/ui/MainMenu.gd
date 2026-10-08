@@ -63,11 +63,22 @@ func _confirm_delete() -> void:
 	_refresh_worlds("")
 	status_label.text = ("World deleted. Select a world to continue." if result.success else str(result.error))
 
+var _mode_option: OptionButton
+var _experimental_checkbox: CheckBox
+
+
 func _create_world() -> void:
+	var creative := _mode_option != null and _mode_option.get_selected_id() == 1
+	var flags := {}
+	for flag_id: String in WorldProfileService.FEATURE_FLAGS:
+		flags[flag_id] = _experimental_checkbox != null and _experimental_checkbox.button_pressed
 	var result: Dictionary = GameAPI.saves.create_world(name_input.text, seed_input.text, {
 		"api_version": ModAPI.API_VERSION,
 		"mods": GameAPI.mods.get_signature(),
 		"content": GameAPI.content.get_content_signature(),
+		"profile_version": WorldProfileService.PROFILE_VERSION,
+		"game_mode": "creative" if creative else "survival",
+		"feature_flags": flags,
 	})
 	if not result.success:
 		status_label.text = str(result.error)
@@ -92,6 +103,25 @@ func _ready() -> void:
 		var service := get_node_or_null("/root/SkinService")
 		if service != null:
 			service.open_picker())
+
+	var mode_row := HBoxContainer.new()
+	var mode_label := Label.new()
+	mode_label.text = "New world mode"
+	mode_row.add_child(mode_label)
+	_mode_option = OptionButton.new()
+	_mode_option.add_item("Survival", 0)
+	_mode_option.add_item("Creative", 1)
+	_mode_option.select(0)
+	mode_row.add_child(_mode_option)
+	$Center/VBox.add_child(mode_row)
+	$Center/VBox.move_child(mode_row, seed_input.get_index() + 1)
+
+	_experimental_checkbox = CheckBox.new()
+	_experimental_checkbox.text = "Enable experimental sandbox systems"
+	_experimental_checkbox.button_pressed = false
+	$Center/VBox.add_child(_experimental_checkbox)
+	$Center/VBox.move_child(_experimental_checkbox, seed_input.get_index() + 2)
+
 	delete_button.pressed.connect(_request_delete)
 	delete_dialog.confirmed.connect(_confirm_delete)
 	delete_dialog.canceled.connect(_cancel_delete)

@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://s663j7mxdntf"]
+
+[ext_resource type="Script" uid="uid://cyhkocyvkgveh" path="res://tests/ContentPackSmoke.gd" id="1_0ex66"]
+
+[node name="ContentPackSmoke" type="Node" unique_id=626553748]
+script = ExtResource("1_0ex66")

@@ -55,14 +55,23 @@ func _generate_trees(ctx: WorldGenContext) -> void:
 			_emit_tree(ctx, Vector3i(root.x, ground, root.y), height)
 
 func _emit_tree(ctx: WorldGenContext, base: Vector3i, height: int) -> void:
+	var species: Array[String] = []
+	for id in ctx.content.blocks:
+		if "survival:tree_log" in ctx.content.blocks[id].tags: species.append(str(id))
+	species.sort()
+	var log_id := LOG
+	var leaves_id := LEAVES
+	if not species.is_empty():
+		log_id = species[posmod(hash(Vector3i(base.x,ctx.world_seed,base.z)),species.size())]
+		leaves_id = log_id.replace("_log","_leaves")
 	for dy in range(1, height + 1):
-		_write_air(ctx, base + Vector3i(0, dy, 0), LOG)
+		_write_air(ctx, base + Vector3i(0, dy, 0), log_id)
 	for dy in range(height - 1, height + 3):
 		var radius := CANOPY_RADIUS if dy <= height else 1
 		for dz in range(-radius, radius + 1):
 			for dx in range(-radius, radius + 1):
 				if dx * dx + dz * dz <= radius * radius:
-					_write_air(ctx, base + Vector3i(dx, dy, dz), LEAVES)
+					_write_air(ctx, base + Vector3i(dx, dy, dz), leaves_id)
 
 func _write_air(ctx: WorldGenContext, world_pos: Vector3i, block_id: String) -> void:
 	var local := world_pos - ctx.origin
